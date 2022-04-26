@@ -54,5 +54,10 @@ Therefore creating and supporting application profiles means also creating and s
 
 
 ## Core Vocabularies
-The Core Vocabularies of SEMIC are mostly residing in the vocabularies category
+The Core Vocabularies of SEMIC have the design intend of the vocabularies category: namely broad reuse mostly ignorant about the application context.
+But over the years the SEMIC community has requested support towards the *application* of the Core Vocabularies. 
+Therefore aspects of what are considered above *application profile* expectations are provided into the Core Vocabularies. 
+The provided artifacts can thus be seen as (a small) step in the process of incorporating the core vocabulary in a usage context. 
+For instance, the shacl shape template is very permissive for Core Vocabularies as it soley expresses that the range of a property might be of an expected broad type (e.g. Literal versus Resource). 
+
 
