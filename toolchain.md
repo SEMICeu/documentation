@@ -13,6 +13,25 @@ To have them progress in the same way and same style tooling support is required
 Certainly if one wants to provide the SEMIC community supportive additional artifacts around the Core Vocabularies, the impact on manual editing is high.
 
 
+## Setup & Design
+
+
+## Editors HowTo
+
+### HowTo add a new data specification 
+
+### HowTo add/update a term to/in a data specification
+
+### HowTo track errors
+
+
+## Developers HowTo
+
+### HowTo find the source code of the automation
+
+### Howto add a new artifact generator
+
+### Howto modify/improve an artificat generator
 
 
 
