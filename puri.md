@@ -28,7 +28,8 @@ where
 
 All PURIs maintained by SEMIC should be handled by the server *uri.semic.eu*.
 On this server a PURI resolvement service is installed that implements the content negotation.
-The source code and deployment instructions are found in the repository uri.semic.eu-proxy.
+The source code and deployment instructions are found in the repository [uri.semic.eu-proxy](https://github.com/SEMICeu/uri.semic.eu-proxy).
+
 
 
 
