@@ -1,13 +1,15 @@
 # Documentation
-A repository containing the overview documentation on the resources and tools related to the core vocabularies 
+A repository containing the overview documentation on the resources and tools related to the Core Vocabularies.
+
+This documentation covers the state of affairs at May 2022.
 
 ## Table Of Contents
 1. [Motivation](#motivation)
 2. [Architecture](#architecture)
 3. [Actors](#actors)
-4. [Toolchain]()
-5. [Datamodel]()
-6. [Persistent URIs]()
+4. [Toolchain](./toolchain.md)
+5. [Datamodel](./datamodel.md)
+6. [Persistent URIs](./puri.md)
 
 
 ## Motivation
@@ -56,9 +58,11 @@ Although it seems simple when applying change A to repository R1 then apply the 
 In particular when editors are collaborating or replaced over time. This knowledge gets lost.
 Automated tooling that is able to propagate the same change over two data specification will ensure consistency.
 
-Independent of the coherent generation of the artifacts to be published, this is today the editorial situation for SEMIC.  
+A first step to support editors producing coherent cross-repository artifacts, is the deployment and use of a [toolchain](#./toolchain.md).
+The editor has then to spend effort to _manually_ copy the resulting artifacts to the correct spot.
 
 The technical setup of the data specification repositories is discussed [here](#GitHubOrganisation)
+
 
 ### generation of the artifacts
 
@@ -77,10 +81,6 @@ More explanation on the technical setup and operation on the toolchain is found 
 Understanding the technical setup might require to understand what is a [data model](/datamodel.md) and how [persistent identifiers](/puri.md) work.
 
 
-
-
-
-
 # GitHubOrganisation
 
 For the Core Vocabularies, e.g. [Core Person](https://github.com/SEMICeu/Core-Person-Vocabulary/), the repository is organised as follows:
@@ -90,9 +90,10 @@ For the Core Vocabularies, e.g. [Core Person](https://github.com/SEMICeu/Core-Pe
 
 Each release is identified with its version number. 
 The content of the [data specification version directory](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00) is not fixed.  
-For the latest release it corresponds to the generated structure by the toolchain for generating the artifacts. 
+For the latest release it corresponds to the generated structure by the [toolchain](/toolchain.md) for generating the artifacts. 
 
 It is assumed that there is an index.html file because the specification is then rendered using github pages, a free service for public open source GitHub repositories, at [https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/).
+
 
 
 # Actors
