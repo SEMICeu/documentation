@@ -42,7 +42,7 @@ But as already mentioned, due to historic reasons the editors (and the readers) 
 
 
 
-### publication of the artifacts
+### Publication of the artifacts
 
 The general idea is to publish each data specification in a human readible form (html) and other supportive representations (JSON-LD context files, SHACL shapes, RDF vocabularies, ...). 
 The expectations, representation, content has evolved through time, but never has been written out in a specification (style guide), but throughout community feedback and SEMIC editors experience an implicit expectation has been realised. 
@@ -58,13 +58,13 @@ Although it seems simple when applying change A to repository R1 then apply the 
 In particular when editors are collaborating or replaced over time. This knowledge gets lost.
 Automated tooling that is able to propagate the same change over two data specification will ensure consistency.
 
-A first step to support editors producing coherent cross-repository artifacts, is the deployment and use of a [toolchain](#./toolchain.md).
+A first step to support editors producing coherent cross-repository artifacts, is the deployment and use of a [toolchain](./toolchain.md).
 The editor has then to spend effort to _manually_ copy the resulting artifacts to the correct spot.
 
 The technical setup of the data specification repositories is discussed [here](#GitHubOrganisation)
 
 
-### generation of the artifacts
+### Generation of the artifacts
 
 A first step towards coherency between data specifications is that the published artifacts are all in the same style.
 To achieve this generators and automated tooling is necessary. 
@@ -77,8 +77,8 @@ but also to the presentation challenges:
    - how to adapt generated artificats
    - how to add new artifacts 
 
-More explanation on the technical setup and operation on the toolchain is found [here](/toolchain.md).
-Understanding the technical setup might require to understand what is a [data model](/datamodel.md) and how [persistent identifiers](/puri.md) work.
+More explanation on the technical setup and operation on the toolchain is found [here](./toolchain.md).
+Understanding the technical setup might require to understand what is a [data model](./datamodel.md) and how [persistent identifiers](/puri.md) work.
 
 
 # GitHubOrganisation
@@ -92,12 +92,11 @@ Each release is identified with its version number.
 The content of the [data specification version directory](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00) is not fixed.  
 For the latest release it corresponds to the generated structure by the [toolchain](/toolchain.md) for generating the artifacts. 
 
-It is assumed that there is an index.html file because the specification is then rendered using github pages, a free service for public open source GitHub repositories, at [https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/).
+It is assumed that there is an `index.html` file because the specification is then rendered using [github pages](https://pages.github.com/), a free service for public open source GitHub repositories, at [https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/).
 
 
 
 # Actors
-
 
 The key users of the tooling and method are _editors_ of data specifications. 
 They are expected to have the following skills:   
@@ -137,6 +136,10 @@ It is advised to maintain the highest burden on the developers and not make desi
 For instance the usage of git repositories to store the data specifications, should not be the reason to impose a software development approach on those git repositories. 
 The organisation and management of those git repositories should match the needs of the editors and the publication objectives. 
 Where-as for software the scope of a branch is a coherent set of instructions, the scope of a data specification is the transparent history of the specification. 
+
+
+### access management
+All user access control operations can be done by the SEMIC admin on [Github](https://github.com/orgs/SEMICeu/people).
 
 
 
