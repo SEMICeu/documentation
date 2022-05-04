@@ -22,22 +22,37 @@ The OSLO toolchain is part of a larger environment for supporting the generation
 
 The OSLO toolchain has been deployed in 3 repositories at SEMIC:
 
-- a thema repository : []() A repository which contains the content of one or more data specifications.
-- a publication repository: []()  A repository associated with a publication environment.
-- a generated repository: []() The repository that contains the result of the processing. 
+- a thema repository : [https://github.com/SEMICeu/uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema) A repository which contains the content of one or more data specifications.
+- a publication repository: [https://github.com/SEMICeu/uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication)  A repository associated with a publication environment.
+- a generated repository: [https://github.com/SEMICeu/uri.semic.eu-generated](https://github.com/SEMICeu/uri.semic.eu-generated) The repository that contains the result of the processing. 
 
 A publication repository is always paired with a generated repository. 
 For the moment a single thema repository is active as it is covering the Core Vocabularies.
 This choice can be revisited in the future.
 
+To setup a new publication environment there is also a template for the publication environment [https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
+This contains the latest scripts and tooling references.
+
 At SEMIC these repositories are private GitHub repositories. 
 This influences the execution and configuration as operating on private repositories is a differrent GitHub API request than those which can be used for public GitHub repositories.
-More information on the configuration can be found in the toolchain.
-
+More information on the configuration can be found in the [publication environment documentation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md).
 
 The setup makes only partially use of the OSLO toolchain ecosystem. 
 Where in OSLO the generated repository is a complete static webpage to be shared with the public, SEMIC uses github pages to publish each data specification independently. 
 The connection between both repositories is _not_ automated, and requires manual intervention of the editors.
+In SEMIC the OSLO toolchain is defacto used as a locally installed software, where the editor has to take care of adapting the result to make it publishable.
+
+_Design note_: Future work should investigate this issue, as it is errorprone and reduces the efficiency of the toolchain for the editors.
+The design should also investigate the issue of the publication of the common domain `http://data.europa.eu/m8g`. 
+
+
+### Operational considerations
+The usage of the OSLO toolchain disconnected from a publication environment but as online editorial tool impacts the current setup.
+For instance, the support for multi-environment publication (development/testing/production) on the same domain is not used.
+Also checks and quality aspects that are can be guaranteed when both are integrated, 
+such as the [out-of-the box source tracing](#HowTo-know-which-repository-is-connected-a-data-specification),
+become editorial attention points.
+
 
 
 ## Editors HowTo
