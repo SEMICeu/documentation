@@ -54,6 +54,26 @@ such as the [out-of-the box source tracing](#HowTo-know-which-repository-is-conn
 become editorial attention points.
 
 
+### (Software) Components
+
+The main components are:
+
+- UML editing tool: Enterprise Architect from Sparx systems 
+- Source Control System: [GitHub](github.com)
+- Continuous Integration/Continous Deployment: [CircleCI](circle.com)
+- OSLO toolchain tools:
+    - content extraction tool from UML document: [EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF/tree/multilingual)
+    - artifact generators: [specgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator/tree/multigual-dev)
+    - template for publication environment
+    - template for thema repository
+
+Commercial fees are only required for Enterprise Architect.
+The others have a free tier (to which the objectives of this work complies) or are Open Source components.
+
+_Roadmap note_: the OSLO toolchain is organically grown over the past years. 
+The team is currently building 4.0 including a rewrite of the EA-to-RDF with improved documentation of the processing rules of the annotations.
+In case of developer related questions on the OSLO-toolchain tools the OSLO maintainers can be best contacted.
+
 
 ## Editors HowTo
 
