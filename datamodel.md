@@ -131,6 +131,7 @@ The following screenshot shows the class _Person_ in Enterprise Architect.
 ![EA-example.png](./EA-example.png)
 
 In the middle the UML graphical representation is shown. On the right hand side the tags for the selected class _Person_.
-Right from the graphical represenation the attributes and relationships of the class are shown.
+Right from the graphical representation the attributes and relationships of the class are shown.
+
 
 
