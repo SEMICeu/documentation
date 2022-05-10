@@ -32,21 +32,20 @@ Vocabularies expect
 
 Application profiles expect
 
-    - a document 
-	- explaining the application scope 
-    	- providing a visual overview of the data model
-        - a textual, tabular representation expressing the data model entities
-    - supportive assets for implementers such as
-	- shacl templates
-        - json-ld context files
-        - xsd schemas
-	- examples
-
-    - integrated with the vocabularies it reuses
+  - a document 
+    - explaining the application scope 
+    - providing a visual overview of the data model
+    - a textual, tabular representation expressing the data model entities
+  - supportive assets for implementers such as
+    - shacl templates
+    - json-ld context files
+    - xsd schemas
+    - examples
+  - and being integrated with the vocabularies it reuses
 
 Implementation models expect
 
-    - the same as application profiles, but usually augmented with additional specific artifacts for that system. 
+  - the same as application profiles, but usually augmented with additional specific artifacts for that system. 
       E.g. a template DB, an API specification, ...
 
 
