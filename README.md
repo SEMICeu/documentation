@@ -5,11 +5,12 @@ This documentation covers the state of affairs at May 2022.
 
 ## Table Of Contents
 1. [Motivation](#motivation)
-2. [Architecture](#architecture)
-3. [Actors](#actors)
-4. [Toolchain](./toolchain.md)
-5. [Datamodel](./datamodel.md)
-6. [Persistent URIs](./puri.md)
+2. [Historic Background](#Historic-Background)
+3. [Organisation of the SEMIC github space](#Organisation-of-the-SEMIC-github-space)
+4. [Actors](./actors.md)
+5. [Toolchain](./toolchain.md)
+6. [Datamodel](./datamodel.md)
+7. [Persistent URIs](./puri.md)
 
 
 ## Motivation
@@ -18,7 +19,7 @@ SEMIC is supporting the Semantic Interopability Community with the creation of d
 
 This documentation describes the supporting assets that are being setup, configured, used to realise the data specifications.
 
-## Architecture 
+## Historic Background
 
 The creation of data specification is an activity that involves design decisions at two aspects:
 
@@ -35,11 +36,9 @@ Step by step, in the past 10 years, more harmonisation occurred.
 The documented tooling and setup is a further step towards an integrated and automated flow between the creation and the publication of the artificats.
 Nevertheless the argumentation why and how the design of the architecture has become this form is because its organically grown, making the best decision with the minimal impact to the existing processes and methodes.
 
-
-We distinguish two main types of actors: editors and developers. These roles are elaborated in a separate section.
+We distinguish two main types of actors: editors and developers. These roles are elaborated in the section [Actors](./actors.md).
 The tools and methods are setup to support the editors and to provide the "readers of the data specifications" a coherent experience.
 But as already mentioned, due to historic reasons the editors (and the readers) are faced with historic organisation and presentations.
-
 
 
 ### Publication of the artifacts
@@ -58,17 +57,7 @@ Although it seems simple when applying change A to repository R1 then apply the 
 In particular when editors are collaborating or replaced over time. This knowledge gets lost.
 Automated tooling that is able to propagate the same change over two data specification will ensure consistency.
 
-A first step to support editors producing coherent cross-repository artifacts, is the deployment and use of a [toolchain](./toolchain.md).
-The editor has then to spend effort to _manually_ copy the resulting artifacts to the correct spot.
-
-The technical setup of the data specification repositories is discussed [here](#GitHubOrganisation)
-
-
-### Generation of the artifacts
-
-A first step towards coherency between data specifications is that the published artifacts are all in the same style.
-To achieve this generators and automated tooling is necessary. 
-
+A first step to support editors producing coherent cross-repository artifacts, is the deployment and use of a common data specification generation tool. 
 The tooling provides support for the common editorial challenges:
    - how to initiate a new vocabulary
    - how to add/modify a term to a vocabulary
@@ -76,12 +65,24 @@ but also to the presentation challenges:
    - how to change the presentation of a vocabulary
    - how to adapt generated artificats
    - how to add new artifacts 
+The section [toolchain](./toolchain.md) provides the explanation on the technical setup and operation of the tooling.
+Understanding the technical setup requires to understand what is a [data model](./datamodel.md) and how [persistent identifiers](/puri.md) future in this.
 
-More explanation on the technical setup and operation on the toolchain is found [here](./toolchain.md).
-Understanding the technical setup might require to understand what is a [data model](./datamodel.md) and how [persistent identifiers](/puri.md) work.
+Whereas the tooling addresses the generation of the artifacts to be published, the publication activity is a manual step. 
+The editor has to _manually_ copy the resulting artifacts to the correct spot. 
 
 
-# GitHubOrganisation
+
+# Organisation of the SEMIC github space
+
+The SEMIC github space contains data specification repositories, repositories supporting the generation and publication of the data specifications and others. 
+
+
+## Data specification repositories.
+
+The data specification repositories are tagged with the topic *"data-specification"*.
+
+### Core Vocabulary repositories
 
 For the Core Vocabularies, e.g. [Core Person](https://github.com/SEMICeu/Core-Person-Vocabulary/), the repository is organised as follows:
 
@@ -94,52 +95,23 @@ For the latest release it corresponds to the generated structure by the [toolcha
 
 It is assumed that there is an `index.html` file because the specification is then rendered using [github pages](https://pages.github.com/), a free service for public open source GitHub repositories, at [https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/).
 
+More governance agreements are not made.
+
+### Application Profile repositories
+
+Some will follow the same organisation as the Core Vocabularies, but others follow a different organisation.
+This has historic reasons.
+
+When creating a new release for these Application Profiles is being prepared, changing the organisation in accordance to the above structure is suggested.
 
 
-# Actors
+## Generation and publication supporting repositories
 
-The key users of the tooling and method are _editors_ of data specifications. 
-They are expected to have the following skills:   
-
- - can write “formal” statements in vocabularies & application profiles (linguistic skills)  
- - can organise information in a data model (structuring skills)  
- - can explain data model issues in a webinar (communication skills)  
- - can write & execute simple software code (software developer skills)  
-
-The objective of the provided tooling and processes is that editors focus on their main task: namely improving and maintaining the data specification and interacting with the working group communities.    
+The data specification repositories are tagged with the topic *"tooling"*.
+These repositories have no common organisation.
 
 
-A main non-functional requirement for the tooling is that it should be avoided that the tooling creates bottlenecks that prevent the scaling up of the editorial effort. Therefore, local installation of software and data should be avoided. The maintenance of the data specification should never be blocked because one editor has sole access to data. It should be at any point in time clear what is the technical content on which the data specification is build. Any knowledge transfer between editors can then be focussed on sharing the current expertise on the different opinions in the working group instead of figuring out how to pass technical artifacts. 
 
-
-_Developers_ are the supporting actors in this story.
-They role is mainly being able to assist in resolving any technical issue with the setup. 
-Thus more operational than new development.
-When it comes to new development, this will be mostly in the area of automation. 
-As already mentioned in the [architecture section](#architecture), the SEMIC tooling and organisation is grown step by step. 
-To support the editors more automation is required.
-
-
-The prerequisite knowlegde of a developer can be circumscribed as being a swith knife (or a full-stack) developer.
-Developers (or the developers team) should have the following skills:
-
- - have generic programming skills
- - being able to process, read and manipulate software in different programming languages and development setups
- - being able to read documentation of various tools and search for missing documentation on the web
- - understand and work with Continuous Integration and Continuous Development (CI/CD) tools
- - understand and work in the spirit of "infrastructure as code", and there able to operate and deploy software using Docker containers
- - be familiar with the Linux ecosystem, able to explore and execute tasks via command line
- - have affinity with the Semantic Web
-  
-The work environment the editors are faced with is more uniform than those by the developers. 
-It is advised to maintain the highest burden on the developers and not make design decisions that make the developers life easier but complicate the work of the editors.
-For instance the usage of git repositories to store the data specifications, should not be the reason to impose a software development approach on those git repositories. 
-The organisation and management of those git repositories should match the needs of the editors and the publication objectives. 
-Where-as for software the scope of a branch is a coherent set of instructions, the scope of a data specification is the transparent history of the specification. 
-
-
-### access management
-All user access control operations can be done by the SEMIC admin on [Github](https://github.com/orgs/SEMICeu/people).
 
 
 

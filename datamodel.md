@@ -1,4 +1,6 @@
-# Data model development
+# Data model 
+
+## Data model types
 
 Designing a data model encompasses the following activities:
 - determining the appropriate data structures (Class, Property, ...)
@@ -25,8 +27,8 @@ The listed expectatations are also resulting from the base premise to use the Se
 
 Vocabularies expect 
 
-    - a document with a simple tabular view of the terms 
-    - persistent identifiers (PURIs) 
+  - a document with a simple tabular view of the terms 
+  - persistent identifiers (PURIs) 
 
 Application profiles expect
 
@@ -59,5 +61,65 @@ But over the years the SEMIC community has requested support towards the *applic
 Therefore aspects of what are considered above *application profile* expectations are provided into the Core Vocabularies. 
 The provided artifacts can thus be seen as (a small) step in the process of incorporating the core vocabulary in a usage context. 
 For instance, the shacl shape template is very permissive for Core Vocabularies as it soley expresses that the range of a property might be of an expected broad type (e.g. Literal versus Resource). 
+
+The Core Vocabularies are showing that the boundaries between a vocabulary and an application profile, as defined above, are not precisely determined.
+Vocabularies, application profiles and implementation models are entities on an axe of reusability/application context.
+Vocabularies are collections of terms formulated in such a way that they are reusable to a maximum extend without becoming semantically too vague/abstract.
+Application profiles are other collections of the same terms but then within a more specific, but still generic  application context. 
+And on the other far extreme are terms used within a very specific context: implementation models.
+
+
+# UML model (annotations)
+
+In SEMIC, the normative documents are semantic data models. 
+However readers often expect a graphical representation.
+Instead of reinventing a new graphical language, it has been decided to (re)use UML as graphical modelling language.
+For coherency reasons accross all specifications it is easier to transform a UML diagram to a semantic representation, than transforming an semantic representation in a UML notation. 
+Thus despite the UML diagram is the master data, the normative document is not the UML diagram but the semantic model that it is representing.
+
+
+
+
+To create the semantic models the UML diagrams have to be converted into a representation that is indepedent from the editorial environment.
+The Enterprise Architect Conversion Tool is a tool supporting the key idea to model a semantic model in UML. 
+In case of OSLO the editorial environment is Enterprise Architect.
+To ease future processing a json(-ld) representation has been chosen as target.
+
+The connection between the UML graphical language and semantic world is based on interpreting the UML language but also on the additional annotations provided by the editors.
+These annotations are key because they control 
+  - the URI assignment
+  - the human readible semantics
+
+In addition some annotations are added to facilitate the control of the scope of the content of the semantic model.
+
+An graphical overview of the information is shown below.
+
+![EA-annotations.jpg](./EA-annotations.jpg)
+
+Each attribute/property corresponds with an annotation.
+In EA these annotations are expressed as tags.
+The tags have the following representation
+
+```
+   {documenttype}-{annotation}-{language}
+```
+
+The {documenttype} can be 
+   - **empty**:  corresponds with the vocabulary interpretation. The base information about the term.
+   - **ap**: application profile (ap) 
+
+The {language} corresponds to the 2-letter code for a language in which the content of the annotation is expressed.
+
+Examples:
+  - `label-nl`: the tag expresses the label of the term in Dutch at the level of a vocabulary. 
+  - `ap-usageNote-en`: the tag expresses the usage note in English for the application profile
+
+The pattern is very useful as it allows to have two perspectives on the same term in the UML file.
+One perspective is the base reference: the vocabulary, and the other perspective is the application usage context.
+Having the ability to have them side by side make it is much easier for editors to ensure the reuse of a term is done properly.
+
+
+Not all annotations support a prefix {documenttype} or suffix {language}. 
+For instance: `uri` has no prefix or suffix as a term should have only one globally unique persistent identifier. 
 
 

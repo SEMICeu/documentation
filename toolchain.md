@@ -204,9 +204,36 @@ In SEMIC, where the publication of the artifacts is done manually by copying the
 
 ### HowTo find the source code of the automation
 
+The source code for the CircleCI automation is part of the repository [uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication). 
+The organisation and setup of the workflow of the CircleCI workflow is extensively documentated in the template repository [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
+
+The CircleCI workflow will executes in some steps software available as public Docker images. 
+These images are build from the open source repositores 
+  - [OSLO-EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF)
+  - [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator)
+
+
 ### Howto add a new artifact generator
 
-### Howto modify/improve an artificat generator
+An artifact generator is a tool that transforms the intermediate aggregated json structure to the desired artifact. 
+It has as input a json file and any additional tool configuration parameters and produces the artifact as a file.
+In the repository [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator) collects the OSLO artifact generators.
+These are all written in javascript. 
+A test suite is available in the repository, illustrating the usage of each artifact generator w.r.t. different parameter choices.
 
+Adding a new artifact generator in that repository is thus the following process in short:
+   - create a new tool as a new javascript tool
+   - add the test suite
+   - build and publish a new docker image
+   - integrate the execution in the CircleCI workflow in a configured publication environment
+   - test the result
+
+When the artifact generator has reached maturity add the additional generation possibility as part of a new version for
+[OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template) to share your work with the community.
+
+
+### Howto modify/improve an artifact generator
+
+The process to update an artifact generator follows the same process as adding a new one.
 
 
