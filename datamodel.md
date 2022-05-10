@@ -71,33 +71,36 @@ And on the other far extreme are terms used within a very specific context: impl
 
 # UML model (annotations)
 
-In SEMIC, the normative documents are semantic data models. 
-However readers often expect a graphical representation.
+In SEMIC, the normative documents are Semantic Web models. 
+Semantic Web models identifiy terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass, domain, range, cardinalities, ...). 
+
+However often a graphical representation is expected.
+Graphical representations are able to convey more condensly the key formal logic statements at one glance.
 Instead of reinventing a new graphical language, it has been decided to (re)use UML as graphical modelling language.
-For coherency reasons accross all specifications it is easier to transform a UML diagram to a semantic representation, than transforming an semantic representation in a UML notation. 
-Thus despite the UML diagram is the master data, the normative document is not the UML diagram but the semantic model that it is representing.
 
+For coherency accross all specifications it is easier to transform a UML diagram to a semantic representation, than transforming an semantic representation in a UML notation. 
+But despite the UML diagram is the master data, the normative document is not the UML diagram but the semantic model that it is representing.
 
+The [Enterprise Architect Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF) is a tool which converts a UML diagram, expressed as an EAP files, into a neutral representation suited for generating artefects for data specifications.
+The syntax of that representation is json(-ld).
 
-
-To create the semantic models the UML diagrams have to be converted into a representation that is indepedent from the editorial environment.
-The Enterprise Architect Conversion Tool is a tool supporting the key idea to model a semantic model in UML. 
-In case of OSLO the editorial environment is Enterprise Architect.
-To ease future processing a json(-ld) representation has been chosen as target.
-
-The connection between the UML graphical language and semantic world is based on interpreting the UML language but also on the additional annotations provided by the editors.
+The connection between the UML graphical language and Semantic Web is based on interpreting the UML language and additional annotations provided by the editors.
 These annotations are key because they control 
   - the URI assignment
   - the human readible semantics
+This information is not part of the _standard_ UML. 
 
-In addition some annotations are added to facilitate the control of the scope of the content of the semantic model.
+Beyond the supporting the interpretation of the UML diagram, the Enterprise Architect Convertion tool supports annotations to facilitate the control of the scope of the content of the semantic model.
 
-An graphical overview of the information is shown below.
+An graphical overview of the content of extracted information is shown below.
 
-![EA-annotations.jpg](./EA-annotations.jpg)
+![EA-annotation.jpg](./EA-annotation.jpg)
 
-Each attribute/property corresponds with an annotation.
-In EA these annotations are expressed as tags.
+Each attribute corresponds with an annotation.
+
+
+### EA data model tags
+In Enterprise Architect these annotations are expressed as tags.
 The tags have the following representation
 
 ```
@@ -118,8 +121,17 @@ The pattern is very useful as it allows to have two perspectives on the same ter
 One perspective is the base reference: the vocabulary, and the other perspective is the application usage context.
 Having the ability to have them side by side make it is much easier for editors to ensure the reuse of a term is done properly.
 
-
 Not all annotations support a prefix {documenttype} or suffix {language}. 
 For instance: `uri` has no prefix or suffix as a term should have only one globally unique persistent identifier. 
+
+
+### Example
+To use the [toolchain](./toolchain.md), editors are required to edit the EAP file of the data specification. 
+The following screenshot shows the class _Person_ in Enterprise Architect. 
+
+![EA-example.png](./EA-example.png)
+
+In the middle the UML graphical representation is shown. On the right hand side the tags for the selected class _Person_.
+Right from the graphical represenation the attributes and relationships of the class are shown.
 
 
