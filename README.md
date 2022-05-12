@@ -95,9 +95,9 @@ A subset of the data specification repositories that are set up for the editing 
 The Core Vocabulary repositories (e.g. [Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/)) are organised as follows:
 
 - Webinars : any documentation, meeting minutes, recording relating to a webinar on the data specification
-- Releases : the data specification releases, organised per version. Each release is identified by its version number, and has a dedicated subfolder.  The content of a specific data specification release version folder (e.g. [version 2.00 of the Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00)) is not fixed.  
-For the latest release it corresponds to the generated structure by the [toolchain](/toolchain.md) for generating the artefacts. 
-It is assumed that there is an `index.html` file, because the specification is then rendered using [github pages](https://pages.github.com/), a free service for public open source GitHub repositories (e.g. for the Person Core Vocabulary it would be published at [https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/)).
+- Releases : the data specification releases, organised per version. Each release is identified by its version number, and has a dedicated subfolder.  The content of a specific data specification release version folder (e.g. [version 2.00 of the Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00)) is not fixed.
+The structure of the latest release will be conform to the setup of the artefact generating [toolchain](/toolchain.md). 
+It is assumed that there is an `index.html` file, as the data specification is then rendered using GitHub Pages, a free service for public open source GitHub repositories (e.g. for the Person Core Vocabulary it would be published at [https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/)).
 
 More governance agreements are not made.
 
