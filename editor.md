@@ -19,6 +19,10 @@ Topics like version numbering, using shared PURI domain, etc. are affecting the 
 
 Example scenario: add property "baptismal name" to the class Person in Core Person Vocabulary and publish it as version 2.0.1-Example
 
+The figure below shows the interactions with Github the editor has to perform to reach the objective of the example scenario.
+
+![Example editorial flow](./semic-editor-flow.jpg)
+
 1. find the latest UML master data. 
     1.1. In [Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00/uml) the latest published file is found.
     1.2. Copy this version to the [uri.semic.eu-thema]() for editing
