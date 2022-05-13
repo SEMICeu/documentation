@@ -59,8 +59,8 @@ become editorial attention points.
 The main components are:
 
 - UML editing tool: Enterprise Architect from Sparx systems 
-- Source Control System: [GitHub](github.com)
-- Continuous Integration/Continous Deployment: [CircleCI](circle.com)
+- Source Control System: [GitHub](https://github.com)
+- Continuous Integration/Continous Deployment: [CircleCI](https://circle.com)
 - OSLO toolchain tools:
     - content extraction tool from UML document: [EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF/tree/multilingual)
     - artifact generators: [specgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator/tree/multigual-dev)
