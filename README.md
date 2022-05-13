@@ -4,6 +4,9 @@ This repository contains the overview documentation describing the resources and
 The [SEMICeu GitHub space](https://github.com/SEMICeu) is created to support the Semantic Interoperability Community with the creation of __data specifications__ (e-Government Core Vocabularies, Application Profiles, etc.). A list of these data specifications can be found [on the SEMIC website](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/our-resources). This documentation describes both how the different SEMIC resources are organized in GitHub repositories, as well as what are the supporting assets that need to be _set up_, _configured_, and _used_ to realise (i.e. edit and publish) such SEMIC data specifications.
 
 This documentation covers the state of affairs as of May 2022.
+The objective is that readers of this documentation are provided with sufficient achors to initiate mastering the methods and tooling used to create and manage data specifications.
+
+
 
 
 ## Table Of Contents
@@ -39,7 +42,16 @@ The connection between these three group of actors is the following: The tools a
 Since the consumers are the "end users" of the data specifications, they will not need to interract directly with the SEMICeu GitHub space. Therefore, this documentation will only focus on the _editors_ and _developers_, as they constitute its target audience.
 
 ### The editing of the artefacts
-[TODO] Write a paragraph or two about how will the editors use the system, and point to the detailed description in the appropriate "HowTo" section of the `Toolchain` section/page.
+
+Data specifications are subject to evolution. 
+This evolution is the result of addressing the use cases provided by the SEMIC community to data specifications.
+In that editorial process editors are adapting the data specification: i.e. the artefacts that are part of the data specification.
+
+The assessment how to best address the use case is beyond this documentation. 
+Nevertheless, this documentation provides insights in how a resolution is integrated in the published artefacts of the data specification.
+
+Thus to adequately respond to the use case, editors should understand how to operate the [toolchain](./toolchain.md) to efficiently create the artefacts for a data specification. 
+
 
 ### Publication of the artefacts
 

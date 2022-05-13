@@ -21,7 +21,7 @@ where
 
 ### Supported domains by SEMIC
 
-TDB
+TBC
 
 |domain|description|example|Content|
 |---|---|---|---|
@@ -41,13 +41,17 @@ This URI is either an existing URI or a new URI minted within [one of the persis
 
 Any change (creation, updating, ...) to a term associated with a SEMIC owned PURI requires editorial effort to ensure the expected dereferenceability.
 
+In short, the steps are 
+
 1. Editors create/update a UML representation of the vocabulary annotated with the right information.
 2. Using the toolchain an RDF file is created that contains the data of the vocabulary.
-3. Editors extract from the RDF file the data for each PURI and add it to the  [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) repository.
+3. Editors extract from the RDF file the data for each PURI and add it to the  [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) repository.  
 
-These steps are part of the editorial effort editors have to perform manually.
+Detailed steps are described in [uri.semic.eu-proxy](https://github.com/SEMICeu/uri.semic.eu-proxy).
 
-**Note**: this process is a candidate to be automated. 
+
+**Note**: These steps are part of the editorial effort editors have to perform manually.
+Therefore this process is a candidate to be automated and integrated in the toolchain.
 
 
 
