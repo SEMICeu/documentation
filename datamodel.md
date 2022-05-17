@@ -22,7 +22,7 @@ Application profiles can be further elaborated to the point they describe the us
 These are called *implementation models*.
 
 
-Aside the differences in the content resulting from the reuse perspective, each category has different expectations on the representation and published artifacts. 
+Aside the differences in the content resulting from the reuse perspective, each category has different expectations on the representation and published artefacts. 
 The listed expectatations are also resulting from the base premise to use the Semantic Web as basis for the design of the data models.
 
 Vocabularies expect 
@@ -45,7 +45,7 @@ Application profiles expect
 
 Implementation models expect
 
-  - the same as application profiles, but usually augmented with additional specific artifacts for that system. 
+  - the same as application profiles, but usually augmented with additional specific artefacts for that system. 
       E.g. a template DB, an API specification, ...
 
 
@@ -58,7 +58,7 @@ Therefore creating and supporting application profiles means also creating and s
 The Core Vocabularies of SEMIC have the design intend of the vocabularies category: namely broad reuse mostly ignorant about the application context.
 But over the years the SEMIC community has requested support towards the *application* of the Core Vocabularies. 
 Therefore aspects of what are considered above *application profile* expectations are provided into the Core Vocabularies. 
-The provided artifacts can thus be seen as (a small) step in the process of incorporating the core vocabulary in a usage context. 
+The provided artefacts can thus be seen as (a small) step in the process of incorporating the core vocabulary in a usage context. 
 For instance, the shacl shape template is very permissive for Core Vocabularies as it soley expresses that the range of a property might be of an expected broad type (e.g. Literal versus Resource). 
 
 The Core Vocabularies are showing that the boundaries between a vocabulary and an application profile, as defined above, are not precisely determined.
