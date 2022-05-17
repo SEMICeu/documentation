@@ -65,6 +65,7 @@ This is feasible, but probably will require further alignment and restructuring 
 Topics like version numbering, using shared PURI domain, etc. are affecting the automation.
 
 
+
 # Example editorial flow
 
 To illustrate the generic editorial flow consider the common change request to add a property to a class in a data specification.
@@ -82,9 +83,9 @@ For readibility the figures are placed below.
 
 2. Edit the UML file in [uri.semic.eu-thema]
 
-   The editor opens the new copy and adds the property with the required annotations. 
+   The editor edits the copy and adds the property with the required annotations. 
    Figure [1](#figure1) shows the property 'baptismalName' with the label in English, definition and the assigned URI. 
-   The editor commits this UML file. 
+   After finishing the editing, the editor commits the UML file. 
    Let 'ad345' the hash identifying this commit.
    
 3. Trigger the toolchain
@@ -107,13 +108,37 @@ For readibility the figures are placed below.
    
 4. Check the generated artefacts
 
-    hen the toolchain is finished the urlref path in [uri.semic.eu-generated] contains the generated artefacts
+   When the artefact generation processs is finished, the generated artefacts are available in the generated repository.
+   More specifically in the directory `/doc/core-vocabulary/core-person/2.0.1-Examples`.
+
+   The editor downloads the artefacts and checks if the generated artefacts contain the new property. 
+   Suppose a typo is detected in the definition then the editor will return to step 2: the editor will update the UML file, change the `branchtag` in the publication point to the commit hash that corresponds to this update and then will trigger the generation again.
+
+   Througout this iterative process the editor constructs the artefacts that are ready for publication.
+
+
 5. Publish the generated artefacts 
-    5.1. Create a new branch 2.0.1-Example in the Core Person Vocabulary repository
-    5.2. Check the branch out and create a new directory in the releases called 2.0.1-Example
-    5.3. Copy the content of the uri.semic.eu-generated to the created directory in 5.2
-    5.4. activate a the new persistent identifier in uri.semic.eu-puris
+
+   To share the new artefacts with the public the editor follows the publication guidelines for Core Person repository.
+
+   First, a directory `2.0.1-Example` is created in the Core Person Vocabulary repository in the releases directory.
+   Because the editor must ensure that no information of the previous release of the Core Person Vocabulary is lost in the new release, it is advised to initiated the content of that directory with the content of the previous release.
+   Then the artefacts from the generated repository in the directory `/doc/core-vocabulary/core-person/2.0.1-Examples` are copied into this directory.
+   Committing this will make the content available to the public.
+   
+   Since the `baptismal name` is a new property and thus got a new PURI assigned, the editor has to publish the content in the repository uri.semic.eu-puris.
+   Extract from the generated RDF artefact the triples that are relating to the new property, and store these in a file with the name 'baptimalName'. 
+   Create a variant for the RDF serialization ntriples, turtle, and RDF/XML with the approporiate file extension.
+   Commit these files in the directory `releases/m8g`.
+
+   
+
 6. Verify the published artefacts 
     
-  
+   All the steps above result in the page  `https://semiceu.github.io/CCCEV/releases/2.0.1-Examples/`. 
+   This is public URL for the html representation of the Core Vocabulary. 
+   On this page the data specification is described and all artefacts and contextual information can be found.
+   By doing a final check of this URL, the editor ensures quality of work.
+   
+    
     

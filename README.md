@@ -13,9 +13,6 @@ The objective is that readers of this documentation are provided with sufficient
 1. [Historical Background](#historical-background)
 2. [User Roles and Activities](#user-roles-and-activities)
 3. [Organisation of the SEMIC GitHub Space](#organisation-of-the-semic-github-space)
-4. [Toolchain](./toolchain.md)
-5. [Datamodel](./datamodel.md)
-6. [Persistent URIs](./puri.md)
 
 
 ## Historical Background
@@ -131,7 +128,6 @@ The full list of these repositories can be found [here](https://github.com/searc
 
 These repositories have no common organisational structure, however their `README.md` file should provide a good overview about their organisation and usage.
 Also, the [Toolchain](./toolchain.md) page can offer additional information about what these tools are meant to do and when and how to use it. 
-
 
 
 
