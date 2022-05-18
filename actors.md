@@ -40,7 +40,6 @@ Their role is mainly to be able to assist in resolving any technical issue with 
 Thus in the first place the performed activities are more operational than oriented to new development.
 When it comes to new development, this will be mostly in the area of automation. 
 As already mentioned in the [Historical Background](README.md#historical-background), the SEMIC tooling and organisation is grown step by step. 
-)
 To support the editors more automation is required.
 
 
@@ -56,14 +55,14 @@ Developers (or the developers team) should have the following skills:
  - have affinity with the Semantic Web
   
 The work environment that the editors are faced with is more uniform than those by the developers. 
-It is advised to maintain the highest burden on the developers and not make design decisions that make the developers life easier but complicate the work of the editors.
-For instance the usage of GitHub repositories to store the data specifications, should not be the reason to impose a software development approach on those GitHub repositories. 
+It is advised to maintain the highest burden on the developers and not make design decisions that make the developers life easier, but complicate the work of the editors.
+For instance, the usage of GitHub repositories to store the data specifications, should not be the reason to impose a software development approach on those GitHub repositories. 
 The organisation and management of those repositories should match the needs of the editors and the publication objectives. 
-For instance, whereas for software the scope of a branch in a repository is a coherent set of instructions, the scope of a data specification is the transparent history of the specification. 
+For instance, whereas for software the scope of a branch in a repository is to ensure that work always happens on a coherent set of instructions, in case of a data specification the scope is to keep a transparent record of the history of the specification. 
 
 
 ## Other roles
-Besides the main roles that the actors described above have to fulfill, there are other roles involving specific activities that certain actors need to assume. These are described below.
+Besides the main roles that the above described actors have to fulfill, there exist also other roles, involving specific activities that certain actors need to assume. These activities are described below.
 
 ### Communication
 Besides the activities related to the creation and management of the data specifications, there are also __communication activities__, like publishing the results on JoinUp.
