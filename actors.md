@@ -4,7 +4,7 @@ There are three main types of actors that will interact with the resources and a
 
 The connection between these three group of actors is the following: The tools and methods are set up by the _developers_ to support the _editors_ in their work to provide together a coherent experience to the _consumers_.
 
-Since the consumers are the "end users" of the data specifications, they will not need to interract directly with the SEMICeu GitHub space. Therefore, this page will mainly focus on defining the roles of the _editors_ and _developers_.
+Since the _consumers_ are the "end users" of the data specifications, they will not need to interract directly with the SEMICeu GitHub space. Therefore, this page will mainly focus on defining the roles of the _editors_ and _developers_.
 
 
 ## Consumers 
