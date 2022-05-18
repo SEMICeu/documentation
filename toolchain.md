@@ -6,21 +6,58 @@
 To support the editors in creating and maintaining data specifications in a coherent manner, tooling is required.
 
 Data specifications have their own life cycle. 
-For instance, in the past the various Core Vocabularies where created by different teams, with different Working Groups, at different times.
-This has resulted in similar, yet distinct, and sometimes incoherent, expressions of these Core Vocabularies.
+The various Core Vocabularies are created by different (editorial) teams, with different Working Groups, at different times.
+In the past, the manual editing has resulted in similar, yet distinct, and sometimes incoherent, expressions of these Core Vocabularies.
+A situation that raised many questions by the consumers.
 
-To have them progress in the same way, and following the same style, tooling support is required. 
-Naturally, providing the SEMIC community with additional supporting artefacts around the Core Vocabularies, will have an impact on the manual editing process.
-However, [TODO continue]
+To have the data specifications progress in the same way, and following the same style, tooling support is required. 
+Introducing tooling will force the editors to follow a predefined editorial flow, and thus reduce their editorial freedom to the limits of the tooling.
+This limitation brings, however, crucial benefits for the SEMIC project:
+  - a harmonised coherent experience of the data specifications. This will increase the adoption by the consumers.
+  - the embedding of the key SEMIC data modeling in formal processes, instead of relying solely on the experience of the editors.
+  - support scaling up the editorial capacity. Automation provides the ability to learn the editorial flow in a safe environment.
+
+
+In this chapter, the tooling that is supporting the editorial flow for managing data specifications is described.
+First the design and how it is setup in SEMIC space is described.
+Then frequently asked questions by the editors and developers are answered.
+
+
 	
 
 ## Setup & Design
 
+
 The toolchain used in the SEMICeu project is based on the [OSLO toolchain](https://github.com/Informatievlaanderen/OSLO-toolchain/tree/master/doc-generic).
 
 The OSLO toolchain is part of a larger environment for supporting the generation, maintenance and publication of data specifications under the governance of the Flemish Government, Belgium.
+Because OSLO has been participating in SEMIC from the start, the toolchain incorporates many advices and best practices SEMIC has produced or applies.
+This is especially true for the support of the editorial flow. 
+The main distinction situates at the publication approach: the current SEMIC practice is to use github as publication platform where per data specification a repository is created, while the OSLO toolchain has been designed with a single publication environment in mind.
 
----------
+In the [editorial flow](./editor.md) this distinction is visible in the manual publication steps the editor has to perform; steps that are not required in the OSLO context. This is future work to adapt the tooling to the SEMIC publication context.
+
+The result from the OSLO toolchain can be seen at [data.vlaanderen.be](https://data.vlaanderen.be).
+Tooling source code and data specifications are all publicly available on [GitHub](https://github.com/search?q=org%3AInformatievlaanderen+topic%3Aoslo).
+
+
+### Generic Design
+
+The high level design OSLO toolchain is illustrated in the figure below.
+
+![./images/high-level-design.jpg](./images/high-level-design.jpg)
+
+The objective is to automate the publication of the data specifications on a publication environment.
+A _publication environment_ is a website identified by a domain. 
+The content of that website can be (and usually is) broader than the data specifications, but here we focus solely on that aspect of the publication environment.
+The toolchain is designed to create a static website, i.e. a collection of webpages.
+This simplifies the operational work to serve the data specifications on the publication environment, but more importantly the editors can see what is being published before it is actually shared with the consumers. 
+
+
+Source code of the static website is stored in the publication repository. The result of the generation process, i.e. the static website, is stored in a generated repository. 
+A _publication_ repository is thus always paired with a _generated_ repository. 
+
+. The data standards are managed in separate thema repositories. Separating the data specifications content from the publication environment creates flexibility and scaling potential, without loosing a central control. The content of the static website is available in the generated repository. The operational deployment the static website is indepedent from , and beyond the configuration of this repository. A setup is described in the documention.
 
 The OSLO toolchain has been deployed in 3 repositories at SEMIC:
 
@@ -32,7 +69,7 @@ A _publication_ repository is always paired with a _generated_ repository.
 For the moment a single _thema_ repository is active as it is covering the Core Vocabularies.
 This choice can be revisited in the future.
 
----------
+### SEMIC setup
 [img] 
 [TODO Describe the three different types of repositores that are key for the OSLO toolchain]
 
