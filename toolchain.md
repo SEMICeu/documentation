@@ -49,29 +49,51 @@ The high level design OSLO toolchain is illustrated in the figure below.
 
 The objective is to automate the publication of the data specifications on a publication environment.
 A _publication environment_ is a website identified by a domain. 
-The content of that website can be (and usually is) broader than the data specifications, but here we focus solely on that aspect of the publication environment.
+The content of that website can be (and usually is) broader than the data specifications, but the toolchain is solely concerned with the publication of the data specifications.
 The toolchain is designed to create a static website, i.e. a collection of webpages.
-This simplifies the operational work to serve the data specifications on the publication environment, but more importantly the editors can see what is being published before it is actually shared with the consumers. 
+This design choice simplifies the operational work to serve the data specifications on the publication environment, but also more importantly it provides the editors with a exact view on what is being shared with the consumers on the publication environment.
 
-
-Source code of the static website is stored in the publication repository. The result of the generation process, i.e. the static website, is stored in a generated repository. 
+The source code of the static website, i.e. the publication environment, is stored in the _publication repository_.
+The result of the generation process, i.e. the static website, is stored in a generated repository. 
 A _publication_ repository is thus always paired with a _generated_ repository. 
+The generated repository is kept in sync with the publication repository via a CI/CD execution flow. 
+Each change (commit) to the publication repository will after a successful CI/CD execution lead to a change in the generated repository.
 
-. The data standards are managed in separate thema repositories. Separating the data specifications content from the publication environment creates flexibility and scaling potential, without loosing a central control. The content of the static website is available in the generated repository. The operational deployment the static website is indepedent from , and beyond the configuration of this repository. A setup is described in the documention.
 
-The OSLO toolchain has been deployed in 3 repositories at SEMIC:
+To provide the editorial freedom to let data specifications have their own life cycle, the source of a data specification is stored in their own repository. 
+These repositories are called _thema repositories_. 
+The publication repository contains a list of references to the thema repositories.
+More precisely it are references to a unique point in time, i.e. a commit.
+These references are called publication points.
+Editors primarely interact with thema repositories, only when a new publication of the data specification is required they update the publication repository with a new publication point.
+This setup creates flexibility and scaling potential, without loosing a central control. 
 
-- a _thema_ repository - A repository that contains the source content of one or more data specifications. Currently _all_ the SEMIC data specifications are in one _thema_ repository: [https://github.com/SEMICeu/uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema).
-- a _publication_ repository - A repository associated with a publication environment: [https://github.com/SEMICeu/uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication).
-- a _generated_ repository - The repository that contains the result of the processing: [https://github.com/SEMICeu/uri.semic.eu-generated](https://github.com/SEMICeu/uri.semic.eu-generated) . 
 
-A _publication_ repository is always paired with a _generated_ repository. 
-For the moment a single _thema_ repository is active as it is covering the Core Vocabularies.
-This choice can be revisited in the future.
+
+The deployment of the above design is supported with two template repositories.
+ - _template for a publication repository_ [https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
+ - _template for a thema repository_ [https://github.com/Informatievlaanderen/OSLOthema-template](https://github.com/Informatievlaanderen/OSLOthema-template)
+
+The generated repository does not require a template.
+
+After creating the publication repository from the template the publication repository must be paired with the generated repository. 
+Documentation how to this and more configuration options are found in the documentation that is part from of the template.
+
+
+#### Glossary
+- a _thema_ repository - A repository that contains the source content of one or more data specifications. 
+- a _publication_ repository - A repository associated with a publication environment. It contains the source of the static website published by the publication environment.
+- a _generated_ repository - The repository that contains the result of processing the publication repository using a CI/CD flow.
+
+
+
+
 
 ### SEMIC setup
 [img] 
 [TODO Describe the three different types of repositores that are key for the OSLO toolchain]
+For the moment a single _thema_ repository is active as it is covering the Core Vocabularies.
+This choice can be revisited in the future.
 
 A _publication_ repository is always paired with a _generated_ repository for a given publication endpoint. 
 

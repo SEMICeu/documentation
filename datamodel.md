@@ -1,4 +1,4 @@
-# Data model 
+# Modeling data specifications
 
 ## Data model types
 
