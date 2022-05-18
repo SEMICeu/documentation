@@ -53,11 +53,13 @@ The content of that website can be (and usually is) broader than the data specif
 The toolchain is designed to create a static website, i.e. a collection of webpages.
 This design choice simplifies the operational work to serve the data specifications on the publication environment, but also more importantly it provides the editors with a exact view on what is being shared with the consumers on the publication environment.
 
-The source code of the static website, i.e. the publication environment, is stored in the _publication repository_.
-The result of the generation process, i.e. the static website, is stored in a generated repository. 
+The source code of the static website, i.e. the publication environment, is stored on GitHub in the _publication repository_.
+The result of the generation process, i.e. the static website, is stored in the _generated repository_. 
 A _publication_ repository is thus always paired with a _generated_ repository. 
 The generated repository is kept in sync with the publication repository via a CI/CD execution flow. 
 Each change (commit) to the publication repository will after a successful CI/CD execution lead to a change in the generated repository.
+
+Using the branching functionality of Github repositories, system staging, i.e. publishing on development, testing and production publication environments, is supported. 
 
 
 To provide the editorial freedom to let data specifications have their own life cycle, the source of a data specification is stored in their own repository. 
@@ -66,8 +68,18 @@ The publication repository contains a list of references to the thema repositori
 More precisely it are references to a unique point in time, i.e. a commit.
 These references are called publication points.
 Editors primarely interact with thema repositories, only when a new publication of the data specification is required they update the publication repository with a new publication point.
-This setup creates flexibility and scaling potential, without loosing a central control. 
+This setup creates flexibility and provides editorial scaling potential, without loosing a central control. 
 
+***Roadmap note***:
+The OSLO toolchain has been developed throughout the past lustrum driven by the local needs and the experiences from the editors.
+It is under active maintenance by the Flemisch Government.
+Roughly yearly a new main release is done.
+At the moment (May 2022) the release 3.0 is the latest, and 4.0 is under development.
+The new development involves, among others, a rewrite of the key component EA-to-RDF, i.e. the UML information extraction tool, and activities to facilitate use beyond the original setting. 
+Documentation is added and tools are more streamlined.
+
+For more information on the OSLO toolchain tools, the OSLO maintainers can be contacted. 
+This can be via posting a github issue or via email on digitaal.vlaanderen@vlaanderen.be.
 
 
 The deployment of the above design is supported with two template repositories.
@@ -90,51 +102,45 @@ Documentation how to this and more configuration options are found in the docume
 
 
 ### SEMIC setup
+
+
 [img] 
-[TODO Describe the three different types of repositores that are key for the OSLO toolchain]
-For the moment a single _thema_ repository is active as it is covering the Core Vocabularies.
-This choice can be revisited in the future.
 
-A _publication_ repository is always paired with a _generated_ repository for a given publication endpoint. 
+In contrast to the OSLO toolchain premisse of a single publication environment, i.e. a single website, SEMIC has decided to apply a decentralised publication strategy. 
+Each data specification repository in the SEMICeu space is not only the source of the specification, but also the publication platform for that data specification by using GitHub pages service offering. 
 
-In the SEMIC project the OSLO toolchain has been deployed in 3 repositories:
+In the OSLO toolchain terminology it means that each SEMICeu data specification repository functions as the pair publication and generated repository and aswell as a thema repository.
+Instead of applying the OSLO toolchain setup to each SEMICeu data specification, the toolchain has been deployed in the assumption there is one SEMIC publication environment despite this technically is not the case.
+This deployment corresponds to a minimalistic setup providing already the most important editorial support for creating harmonised artefacts for all data specifications.
 
--  [https://github.com/SEMICeu/uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema) - a _thema_ repository that currently contains _all_ the SEMIC data specifications. This choice can be revisited in the future.
+In the SEMICeu GitHub space the toolchain has been deployed in these repositories:
+
 - [https://github.com/SEMICeu/uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication) - the _publication_ repository
-- [https://github.com/SEMICeu/uri.semic.eu-generated](https://github.com/SEMICeu/uri.semic.eu-generated) - the _generated_ repository. 
+- [https://github.com/SEMICeu/uri.semic.eu-generated](https://github.com/SEMICeu/uri.semic.eu-generated) - the _generated_ repository
+- [https://github.com/SEMICeu/uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema) - a _thema_ repository that currently contains _all_ the SEMIC data specifications. This choice can be revisited in the future.
+All editing happens on the _master_ branch as there are no staging publication environments.
 
 
-
---------
-
-To setup a new publication environment there is also a _template for the publication environment_:
-[https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
-This contains the latest scripts and tooling references.
-
-At SEMIC these repositories are **private** GitHub repositories. 
+Within the SEMICeu GitHub space, these repositories are **private** GitHub repositories. 
 This influences the execution and configuration as operating on private repositories is a differrent GitHub API request than those which can be used for public GitHub repositories.
-More information on the configuration can be found in the [publication environment documentation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md).
+More information this and the configuration can be found in the [publication environment documentation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md).
 
-The setup makes only partial use of the OSLO toolchain ecosystem. 
-Where in OSLO the _generated_ repository is a complete static webpage to be shared with the public, SEMIC uses GitHub Pages to publish each data specification independently. 
-The connection between both repositories is _not_ automated, and requires manual intervention of the editors.
-In SEMIC the OSLO toolchain is defacto used as a locally installed software, where the editor has to take care of adapting the generated results to make it publishable.
+How these repositories feature in the management of data specifications is elaborated in the [editorial flow](./editor.md).
 
-***Design note***: Future work should investigate this issue, as it is errorprone and reduces the efficiency of the toolchain for the editors.
+This setup does not provide the end-to-end experience of the original design, but it is feasible that the CI/CD flow can be adapted to achieve this.
+
+
+----
+The URLs for the data specifications to be consulted by the consumers are therefore strongly connected with the repository namegiving and structure.
 The design should also investigate the issue of the publication of the common domain `http://data.europa.eu/m8g`. 
-
-
-### Operational considerations
-The usage of the OSLO toolchain is disconnected from a publication environment, but as an online editorial tool impacts the current setup.
-For instance, the support for multi-environment publication (development/testing/production) on the same domain is not used.
-Also, checks and quality assurance aspects that could be guaranteed when both are integrated, 
-such as the [out-of-the box source tracing](#HowTo-know-which-repository-is-connected-a-data-specification),
-become editorial attention points.
+----
 
 
 ### (Software) Components
 
-The main components are:
+This section lists the main software components involved in the toolchain of which the editors and developers should be aware. 
+
+They are:
 
 - UML editing tool: Enterprise Architect from Sparx systems 
 - Source Control System: [GitHub](https://github.com)
@@ -142,15 +148,12 @@ The main components are:
 - OSLO toolchain tools:
     - content extraction tool from UML document: [EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF/tree/multilingual)
     - artefact generators: [specgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator/tree/multigual-dev)
-    - _template for publication environment_
-    - _template for thema repository_
+    - template for a publication repository [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
+    - template for a thema repository [OSLOthema-template](https://github.com/Informatievlaanderen/OSLOthema-template)
 
 Commercial fees are only required for Enterprise Architect.
 The others have a free tier (to which the objectives of this work complies) or are Open Source components.
 
-***Roadmap note***: the OSLO toolchain is organically grown over the past years. 
-The team is currently building 4.0 including a rewrite of the EA-to-RDF with improved documentation of the processing rules of the annotations.
-In case of developer related questions on the OSLO-toolchain tools the OSLO maintainers can be best contacted.
 
 
 ## Editors HowTo
@@ -181,17 +184,18 @@ And to remove as much as possible the not necessary boilerplate configuration wi
 
 #### As part of an existing _thema_ repository
 
-In this case the user has to step wise add the necessary configuration and data related to the data specification {NEW}.
+In this case the user has to step wise add the necessary configuration and data related to the data specification {DATASPEC}.
 Either by copying the boilerplate values found in https://github.com/Informatievlaanderen/OSLOthema-template, or by copying the values from another data specification in the _thema_ repository.
 
 The current minimal steps are:
 
-1. add config file {NEW} for the data specification in {THEMAREPO}/config/{NEW}.json 
-2. add the UML document  {THEMAREPO}/{NEW}.eap
+1. add config file {DATASPEC} for the data specification in {THEMAREPO}/config/{DATASPEC}.json 
+2. add the UML document  {THEMAREPO}/{DATASPEC}.eap
 3. add the stakeolder information {THEMAREPO}/stakholders.csv
-4. add the html template information {THEMAREPO}/templates/{NEW}.j2
-5. add the directory {NEW} for additional information in the html representation: {THEMAREPO}/site-skeleton/{NEW}
-    TIP: if the directory is empty, add an empty file called .gitignore to the directory.
+4. add the html template information {THEMAREPO}/templates/{DATASPEC}.j2
+5. add the directory {DATASPEC} for additional information in the html representation: {THEMAREPO}/site-skeleton/{DATASPEC}
+
+***TIP***: if the directory is empty, add an empty file called .gitignore to the directory, to ensure the directory is included in the repository.
 
 ### HowTo add/update a term to/in a data specification
 
