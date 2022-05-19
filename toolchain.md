@@ -131,8 +131,12 @@ This setup does not provide the end-to-end experience of the original design, bu
 
 
 ----
-The URLs for the data specifications to be consulted by the consumers are therefore strongly connected with the repository namegiving and structure.
-The design should also investigate the issue of the publication of the common domain `http://data.europa.eu/m8g`. 
+
+> 
+> The URLs for the data specifications to be consulted by the consumers are therefore strongly connected with the repository namegiving and structure.
+> The design should also investigate the issue of the publication of the common domain `http://data.europa.eu/m8g`. 
+>
+
 ----
 
 

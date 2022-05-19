@@ -1,12 +1,19 @@
 # Modeling data specifications
 
-## Data model types
+This chapter decribes the key notions and information an editor need to understand for modeling data specifications.
+Within this document the term data specification is to refer to its core: the semantical model, i.e. the classes and properties with their semantic description.
+Besides this, and beyond the scope of this chapter, a data specification contains metadata about the document, a changelog, use case descriptions, context, conformance statements and more.
 
-Designing a data model encompasses the following activities:
+First differences between the 
+
+
+## Data specification categories
+
+Designing a data specification encompasses the following activities:
 - determining the appropriate data structures (Class, Property, ...)
 - for each entity the necessary semantical information to relate it to the real world phenonomen it describes.
 
-Data models can be roughly categorized in three groups, according to their intend of reuse.
+Data specifications can roughly be categorized in three categories according to their intend of reuse.
 
 A *vocabulary* is a collection of terms.  
 A term is consists minimally of a label and definition and is identified with a URI. 
@@ -23,12 +30,12 @@ These are called *implementation models*.
 
 
 Aside the differences in the content resulting from the reuse perspective, each category has different expectations on the representation and published artefacts. 
-The listed expectatations are also resulting from the base premise to use the Semantic Web as basis for the design of the data models.
+The listed expectations result from the premisse to use the _Semantic Web_ as __basis__ for the design of the data specification.
 
 Vocabularies expect 
 
   - a document with a simple tabular view of the terms 
-  - persistent identifiers (PURIs) 
+  - dereferenceable persistent identifiers (PURIs)
 
 Application profiles expect
 
@@ -54,34 +61,76 @@ It is very unlikely that an application profile is only reusing terms from exist
 Therefore creating and supporting application profiles means also creating and supporting vocabularies, in order to achieve the objectives. 
 
 
-## Core Vocabularies
-The Core Vocabularies of SEMIC have the design intend of the vocabularies category: namely broad reuse mostly ignorant about the application context.
+The SEMIC Core Vocabularies have the design intend of the vocabularies category: namely broad reuse mostly ignorant about the application context.
 But over the years the SEMIC community has requested support towards the *application* of the Core Vocabularies. 
 Therefore aspects of what are considered above *application profile* expectations are provided into the Core Vocabularies. 
 The provided artefacts can thus be seen as (a small) step in the process of incorporating the core vocabulary in a usage context. 
-For instance, the shacl shape template is very permissive for Core Vocabularies as it soley expresses that the range of a property might be of an expected broad type (e.g. Literal versus Resource). 
+For instance, the SHACL shape for a Core Vocabulary is very permissive as it soley expresses that the range of a property might be of an expected broad type (e.g. Literal versus Resource). 
 
 The Core Vocabularies are showing that the boundaries between a vocabulary and an application profile, as defined above, are not precisely determined.
 Vocabularies, application profiles and implementation models are entities on an axe of reusability/application context.
 Vocabularies are collections of terms formulated in such a way that they are reusable to a maximum extend without becoming semantically too vague/abstract.
 Application profiles are other collections of the same terms but then within a more specific, but still generic  application context. 
-And on the other far extreme are terms used within a very specific context: implementation models.
+And on the other far extreme are the collection of terms used within a very specific context: implementation models.
+
+Despite at this moment no formal expectation of the SEMIC data specifications has been written out, the editors' awareness of this categorisation will aid the semantical model creation.
 
 
-# UML model (annotations)
 
-In SEMIC, the normative documents are Semantic Web models. 
-Semantic Web models identifiy terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass, domain, range, cardinalities, ...). 
+# UML model 
 
-However often a graphical representation is expected.
+As mentioned in the previous section, a SEMIC data specification is build and published according to the best practices of the Semantic Web.
+Following this approach data specifications identifiy terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass, domain, range, cardinalities, ...). 
+
+However because the Semantic Web representations (tables in html or machine readible, i.e. RDF) are not providing consumers a satisfactory way for understanding the data specification, often a graphical representation is provided.
 Graphical representations are able to convey more condensly the key formal logic statements at one glance.
-Instead of reinventing a new graphical language, it has been decided to (re)use UML as graphical modelling language.
+Instead of reinventing a new graphical language, SEMIC uses UML as graphical modelling language.
 
+This introduces the challenge of maintaining the coherency between the Semantic Web representation, i.e. RDF, and the UML representation. 
+The [toolchain](./toolchain.md) deployed by SEMIC implements the following master data management.
+
+(transformation argument)
 For coherency accross all specifications it is easier to transform a UML diagram to a semantic representation, than transforming an semantic representation in a UML notation. 
-But despite the UML diagram is the master data, the normative document is not the UML diagram but the semantic model that it is representing.
+Turning RDF vocabularies into UML fully exploiting the graphical notation possibilies would require to create a new configuration language.
+This language would not only include semantical instructions (for instance this URI is a UML class), but quickly also include styling and other represenation instructions. 
+A large part of the editorial effort for a graphical representation is organising and styling the picture to make it as supportive as possible for the consumers. 
+That is a complex task.
+It is far more easier to exploit the power of a UML modeling tool, offering all the graphical styling possibilities an editor needs, and transform the resulting UML representation.
 
-The [Enterprise Architect Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF) is a tool which converts a UML diagram, expressed as an EAP files, into a neutral representation suited for generating artefects for data specifications.
-The syntax of that representation is json(-ld).
+(editorial argument)
+When interacting with the Working Group the discussion is often driven by a graphical representation.
+Therefore editors naturally first create the graphical representation of the proposed resolution.
+When agreement is reached, the decision is turned into the data specification following the Semantic Web principles by the editor.
+
+Both arguments resulted in the design decision to store the master data of the data specification in a UML model.
+However despite the UML diagram will act as the master data for the data specification, it is the semantical model that is generated from it which the consumers will consider as the data specification.
+
+----
+
+>
+> And therefore existing RDF vocabulary visualisations offer not a mapping to the specific UML language but an ability to graphically browse the RDF vocabulary graph which the user of the visualisation can style and organise themselves. 
+> These visualisation therefore are not intented to explore the semantics behind the 
+>
+> Creating an managing data specification acording to the Semantic Web principles is not a default course for students. 
+> UML modeling is however part of most curicula.
+> Therefore editors are more trained in modeling UML than modeling Semantic Web. 
+>
+
+----
+
+## Extracting the semantical model from the UML model
+
+In the toolchain the creation of the data specification is a roughly a two phase process: first all information of the data specification is collected in an internal representation. And subsequently from that internal representation are the to be published artefacts of the data specification generated.
+The internal representation is the same for each category of data specifications. 
+
+In this section the core activity of the first phase, namely extracting the semantical model in this internal representation expressed in the UML diagram.
+
+
+Within the toolchain the [Enterprise Architect Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF) is used to convert a UML diagram into the internal representation.
+At the moment the sole supported input file format is an EAP file, the format by the UML editor Enterprise Architect.
+This is not a limitation for SEMIC as all data specifications are modeled in Enterprise Architect.
+
+
 
 The connection between the UML graphical language and Semantic Web is based on interpreting the UML language and additional annotations provided by the editors.
 These annotations are key because they control 
