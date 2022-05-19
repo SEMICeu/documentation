@@ -123,41 +123,43 @@ However despite the UML diagram will act as the master data for the data specifi
 In the toolchain the creation of the data specification is a roughly a two phase process: first all information of the data specification is collected in an internal representation. And subsequently from that internal representation are the to be published artefacts of the data specification generated.
 The internal representation is the same for each category of data specifications. 
 
-In this section the core activity of the first phase, namely extracting the semantical model in this internal representation expressed in the UML diagram.
+In this section the core activity of the first phase, namely extracting the semantical model in this internal representation expressed in the UML diagram, is described.
 
 
 Within the toolchain the [Enterprise Architect Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF) is used to convert a UML diagram into the internal representation.
 At the moment the sole supported input file format is an EAP file, the format by the UML editor Enterprise Architect.
 This is not a limitation for SEMIC as all data specifications are modeled in Enterprise Architect.
 
-
-
-The connection between the UML graphical language and Semantic Web is based on interpreting the UML language and additional annotations provided by the editors.
+For a conversion tool to work, one must connect the UML model with the desired Semantic Web representation. 
+The Enterprise Architect Conversion Tool bases itselves on interpreting the UML language (as expected) and additional annotations of the elements in the UML model.
 These annotations are key because they control 
-  - the URI assignment
-  - the human readible semantics
-This information is not part of the _standard_ UML. 
+  - the URI assignmenti, and 
+  - the human readible semantics.
+This information is not part of the _standard_ UML language, and thus must be included in the UML model using a UML language extension mechanism to fullfil the master data design. 
 
-Beyond the supporting the interpretation of the UML diagram, the Enterprise Architect Convertion tool supports annotations to facilitate the control of the scope of the content of the semantic model.
+>
+> The annotations provide a flexible and extensible approach to support the conversion process beyond the semantic interpretation of the UML diagram.
+> Beyond supporting the semantic interpretation of the UML diagram, annotations are also included to facilitate the control the conversion process. of the scope of the content of the semantic model.
+>
 
-An graphical overview of the content of extracted information is shown below.
+Without going into detail, the figure below shows the abstract metamodel of the information that the Enterprise Architect Conversion Tool extracts from the UML model augmented with annotations.
 
 ![EA-annotation.jpg](./EA-annotation.jpg)
 
-Each attribute corresponds with an annotation.
+### UML annotations (tags)
+Most attributes on the figure correspond with an annotation. 
+They are implemented as Enterprise Architect tags. 
+EA tags can be applied to any UML model entity.
 
-
-### EA data model tags
-In Enterprise Architect these annotations are expressed as tags.
-The tags have the following representation
+The tag names follow the pattern
 
 ```
-   {documenttype}-{annotation}-{language}
+   {spec-category}-{annotation}-{language}
 ```
 
-The {documenttype} can be 
-   - **empty**:  corresponds with the vocabulary interpretation. The base information about the term.
-   - **ap**: application profile (ap) 
+The {spec-category} represents the data specification category. The possible values are
+   - **empty**:  the annotation is associated with the vocabulary in which the term is defined. It contains the base information about the term.
+   - **ap**: the annotation is associated with an application profile in which the term is used.
 
 The {language} corresponds to the 2-letter code for a language in which the content of the annotation is expressed.
 
@@ -165,15 +167,14 @@ Examples:
   - `label-nl`: the tag expresses the label of the term in Dutch at the level of a vocabulary. 
   - `ap-usageNote-en`: the tag expresses the usage note in English for the application profile
 
-The pattern is very useful as it allows to have two perspectives on the same term in the UML file.
+The pattern is very useful because it allows to have two perspectives on the same term in the UML file.
 One perspective is the base reference: the vocabulary, and the other perspective is the application usage context.
 Having the ability to have them side by side make it is much easier for editors to ensure the reuse of a term is done properly.
 
-Not all annotations support a prefix {documenttype} or suffix {language}. 
+Not all annotations require a prefix {documenttype} or suffix {language}. 
 For instance: `uri` has no prefix or suffix as a term should have only one globally unique persistent identifier. 
 
-
-### Example
+### Example annotated UML model
 To use the [toolchain](./toolchain.md), editors are required to edit the EAP file of the data specification. 
 The following screenshot shows the class _Person_ in Enterprise Architect. 
 
@@ -182,5 +183,11 @@ The following screenshot shows the class _Person_ in Enterprise Architect.
 In the middle the UML graphical representation is shown. On the right hand side the tags for the selected class _Person_.
 Right from the graphical representation the attributes and relationships of the class are shown.
 
+
+### Complete overview
+
+The thema repository [OSLOthema-toolchainTestbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed) provides a collection of example UML models.
+Editors can use the collection to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
+Developers can use it to do regression testing during development.
 
 
