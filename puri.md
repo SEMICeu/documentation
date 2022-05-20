@@ -11,19 +11,17 @@ Dereferencing is thus a technical mean to ensure that semantics are stable and n
 
 ## PURIs at SEMIC
 
-A PURI is of the form *http://data.europa.eu/{domain}/{reference}*. 
+A PURI is of the form *`http://data.europa.eu/{domain}/{reference}`*, where 
 
-where 
-
- - domain: requested and assigned by Publications Office which is the maintainer of data.europa.eu
- - reference: maintained and assigned by editors of the data model
+ - *{domain}* is requested and assigned by Publications Office, which is the maintainer of **data.europa.eu** domain
+ - *{reference}* is maintained and assigned by editors of the data specification
 
 
 ### Supported domains by SEMIC
 
-TBC
+TBC [TODO]
 
-|domain|description|example|Content|
+|Domain|Description|Example|Content|
 |---|---|---|---|
 |m8g| The Core Vocabularies domain | http://data.europa.eu/m8g/Criterion | [releases/m8g](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/m8g) |
 
@@ -37,11 +35,11 @@ The source code and deployment instructions are found in the repository [uri.sem
 ### Data specifications and PURIs
 
 Data specifications must assign an URI to each term. 
-This URI is either an existing URI or a new URI minted within [one of the persistent URI domains](#Supported-domains-by-SEMIC) from SEMIC.
+This URI is either an existing URI or a new URI minted within [one of the persistent URI domains](#supported-domains-by-semic) from SEMIC.
 
 Any change (creation, updating, ...) to a term associated with a SEMIC owned PURI requires editorial effort to ensure the expected dereferenceability.
 
-In short, the steps are 
+In short, the steps are: 
 
 1. Editors create/update a UML representation of the vocabulary annotated with the right information.
 2. Using the toolchain an RDF file is created that contains the data of the vocabulary.
