@@ -188,7 +188,7 @@ And to remove as much as possible the not necessary boilerplate configuration wi
 
 #### As part of an existing _thema_ repository
 
-In this case the user has to step wise add the necessary configuration and data related to the data specification {DATASPEC}.
+In this case the user has to stepwise add the necessary configuration and data related to the data specification {DATASPEC}.
 Either by copying the boilerplate values found in https://github.com/Informatievlaanderen/OSLOthema-template, or by copying the values from another data specification in the _thema_ repository {THEMAREPO}.
 
 The current minimal steps are:
