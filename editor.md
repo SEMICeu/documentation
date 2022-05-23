@@ -9,7 +9,10 @@ The generic flow is then made more concrete with an example.
 # Generic editorial flow
 
 
-![Example editorial flow](./semic-editor-flow.jpg)
+![Generic editorial flow](./images/editorial-flow-generic.jpg)
+
+  semic-editor-flow.jpg  toolchain-generic.jpg
+
 
 The editorial flow consist of 6 steps:
 
@@ -70,7 +73,10 @@ Topics like version numbering, using shared PURI domain, etc. are affecting the 
 
 To illustrate the generic editorial flow consider the common change request to add a property to a class in a data specification.
 
+
 Let's make the example more concrete: add the property "baptismal name" to the class Person in Core Person Vocabulary and publish this new data specification as _version 2.0.1-Example_.
+
+![Example editorial flow](./images/semic-editor-flow.jpg)
 
 For readibility the figures are placed below.
 

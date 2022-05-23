@@ -45,7 +45,7 @@ Tooling source code and data specifications are all publicly available on [GitHu
 
 The high level design OSLO toolchain is illustrated in the figure below.
 
-![./images/high-level-design.jpg](./images/high-level-design.jpg)
+![./images/toolchain-generic.jpg](./images/toolchain-generic.jpg)
 
 The objective is to automate the publication of the data specifications on a publication environment.
 A _publication environment_ is a website identified by a domain. 
