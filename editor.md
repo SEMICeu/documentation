@@ -11,8 +11,6 @@ The generic flow is then made more concrete with an example.
 
 ![Generic editorial flow](./images/editorial-flow-generic.jpg)
 
-  semic-editor-flow.jpg  toolchain-generic.jpg
-
 
 The editorial flow consist of 6 steps:
 
@@ -32,11 +30,11 @@ The editorial flow consist of 6 steps:
 
 3. Trigger the toolchain
 
-   The editor triggers the rendering of the data specification artefacts by adding a publication point in the [publication reposiory](uri.semic.eu-publication).
+   The editor triggers the rendering of the data specification artefacts by adding a publication point in the [publication reposiory](https://github.com/SEMICeu/uri.semic.eu-publication).
 
 4. Check the generated artefacts
 
-   When the toolchain processing is finished the artefacts are available in the [generated repository](uri.semic.eu-generated).
+   When the toolchain processing is finished the artefacts are available in the [generated repository](https://github.com/SEMICeu/uri.semic.eu-generated).
 
    If the artefacts address the issue as expected the editor continues with the publication (step 5), otherwise another iteration is required (back to step 2 ).
 
@@ -49,7 +47,7 @@ The editorial flow consist of 6 steps:
    This must be done in accordance with the guidelines on these data specification repositories, for instance by creating a new release directory.
 
    Another repository might be affected to: namely when the edit resulted in a RDF content change for a persistent URI.
-   Then the RDF artefact data has to changed according to the steps documented in [uri.semic.eu-puris]().
+   Then the RDF artefact data has to changed according to the steps documented in [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris).
 
 6. Verify the published artefacts 
 
