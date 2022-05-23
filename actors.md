@@ -2,9 +2,18 @@
 
 There are three main types of actors that will interact with the resources and assets produced and managed by SEMIC on the SEMICeu GitHub space: the data specification _consumers_, the data specification _editors_, and the supporting asset _developers_. 
 
-The connection between these three group of actors is the following: The tools and methods are set up by the _developers_ to support the _editors_ in their work to provide together a coherent experience to the _consumers_.
+The connection between these three group of actors is the following: The tools and methods are set up by the _developers_ to support the _editors_ in their work, to provide together a coherent experience to the _consumers_.
 
-Since the _consumers_ are the "end users" of the data specifications, they will not need to interract directly with the SEMICeu GitHub space. Therefore, this page will mainly focus on defining the roles of the _editors_ and _developers_.
+Since the _consumers_ are the "end users" of the data specifications, they will not need to interract directly with the SEMICeu GitHub space. 
+Therefore, this page will focus most on defining the roles of the _editors_ and _developers_, and will provide less details about _consumers_ and other user roles.
+
+1. [Consumers](#consumers)
+2. [Editors](#editors)
+3. [Developers](#developers)
+4. [Other roles](#other-roles)
+    1. [Communication](#communication)
+    2. [Access management](#access-management)
+
 
 
 ## Consumers 
@@ -19,7 +28,7 @@ So, a consumer can also be an enterprise doing business in Japan, for example.
 
 ## Editors
 
-The key users of the tooling and method are _editors_ of data specifications. 
+The key users of the tooling and method are the _editors_ of data specifications. 
 They are expected to have the following skills:   
 
  - can write “formal” statements in vocabularies & application profiles (linguistic skills)  
@@ -37,9 +46,9 @@ At any point in time it should be clear what is the technical content on which t
 
 _Developers_ are the supporting actors in this story.
 Their role is mainly to be able to assist in resolving any technical issue with the setup. 
-Thus in the first place the performed activities are more operational than oriented to new development.
+Thus, the performed activities are primarily of operational nature, and less oriented to new development.
 When it comes to new development, this will be mostly in the area of automation. 
-As already mentioned in the [Historical Background](README.md#historical-background), the SEMIC tooling and organisation is grown step by step. 
+As mentioned in the [Historical Background](README.md#historical-background), the SEMIC tooling and organisation is grown step by step. 
 To support the editors more automation is required.
 
 

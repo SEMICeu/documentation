@@ -188,16 +188,16 @@ And to remove as much as possible the not necessary boilerplate configuration wi
 
 #### As part of an existing _thema_ repository
 
-In this case the user has to step wise add the necessary configuration and data related to the data specification {DATASPEC}.
-Either by copying the boilerplate values found in https://github.com/Informatievlaanderen/OSLOthema-template, or by copying the values from another data specification in the _thema_ repository.
+In this case the user has to stepwise add the necessary configuration and data related to the data specification {DATASPEC}.
+Either by copying the boilerplate values found in https://github.com/Informatievlaanderen/OSLOthema-template, or by copying the values from another data specification in the _thema_ repository {THEMAREPO}.
 
 The current minimal steps are:
 
-1. add config file {DATASPEC} for the data specification in {THEMAREPO}/config/{DATASPEC}.json 
+1. add config file for the data specification {DATASPEC} in {THEMAREPO}/config/{DATASPEC}.json 
 2. add the UML document  {THEMAREPO}/{DATASPEC}.eap
-3. add the stakeolder information {THEMAREPO}/stakholders.csv
-4. add the html template information {THEMAREPO}/templates/{DATASPEC}.j2
-5. add the directory {DATASPEC} for additional information in the html representation: {THEMAREPO}/site-skeleton/{DATASPEC}
+3. add the stakeholder information {THEMAREPO}/stakeholders.csv
+4. add the HTML template information {THEMAREPO}/templates/{DATASPEC}.j2
+5. add the directory {DATASPEC} for additional information in the HTML representation: {THEMAREPO}/site-skeleton/{DATASPEC}
 
 ***TIP***: if the directory is empty, add an empty file called .gitignore to the directory, to ensure the directory is included in the repository.
 
@@ -267,7 +267,7 @@ The business validation errors are always collected and committed to the _genera
 Most editors will therefore use CircleCI to follow the progress of the artefact generation or to understand how their commit to the publication environment triggered a processing error.
 
 Since the toolchain is based on versioned services, a complete block of the execution of the toolchain can _always_ be resolved by reverting to the last correct operational situation in the (_publication_) repositories. 
-This are normal GitHub operations, therefore even editors are capable to realise this.
+These are standard GitHub operations, so editors should be able to realise this.
 
 
 ### HowTo know which repository is connected a data specification 
