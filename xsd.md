@@ -30,10 +30,10 @@ But also this creates a maintenance issue.
 
 ### References
 
-[1] [SEMIC XML Open Guidelines](https://github.com/SEMICeu/OpenGuidelines/blob/main/xml/guidelines.md)
-[2] [Example intermediate json for Core Person](https://github.com/SEMICeu/uri.semic.eu-generated/blob/master/report/doc/core-vocabulary/core-person/all-core-person-ap.jsonld)
-[3] [Example xsd for Core Person](https://github.com/SEMICeu/uri.semic.eu-generated/blob/master/doc/core-vocabulary/core-person/xsd/core-person-ap.xsd)
-[4] [Generator for xsd generator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator/blob/multigual-dev/xsd-generator.js)
-[5] [CircleCI step triggering the xsd generation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/.circleci/config.yml#L300)
-[6] [Toolchain script triggering the xsd generation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/scripts/render-details.sh#L356)
+- [1] [SEMIC XML Open Guidelines](https://github.com/SEMICeu/OpenGuidelines/blob/main/xml/guidelines.md)
+- [2] [Example intermediate json for Core Person](https://github.com/SEMICeu/uri.semic.eu-generated/blob/master/report/doc/core-vocabulary/core-person/all-core-person-ap.jsonld)
+- [3] [Example xsd for Core Person](https://github.com/SEMICeu/uri.semic.eu-generated/blob/master/doc/core-vocabulary/core-person/xsd/core-person-ap.xsd)
+- [4] [Generator for xsd generator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator/blob/multigual-dev/xsd-generator.js)
+- [5] [CircleCI step triggering the xsd generation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/.circleci/config.yml#L300)
+- [6] [Toolchain script triggering the xsd generation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/scripts/render-details.sh#L356)
 
