@@ -19,7 +19,12 @@ Some rules cannot be realised in automated xsd generation, such as R22 and R23.
 Others require more fine-grained discussion like how to turn a label of a term into a valid XML tag name. 
 The label can includes special characters like `(` or a white space, but these characters are invalid XML tag name characters.
 
-
+The result of the XSD generator is thus today only partially the intended outcome. 
+To resolve some issues the UML of the Core Vocabulary might have to revised, but that impacts the other artefacts.
+To minimize the impact, a dedicated UML variant might be created and the outcome of that is published.
+The drawback of that choice is to maintain the coherency between both UML files.
+An alternative might be to apply manual changes before releasing the XSD to the public.
+But also this creates a maintenance issue.
 
 
 
