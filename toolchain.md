@@ -56,7 +56,8 @@ This design choice simplifies the operational work to serve the data specificati
 The source code of the static website, i.e. the publication environment, is stored on GitHub in the _publication repository_.
 The result of the generation process, i.e. the static website, is stored in the _generated repository_. 
 A _publication_ repository is thus always paired with a _generated_ repository. 
-The generated repository is kept in sync with the publication repository via a CI/CD execution flow. 
+The generated repository is kept in sync with the publication repository via a [Continous Integration/Continuous Development](https://en.wikipedia.org/wiki/CI/CD) (CI/CD) execution flow. 
+Within software engineering CI/CD is the name for any automated process supporting the software building and deployment activities.
 Each change (commit) to the publication repository will after a successful CI/CD execution lead to a change in the generated repository.
 
 Using the branching functionality of Github repositories, system staging, i.e. publishing on development, testing and production publication environments, is supported. 
@@ -65,22 +66,14 @@ Using the branching functionality of Github repositories, system staging, i.e. p
 To provide the editorial freedom to let data specifications have their own life cycle, the source of a data specification is stored in their own repository. 
 These repositories are called _thema repositories_. 
 The publication repository contains a list of references to the thema repositories.
-More precisely it are references to a unique point in time, i.e. a commit.
-These references are called publication points.
+More precisely those are references to unique points in time, i.e. commits.
+These references are called __publication points__.
 Editors primarely interact with thema repositories, only when a new publication of the data specification is required they update the publication repository with a new publication point.
 This setup creates flexibility and provides editorial scaling potential, without loosing a central control. 
 
-***Roadmap note***:
-The OSLO toolchain has been developed throughout the past lustrum driven by the local needs and the experiences from the editors.
-It is under active maintenance by the Flemisch Government.
-Roughly yearly a new main release is done.
-At the moment (May 2022) the release 3.0 is the latest, and 4.0 is under development.
-The new development involves, among others, a rewrite of the key component EA-to-RDF, i.e. the UML information extraction tool, and activities to facilitate use beyond the original setting. 
-Documentation is added and tools are more streamlined.
 
 For more information on the OSLO toolchain tools, the OSLO maintainers can be contacted. 
 This can be via posting a github issue or via email on digitaal.vlaanderen@vlaanderen.be.
-
 
 The deployment of the above design is supported with two template repositories.
  - _template for a publication repository_ [https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
@@ -96,6 +89,7 @@ Documentation how to this and more configuration options are found in the docume
 - a _thema_ repository - A repository that contains the source content of one or more data specifications. 
 - a _publication_ repository - A repository associated with a publication environment. It contains the source of the static website published by the publication environment.
 - a _generated_ repository - The repository that contains the result of processing the publication repository using a CI/CD flow.
+- a publication point - A structure describing the data specification to be published as a commit in a thema repository.
 
 
 
@@ -104,12 +98,10 @@ Documentation how to this and more configuration options are found in the docume
 ### SEMIC setup
 
 
-[img] 
-
 In contrast to the OSLO toolchain premisse of a single publication environment, i.e. a single website, SEMIC has decided to apply a decentralised publication strategy. 
 Each data specification repository in the SEMICeu space is not only the source of the specification, but also the publication platform for that data specification by using GitHub pages service offering. 
 
-In the OSLO toolchain terminology it means that each SEMICeu data specification repository functions as the pair publication and generated repository and aswell as a thema repository.
+The OSLO toolchain separates these functionalities (master data source, content generation, publication) in seperated repositories, making it then natural to combine the processing of multiple data specifications in one pair publication and generated repository.
 Instead of applying the OSLO toolchain setup to each SEMICeu data specification, the toolchain has been deployed in the assumption there is one SEMIC publication environment despite this technically is not the case.
 This deployment corresponds to a minimalistic setup providing already the most important editorial support for creating harmonised artefacts for all data specifications.
 
@@ -130,14 +122,27 @@ How these repositories feature in the management of data specifications is elabo
 This setup does not provide the end-to-end experience of the original design, but it is feasible that the CI/CD flow can be adapted to achieve this.
 
 
-----
 
-> 
-> The URLs for the data specifications to be consulted by the consumers are therefore strongly connected with the repository namegiving and structure.
-> The design should also investigate the issue of the publication of the common domain `http://data.europa.eu/m8g`. 
->
+#### Thema repository(ies)
 
-----
+The deployment of the toolchain resulted in a simplied setup with a single thema repository. 
+This choice has been made to facilitate the ongoing harmonisation of the Core Vocabularies and to ensure that future contractors had everything to perform changes.
+One can consider the current SEMIC thema repository as the shared space to have the toolchain functioning.
+
+However this choice has to be reflected on in the future to support editors better. Considerations to organise the content in multiple thema repositories and within the thema repositories are
+
+  - It is best to group all data specifications that are defining PURIs in the same namespace in one thema repository. 
+    Then the risk for creating overlapping concepts is reduced and the impact of a change in a URI is more visible.
+  - It is best to decide a branching and tagging strategy within the thema repository. E.g. each data specification could be hosted on a separate branch.
+
+Note that the some options might be blocked by past decisions. 
+For instance, the PURI design influences strongly the grouping. 
+I.e. the PURIs in the domain `http://data.europa.eu/m8g` form a global space and therefore all data specifications that create PURIs in this domain are best maintained together.
+Modularity in the PURI design will thus also facilitate modularity in the data specification management.
+
+Besides the quick win motivation, none of the above considerations have been discussed in depth. 
+They are part of future improving the editorial flow and must be done in collaboration with the whole SEMIC team.
+
 
 
 ### (Software) Components
@@ -146,7 +151,7 @@ This section lists the main software components involved in the toolchain of whi
 
 They are:
 
-- UML editing tool: Enterprise Architect from Sparx systems 
+- UML editing tool: [Enterprise Architect from Sparx systems](https://www.sparxsystems.eu/enterprise-architect)
 - Source Control System: [GitHub](https://github.com)
 - Continuous Integration/Continous Deployment: [CircleCI](https://circle.com)
 - OSLO toolchain tools:
@@ -158,6 +163,7 @@ They are:
 Commercial fees are only required for Enterprise Architect.
 The others have a free tier (to which the objectives of this work complies) or are Open Source components.
 
+It is assumed throughout the documentation that editors and developers are familiar with GitHub and with the basic CI/CD principle: a commit leads to a execution of a software process.
 
 
 ## Editors HowTo
@@ -189,7 +195,7 @@ And to remove as much as possible the not necessary boilerplate configuration wi
 #### As part of an existing _thema_ repository
 
 In this case the user has to stepwise add the necessary configuration and data related to the data specification {DATASPEC}.
-Either by copying the boilerplate values found in https://github.com/Informatievlaanderen/OSLOthema-template, or by copying the values from another data specification in the _thema_ repository {THEMAREPO}.
+Either by copying the boilerplate values found in [OSLOthema-template](https://github.com/Informatievlaanderen/OSLOthema-template), or by copying the values from another data specification in the _thema_ repository {THEMAREPO}.
 
 The current minimal steps are:
 
@@ -209,12 +215,10 @@ It does not involve manipulating any other data.
 The editor thus updates the UML model in Enterprise Architect, and commits the changed file to the _thema_ repository.
 To trigger the artefact generator, the corresponding publication point has to be adapted in the publication environment.
 
-The rules for manipulating the UML model can be found []().
-
 ### HowTo trigger the generation of the artefacts
 
 Triggering the generation of the artefacts is done via changing the _publication_ repository. 
-When a change is committed to the _publication_ repository, CI/CD process (CircleCI) is initiated which produces the artefacts.
+When a change is committed to the _publication_ repository, a CI/CD process is initiated which produces the artefacts.
 The result of the generation process is stored in the _generated_ repository.
 
 A commit to the _thema_ repository is _not_ triggering the generation process. 
@@ -222,7 +226,7 @@ An editor can thus improve incrementally the content in the _thema_ repository, 
 Ony when needed the editor will trigger the generation process.
 
 The usual commit for triggering the generation process is changing the publication point corresponding to the data specification the editor.
-Guidelines on how to create and maintain publication points are found in the _publication_ repository.
+Guidelines on how to create and maintain publication points are found in the [_publication_ repository](https://github.com/SEMICeu/uri.semic.eu-publication]).
 
 
 ### HowTo track errors
@@ -249,9 +253,9 @@ The variation of these errors require thus developer knowledge, to assess and re
 
 The toolchain foresees in error reporting and user feedback in 2 major channels:
  - via the _generated_ repository
- - via the CircleCI interface
+ - via the CI/CD (CircleCI) interface
 
-When the artefact generation is successful, i.e. technically successful, the _generated_ repository contains the intermediate processing data including logs from the artefacts generators in the directory `report`. In SEMIC it is [here]().
+When the artefact generation is successful, i.e. technically successful, the _generated_ repository contains the intermediate processing data including logs from the artefacts generators in the directory `report`. In SEMIC it is [here](https://github.com/SEMICeu/uri.semic.eu-publication://github.com/SEMICeu/uri.semic.eu-generated/tree/master/report).
 A successful execution is thus equivalent with a commit to the _generated_ repository where the content of the publication point is updated to reflect the change done by the editor.
 To know if the issue is a content issue (category 1) or an artefact generator issue (category 2) the report directory contains the aggregated content, serialised as a json file, produced in the aggregation phase. 
 If the content is present in the aggregated file, then the issue is most likely a category 2 issue. 
@@ -281,7 +285,7 @@ to the aggregated content.
 Per default, this is part in the html representation as a html link to the _thema_ repository pointing to the source of the data specification.
 
 This allows to exactly know the (UML) content on which the data specification is based. 
-Even more, git history provides an undeniable ledger of which changes that have resulted in this state.
+Even more, the GitHub history provides an undeniable ledger of which changes that have resulted in this state.
 
 In SEMIC, where the publication of the artefacts is done manually by copying the generated artefacts to the corresponding Core Vocabulary GitHub repositories, adding this information (even hidden) is aiding the tracing.
 

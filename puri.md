@@ -29,7 +29,7 @@ TBC [TODO]
 
 All PURIs maintained by SEMIC should be handled by the server *uri.semic.eu*.
 On this server a PURI resolvement service is installed that implements the content negotation.
-The source code and deployment instructions are found in the repository [uri.semic.eu-proxy](https://github.com/SEMICeu/uri.semic.eu-proxy).
+The description of the implemented content negotation rules, source code and deployment instructions are found in the repository [uri.semic.eu-proxy](https://github.com/SEMICeu/uri.semic.eu-proxy).
 
 
 ### Data specifications and PURIs
@@ -41,8 +41,8 @@ Any change (creation, updating, ...) to a term associated with a SEMIC owned PUR
 
 In short, the steps are: 
 
-1. Editors create/update a UML representation of the vocabulary annotated with the right information.
-2. Using the toolchain an RDF file is created that contains the data of the vocabulary.
+1. Editors create/update a UML representation of the vocabulary according to the [editorial flow](./editor.md).
+2. Editors select the generated RDF file which contains the data of the vocabulary.
 3. Editors extract from the RDF file the data for each PURI and add it to the  [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) repository.  
 
 Detailed steps are described in [uri.semic.eu-proxy](https://github.com/SEMICeu/uri.semic.eu-proxy).
@@ -50,7 +50,6 @@ Detailed steps are described in [uri.semic.eu-proxy](https://github.com/SEMICeu/
 
 **Note**: These steps are part of the editorial effort editors have to perform manually.
 Therefore this process is a candidate to be automated and integrated in the toolchain.
-
 
 
 

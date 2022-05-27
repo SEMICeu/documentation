@@ -82,10 +82,10 @@ For readibility the figures are placed below.
 1. Find the latest UML master data.
 
     In the [Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00/uml) repository the latest published UML file is located.
-    Copy this version to the [uri.semic.eu-thema]() for editing.
+    Copy this version to the [uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema) for editing.
     
 
-2. Edit the UML file in [uri.semic.eu-thema]
+2. Edit the UML file in [uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema)
 
    The editor edits the copy and adds the property with the required annotations. 
    Figure [1](#figure1) shows the property 'baptismalName' with the label in English, definition and the assigned URI. 

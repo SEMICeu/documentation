@@ -49,7 +49,7 @@ During the editorial process the _editors_ are adapting the data specification: 
 The assessment how to best address the use case is beyond this documentation. 
 Nevertheless, this documentation provides insights in how a resolution is integrated in the published artefacts of the data specification.
 
-Thus, to adequately respond to the use case, _editors_ should understand how to operate the [toolchain](./toolchain.md) to efficiently create the artefacts for a data specification. 
+Thus, to adequately respond to the use case, _editors_ should understand how to operate the [toolchain](#Usage) to efficiently create the artefacts for a data specification. 
 
 
 ### Publication of the artefacts
@@ -112,28 +112,24 @@ Also, the [Toolchain](./toolchain.md) page can offer additional information abou
 
 ## Usage
 
-[TODO: Add an intro sentence]
+To fulfill its editorial task, an editor will interact with the SEMIC GitHub space following the [editorial flow](./editor.md).
 
-For the editors, who are expected to keep the coherency between different repositories, this constitutes a serious challenge. 
+When applying this approach, editors can ensure a coherency between the different data specifications published in distinct repositories.
+Without tooling support this constitutes a serious challenge. 
 Although it seems simple to follow the rule that "when change _A_ is applied to repository _R1_, then apply the same change _A_ to repository _R2_", in reality this ends up being errorprone. 
 In particular, when editors are collaborating, or are replaced over time, such knowledge gets lost.
-An automated tooling that is able to propagate the same change over two data specification will ensure consistency.
+The editorial flow supported by the automated tooling is able to propagate the same change over all impacted data specifications to ensure consistency.
 
-A first step to support editors producing coherent cross-repository artefacts, is the deployment and use of a common __data specification generation tool__.
- 
-The tooling provides support for the common editorial challenges:
-   - how to initiate a new vocabulary
-   - how to add/modify a term to a vocabulary
-   
-but also for the presentation challenges:
-   - how to change the presentation of a vocabulary
-   - how to adapt generated artefacts
-   - how to add new artefacts 
+Editing data specifications requires editors to understand 
+  
+   - the interplay between the GitHub repositories (See the Chapter on the [Editorial Flow](./editor.md) ), 
+   - what data specifications are, and what information these are build of. (See the Chapter on the [data specifications](./datamodel.md) )
+   - what persistent identiers are, and how they are supported by SEMIC. (See the Chapter on [persistent identifiers](./puris.md) )
+   - the operational environment deployed (See the Chapter on the [toolchain](./toolchain.md) )
 
-The [Toolchain](./toolchain.md) page provides the explanation on the technical setup and operation of the tooling.
-Understanding the technical setup requires the understanding of [how data specifications are modelled](./datamodel.md), and how [persistent identifiers](./puri.md) are used.
+All chapters shed a different perspective on creating and publishing data specifications. 
+Each chapter can be read independently, but it might use terms or knowlegde that is explained in depth in other chapters. 
+This organisation is to keep the documents concise and overviewable for a reader.
 
-Whereas the tooling addresses the generation of the artefacts to be published, the publication activity is a manual step. 
-The editor has to _manually_ copy the resulting artefacts to the appropriate location. 
 
 
