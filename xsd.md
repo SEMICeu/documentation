@@ -5,7 +5,7 @@ This section describes the creation of an XSD based on the data specification.
 
 The SEMIC XML Open Guidelines (See [1]) describe the generic rules for building good XML structures.
 The toolchain contains a generator that produces an XSD according to these guidelines. 
-[2] is the current output for Core Person.
+[3] is the current output for Core Person.
 
 Technically the generation process is constructed as follows:
 
