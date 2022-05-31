@@ -19,11 +19,12 @@ A PURI is of the form *`http://data.europa.eu/{domain}/{reference}`*, where
 
 ### Supported domains by SEMIC
 
-TBC [TODO]
-
 |Domain|Description|Example|Content|
 |---|---|---|---|
 |m8g| The Core Vocabularies domain | http://data.europa.eu/m8g/Criterion | [releases/m8g](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/m8g) |
+|r5r| The DCAT-AP domain | [releases/r5r](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/r5r) |
+|p4s| The Single Digital Gateway (OOTS) domain - unused | | [releases/p4s](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/p4s) |
+
 
 ### System setup by SEMIC
 

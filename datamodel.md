@@ -170,6 +170,11 @@ The `{language}` part corresponds to the 2-letter language code (conform to ISO 
 The pattern is very useful because it allows to have two perspectives on the same term in the UML file.
 One perspective is the base reference: the vocabulary, and the other perspective is the application usage context.
 Having the ability to have them side by side makes it is much easier for editors to ensure that the reuse of a term is done properly.
+Artefact generation tools can take benefit from this multi-perspective to implement a sensible fallback approach. 
+For instance, when generating application profile content, first the tags with `{spec-category}` having value `ap` are consulted. 
+If no value is found, then the vocabulary tag is consulted. 
+Only when this is not present a `TODO/NOT FOUND` value is used.
+Application profile editors are thus supported when reusing existing vocabularies.
 
 Not all annotations require a prefix (`{documenttype}`) or suffix (`{language}`). 
 For instance: `uri` has no prefix or suffix as a term should have only one globally unique persistent identifier. 
