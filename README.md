@@ -123,8 +123,16 @@ Also, the [Toolchain](./toolchain.md) page can offer additional information abou
 
 ## Usage
 
-The toolchain is an online service build with a collection of GitHub repositories in the SEMIC GitHub space which are interconnected with automated processing.
-There is no local install required, besides a UML editor.
+The toolchain is an online service build with a collection of GitHub repositories in the SEMIC GitHub space. 
+The repositories are interconnected with automated processing.
+There is no local install required besides a UML editing tool.
+
+The basic idea behind the toolchain service is to consider a data specification as software source code. 
+Software development has a long history in tooling and approaches to manage code changes with different contributors.
+Due to the rise of Open Source software development in the past decades, tools and approaches for building software are now freely and reliable available for anybody.
+One of the best practices within software development is to build tools that release developers from repetitive work and other risks that are part of the software development process.
+Here, the toolchain will release editors from building the artefacts themselves.
+However as consequence, editors must familiarize themselves with the software development mindset. 
 
 Using the toolchain for editing data specifications requires editors to have insight in 
   
@@ -134,7 +142,6 @@ Using the toolchain for editing data specifications requires editors to have ins
    - the operational environment deployed ( See the Chapter on the [toolchain](./toolchain.md) )
 
 These chapters have as purpose to introduce editors, but also developers, to foundational aspects of the editorial flow and how it is supported by the toolchain.
-It is written with the objective to be a starting point for familiarizing with the toolchain so that challenges experienced while editing data specifications can get their place in the story.
 
 The documentation is not a reflection on design decisions, only those that are required to improve the understanding are included.
 But it merely a description of the current state of affairs, with references to find more information for when it is needed by the task.
