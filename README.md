@@ -113,23 +113,46 @@ Also, the [Toolchain](./toolchain.md) page can offer additional information abou
 ## Usage
 
 To fulfill its editorial task, an editor will interact with the SEMIC GitHub space following the [editorial flow](./editor.md).
+The editorial flow is supported by software for producing the data specification artefacts, called *the toolchain*.
+The toolchain is an online service (no local install required) build with a collection of GitHub repositories in the SEMIC GitHub space which are interconnected with automated processing.
 
-When applying this approach, editors can ensure a coherency between the different data specifications published in distinct repositories.
-Without tooling support this constitutes a serious challenge. 
-Although it seems simple to follow the rule that "when change _A_ is applied to repository _R1_, then apply the same change _A_ to repository _R2_", in reality this ends up being errorprone. 
-In particular, when editors are collaborating, or are replaced over time, such knowledge gets lost.
-The editorial flow supported by the automated tooling is able to propagate the same change over all impacted data specifications to ensure consistency.
+In short, the editorial flow for updating a data specification is as follows: editors will edit UML files and commit these to the toolchain repositories. 
+This triggers the artefact generation process. 
+When the artefact generation is finished, the resulting artefacts are collected and made public for the consumers.
 
-Editing data specifications requires editors to understand 
+Editing data specifications requires editors to have insight in 
   
    - the interplay between the GitHub repositories (See the Chapter on the [Editorial Flow](./editor.md) ), 
    - what data specifications are, and what information these are build of. (See the Chapter on the [data specifications](./datamodel.md) )
    - what persistent identiers are, and how they are supported by SEMIC. (See the Chapter on [persistent identifiers](./puris.md) )
    - the operational environment deployed (See the Chapter on the [toolchain](./toolchain.md) )
 
-All chapters shed a different perspective on creating and publishing data specifications. 
-Each chapter can be read independently, but it might use terms or knowlegde that is explained in depth in other chapters. 
-This organisation is to keep the documents concise and overviewable for a reader.
+These chapters have as purpose to introduce editors, but also developers, to foundational aspects of the editorial flow and how it is supported by the toolchain.
+It is written with the objective to be a starting point for familiarizing with the toolchain so that challenges experienced while editing data specifications can get their place in the story.
 
+
+The documentation is not a reflection on design decisions, only those that are required to improve the understanding are included.
+But it merely a description of the current state of affairs, with references to find more information for when it is needed by the task.
+This makes that the documenation may raise valuable (design) questions without answer here. For instance, UML data modeling guidelines are not part of this documentation despite this is valuable knowledge for an editor.
+In the future these aspects find their place in the documentation.
+
+The chapters are written under the assumption of a basic knowledge on the Semantic Web, UML modeling, GitHub and software development by the reader.
+Despite the efforts to make the text understandable for readers with diverse backgrounds, readers might encounter parts using unfamiliar terminology or approaches.
+If this is blocking for the reader, it may be helpful to perform the editorial flow to experience the expressed idea. 
+Also watching the included screencasts might help.
+
+All chapters shed a different perspective on creating and publishing data specifications. 
+Each chapter can be read to a high extend independently. 
+Nevertheless they might use terms or knowlegde explained in other chapters in more depth. 
+Cross referencing is applied to enable readers to find these explanations more quickly.
+This organisation is to keep the documents concise and overviewable for the reader.
+
+
+Supporting the editorial flow with a toolchain fits within the objective for SEMIC to provide more coherent, transparent and efficient services around the data specifications. 
+When applying the documented approach, editors can ensure a coherency between the different data specifications published in distinct repositories.
+Without tooling support this constitutes a serious challenge. 
+Although it seems simple to follow the rule that "when change _A_ is applied to repository _R1_, then apply the same change _A_ to repository _R2_", in reality this ends up being errorprone. 
+In particular, when editors are collaborating, or are replaced over time, such knowledge gets lost.
+Within this objective the toolchain and this documentation should be seen the activity of capturing the existing editorial practices and experiences in such a way that future editors can more easily maintain the data specifications. 
 
 
