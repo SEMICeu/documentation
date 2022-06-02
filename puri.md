@@ -42,7 +42,7 @@ Any change (creation, updating, ...) to a term associated with a SEMIC owned PUR
 
 In short, the steps are: 
 
-1. Editors create/update a UML representation of the vocabulary according to the [editorial flow](./editor.md).
+1. Editors create/update a UML representation of the vocabulary according to the [editorial flow](./editorial_flow.md).
 2. Editors select the generated RDF file which contains the data of the vocabulary.
 3. Editors extract from the RDF file the data for each PURI and add it to the  [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) repository.  
 

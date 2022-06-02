@@ -35,7 +35,7 @@ Because OSLO has been participating in SEMIC from the start, the toolchain incor
 This is especially true for the support of the editorial flow. 
 The main distinction situates at the publication approach: the current SEMIC practice is to use github as publication platform where per data specification a repository is created, while the OSLO toolchain has been designed with a single publication environment in mind.
 
-In the [editorial flow](./editor.md) this distinction is visible in the manual publication steps the editor has to perform; steps that are not required in the OSLO context. This is future work to adapt the tooling to the SEMIC publication context.
+In the [editorial flow](./editorial_flow.md) this distinction is visible in the manual publication steps the editor has to perform; steps that are not required in the OSLO context. This is future work to adapt the tooling to the SEMIC publication context.
 
 The result from the OSLO toolchain can be seen at [data.vlaanderen.be](https://data.vlaanderen.be).
 Tooling source code and data specifications are all publicly available on [GitHub](https://github.com/search?q=org%3AInformatievlaanderen+topic%3Aoslo).
@@ -117,7 +117,7 @@ Within the SEMICeu GitHub space, these repositories are **private** GitHub repos
 This influences the execution and configuration as operating on private repositories is a differrent GitHub API request than those which can be used for public GitHub repositories.
 More information this and the configuration can be found in the [publication environment documentation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md).
 
-How these repositories feature in the management of data specifications is elaborated in the [editorial flow](./editor.md).
+How these repositories feature in the management of data specifications is elaborated in the [editorial flow](./editorial_flow.md).
 
 This setup does not provide the end-to-end experience of the original design, but it is feasible that the CI/CD flow can be adapted to achieve this.
 
