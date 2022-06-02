@@ -60,7 +60,7 @@ It also can play an important role to train future editors to maintain the data 
 ### Publication of the artefacts
 
 After creating the artefacts, the editor has to make them accessible for the consumers. 
-For this the artefacts have to be stored in a publication environment.
+For this the artefacts have to be stored on a publication environment.
 
 Today the publication environment adopted by SEMIC has evolved into using GitHub; one repository per data specification. 
 Over the past years, the organisation and structure of these repositories underwent a gradual harmonisation process.
@@ -68,8 +68,8 @@ More specifically, the consumer access is facilitated through [GitHub Pages](htt
 
 Since these repositories were created before an automated artefact generation tooling was applied, the repositories are set up and organised with the assumption that the content of the repository is manually created. 
 
-The original source code for the [toolchain](#usage) has not designed with this publication choice in mind, therefore editors are today required to manually collect the generated artefacts and store them in the appropriate data specification repository.
-It is future work to reduce the manual activity. 
+The original source code for the [toolchain](#usage) has not designed with this publication design in mind, therefore editors are today required to manually collect the generated artefacts and store them in the appropriate data specification repository.
+It is future work to reduce this manual activity. 
 
 
 
@@ -129,10 +129,10 @@ There is no local install required besides a UML editing tool.
 
 The basic idea behind the toolchain service is to consider a data specification as software source code. 
 Software development has a long history in tooling and approaches to manage code changes with different contributors.
-Due to the rise of Open Source software development in the past decades, tools and approaches for building software are now freely and reliable available for anybody.
+The rise of Open Source software development in the past decades made the tools and approaches for building software freely and reliable available for anybody.
 One of the best practices within software development is to build tools that release developers from repetitive work and other risks that are part of the software development process.
-Here, the toolchain will release editors from building the artefacts themselves.
-However as consequence, editors must familiarize themselves with the software development mindset. 
+Here, the toolchain will release editors from manually building the artefacts exploiting software building tools.
+As consequence, editors must familiarize themselves with the software development mindset. 
 
 Using the toolchain for editing data specifications requires editors to have insight in 
   
@@ -143,10 +143,10 @@ Using the toolchain for editing data specifications requires editors to have ins
 
 These chapters have as purpose to introduce editors, but also developers, to foundational aspects of the editorial flow and how it is supported by the toolchain.
 
-The documentation is not a reflection on design decisions, only those that are required to improve the understanding are included.
+Note that the documentation is not a reflection on design decisions, only those that are required to improve the understanding are included.
 But it merely a description of the current state of affairs, with references to find more information for when it is needed by the task.
-This makes that the documenation may raise valuable (design) questions without answer here. For instance, UML data modeling guidelines are not part of this documentation despite this is valuable knowledge for an editor.
-In the future these aspects find their place in the documentation.
+This makes that the documentation may raise valuable (design) questions without answer here. For instance, UML data modeling guidelines are not part of this documentation despite this is valuable knowledge for an editor.
+In the future these aspects may find their place in the documentation.
 
 The chapters are written under the assumption of a basic knowledge on the Semantic Web, UML modeling, GitHub and software development by the reader.
 Despite the efforts to make the text understandable for readers with diverse backgrounds, readers might encounter parts using unfamiliar terminology or approaches.
@@ -160,6 +160,7 @@ Cross referencing is applied to enable readers to find these explanations more q
 This organisation is to keep the documents concise and overviewable for the reader.
 
 
+----
 Supporting the editorial flow with a toolchain fits within the objective for SEMIC to provide more coherent, transparent and efficient services around the data specifications. 
 When applying the documented approach, editors can ensure a coherency between the different data specifications published in distinct repositories.
 Without tooling support this constitutes a serious challenge. 
@@ -168,7 +169,6 @@ In particular, when editors are collaborating, or are replaced over time, such k
 Within this objective the toolchain and this documentation should be seen the activity of capturing the existing editorial practices and experiences in such a way that future editors can more easily maintain the data specifications. 
 
 
-----
 To fulfill its editorial task, an editor will interact with the SEMIC GitHub space following the [editorial flow](./editorial_flow.md).
 The editorial flow is supported by software for producing the data specification artefacts, called *the toolchain*.
 
