@@ -36,11 +36,21 @@ They are expected to have the following skills:
  - can explain data model issues in a webinar (communication skills)  
  - can write & execute simple software code (software developer skills)  
 
+It is best that editors are familiar with the Semantic Web.
+This means they have knowledge and experience with the terminology, the data formats and tools within the Semantic Web. 
+This documentation is not targetting editors who for the first time model a data specification (according to the Semantic Web principles).
+Nevertheless with a coach and by using the tooling, editors with limited experience become quickly more experienced. 
+
+
 The objective of the provided tooling and processes is that editors focus on their main task; namely, on improving and maintaining the data specification and interacting with the working group communities.    
 
-A key non-functional requirement for the tooling is that it should not create bottlenecks that prevent the scaling up of the editorial effort. Therefore, local installation of software and data should be avoided. The maintenance of the data specification should never be blocked because one editor has sole access to data.
+A key non-functional requirement for the tooling is that it should not create bottlenecks that prevent the scaling up of the editorial effort. 
+Therefore, local installation of software and data should be avoided. 
+The maintenance of the data specification should never be blocked because one editor has sole access to data.
 
-At any point in time it should be clear what is the technical content on which the data specification is build. Any knowledge transfer between editors can then be focussed on sharing the current expertise on the different opinions in the working group instead of figuring out how to pass technical artifacts. 
+Also, at any point in time it should be clear what is the technical content on which the data specification is build. 
+Any knowledge transfer between editors can then be focussed on sharing the current expertise on the different opinions in the working group instead of figuring out how to pass technical artifacts. 
+
 
 ## Developers
 

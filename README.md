@@ -50,18 +50,26 @@ The assessment how to best address the use case is beyond this documentation.
 Nevertheless, this documentation provides insights in how a resolution is integrated in the published artefacts of the data specification.
 
 Thus, to adequately respond to the use case, _editors_ should understand how to operate the [toolchain](#Usage) to efficiently create the artefacts for a data specification. 
+The created artefacts are always a human readable form (e.g. HTML) together with other supportive representations (JSON-LD context files, SHACL shapes, RDF vocabularies, etc.) depending on the nature of the data specification. 
+
+The editorial activity typically requires to iterate several times in order to reach the final resolution.
+The [toolchain](#usage) reduces the workload on editors created by these iterations, makes the artefact creation less errorprone and at the same time increase the coherency between the different data specifications. 
+It also can play an important role to train future editors to maintain the data specifications. 
 
 
 ### Publication of the artefacts
 
-The general idea is to publish each data specification in a human readable form (e.g. HTML) together with other supportive representations (JSON-LD context files, SHACL shapes, RDF vocabularies, etc.). 
-The expectations, representations, and content has evolved over time, but has never been written out in a specification (e.g. style guide). Instead, through community feedback and the experience of the SEMIC editors an implicit expectation has been realised. 
+After creating the artefacts, the editor has to make them accessible for the consumers. 
+For this the artefacts have to be stored on a publication environment.
 
-Today the process adopted by SEMIC has evolved into using GitHub; one repository per data specification. 
+Today the publication environment adopted by SEMIC has evolved into using GitHub; one repository per data specification. 
 Over the past years, the organisation and structure of these repositories underwent a gradual harmonisation process.
+More specifically, the consumer access is facilitated through [GitHub Pages](https://pages.github.com/), a service offered to render webpages stored in a repository.
 
 Since these repositories were created before an automated artefact generation tooling was applied, the repositories are set up and organised with the assumption that the content of the repository is manually created. 
-Each repository has an individual lifecycle.
+
+The original source code for the [toolchain](#usage) has not designed with this publication design in mind, therefore editors are today required to manually collect the generated artefacts and store them in the appropriate data specification repository.
+It is future work to reduce this manual activity. 
 
 
 
@@ -74,6 +82,9 @@ The SEMIC GitHub space contains several dozens of repositories, each falling in 
 
 The data specification repositories are tagged with the topic ***data-specification***.
 The full list of SEMICeu repositories tagged with ***data-specification*** can be found [here](https://github.com/search?q=org%3ASEMICeu+topic%3Adata-specification).
+
+As each data specification follows its an individual lifecycle, their repositories also do. 
+Nevertheless, as part of the editorial process multiple data specification repositories might be updated to address an issue.
 
 
 #### Core Vocabulary repositories
@@ -112,24 +123,40 @@ Also, the [Toolchain](./toolchain.md) page can offer additional information abou
 
 ## Usage
 
-To fulfill its editorial task, an editor will interact with the SEMIC GitHub space following the [editorial flow](./editor.md).
+The toolchain is an online service build with a collection of GitHub repositories in the SEMIC GitHub space. 
+The repositories are interconnected with automated processing.
+There is no local install required besides a UML editing tool.
 
-When applying this approach, editors can ensure a coherency between the different data specifications published in distinct repositories.
-Without tooling support this constitutes a serious challenge. 
-Although it seems simple to follow the rule that "when change _A_ is applied to repository _R1_, then apply the same change _A_ to repository _R2_", in reality this ends up being errorprone. 
-In particular, when editors are collaborating, or are replaced over time, such knowledge gets lost.
-The editorial flow supported by the automated tooling is able to propagate the same change over all impacted data specifications to ensure consistency.
+The basic idea behind the toolchain service is to consider a data specification as software source code. 
+Software development has a long history in tooling and approaches to manage code changes with different contributors.
+The rise of Open Source software development in the past decades made the tools and approaches for building software freely and reliable available for anybody.
+One of the best practices within software development is to build tools that release developers from repetitive work and other risks that are part of the software development process.
+Here, the toolchain will release editors from manually building the artefacts exploiting software building tools.
+As consequence, editors must familiarize themselves with the software development mindset. 
 
-Editing data specifications requires editors to understand 
+Using the toolchain for editing data specifications requires editors to have insight in 
   
-   - the interplay between the GitHub repositories (See the Chapter on the [Editorial Flow](./editor.md) ), 
-   - what data specifications are, and what information these are build of. (See the Chapter on the [data specifications](./datamodel.md) )
-   - what persistent identiers are, and how they are supported by SEMIC. (See the Chapter on [persistent identifiers](./puris.md) )
-   - the operational environment deployed (See the Chapter on the [toolchain](./toolchain.md) )
+   - the interplay between the GitHub repositories ( See the Chapter on the [Editorial Flow](./editorial_flow.md) ) 
+   - what data specifications are, and what information these are build of ( See the Chapter on the [data specifications](./datamodel.md) )
+   - what persistent identiers are, and how they are supported by SEMIC ( See the Chapter on [persistent identifiers](./puris.md) )
+   - the operational environment deployed ( See the Chapter on the [toolchain](./toolchain.md) )
+
+These chapters have as purpose to introduce editors, but also developers, to foundational aspects of the editorial flow and how it is supported by the toolchain.
+
+Note that the documentation is not a reflection on design decisions, only those that are required to improve the understanding are included.
+But it merely a description of the current state of affairs, with references to find more information for when it is needed by the task.
+This makes that the documentation may raise valuable (design) questions without answer here. For instance, UML data modeling guidelines are not part of this documentation despite this is valuable knowledge for an editor.
+In the future these aspects may find their place in the documentation.
+
+The chapters are written under the assumption of a basic knowledge on the Semantic Web, UML modeling, GitHub and software development by the reader.
+Despite the efforts to make the text understandable for readers with diverse backgrounds, readers might encounter parts using unfamiliar terminology or approaches.
+If this is blocking for the reader, it may be helpful to perform the editorial flow to experience the expressed idea. 
+Also watching the included screencasts might help.
 
 All chapters shed a different perspective on creating and publishing data specifications. 
-Each chapter can be read independently, but it might use terms or knowlegde that is explained in depth in other chapters. 
-This organisation is to keep the documents concise and overviewable for a reader.
-
+Each chapter can be read to a high extend independently. 
+Nevertheless they might use terms or knowlegde explained in other chapters in more depth. 
+Cross referencing is applied to enable readers to find these explanations more quickly.
+This organisation is to keep the documents concise and overviewable for the reader.
 
 

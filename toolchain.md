@@ -19,11 +19,12 @@ This limitation brings, however, crucial benefits for the SEMIC project:
 
 
 In this chapter, the tooling that is supporting the editorial flow for managing data specifications is described.
+It focusses on the interplay between the different repositories and how editors can use it to generate the data specification artefacts.
 First the design and how it is setup in SEMIC space is described.
 Then frequently asked questions by the editors and developers are answered.
+The artefact generation itself is documented in the chapter on [artefact generation](./artefact_generation.md).
 
 
-	
 
 ## Setup & Design
 
@@ -35,7 +36,7 @@ Because OSLO has been participating in SEMIC from the start, the toolchain incor
 This is especially true for the support of the editorial flow. 
 The main distinction situates at the publication approach: the current SEMIC practice is to use github as publication platform where per data specification a repository is created, while the OSLO toolchain has been designed with a single publication environment in mind.
 
-In the [editorial flow](./editor.md) this distinction is visible in the manual publication steps the editor has to perform; steps that are not required in the OSLO context. This is future work to adapt the tooling to the SEMIC publication context.
+In the [editorial flow](./editorial_flow.md) this distinction is visible in the manual publication steps the editor has to perform; steps that are not required in the OSLO context. This is future work to adapt the tooling to the SEMIC publication context.
 
 The result from the OSLO toolchain can be seen at [data.vlaanderen.be](https://data.vlaanderen.be).
 Tooling source code and data specifications are all publicly available on [GitHub](https://github.com/search?q=org%3AInformatievlaanderen+topic%3Aoslo).
@@ -85,18 +86,8 @@ After creating the publication repository from the template the publication repo
 Documentation how to this and more configuration options are found in the documentation that is part from of the template.
 
 
-#### Glossary
-- a _thema_ repository - A repository that contains the source content of one or more data specifications. 
-- a _publication_ repository - A repository associated with a publication environment. It contains the source of the static website published by the publication environment.
-- a _generated_ repository - The repository that contains the result of processing the publication repository using a CI/CD flow.
-- a publication point - A structure describing the data specification to be published as a commit in a thema repository.
-
-
-
-
 
 ### SEMIC setup
-
 
 In contrast to the OSLO toolchain premisse of a single publication environment, i.e. a single website, SEMIC has decided to apply a decentralised publication strategy. 
 Each data specification repository in the SEMICeu space is not only the source of the specification, but also the publication platform for that data specification by using GitHub pages service offering. 
@@ -117,7 +108,7 @@ Within the SEMICeu GitHub space, these repositories are **private** GitHub repos
 This influences the execution and configuration as operating on private repositories is a differrent GitHub API request than those which can be used for public GitHub repositories.
 More information this and the configuration can be found in the [publication environment documentation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md).
 
-How these repositories feature in the management of data specifications is elaborated in the [editorial flow](./editor.md).
+How these repositories feature in the management of data specifications is elaborated in the [editorial flow](./editorial_flow.md).
 
 This setup does not provide the end-to-end experience of the original design, but it is feasible that the CI/CD flow can be adapted to achieve this.
 
@@ -145,7 +136,7 @@ They are part of future improving the editorial flow and must be done in collabo
 
 
 
-### (Software) Components
+#### (Software) Components
 
 This section lists the main software components involved in the toolchain of which the editors and developers should be aware. 
 
@@ -155,7 +146,7 @@ They are:
 - Source Control System: [GitHub](https://github.com)
 - Continuous Integration/Continous Deployment: [CircleCI](https://circle.com)
 - OSLO toolchain tools:
-    - content extraction tool from UML document: [EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF/tree/multilingual)
+    - UML content extraction tool: [EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF/tree/multilingual)
     - artefact generators: [specgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator/tree/multigual-dev)
     - template for a publication repository [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
     - template for a thema repository [OSLOthema-template](https://github.com/Informatievlaanderen/OSLOthema-template)
@@ -163,57 +154,10 @@ They are:
 Commercial fees are only required for Enterprise Architect.
 The others have a free tier (to which the objectives of this work complies) or are Open Source components.
 
-It is assumed throughout the documentation that editors and developers are familiar with GitHub and with the basic CI/CD principle: a commit leads to a execution of a software process.
+Users should have an GitHub account. That GitHub account grants also access to CircleCI.
 
 
 ## Editors HowTo
-
-
-### HowTo add a new data specification 
-
-There are basically two approaches to initiate a new data specification, each them addressing a different objective.
-The first is creating a full fresh start with a new _thema_ repository. 
-The advantages and reasons for this choice are that the changes to the GitHub repository reflect the (editorial) changes to data specification. 
-They are thus not mixed with the changes to other data specifications. 
-If the new data specification is an extension or will be part of the common maintenance (e.g. common versioning and publication history) of an existing collection of data specifications, then these should be present in the same GitHub repository.
-
-For instance, if each Core Vocabulary is considered a subpart of the common data model, the Common Core Vocabularies, and the release policy is that a change in the one element will increase the release version number for all individual Core Vocabularies, then a single _thema_ repository is a good choice.
-When each Core Vocabulary has a totally independent release and maintenance flow, with distinct version numbering ( e.g. CCCEV is 2.1.4 and Core Person is 3.2.4) then distinct _thema_ repositories are adviced.
-The release and maintenance processes evolve over time, therefore the organisation of the _thema_ repositories can change over time.
-
-#### An new _thema_ repository
-
-The OSLO-toolchain has prepared a _thema repository template_ [https://github.com/Informatievlaanderen/OSLOthema-template](https://github.com/Informatievlaanderen/OSLOthema-template). 
-Use this to create an initial _thema_ repository in the SEMIC space.
-Mark the new repository as private.
-
-The repository is ready to be used but it is advised to create quickly the minimal context and configuration relating to the target data specification.
-And to remove as much as possible the not necessary boilerplate configuration with sensible values for SEMIC.
-
-
-
-#### As part of an existing _thema_ repository
-
-In this case the user has to stepwise add the necessary configuration and data related to the data specification {DATASPEC}.
-Either by copying the boilerplate values found in [OSLOthema-template](https://github.com/Informatievlaanderen/OSLOthema-template), or by copying the values from another data specification in the _thema_ repository {THEMAREPO}.
-
-The current minimal steps are:
-
-1. add config file for the data specification {DATASPEC} in {THEMAREPO}/config/{DATASPEC}.json 
-2. add the UML document  {THEMAREPO}/{DATASPEC}.eap
-3. add the stakeholder information {THEMAREPO}/stakeholders.csv
-4. add the HTML template information {THEMAREPO}/templates/{DATASPEC}.j2
-5. add the directory {DATASPEC} for additional information in the HTML representation: {THEMAREPO}/site-skeleton/{DATASPEC}
-
-***TIP***: if the directory is empty, add an empty file called .gitignore to the directory, to ensure the directory is included in the repository.
-
-### HowTo add/update a term to/in a data specification
-
-Adding or updating a term to/in a data specification is a UML modeling task. 
-It does not involve manipulating any other data.
-
-The editor thus updates the UML model in Enterprise Architect, and commits the changed file to the _thema_ repository.
-To trigger the artefact generator, the corresponding publication point has to be adapted in the publication environment.
 
 ### HowTo trigger the generation of the artefacts
 
@@ -225,69 +169,29 @@ A commit to the _thema_ repository is _not_ triggering the generation process.
 An editor can thus improve incrementally the content in the _thema_ repository, without being forced to generate each time the artefacts.
 Ony when needed the editor will trigger the generation process.
 
-The usual commit for triggering the generation process is changing the publication point corresponding to the data specification the editor.
-Guidelines on how to create and maintain publication points are found in the [_publication_ repository](https://github.com/SEMICeu/uri.semic.eu-publication]).
+The usual change to the publication repository for triggering the generation process is changing the publication point corresponding to the data specification has edited.
+A publication point is a reference to a data specification in a _thema_ repository.
+An example is shown below:
+```
+{
+    "urlref": "/doc/core-vocabulary/core-person",
+    "repository": "git@uri.semic.eu-thema:SEMICeu/uri.semic.eu-thema.git",
+    "branchtag": "4629f50dbb5953284f83bda9321305bfeb2f7da7",
+    "name": "core-person-ap",
+    "filename": "config/core-person.json",
+    "navigation": {}
+  },
+```
+An elaborated description of the structure and semantics of the attributes is found in the [_publication_ repository](https://github.com/SEMICeu/uri.semic.eu-publication]).
+Intuitively, the above publication point can be read at the following processing instruction: "write in the generated repository at path {urlref} the generated artefacts for the data specification {name} found in configfile {filename} located in {repository} on {branchtag}"
+Thus since changing the data specification content is changing the thema repository, a change in the publication point can correspond to changing the branchtag to point to the new content. 
+Performing this change will trigger the generation of the artefacts.
 
 
-### HowTo track errors
+Besides technical expectations like the repository should be a GitHub repository, the toolchain does not impose editorial management rules on a publication point's structure.
+For instance, SEMIC could impose rules for the namegiving of the filenames, urlref path structure and branchtags, but also SEMIC could impose a correspondence between the branchtag and the urlpath structure.
+This is future work and should be considered in the context of further integrating the toolchain in the publication process.
 
-The editorial process is a continuous process of improvements.
-Errors or mistakes can be either data specification related, either the result of a technical error in the processing.
-
-The first are in general only detectable by the data specification readers. 
-For instance, a definition set to be "TODO definition" by the editor is technically a valid string, but from a data specification incorrect.
-Spotting these kind of errors/mistakes/issues are the responsability,  in the first place,  of the editor but in general of the whole working group.
-The tooling will only facilitate the propagation of the correction throughout all artefacts.
-
-A second category are when the artefacts yield unexpected content (being the presence or absence of data). 
-This might be caused by a bug in the artefact generator, or the result of a mis-configuration (of the artefact generator).
-Check if the same unexpected content is present for other data models, not under your responsability. 
-If that is the case, then the issue is probably a "feature" of the artefact generator. 
-Otherwise, it might be a wrong configuration which can be checked by comparing with a data model configuration for which the artefact is as expected.
-Usually the issue can be efficiently analysed by a developer, as technical experience enable quick tracing of the problem.
-
-The last category are errors that are due to a technical error in the processing. 
-The source can be inside or outside the toolchain.
-E.g. GitHub is not accessible in the organisation.
-The variation of these errors require thus developer knowledge, to assess and react to the issue.
-
-The toolchain foresees in error reporting and user feedback in 2 major channels:
- - via the _generated_ repository
- - via the CI/CD (CircleCI) interface
-
-When the artefact generation is successful, i.e. technically successful, the _generated_ repository contains the intermediate processing data including logs from the artefacts generators in the directory `report`. In SEMIC it is [here](https://github.com/SEMICeu/uri.semic.eu-publication://github.com/SEMICeu/uri.semic.eu-generated/tree/master/report).
-A successful execution is thus equivalent with a commit to the _generated_ repository where the content of the publication point is updated to reflect the change done by the editor.
-To know if the issue is a content issue (category 1) or an artefact generator issue (category 2) the report directory contains the aggregated content, serialised as a json file, produced in the aggregation phase. 
-If the content is present in the aggregated file, then the issue is most likely a category 2 issue. 
-
-When there is no commit present, then the CircleCI processing might be terminated.
-To check this open in the CircleCI UI the execution trace for this repository and corresponding branch.
-A failed step is indicated clearly, and this forms the starting point of the investigation.
-The logged messages are verbose, and normally provide sufficient context to find the source. 
-However in some cases, it is more efficient to rerun the step with SSH active and investigate the processing with the data by connecting through SSH to the CircleCI step. 
-This requires developer knowledge.
-Note that the log messages are targetting developers, not editors. 
-The business validation errors are always collected and committed to the _generated_ repository. 
-Most editors will therefore use CircleCI to follow the progress of the artefact generation or to understand how their commit to the publication environment triggered a processing error.
-
-Since the toolchain is based on versioned services, a complete block of the execution of the toolchain can _always_ be resolved by reverting to the last correct operational situation in the (_publication_) repositories. 
-These are standard GitHub operations, so editors should be able to realise this.
-
-
-### HowTo know which repository is connected a data specification 
-When dealing with issues for a data specification, tracking the data specification to its source is a common issue.
-For that the editor has to create a (mental) map crossing different repositories, which is helped by built-in features of the toolchain.
-
-The toolchain will always add the 
-   - commit hash code for the publication environment that triggered the generation of the artefact, and
-   - commit hash code for the _thema_ repository from which the artefact is generated
-to the aggregated content.
-Per default, this is part in the html representation as a html link to the _thema_ repository pointing to the source of the data specification.
-
-This allows to exactly know the (UML) content on which the data specification is based. 
-Even more, the GitHub history provides an undeniable ledger of which changes that have resulted in this state.
-
-In SEMIC, where the publication of the artefacts is done manually by copying the generated artefacts to the corresponding Core Vocabulary GitHub repositories, adding this information (even hidden) is aiding the tracing.
 
 
 ## Developers HowTo
@@ -302,28 +206,5 @@ These images are build from the open source repositores
   - [OSLO-EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF)
   - [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator)
 
-
-### Howto add a new artefact generator
-
-An artefact generator is a tool that transforms the intermediate aggregated json structure to the desired artefact. 
-It has as input a json file and any additional tool configuration parameters and produces the artefact as a file.
-In the repository [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator) collects the OSLO artefact generators.
-These are all written in javascript. 
-A test suite is available in the repository, illustrating the usage of each artefact generator w.r.t. different parameter choices.
-
-Adding a new artefact generator in that repository is thus the following process in short:
-   - create a new tool as a new javascript tool
-   - add the test suite
-   - build and publish a new docker image
-   - integrate the execution in the CircleCI workflow in a configured publication environment
-   - test the result
-
-When the artefact generator has reached maturity add the additional generation possibility as part of a new version for
-[OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template) to share your work with the community.
-
-
-### Howto modify/improve an artefact generator
-
-The process to update an artefact generator follows the same process as adding a new one.
 
 
