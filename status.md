@@ -14,11 +14,11 @@ Table of Contents
 
 | page | status|
 | ---- | ---- | 
-| README.md | draft  |
-| actors.md | draft  |
-| editorial_flow.md | draft  |
-| datamodel.md | draft | 
-| toolchain.md | draft | 
+| README.md | for internal review|
+| actors.md | for internal review |
+| editorial_flow.md | draft |
+| datamodel.md | for internal review | 
+| toolchain.md | for internal review | 
 | puri.md | draft | 
 | artefact_generation.md | draft |
 | xsd.md | draft  |
