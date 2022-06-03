@@ -1,8 +1,14 @@
 # Modeling data specifications
 
-This chapter decribes the key notions and information an editor needs to understand for _modeling data specifications_.
+This chapter decribes the key notions and information an editor needs to understand for _editing data specifications_.
 Within this document the term data specification is used to refer to its core: **the semantic model**, i.e. the classes and properties with their semantic description.
 Besides this, and beyond the scope of this chapter, a data specification contains metadata about the document, a changelog, use case descriptions, context, conformance statements and more.
+
+First, a overview of different data specification categories are presented. 
+Understanding this categorisation aid editors in their semantic model editing activity as it provides an insight between the generated artefacts and the expectations of consumers.
+Secondly, the chapter discusses master data management of the data specification.
+It describes the approach how editors must construct the UML, the chosen master data representation, to be processed by the toolchain.
+
 
 
 
@@ -51,12 +57,12 @@ _Application profiles_ expect:
 
 _Implementation models_ expect:
 
-  - the same as Application profiles, but usually augmented with additional artefacts specific for a given system,
+  - the same as application profiles, but usually augmented with additional artefacts specific for a given system,
       e.g., a template DB or an API specification.
 
 
-Observe that application profile design is always connected with the creation of a vocabulary associated with application context. 
-It is very unlikely that an application profile is only reusing terms from existing vocabularies. 
+Application profile design is usually connected with the creation of a vocabulary associated with application context. 
+It is uncommon that an application profile is only reusing terms from existing vocabularies. 
 Therefore creating and supporting application profiles means also creating and supporting vocabularies, in order to achieve the objectives. 
 
 
@@ -72,11 +78,10 @@ Vocabularies are collections of terms formulated in such a way that they are reu
 Application profiles are other collections of the same terms, but within a more specific, however still generic, application context. 
 On the other extreme are the collection of terms used within a very specific context: implementation models.
 
-At this moment, however, no formal expectation of the SEMIC data specifications has been written out. We are clarifying these concepts here in the assumption and hope that the editors' awareness of this categorisation will aid the creation the most appropriate semantic models.
+At this moment, however, _no formal expectation of the SEMIC data specifications_ has been written out. We are clarifying these concepts here in the assumption and hope that the editors' awareness of this categorisation will aid the creation the most appropriate semantic models.
 
 
-
-# The UML model
+## The UML model
 
 As mentioned in the previous section, a SEMIC data specification is build and published according to the best practices of the Semantic Web.
 Following this approach data specifications identifiy terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass, domain, range, cardinality restrictions, ...). 
@@ -84,10 +89,13 @@ Following this approach data specifications identifiy terms with URIs and associ
 However, because the Semantic Web representations (tables in HTML or machine readable formats, such as RDF) are not providing consumers a satisfactory way for understanding the data specification, often a graphical representation is provided.
 Graphical representations are able to convey more condensly the key formal logic statements at one glance.
 Instead of reinventing a new graphical language, SEMIC uses the Unified Modeling Language (UML) as graphical modelling language.
-Instead of reinventing a new graphical language, SEMIC uses the Unified Modeling Language (UML) as graphical modelling language.
+
+
+###  Master data management
 
 This introduces the challenge of maintaining the coherency between the Semantic Web representation, i.e. RDF, and the UML representation. 
-The [toolchain](./toolchain.md) deployed by SEMIC implements the following master data management.
+The [toolchain](./toolchain.md) implements the master data management where the UML representation is the master. 
+The motivation is provided below.
 
 #### (transformation argument)
 For coherency accross all specifications it is easier to transform a UML diagram to a semantic representation, than transforming an semantic representation into a UML notation. 
@@ -97,7 +105,7 @@ A large part of the editorial effort for a graphical representation is organisin
 That is a complex task.
 It is far more easier to exploit the power of a UML modeling tool, offering all the graphical styling possibilities an editor needs, and transform the resulting UML representation into a semantic model (such as RDF).
 
-#### (editorial argument)
+##### (editorial argument)
 When interacting with the Working Group the discussion is often driven by a graphical representation.
 Therefore editors naturally first create the graphical representation of the proposed resolution.
 When agreement is reached, the decision is turned into the data specification following the Semantic Web principles by the editor.
@@ -105,51 +113,32 @@ When agreement is reached, the decision is turned into the data specification fo
 Both arguments resulted in the design decision to store the master data of the data specification in a UML model.
 However, despite the fact that the UML diagram will act as the master data for the data specification, it is the **semantic model** that is generated from it that the consumers will consider as the data specification.
 
-----
 
->
-> And therefore existing RDF vocabulary visualisations offer not a mapping to the specific UML language but an ability to graphically browse the RDF vocabulary graph which the user of the visualisation can style and organise themselves. 
-> These visualisation therefore are not intented to explore the semantics behind the 
->
-> Creating an managing data specification acording to the Semantic Web principles is not a default course for students. 
-> UML modeling is however part of most curicula.
-> Therefore editors are more trained in modeling UML than modeling Semantic Web. 
->
+### The semantic model in UML
 
-----
-
-## Extracting the semantic model from the UML model
-
-In the toolchain the creation of the data specification is a roughly a two phase process. First, all information of the data specification is collected in an internal representation. Next, out of that internal representation, the artefacts of the data specification to be published are generated.
-The internal representation is the same for each category of data specification. 
-
-In this section we describe the core activity of the first phase: namely, the extraction of the semantic model expressed in the UML diagram into this internal representation.
-
-
-Within the toolchain the [Enterprise Architect Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF) is used to convert a UML diagram into the internal representation.
-At the moment the only supported input file format is an EAP file, the format used by the UML editor Enterprise Architect to save a project.
-This is not a limitation for SEMIC as all data specifications are modeled in Enterprise Architect.
-
-For a conversion tool to work, one must connect the UML model with the desired Semantic Web representation. 
-The Enterprise Architect Conversion Tool bases itselves on interpreting the UML language (as expected) and additional annotations of the elements in the UML model.
+Having the UML model as master data means that the UML must be constructed to contain **all** information required for the Semantic Web representation. 
+The UML Conversion Tool within the toolchain bases itselves on interpreting the UML language (as expected) and additional annotations of the elements in the UML model.
 These annotations are key because they control 
   - the URI assignments, and 
   - the human readible semantics.
 This information is not part of the _standard_ UML language, and thus must be included in the UML model using a UML language extension mechanism to fullfil the master data design. 
 
->
-> The annotations provide a flexible and extensible approach to support the conversion process beyond the semantic interpretation of the UML diagram.
-> Beyond supporting the semantic interpretation of the UML diagram, annotations are also included to facilitate the control the conversion process. of the scope of the content of the semantic model.
->
+The approach for adding these annotations is elaborated in the following sections.
+After this editors should be able to read the UML of the data specifications in the SEMIC space.
+The impact and usage of each of the possible annotations is beyond the scope of this documentation.
 
-Without going into detail, the figure below shows the abstract metamodel of the information that the Enterprise Architect Conversion Tool extracts from the UML model augmented with annotations.
+
+
+####  UML annotations (tags)
+
+Without going into detail, the figure below shows the abstract metamodel of the information that the UML Conversion Tool extracts from the UML model augmented with annotations. 
+For instance, the metamodel shows that there are _properties_ extracted, and that they may have a label associated. 
 
 ![EA-annotation.jpg](./images/EA-annotation.jpg)
 
-### UML annotations (tags)
 Most attributes in the above figure correspond to an annotation. 
-They are implemented as Enterprise Architect tags. 
-EA tags can be applied to any UML model entity.
+They are implemented as tags. 
+Tags can be applied to any UML model entity.
 
 The tag names used in the SEMIC data specifications will follow the pattern:
 
@@ -179,20 +168,23 @@ Application profile editors are thus supported when reusing existing vocabularie
 Not all annotations require a prefix (`{documenttype}`) or suffix (`{language}`). 
 For instance: `uri` has no prefix or suffix as a term should have only one globally unique persistent identifier. 
 
-### Example annotated UML model
-To use the [toolchain](./toolchain.md), editors are required to edit the EAP file of the data specification. 
+
+#### Example annotated UML model
+
 The following screenshot shows the class _Person_ defined in the Core Person Vocabulary when edited in Enterprise Architect. 
 
 ![EA-example.png](./images/EA-example.png)
 
-In the middle we can see the UML graphical representation. On the right hand side the tags for the selected class _Person_ are shown.
+In the middle the UML graphical representation is shown. On the right hand side the tags for the selected class _Person_ are shown.
 On the left side of the graphical representation the attributes and relationships of the class can be seen.
 
 
-### Complete overview
 
-The [OSLOthema-toolchainTestbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed) _thema_ repository provides a collection of example UML models.
+#### test suite
+
+The [OSLOthema-toolchainTestbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed) is a _thema_ repository that provides a collection of example UML models.
 Editors can use the collection to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
 Developers can use it to do regression testing during development.
+
 
 

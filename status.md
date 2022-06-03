@@ -20,6 +20,7 @@ Table of Contents
 | datamodel.md | draft | 
 | toolchain.md | draft | 
 | puri.md | draft | 
+| artefact_generation.md | draft |
 | xsd.md | draft  |
 | glossary.md | draft |
 

@@ -160,17 +160,3 @@ Cross referencing is applied to enable readers to find these explanations more q
 This organisation is to keep the documents concise and overviewable for the reader.
 
 
-----
-Supporting the editorial flow with a toolchain fits within the objective for SEMIC to provide more coherent, transparent and efficient services around the data specifications. 
-When applying the documented approach, editors can ensure a coherency between the different data specifications published in distinct repositories.
-Without tooling support this constitutes a serious challenge. 
-Although it seems simple to follow the rule that "when change _A_ is applied to repository _R1_, then apply the same change _A_ to repository _R2_", in reality this ends up being errorprone. 
-In particular, when editors are collaborating, or are replaced over time, such knowledge gets lost.
-Within this objective the toolchain and this documentation should be seen the activity of capturing the existing editorial practices and experiences in such a way that future editors can more easily maintain the data specifications. 
-
-
-To fulfill its editorial task, an editor will interact with the SEMIC GitHub space following the [editorial flow](./editorial_flow.md).
-The editorial flow is supported by software for producing the data specification artefacts, called *the toolchain*.
-
-The expectations, representations, and content has evolved over time, but has never been written out in a formal specification (e.g. style guide). 
-Instead, through community feedback and the experience of the SEMIC editors an implicit expectation has been realised. 
