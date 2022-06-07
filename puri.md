@@ -54,9 +54,10 @@ The following domains are domains that are closely related to SEMIC activities b
 |2sa| The Common Assessment Method for Standards and Specifications (CAMSS) domain | |
 
 
-Decommissioned domains:
+The following domains are decommissioned.
 
 |Domain|Description| Notes |
+| --- | --- | --- | 
 | 3rx | The EU Budget Vocabulary | |
 
 
