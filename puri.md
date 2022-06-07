@@ -28,7 +28,7 @@ The following domains are configured on SEMIC PURI service and are ready to be u
 |Domain|Description|Example|Content|
 |---|---|---|---|
 |m8g| The Core Vocabularies domain | http://data.europa.eu/m8g/Criterion | [releases/m8g](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/m8g) |
-|r5r| The DCAT-AP domain | [releases/r5r](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/r5r) |
+|r5r| The DCAT-AP domain | http://data.europa.eu/r5r/availability/experimental | [releases/r5r](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/r5r) |
 |p4s| The EU Once Only Principle (Single Digital Gateway - OOTS) domain - unused | | [releases/p4s](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/p4s) |
 
 The following domains are handled by the [proxy](https://github.com/SEMICeu/uri.semic.eu-proxy) operated by SEMIC .
