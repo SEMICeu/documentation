@@ -8,6 +8,13 @@ Technically it means that content negotation is active for the PURI.
 Without it, nobody can verify the original values and the risk exists that a local usage changes the semantics for the identifier unnoticed.
 Dereferencing is thus a technical mean to ensure that semantics are stable and not shifting behind the back of users.
 
+PURIs form the foundation of data specifications. 
+In order to unambigously fix the semantics of terms in a data specification, each term gets a URI assigned.
+This URI is either an existing URI or a new URI minted within [one of the persistent URI domains](#supported-domains-by-semic) from SEMIC.
+Reusing PURIs from external domains means that the data specification will rely on the semantics and the governance associated with the external URI to set the semantics of the term.
+For those terms that are identified by a PURI within a SEMIC owned domain, it is the editors duty to perform the neccesary editorial effort to maintain the correctness of the shared content via dereferenceability.
+In this chapter the setup and basic editorial maintenance activities for PURIs within SEMIC are described.
+
 
 ## PURIs at SEMIC
 
@@ -91,28 +98,17 @@ The same holds for other representations.
 
 A developer is responsible for enabling (configuring) a domain in the SEMIC PURI service. 
 When setup, editors should only edit the content of the PURI in the content repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris). 
+More precisely, the editors should extract from the generated RDF artefact for the data specification the content for the PURI.
+And then create the RDF serialisations to be added to the content repository according to the conventions explained before.
 
-**Future work**: Today the editors require assistance from a developer to complete the editorial process for PURIs.
+An example is shown in the editorial flow chapter.
+
+
+**Future work 1**: Today the editors require assistance from a developer to complete the editorial process for PURIs.
 This limitation is documented in the proxy documentation and it future work to improve the setup to match the design objectives.
 
 
-### Data specifications and PURIs
-
-Data specifications must assign an URI to each term. 
-This URI is either an existing URI or a new URI minted within [one of the persistent URI domains](#supported-domains-by-semic) from SEMIC.
-
-Any change (creation, updating, ...) to a term associated with a SEMIC owned PURI requires editorial effort to ensure the expected dereferenceability.
-
-In short, the steps are: 
-
-1. Editors create/update a UML representation of the vocabulary according to the [editorial flow](./editorial_flow.md).
-2. Editors select the generated RDF file which contains the data of the vocabulary.
-3. Editors extract from the RDF file the data for each PURI and add it to the  [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) repository.  
-
-Detailed steps are described in [uri.semic.eu-proxy](https://github.com/SEMICeu/uri.semic.eu-proxy).
-
-
-**Note**: These steps are part of the editorial effort editors have to perform manually.
+**Future work 2**: These steps are part of the editorial effort editors have to perform manually.
 Therefore this process is a candidate to be automated and integrated in the toolchain.
 
 
