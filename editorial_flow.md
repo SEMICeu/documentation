@@ -115,17 +115,36 @@ This elaborated scenario shows the minimal steps to use
    When the artefact generation processs is finished, the generated artefacts are available in the generated repository.
    In the demonstration video, the updated artefacts are found within the directory [`/doc`](https://github.com/SEMICeu/uri.semic.eu-generated/tree/example/doc). 
 
-   To prepare the next step, the editor checks the generated artefacts if the result is correct: e.g. if the property is present in all relevant artefacts.
-   
-
-   The editor downloads the artefacts and checks if the generated artefacts contain the new property. 
+   To prepare the next step, the editor checks the generated artefacts whether the result is correct: e.g. if the property is present in all relevant artefacts.
+   There are several ways to check this: the editor can download the artefacts and checks within the downloaded files for the new property, or alternatively the editor can use the GitHub built in diffing support.
 
 5. Publish the generated artefacts 
 
-   TODO
+   (Note) This and the subsequent step are only partially shown in the recording. 
+   In order to demonstrate the steps would require to propagate the demonstration content to the consumers on an official channel.
+   Therefore only the changes that do not lead to immediate and direct impact to the consumers are included in the video.
+
+   (not in recording) To share the new artefacts with the public the editor follows the publication guidelines for Core Person repository. 
+   For that the editor use the version (release number) of the data specification.
+   First, a directory named after the version is created in the Core Person Vocabulary repository in the releases directory.
+   Because the editor must ensure that no information of the previous release of the Core Person Vocabulary is lost in the new release, it is advised to initiated the content of that directory with the content of the previous release.
+   Then the artefacts from the generated repository in the directory `/doc/core-vocabulary/core-person/` are copied into this directory.
+   Committing this will make the content available to the public.
+
+
+   (in recording) Since the `baptismal name` is a new property and thus got a new PURI assigned, the editor has to publish the content in the repository uri.semic.eu-puris.
+   The editor extracts from the generated RDF artefact the triples that are relating to the new property, and store these in a file with the name 'baptimalName'. 
+   A variant for the RDF serialization ntriples, turtle, and RDF/XML with the approporiate file extension is then created.
+   The editor will commit these files in the directory `releases/m8g` in the repository uri.semic.eu-puris.
+
+   
 
 6. Verify the published artefacts 
     
-   TODO
+   (not in recording) All the steps above result in the page  `https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/`. 
+   This is public URL for the html representation of the Core Vocabulary. 
+   On this page the data specification is described and all artefacts and contextual information can be found.
+   By doing a final check of this URL, the editor ensures quality of work.
+   
     
     
