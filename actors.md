@@ -5,7 +5,7 @@ There are three main types of actors that will interact with the resources and a
 The connection between these three group of actors is the following: The tools and methods are set up by the _developers_ to support the _editors_ in their work, to provide together a coherent experience to the _consumers_.
 
 Since the _consumers_ are the "end users" of the data specifications, they will not need to interract directly with the SEMICeu GitHub space. 
-Therefore, this page will focus most on defining the roles of the _editors_ and _developers_, and will provide less details about _consumers_ and other user roles.
+Therefore, this page will focus mosty on defining the roles of the _editors_ and _developers_, and will provide less details about _consumers_ and other user roles.
 
 1. [Consumers](#consumers)
 2. [Editors](#editors)
@@ -23,7 +23,7 @@ Some information about the [Access management](#access-management) is
 
 The main group of consumers of the the data specifications are the EU Member State administrations that want to exchange data cross-border.
 To support that activity an EU wide understanding of the semantics of the shared data is required.
-SEMIC offers a platform to achieve a consensus on the semantics, and the result is being published as a data specification.
+SEMIC offers a platform to achieve a consensus on the semantics, and the result is being published as a *data specification*.
 
 Although the EU Member State administrations are the main target audience, the work and participation is open to anybody. 
 So, a consumer can also be an enterprise doing business in Japan, for example.
@@ -31,18 +31,18 @@ So, a consumer can also be an enterprise doing business in Japan, for example.
 
 ## Editors
 
-The key users of the tooling and method are the _editors_ of data specifications. 
+The key users of the tooling and methods are the _editors_ of data specifications. 
 They are expected to have the following skills:   
 
- - can write “formal” statements in vocabularies & application profiles (linguistic skills)  
- - can organise information in a data model (structuring skills)  
- - can explain data model issues in a webinar (communication skills)  
- - can write & execute simple software code (software developer skills)  
+ - can write “formal” statements in vocabularies & application profiles (***linguistic skills***)  
+ - can organise information in a data model (***structuring skills***)  
+ - can explain data modeling issues in a webinar (***communication skills***)  
+ - can write & execute simple software code (***software developer skills***)  
 
-It is best that editors are familiar with the Semantic Web.
-This means they have knowledge and experience with the terminology, the data formats and tools within the Semantic Web. 
-This documentation is not targetting editors who for the first time model a data specification (according to the Semantic Web principles).
-Nevertheless with a coach and by using the tooling, editors with limited experience become quickly more experienced. 
+The editors should be familiar with the Semantic Web.
+That is, they should have knowledge and experience with the terminology, the data formats and tools used in the Semantic Web community. 
+This documentation is not targetting editors who model a data specification (according to the Semantic Web principles) for the first time.
+Nevertheless, with a coach, and by using the tooling, editors with limited experience can become more experienced quite quickly. 
 
 
 The objective of the provided tooling and processes is that editors focus on their main task; namely, on improving and maintaining the data specification and interacting with the working group communities.    
@@ -62,7 +62,7 @@ Their role is mainly to be able to assist in resolving any technical issue with 
 Thus, the performed activities are primarily of operational nature, and less oriented to new development.
 When it comes to new development, this will be mostly in the area of automation. 
 As mentioned in the [Historical Background](README.md#historical-background), the SEMIC tooling and organisation is grown step by step. 
-To support the editors more automation is required.
+To support the editors even better more automation is required.
 
 
 The prerequisite knowlegde of a developer can be circumscribed as being a Swiss knife (or a full-stack) developer.
@@ -84,7 +84,7 @@ For instance, whereas for software the scope of a branch in a repository is to e
 
 
 ## Other roles
-Besides the main roles that the above described actors have to fulfill, there exist also other roles, involving specific activities that certain actors need to assume. These activities are described below.
+Besides the main roles that the above described actors have to fulfill, there exist also other roles, involving specific activities, that certain actors need to assume. These activities are described below.
 
 ### Communication
 Besides the activities related to the creation and management of the data specifications, there are also __communication activities__, like publishing the results on JoinUp.
