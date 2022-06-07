@@ -83,9 +83,6 @@ Using this branch all activities can demonstrated on a working environment, exce
 
 This elaborated scenario shows the minimal steps to use  
 
-> ![Example editorial flow](./images/semic-editor-flow.jpg)
-> 
-> For readibility the figures are placed below.
 
 ## part 1 - change the UML model ( [video](./images/step1.mp4) )
 
@@ -125,26 +122,10 @@ This elaborated scenario shows the minimal steps to use
 
 5. Publish the generated artefacts 
 
-   To share the new artefacts with the public the editor follows the publication guidelines for Core Person repository.
-
-   First, a directory `2.0.1-Example` is created in the Core Person Vocabulary repository in the releases directory.
-   Because the editor must ensure that no information of the previous release of the Core Person Vocabulary is lost in the new release, it is advised to initiated the content of that directory with the content of the previous release.
-   Then the artefacts from the generated repository in the directory `/doc/core-vocabulary/core-person/2.0.1-Examples` are copied into this directory.
-   Committing this will make the content available to the public.
-   
-   Since the `baptismal name` is a new property and thus got a new PURI assigned, the editor has to publish the content in the repository uri.semic.eu-puris.
-   Extract from the generated RDF artefact the triples that are relating to the new property, and store these in a file with the name 'baptimalName'. 
-   Create a variant for the RDF serialization ntriples, turtle, and RDF/XML with the approporiate file extension.
-   Commit these files in the directory `releases/m8g`.
-
-   
+   TODO
 
 6. Verify the published artefacts 
     
-   All the steps above result in the page  `https://semiceu.github.io/CCCEV/releases/2.0.1-Examples/`. 
-   This is public URL for the html representation of the Core Vocabulary. 
-   On this page the data specification is described and all artefacts and contextual information can be found.
-   By doing a final check of this URL, the editor ensures quality of work.
-   
+   TODO
     
     
