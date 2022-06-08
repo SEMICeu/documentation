@@ -12,7 +12,10 @@ Therefore, this page will focus mosty on defining the roles of the _editors_ and
 3. [Developers](#developers)
 4. [Other roles](#other-roles)
     1. [Communication](#communication)
-    2. [Access management](#access-management)
+
+
+To perform their tasks many of these roles require access to the SEMIC assets, in particular the SEMIC GitHub space. 
+This chapter on the roles is concluded with the [user access management](#access-management) applied.
 
 
 
@@ -88,10 +91,17 @@ Besides the activities related to the creation and management of the data specif
 
 These are not documented here (yet).
 
-### Access management
+# Access management
 
-All user access control operations can be done by the __SEMIC admin__ on [Github](https://github.com/orgs/SEMICeu/people).
+In order for editors to perform their activities they need access to the necessary SEMIC assets. 
+For the activities described in this documentation editors only require write permissions to the SEMIC GitHub space.
+To facilitate the management, an [editor team](https://github.com/orgs/SEMICeu/teams/core-voc-editors) has been created in the SEMIC GitHub space.
 
+Developers usually are granted more extensive rights to perform the various tasks on the SEMIC assets. 
+For them and the EC officials are part of the [SEMIC administrator team](https://github.com/orgs/SEMICeu/teams/administrators).
+They have full access to the SEMIC space.
+
+Individual user access control operations can be done by the __SEMIC admin__ on [Github](https://github.com/orgs/SEMICeu/people).
 
 
 

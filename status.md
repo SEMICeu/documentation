@@ -12,15 +12,15 @@ Table of Contents
  - xsd : the xsd artefact
  - glossary 
 
-| page | status|
-| ---- | ---- | 
-| README.md | reviewed and approved by the editors' team |
-| actors.md | reviewed and approved by the editors' team |
-| editorial_flow.md | draft |
-| datamodel.md | for internal review | 
-| toolchain.md | for internal review | 
-| puri.md | draft | 
-| artefact_generation.md | draft |
+| page | status| Planned date internal review | Planned dated review |
+| ---- | ---- |  --- |  --- | 
+| README.md | reviewed and approved by the editors' team | 7 june 2022 | 9 june 2022 |
+| actors.md | reviewed and approved by the editors' team | 7 june 2022 | 9 june 2022 |
+| editorial_flow.md | draft | 8 june 2022 | 
+| datamodel.md | for internal review |  8 june 2022 | 9 june 2022 |
+| toolchain.md | for internal review |  8 june 2022 | 9 june 2022 |
+| puri.md | for internal review | 8 june 2022 | |
+| artefact_generation.md | for internal review | 9 june 2022 |
 | xsd.md | draft  |
 | glossary.md | draft |
 
