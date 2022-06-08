@@ -4,7 +4,8 @@ An editorial flow is initiated when issues for a data specification are to be ad
 This section provides a high level overview how the editor will interact with the SEMIC GitHub space to execute this task.
 
 First the editorial flow is described generically, at design level. 
-The generic flow is then made more concrete with an example.
+Next, the generic editorial flow is made more concrete with an example.
+To make the example more insightful, it is composed of three short screen recordings each illustrating some steps.
 
 # Generic editorial flow
 
@@ -79,10 +80,12 @@ The video recordings are:
    - [part 2](./images/step2.mp4)
    - [part 3](./images/step3.mp4)
 
-All demonstrated changes are performed on separate branch called `example`. 
+All demonstrated changes are performed on the involved repositories using a demonstration branch called `example`.
 Using this branch all activities can demonstrated on a working environment, except for the last step: the official publication of the transformation.
 
-This elaborated scenario shows the minimal steps to use  
+*Note*: The recording applies one way to interact with the repositories. 
+This approach has been selected to facilitate the recording, not because is the most efficient or best way to interact with the SEMIC GitHub space.
+Editors can use their preferred way to interact with the SEMIC GitHub space.
 
 
 ## part 1 - change the UML model ( [video](./images/step1.mp4) )
