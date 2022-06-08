@@ -20,15 +20,15 @@ The editorial flow consist of 6 steps:
    From that repository the UML file is copied to the uri.semic.eu-thema repository.
 
 
-2. Edit the UML file in [uri.semic.eu-thema]
+2. Edit the UML file 
 
    The editor opens and edits the UML file in the appropriate UML editor. 
    Then the UML structure is adapted to resolve the issue. 
    The UML structure is changed according to the [toolchain UML data model requirements](./datamodel.md). 
 
-   The changed UML file is committed in the uri.semic.eu-thema repository.
+   The changed UML file is committed in the [thema repository](https://github.com/SEMICeu/uri.semic.eu-thema).
 
-3. Trigger the toolchain
+3. Trigger the toolchain in the publication repository.
 
    The editor triggers the rendering of the data specification artefacts by adding a publication point in the [publication reposiory](https://github.com/SEMICeu/uri.semic.eu-publication).
 
@@ -38,7 +38,7 @@ The editorial flow consist of 6 steps:
 
    If the artefacts address the issue as expected the editor continues with the publication (step 5), otherwise another iteration is required (back to step 2 ).
 
-5. Publish the generated artefacts 
+5. Publish the generated artefacts.
 
 
    To provide the consumers access to the updated artefacts, the editor must publish the generated artefacts to the right places by copying the content to other GitHub repositories.
@@ -46,10 +46,11 @@ The editorial flow consist of 6 steps:
    This consists of copying artefacts to the data specification repository from where the editorial flow was started. 
    This must be done in accordance with the guidelines on these data specification repositories, for instance by creating a new release directory.
 
-   Another repository might be affected to: namely when the edit resulted in a RDF content change for a persistent URI.
-   Then the RDF artefact data has to changed according to the steps documented in [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris).
+   Another repository might be affected to: namely when the edit resulted in a RDF content change for a persistent URI published by SEMIC.
+   Then this change must be propagated to the PURI content repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris).
+   
 
-6. Verify the published artefacts 
+6. Verify the published artefacts.
 
    To finalise the editorial flow a final verifaction of the published data specification is adviced.
    The editor will then take the role of the consumer to investigate if the new situation is as desired.
@@ -132,10 +133,12 @@ This elaborated scenario shows the minimal steps to use
    Committing this will make the content available to the public.
 
 
-   (in recording) Since the `baptismal name` is a new property and thus got a new PURI assigned, the editor has to publish the content in the repository uri.semic.eu-puris.
-   The editor extracts from the generated RDF artefact the triples that are relating to the new property, and store these in a file with the name 'baptimalName'. 
-   A variant for the RDF serialization ntriples, turtle, and RDF/XML with the approporiate file extension is then created.
-   The editor will commit these files in the directory `releases/m8g` in the repository uri.semic.eu-puris.
+   (in recording) Since the `baptismal name` is a new property and thus got a new PURI assigned, the editor has to publish the content in the PURIS content repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris). 
+   The editor extracts from the generated RDF artefact the triples that are relating to the new property and stores these in a file with the name 'baptimalName'. 
+   A variant for the RDF serialization ntriples, turtle, and RDF/XML with the approporiate file extension is then created using one of the many RDF serialisation tools. In the video an online web tool is used.
+   The editor will commit these files in the directory `releases/m8g` in the PURIs content repository uri.semic.eu-puris.
+   For demonstration purposes the file created during the video are stored in the branch `example`, e.g. [baptismalName.ttl](https://github.com/SEMICeu/uri.semic.eu-puris/blob/example/releases/m8g/baptismalName.ttl).
+   
 
    
 

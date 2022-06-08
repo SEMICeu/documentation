@@ -19,6 +19,15 @@ Within the toolchain the [UML Conversion Tool](https://github.com/Informatievlaa
 
 The artefact generation phase consists of parallell executions targetting one artefact.
 
+The toolchain provides a number of artefact generators. 
+Below for each artefact generator a short description is provided.
+
+During editing a data specifications editors should not be concerned with the internal details of the artefact generators.
+However experienced editors may start reflecting on whether the produced artefacts satisfy the consumers' expectations or needs.
+At that moment editors become developers, namely evaluating and desiging the expected outcome of the artefacts.
+The provided documentation targets the knowledge required for performing editorial activities. 
+Design considerations for developers are beyond scope.
+
 ### HTML artefact generator
 
 The HTML artefact generator makes a HTML file by rendering an template with the internal representation.
@@ -75,7 +84,7 @@ The generation is language sensitive as the validation messages are based on the
 Therefore the language to use from the internal representation must be specified.
 In a multilingual context, the second representation is required as it is the only way to create a error context aware message in multiple languages.
 
-
+In the toolchain the first representation is active.
 
 
 ## Howto add a new artefact generator
