@@ -20,7 +20,7 @@ Table of Contents
 | datamodel.md | for internal review |  8 june 2022 | 9 june 2022 |
 | toolchain.md | for internal review |  8 june 2022 | 9 june 2022 |
 | puri.md | for internal review | 8 june 2022 | |
-| artefact_generation.md | for internal review | 9 june 2022 |
+| artefact_generation.md | draft | 9 june 2022 |
 | xsd.md | draft  |
 | glossary.md | draft |
 
