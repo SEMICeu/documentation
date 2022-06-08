@@ -19,8 +19,8 @@
 | README.md | reviewed and approved by the editors' team | 7 june 2022 | 9 june 2022 |
 | actors.md | reviewed and approved by the editors' team | 7 june 2022 | 9 june 2022 |
 | editorial_flow.md | draft | 8 june 2022 | 10 june 2022 |
-| datamodel.md | for internal review |  8 june 2022 | 9 june 2022 |
-| toolchain.md | for internal review |  8 june 2022 | 9 june 2022 |
+| datamodel.md | for internal review |  8 june 2022 | 10 june 2022 |
+| toolchain.md | for internal review |  8 june 2022 | 10 june 2022 |
 | puri.md | for internal review | 8 june 2022 | 10 june 2022 |
 | artefact_generation.md | draft | 9 june 2022 | |
 | xsd.md | draft  | 9 june 2022 |
