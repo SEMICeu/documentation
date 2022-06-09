@@ -18,14 +18,13 @@
 | ---- | ---- | ---- | ---- | ---- | 
 | README.md | Under internal revision | 7 june 2022 | 9 june 2022 | |
 | actors.md | Ready for internal revision (2nd round) | 7 june 2022 | 9 june 2022 | |
-| editorial_flow.md | Draft | 8 june 2022 | 10 june 2022 | |
-| datamodel.md | Ready for internal revision |  8 june 2022 | 10 june 2022 | |
-| toolchain.md | Under internal revision |  8 june 2022 | 10 june 2022 | |
+| editorial_flow.md | ready for internal review | 8 june 2022 | 10 june 2022 | |
+| datamodel.md | Under internal review |  8 june 2022 | 10 june 2022 | |
+| toolchain.md | Under internal review |  8 june 2022 | 10 june 2022 | |
 | puri.md | Ready for internal review | 8 june 2022 | 10 june 2022 | |
 | artefact_generation.md | Draft | 9 june 2022 | | |
 | xsd.md | Draft  | 9 june 2022 | |
 | glossary.md | Draft | |
-
 
 
 **Legend for status:**
