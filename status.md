@@ -16,11 +16,11 @@
 
 | Page | Status| Planned date for<BR>'Ready for internal review' | Planned date for<BR>'Ready for final review' | Planned date for <BR>'Approved' |
 | ---- | ---- | ---- | ---- | ---- | 
-| README.md | Ready for internal review (2nd round) | 7 june 2022 | 9 june 2022 | |
-| actors.md | Ready for internal review (2nd round) | 7 june 2022 | 9 june 2022 | |
+| README.md | Under internal revision (2nd round) | 7 june 2022 | 9 june 2022 | |
+| actors.md | Under internal revision (2nd round) | 7 june 2022 | 9 june 2022 | |
 | editorial_flow.md | Draft | 8 june 2022 | 10 june 2022 | |
 | datamodel.md | Ready for internal revision |  8 june 2022 | 10 june 2022 | |
-| toolchain.md | Ready for internal review |  8 june 2022 | 10 june 2022 | |
+| toolchain.md | Under internal revision |  8 june 2022 | 10 june 2022 | |
 | puri.md | Ready for internal review | 8 june 2022 | 10 june 2022 | |
 | artefact_generation.md | Draft | 9 june 2022 | | |
 | xsd.md | Draft  | 9 june 2022 | |
