@@ -67,9 +67,8 @@ Over the past years, the organisation and structure of these repositories underw
 More specifically, the consumers' access to the content of these repositories is facilitated through [GitHub Pages](https://pages.github.com/), a service offered to render webpages stored in a repository.
 
 Since these repositories were created before an automated artefact generation tooling was applied, the repositories are set up and organised with the assumption that the content of the repository is manually created. 
-
-The original source code for the *toolchain* has not been designed with this publication design in mind, therefore editors are today required to manually collect the generated artefacts and store them in the appropriate data specification repository.
-It is future work to reduce this manual activity. 
+The full integration of this publication design in the automation requires adaptations to the automation and the organisation and setup of the data specification repositories. 
+This is future work. Therefore editors are today required to manually collect the generated artefacts and store them in the appropriate data specification repository.
 
 
 
@@ -139,7 +138,7 @@ Using the toolchain for editing data specifications requires editors to have ins
    - the interplay between the GitHub repositories (see the chapter on the [Editorial flow](./editorial_flow.md)) 
    - what data specifications are, and what information are they built of (see the chapter on the [Data specifications](./datamodel.md))
    - what persistent identifiers are, and how their use is supported by SEMIC (see the chapter on [Persistent identifiers](./puri.md))
-   - the operational environment deployed (see the chapter on the [Toolchain](./toolchain.md))
+   - the deployed tooling for the generation of artefacts (see the chapter on the [Toolchain](./toolchain.md))
 
 The purpose of these chapters is  to introduce *editors*, but also *developers*, to foundational aspects of the *editorial flow* and how it is supported by the *toolchain*.
 
