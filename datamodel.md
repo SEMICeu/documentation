@@ -6,7 +6,7 @@ Besides this, and beyond the scope of this chapter, a data specification contain
 
 First, an overview of the different data specification categories is presented. 
 Understanding this categorisation helps the editors in their semantic model editing activity, as it provides an insight into the relationship between the generated artefacts and the expectations of consumers.
-Secondly, the chapter discusses master data management of the data specification.
+The second part of this chapter discusses the master data management of the data specification.
 It describes the approach how editors must construct the UML, the chosen master data representation, to be processed by the toolchain.
 
 
@@ -99,8 +99,8 @@ The motivation is provided below.
 
 #### (transformation argument)
 For coherency across all specifications it is easier to transform a UML diagram to a semantic representation, than transforming an semantic representation into a UML notation. 
-Turning RDF vocabularies into UML, fully exploiting the graphical notation possibilies, would require to create a new configuration language.
-This language would not only include semantical instructions (for instance, this URI is a UML class), but likely would also need to include styling and other represenation instructions. 
+Turning RDF vocabularies into UML, to fully exploit the graphical notation possibilies, would require to create a new configuration language.
+This language would not only include semantical instructions (such as "this URI is a UML class"), but likely would also need to include styling and other represenation instructions. 
 A large part of the editorial effort for a graphical representation is organising and styling the picture to make it as suggestive and meaningful as possible for the consumers. 
 That is a complex task.
 It is far more easier to exploit the power of a UML modeling tool, offering all the graphical styling possibilities an editor needs, and transform the resulting UML representation into a semantic model (such as RDF).
@@ -108,7 +108,7 @@ It is far more easier to exploit the power of a UML modeling tool, offering all 
 #### (editorial argument)
 The interactions and discussions within a Working Group are often driven by a graphical representation.
 Therefore, naturally, editors first create the graphical representation of the proposed resolution.
-When agreement is reached, the decision is turned into the data specification following the Semantic Web principles by the editor.
+When agreement is reached, the decision is turned by the editor into the data specification following the Semantic Web principles.
 
 Both arguments resulted in the design decision to store the master data of the data specification in a UML model.
 However, despite the fact that the UML diagram will act as the master data for the data specification, it is the **semantic model** that is generated from it that the consumers will consider as the data specification.
@@ -117,7 +117,7 @@ However, despite the fact that the UML diagram will act as the master data for t
 ### The semantic model in UML
 
 Having the UML model as master data means that the UML must be constructed to contain **all** information required for the Semantic Web representation. 
-The UML Conversion Tool within the toolchain bases itselves on interpreting not only the standard semantics of the UML language, as it is expected, but also of the additional annotations that are defined on the UML model elements.
+The UML Conversion Tool that is part of the toolchain is capable of interpreting not only the standard semantics of the UML language, as it is expected, but also of the additional annotations that are defined on the UML model elements.
 These annotations are key because they control :
   - the URI assignments, and 
   - the human readible semantics.
@@ -125,8 +125,8 @@ These annotations are key because they control :
 This information is not part of the _standard_ UML language, and thus must be included in the UML model using a UML language extension mechanism, in order to fullfil the master data design. 
 
 The approach for adding these annotations is elaborated in the following sections.
-After reading these sections, the editors should be able to read the UML of the data specifications in the SEMIC space.
-The impact and usage of each of the possible annotations is beyond the scope of this documentation.
+After the editors familiarize themselves with these sections, they should be able to read the UML of the data specifications in the SEMIC space.
+The description of the impact and usage of each of the possible annotations is beyond the scope of this documentation.
 
 
 
@@ -138,53 +138,54 @@ For instance, the metamodel shows that there are _properties_ extracted, and tha
 ![EA-annotation.jpg](./images/EA-annotation.jpg)
 
 Most attributes in the above figure correspond to an annotation. 
-They are implemented as tags. 
+They are implemented as **tags**. 
 Tags can be applied to any UML model entity.
 
-The tag names used in the SEMIC data specifications will follow the pattern:
+The **tag names** used in the SEMIC data specifications will follow the pattern:
 
 ```
-   {spec-category}-{annotation}-{language}
+   {data_spec_category}-{annotation}-{language}
 ```
 
-The `{spec-category}` part represents the data specification category. The values for this can be either:
-   - _ommitted_:  the annotation is associated with the _vocabulary_ in which the term is defined. It contains the base information about the term.
-   - **ap**: the annotation is associated with an _application profile_ in which the term is used.
+The `{data_spec_category}` part represents the data specification category. The values for `{data_spec_category}-` can be at the moment either:
+   - _ommitted_ :  the annotation is associated with the _vocabulary_ in which the term is defined. It contains the base information about the term.
+   - `ap-` : the annotation is associated with an _application profile_ in which the term is used.
 
-The `{language}` part corresponds to the 2-letter language code (conform to ISO 639-1) in which the content of the annotation is expressed.
+The `{language}` part corresponds to the 2-letter [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in which the content of the annotation is expressed.
 
 **Examples:**
   - `label-nl`: the tag expresses the label of the term in Dutch, at the level of a vocabulary
-  - `ap-usageNote-en`: the tag expresses the usage note in English for the application profile
+  - `ap-usageNote-en`: the tag expresses the "usage note" annotation in English, for the application profile
 
 The pattern is very useful because it allows to have two perspectives on the same term in the UML file.
-One perspective is the base reference: the vocabulary, and the other perspective is the application usage context.
-Having the ability to have them side by side makes it is much easier for editors to ensure that the reuse of a term is done properly.
+One perspective is the base reference, i.e. the vocabulary, and the other perspective is the application usage context.
+Having the ability to have them side by side makes it much easier for editors to ensure that the reuse of a term is done properly.
 Artefact generation tools can take benefit from this multi-perspective to implement a sensible fallback approach. 
-For instance, when generating application profile content, first the tags with `{spec-category}` having value `ap` are consulted. 
+For instance, when generating application profile content, first the tags with `{data_spec_category}` having value `ap` are consulted. 
 If no value is found, then the vocabulary tag is consulted. 
 Only when this is not present a `TODO/NOT FOUND` value is used.
 Application profile editors are thus supported when reusing existing vocabularies.
 
-Not all annotations require a prefix (`{documenttype}`) or suffix (`{language}`). 
-For instance: `uri` has no prefix or suffix as a term should have only one globally unique persistent identifier. 
+Not all annotations require a prefix (`{data_spec_category}-`) or suffix (`-{language}`). 
+For instance, `uri` has no prefix or suffix, as a term should have only one globally unique persistent identifier. 
 
 
 #### Example annotated UML model
 
-The following screenshot shows the class _Person_ defined in the Core Person Vocabulary when edited in Enterprise Architect. 
+The following screenshot shows the class _Person_ defined in the Core Person Vocabulary, when edited in Enterprise Architect. 
 
 ![EA-example.png](./images/EA-example.png)
 
-In the middle the UML graphical representation is shown. On the right hand side the tags for the selected class _Person_ are shown.
-On the left side of the graphical representation the attributes and relationships of the class can be seen.
+In the middle of the screenshot we can see the graphical representation of the (partial) UML diagram where the class _Person_ is selected. 
+On the right hand side the tags for the selected _Person_ class are shown.
+On the left side of the graphical representation the attributes and relationships of the selected class can be seen.
 
 
 
-#### test suite
+#### Test suite
 
 The [OSLOthema-toolchainTestbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed) is a _thema_ repository that provides a collection of example UML models.
-Editors can use the collection to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
+Editors can use this collection to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
 Developers can use it to do regression testing during development.
 
 

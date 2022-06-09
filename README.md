@@ -137,7 +137,7 @@ Using the toolchain for editing data specifications requires editors to have ins
   
    - the interplay between the GitHub repositories (see the chapter on the [Editorial flow](./editorial_flow.md)) 
    - what data specifications are, and what information are they built of (see the chapter on the [Data specifications](./datamodel.md))
-   - what persistent identifiers are, and how their use is supported by SEMIC (see the chapter on [Persistent identifiers](./puri.md))
+   - what persistent unique identifiers (PURIs) are, and how their use is supported by SEMIC (see the chapter on [Persistent identifiers](./puri.md))
    - the deployed tooling for the generation of artefacts (see the chapter on the [Toolchain](./toolchain.md))
 
 The purpose of these chapters is  to introduce *editors*, but also *developers*, to foundational aspects of the *editorial flow* and how it is supported by the *toolchain*.

@@ -94,17 +94,14 @@ These are not documented here (yet).
 # Access management
 
 In order for editors to perform their activities they need access to the necessary SEMIC assets. 
-For the activities described in this documentation editors only require write permissions to the SEMIC GitHub space.
+For the activities described in this documentation _editors_ only require write permissions to the SEMIC GitHub space.
 To facilitate the management, an [editor team](https://github.com/orgs/SEMICeu/teams/core-voc-editors) has been created in the SEMIC GitHub space.
 
-Developers usually are granted more extensive rights to perform the various tasks on the SEMIC assets. 
-For them and the EC officials are part of the [SEMIC administrator team](https://github.com/orgs/SEMICeu/teams/administrators).
-They have full access to the SEMIC space.
+_Developers_ usually are granted more extensive rights to perform the various tasks on the SEMIC assets. 
+For them, and the EC officials, the [SEMIC administrators' team](https://github.com/orgs/SEMICeu/teams/administrators) was set up.
+They have full access to the SEMIC GitHub space.
 
-Individual user access control operations can be done by the __SEMIC admin__ on [Github](https://github.com/orgs/SEMICeu/people).
-
-
-
+Individual user access control operations can be done by the [owners of SEMIC Github space](https://github.com/orgs/SEMICeu/people?query=role%3Aowner).
 
 
 
