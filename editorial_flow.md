@@ -76,9 +76,9 @@ To illustrate the generic editorial flow consider the common change request to a
 The text below is summerized transcript of a video recording demonstrating the addition of a new property 'baptimal name' to the class Person in the Core Person Vocabulary.
 The video recordings are:
  
-   - [part 1](./images/step1.mp4)
-   - [part 2](./images/step2.mp4)
-   - [part 3](./images/step3.mp4)
+   - ![part 1](./images/step1.mp4)
+   - ![part 2](./images/step2.mp4)
+   - ![part 3](./images/step3.mp4)
 
 All demonstrated changes are performed on the involved repositories using a demonstration branch called `example`.
 Using this branch all activities can demonstrated on a working environment, except for the last step: the official publication of the transformation.
