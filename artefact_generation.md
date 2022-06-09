@@ -1,31 +1,34 @@
 # Artefact generation process
 
-This chapter describes condensly the artefact generation process for a data specification.
+This chapter describes the artefact generation process for a data specification.
 The target audience for this chapter are experienced editors and developers that want to understand and improve the artefact generation.
 Nevertheless novel editors are invited to perform a quick reading as this will aid them to communicate better with the developers when the artefact generation fails.
 
+## Overview
 
-The creation of the data specification artefacts is roughly a two phase process. 
+The creation of the data specification artefacts is roughly a *two* phase process. 
 First, all information of the data specification is collected in an internal representation. 
 Next, out of that internal representation, the artefacts of the data specification to be published are generated.
+The first phase is denoted as the [aggregation phase](#Aggregation-phase), while the second is called the [generation phase](#Generation-phase).
 
-The internal representation has the same structure for each data specification category. 
+
+The *internal representation* has the same structure for each data specification category. 
 This simplifies the developer effort to create (new) data specification artefact generators, as experience from one generator can be transferred to another.
 The internal representation contains besides the semantical content of a data specification (see the [datamodel](./datamodel.md) chapter) the stakeholders contributing to the data specification and the complete configuration information associated with the data specification:  the [data specification configuration](https://github.com/SEMICeu/uri.semic.eu-thema/blob/example/config/core-person.json), the [publication point configuration](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json), the [publication environment configuration](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/config.json) and the toolchain execution information.
 E.g. the internal representation for the example data specification discussed in the [editorial flow](./editorial_flow.md) chapter is [here](https://github.com/SEMICeu/uri.semic.eu-generated/blob/example/report/doc/core-vocabulary/core-person/all-core-person-ap.jsonld).
 Storing the internal representation in the generated repository provides editors to explore this structure to detect the origin of errors or to express new features for artefact generators.
 
-The artefact generation process is automated and implemented using CircleCI, within the publication repository [uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication). 
+The complete artefact generation process is automated and implemented using CircleCI, within the publication repository [uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication). 
 The CircleCI web application offers a visual representation of the CircleCI workflow, and thus a visual representation of the artefact generation process.
 Generic information about the organisation and setup of the workflow of the CircleCI workflow is documentated in [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
 
 
-## aggregation phase 
+## Aggregation phase 
 
 The core activity of the first phase is the extraction of the semantic model expressed in the UML diagram into the internal representation.
 In the [datamodel](./datamodel.md) chapter is explained that the UML diagram is a standard UML model extended with annotations.
 
-Technically the [UML Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF) is used to convert a UML diagram.
+The [UML Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF) is used to convert a UML diagram.
 This tool is responsible for assigning PURIs to the terms in the data specification and for the interpretation of the UML model as a semantic model.
 To avoid diverging semantical interpretations across the artefacts, the generators in the generation phase should not make any semantic interpretation. 
 This means determining what is a class or a property, the assignment of PURIs, etc. are the sole responsability for the UML Conversion Tool.
@@ -37,7 +40,7 @@ During the aggration phase, the provided translations are merged into the intern
 
 
 
-## generation phase 
+## Generation phase 
 
 The artefact generation phase consists of parallell executions targetting one artefact.
 
@@ -109,7 +112,7 @@ In the toolchain the first representation is active.
 
  
 
-# Adding a new artefact generator to the artefact generation process
+## Adding a new artefact generator to the artefact generation process
 
 The repository [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator) collects the OSLO artefact generators.
 These are all written in javascript. 
