@@ -1,6 +1,6 @@
 # Artefact generation process
 
-This chapter describes condensly the artefact generation process for a data specification.
+This chapter describes the artefact generation process for a data specification.
 The target audience for this chapter are experienced editors and developers that want to understand and improve the artefact generation.
 Nevertheless novel editors are invited to perform a quick reading as this will aid them to communicate better with the developers when the artefact generation fails.
 
