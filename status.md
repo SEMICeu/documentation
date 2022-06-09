@@ -22,7 +22,7 @@
 | datamodel.md | Under internal review |  8 june 2022 | 10 june 2022 | |
 | toolchain.md | Under internal review |  8 june 2022 | 10 june 2022 | |
 | puri.md | Ready for internal review | 8 june 2022 | 10 june 2022 | |
-| artefact_generation.md | Draft | 9 june 2022 | | |
+| artefact_generation.md | ready for internal review | 9 june 2022 | | |
 | xsd.md | Draft  | 9 june 2022 | |
 | glossary.md | Draft | |
 
