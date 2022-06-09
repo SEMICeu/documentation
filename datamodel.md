@@ -6,7 +6,7 @@ Besides this, and beyond the scope of this chapter, a data specification contain
 
 First, an overview of the different data specification categories is presented. 
 Understanding this categorisation helps the editors in their semantic model editing activity, as it provides an insight into the relationship between the generated artefacts and the expectations of consumers.
-Secondly, the chapter discusses master data management of the data specification.
+The second part of this chapter discusses the master data management of the data specification.
 It describes the approach how editors must construct the UML, the chosen master data representation, to be processed by the toolchain.
 
 
