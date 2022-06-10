@@ -105,12 +105,12 @@ Within the SEMIC toolchain, the "master" for the semantic model is the UML repre
 This decision is motivated based on two compelling arguments: the "transformational argument" and the "editorial argument".
 
 #### Transformational argument
-For coherency across all specifications it is easier to transform a UML diagram to a semantic representation, than transforming an semantic representation into a UML notation. 
 Turning RDF vocabularies into UML, to fully exploit the graphical notation possibilies, would require to create a new configuration language.
 This language would not only include semantical instructions (such as "this URI is a UML class"), but likely would also need to include styling and other represenation instructions. 
 A large part of the editorial effort for a graphical representation is organising and styling the picture to make it as suggestive and meaningful as possible for the consumers. 
 That is a complex task.
 It is far more easier to exploit the power of a UML modeling tool, offering all the graphical styling possibilities an editor needs, and transform the resulting UML representation into a semantic model (such as RDF).
+
 
 #### Editorial argument 
 The interactions and discussions within a Working Group are often driven by a graphical representation.
