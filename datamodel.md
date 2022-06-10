@@ -4,12 +4,13 @@ This chapter decribes the key notions and information an editor needs to underst
 Within this document the term data specification is used to refer to its core: **the semantic model**, i.e. the classes and properties with their semantic description.
 Besides this, and beyond the scope of this chapter, a data specification contains metadata about the document, a changelog, use case descriptions, context, conformance statements and more.
 
+
 First, an overview of the different data specification categories is presented. 
 Understanding this categorisation helps the editors in their semantic model editing activity, as it provides an insight into the relationship between the generated artefacts and the expectations of consumers.
 The second part of this chapter discusses the [master data management](./glossary.md) of the data specification.
-It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain."
+It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain.
 
-
+The (software) implementation in the toolchain is not discussed in this chapter. Consult the chapters [artefact generation process](./artefact_generation.md) for insights on and pointers to the software used, and [toolchain](./toolchain.md) for understanding the automation exploiting GitHub.
 
 
 ## Data specification categories
@@ -185,7 +186,6 @@ The following screenshot shows the class _Person_ defined in the Core Person Voc
 In the middle of the screenshot we can see the graphical representation of the (partial) UML diagram where the class _Person_ is selected. 
 On the right hand side the tags for the selected _Person_ class are shown.
 On the left side of the graphical representation the attributes and relationships of the selected class can be seen.
-
 
 
 #### Test suite
