@@ -7,15 +7,15 @@ The connection between these three group of actors is the following: The tools a
 Since the _consumers_ are the "end users" of the data specifications, they will not need to interract directly with the SEMICeu GitHub space. 
 Therefore, this page will focus mosty on defining the roles of the _editors_ and _developers_, and will provide less details about _consumers_ and other user roles.
 
+The page is structured in sections and subsections describing these **roles** and their related **activities**, as follows:
+
 1. [Consumers](#consumers)
 2. [Editors](#editors)
 3. [Developers](#developers)
 4. [Other roles](#other-roles)
     1. [Communication](#communication)
+	2. [User access management](#access-management)
 
-
-To perform their tasks many of these roles require access to the SEMIC assets, in particular the SEMIC GitHub space. 
-This chapter on the roles is concluded with the [user access management](#access-management) applied.
 
 
 
@@ -91,17 +91,18 @@ Besides the activities related to the creation and management of the data specif
 
 These are not documented here (yet).
 
-# Access management
+### Access management
 
-In order for editors to perform their activities they need access to the necessary SEMIC assets. 
+For the different actors to be able to perform the activities implied by their roles, they need to have access to the various SEMIC assets.
+Therefore, there is a need for a proper user access management.
+
 For the activities described in this documentation _editors_ only require write permissions to the SEMIC GitHub space.
-To facilitate the management, an [editor team](https://github.com/orgs/SEMICeu/teams/core-voc-editors) has been created in the SEMIC GitHub space.
+To facilitate the access management of people with editorial role, an [editors team](https://github.com/orgs/SEMICeu/teams/core-voc-editors) has been created in the SEMIC GitHub space.
 
 _Developers_ usually are granted more extensive rights to perform the various tasks on the SEMIC assets. 
-For them, and the EC officials, the [SEMIC administrators' team](https://github.com/orgs/SEMICeu/teams/administrators) was set up.
+For them, and the EC officials, the [SEMIC administrators team](https://github.com/orgs/SEMICeu/teams/administrators) was set up.
 They have full access to the SEMIC GitHub space.
-
-Individual user access control operations can be done by the [owners of SEMIC Github space](https://github.com/orgs/SEMICeu/people?query=role%3Aowner).
+They can also perform any necessary access control operation for individual users.
 
 
 
