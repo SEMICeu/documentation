@@ -62,13 +62,13 @@ It also can play an important role in training future editors to maintain the da
 After creating the artefacts, the editor has to make them accessible to the consumers. 
 For this the artefacts have to be stored in a publication environment.
 
-Currently, the publication environment that has been adopted by SEMIC is GitHub; one repository per data specification. 
+Currently, the publication environment that has been adopted by SEMIC is GitHub: one repository per data specification. 
 Over the past years, the organisation and structure of these repositories underwent a gradual harmonisation process.
-More specifically, the consumers' access to the content of these repositories is facilitated through [GitHub Pages](https://pages.github.com/), a service offered to render webpages stored in a repository.
+Moreover, the consumers' access to the content of these repositories is facilitated through [GitHub Pages](https://pages.github.com/), a service offered to render webpages stored in a repository.
 
 Since these repositories were created before an automated artefact generation tooling was applied, the repositories are set up and organised with the assumption that the content of the repository is manually created. 
-The full integration of this publication design in the automation requires adaptations to the automation and the organisation and setup of the data specification repositories. 
-This is future work. Therefore editors are today required to manually collect the generated artefacts and store them in the appropriate data specification repository.
+The full integration of this publication design in the automation process requires adaptations to the automation, organisation and setup of the data specification repositories. 
+This is future work. Therefore, editors are today required to manually collect the generated artefacts, and store them in the appropriate locations within the data specification repository.
 
 
 
