@@ -5,12 +5,12 @@ Within this document the term data specification is used to refer to its core: *
 Besides this, and beyond the scope of this chapter, a data specification contains metadata about the document, a changelog, use case descriptions, context, conformance statements and more.
 
 
-First, an overview of the different data specification categories is presented. 
+First, an overview of the different **data specification categories** is presented. 
 Understanding this categorisation helps the editors in their semantic model editing activity, as it provides an insight into the relationship between the generated artefacts and the expectations of consumers.
-The second part of this chapter discusses the [master data management](./glossary.md) of the data specification.
+The second part of this chapter discusses the **master data management** of the data specification.
 It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain.
 
-The (software) implementation in the toolchain is not discussed in this chapter. Consult the chapters [artefact generation process](./artefact_generation.md) for insights on and pointers to the software used, and [toolchain](./toolchain.md) for understanding the automation exploiting GitHub.
+The implementation aspects of the modeling are not discussed in this chapter. Consult the [artefact generation process](./artefact_generation.md) chapter for insights on and pointers to the software used, and the [toolchain](./toolchain.md) chapter for understanding the automation process set up for publishing data specifications exploiting GitHub.
 
 
 ## Data specification categories
@@ -63,18 +63,18 @@ _Implementation models_ expect:
 
 
 The design of a data specification usually involves the creation of other data specifications of another category.
-It is seldom that a data specification will fully rely on existing data specifications.
-In particular the development of application profiles and implementation models is naturally combined with the creation of a vocabulary.
-That vocabulary captures all new terminology that does not yet has been published.
+It is seldom that a data specification will rely only on already existing data specifications.
+In particular, the development of application profiles and implementation models is naturally combined with the creation of a vocabulary.
+That vocabulary captures all new terminology that has not yet been published.
 
 
 
-The **SEMIC Core Vocabularies** have the design intent of the _vocabularies_ category: namely broad reuse, mostly ignorant of the application context.
+The **SEMIC Core Vocabularies** have the design intent of the _vocabularies_ category; namely, broad reuse, mostly ignorant of the application context.
 Over the years, however, the SEMIC community has requested support towards the *application* of the Core Vocabularies. 
-Therefore, some artefacts that are above enumerated as *application profile* expectations, are also provided for the Core Vocabularies. 
+Therefore, some expectations that are enumerated above for *application profile* artefacts, are also provided for the Core Vocabularies. 
 Given the broad reuse objective, the provided artefacts are very permissive and thus should be seen as the initial step in the process of incorporating the Core Vocabularies in an application context. 
 For instance, the SHACL shape for a Core Vocabulary is very permissive as it soley expresses that the range of a property might be of an expected broad type (e.g. Literal versus Resource). 
-It neither includes any cardinality restriction because Core Vocabularies do not express cardinality limitations.
+It does not include any cardinality restriction, because Core Vocabularies do not express cardinality limitations.
 
 The Core Vocabularies are showing that the boundaries between a vocabulary and an application profile, as defined above, are not precisely determined.
 Vocabularies, application profiles and implementation models are entities along a "reusability/application context" axis.
@@ -97,14 +97,14 @@ Instead of reinventing a new graphical language, SEMIC uses the Unified Modeling
 
 ###  Master data management
 
-The presence of two distinct modelling languages introduces the challenge which one editors should use. 
-It would be a waste of time and effort when editors have to express the same data specification in two distinct modelling languages.
-Therefore one modeling language should be selected as the master.
+Working with two (or more) distinct modelling languages simultanously creates a significant challenge. 
+It would be a waste of time and effort, if the editors would have to express the same data specification in two distinct modelling languages.
+Therefore, one modeling language should be selected as the "master", from which the other representations would be derived.
 
-Within the toolchain the master for the semantical model is the UML represenation. 
-This decision is motivated by an transformational argument and an editorial argument.
+Within the SEMIC toolchain, the "master" for the semantic model is the UML represenation. 
+This decision is motivated based on two compelling arguments: the "transformational argument" and the "editorial argument".
 
-#### Transformation argument
+#### Transformational argument
 For coherency across all specifications it is easier to transform a UML diagram to a semantic representation, than transforming an semantic representation into a UML notation. 
 Turning RDF vocabularies into UML, to fully exploit the graphical notation possibilies, would require to create a new configuration language.
 This language would not only include semantical instructions (such as "this URI is a UML class"), but likely would also need to include styling and other represenation instructions. 
