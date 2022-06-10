@@ -4,12 +4,13 @@ This chapter decribes the key notions and information an editor needs to underst
 Within this document the term data specification is used to refer to its core: **the semantic model**, i.e. the classes and properties with their semantic description.
 Besides this, and beyond the scope of this chapter, a data specification contains metadata about the document, a changelog, use case descriptions, context, conformance statements and more.
 
+
 First, an overview of the different data specification categories is presented. 
 Understanding this categorisation helps the editors in their semantic model editing activity, as it provides an insight into the relationship between the generated artefacts and the expectations of consumers.
-The second part of this chapter discusses the master data management of the data specification.
-It describes the approach how editors must construct the UML, the chosen master data representation, to be processed by the toolchain.
+The second part of this chapter discusses the [master data management](./glossary.md) of the data specification.
+It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain.
 
-
+The (software) implementation in the toolchain is not discussed in this chapter. Consult the chapters [artefact generation process](./artefact_generation.md) for insights on and pointers to the software used, and [toolchain](./toolchain.md) for understanding the automation exploiting GitHub.
 
 
 ## Data specification categories
@@ -23,7 +24,7 @@ Data specifications can roughly be categorized in three categories according to 
 A *vocabulary* is a collection of terms. 
 A term consists minimally of a label and definition, and it is identified by a URI. 
 The information attached to a term in a vocabulary is expressed with the intent to be applicable within a broad context. 
-Guidelines on writing good definitions can be found (here)[TODO].
+Guidelines on writing good definitions can be found [here](https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf).
  
 An *application profile* is the usage of terms within a generic application context. 
 The application context imposes additional constraints on the usage of the terms such as cardinality restrictions, ranges, code lists, etc.
@@ -34,13 +35,13 @@ Application profiles can be further elaborated to the point where they describe 
 These are called *implementation models*.
 
 
-Aside from the differences in the content resulting from the reuse perspective, each category has different expectations on the representation and published artefacts. 
+Aside from the differences in the content resulting from the reuse perspective, each category has different expectations on the to be published artefacts. 
 These expectations, summarized below, result from the premise to use the _Semantic Web_ as the __basis__ for the design of the data specification.
 
 _Vocabularies_ expect: 
 
   - a document with a simple tabular view of the terms 
-  - dereferenceable persistent identifiers ([PURIs](./puri.md))
+  - dereferenceable persistent identifiers 
 
 _Application profiles_ expect:
 
@@ -61,16 +62,19 @@ _Implementation models_ expect:
       e.g., a template DB or an API specification.
 
 
-Application profile design is usually connected with the creation of a vocabulary associated with application context. 
-It is uncommon that an application profile is only reusing terms from existing vocabularies. 
-Therefore creating and supporting application profiles means also creating and supporting vocabularies, in order to achieve the objectives. 
+The design of a data specification usually involves the creation of other data specifications of another category.
+It is seldom that a data specification will fully rely on existing data specifications.
+In particular the development of application profiles and implementation models is naturally combined with the creation of a vocabulary.
+That vocabulary captures all new terminology that does not yet has been published.
+
 
 
 The **SEMIC Core Vocabularies** have the design intent of the _vocabularies_ category: namely broad reuse, mostly ignorant of the application context.
 Over the years, however, the SEMIC community has requested support towards the *application* of the Core Vocabularies. 
-Therefore, some aspects that are enumerated as *application profile* expectations above, are also provided for the Core Vocabularies. 
-The provided artefacts can thus be seen as a (small) step in the process of incorporating the Core Vocabulary in a usage context. 
+Therefore, some artefacts that are above enumerated as *application profile* expectations, are also provided for the Core Vocabularies. 
+Given the broad reuse objective, the provided artefacts are very permissive and thus should be seen as the initial step in the process of incorporating the Core Vocabularies in an application context. 
 For instance, the SHACL shape for a Core Vocabulary is very permissive as it soley expresses that the range of a property might be of an expected broad type (e.g. Literal versus Resource). 
+It neither includes any cardinality restriction because Core Vocabularies do not express cardinality limitations.
 
 The Core Vocabularies are showing that the boundaries between a vocabulary and an application profile, as defined above, are not precisely determined.
 Vocabularies, application profiles and implementation models are entities along a "reusability/application context" axis.
@@ -93,11 +97,14 @@ Instead of reinventing a new graphical language, SEMIC uses the Unified Modeling
 
 ###  Master data management
 
-This introduces the challenge of maintaining the coherency between the Semantic Web representation, i.e. RDF, and the UML representation. 
-The [toolchain](./toolchain.md) implements the master data management where the UML representation is the master. 
-The motivation is provided below.
+The presence of two distinct modelling languages introduces the challenge which one editors should use. 
+It would be a waste of time and effort when editors have to express the same data specification in two distinct modelling languages.
+Therefore one modeling language should be selected as the master.
 
-#### (transformation argument)
+Within the toolchain the master for the semantical model is the UML represenation. 
+This decision is motivated by an transformational argument and an editorial argument.
+
+#### Transformation argument
 For coherency across all specifications it is easier to transform a UML diagram to a semantic representation, than transforming an semantic representation into a UML notation. 
 Turning RDF vocabularies into UML, to fully exploit the graphical notation possibilies, would require to create a new configuration language.
 This language would not only include semantical instructions (such as "this URI is a UML class"), but likely would also need to include styling and other represenation instructions. 
@@ -105,7 +112,7 @@ A large part of the editorial effort for a graphical representation is organisin
 That is a complex task.
 It is far more easier to exploit the power of a UML modeling tool, offering all the graphical styling possibilities an editor needs, and transform the resulting UML representation into a semantic model (such as RDF).
 
-#### (editorial argument)
+#### Editorial argument 
 The interactions and discussions within a Working Group are often driven by a graphical representation.
 Therefore, naturally, editors first create the graphical representation of the proposed resolution.
 When agreement is reached, the decision is turned by the editor into the data specification following the Semantic Web principles.
@@ -179,7 +186,6 @@ The following screenshot shows the class _Person_ defined in the Core Person Voc
 In the middle of the screenshot we can see the graphical representation of the (partial) UML diagram where the class _Person_ is selected. 
 On the right hand side the tags for the selected _Person_ class are shown.
 On the left side of the graphical representation the attributes and relationships of the selected class can be seen.
-
 
 
 #### Test suite
