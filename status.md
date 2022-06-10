@@ -24,7 +24,7 @@
 | puri.md | Ready for internal review | 8 june 2022 | 13 june 2022 | |
 | artefact_generation.md | Ready for internal review | 10 june 2022 | 15 june 2022 | |
 | xsd.md | Draft  | 10 june 2022 | 15 june 2022 |
-| glossary.md | Draft | |
+| glossary.md | Draft | 14 june 2022 | 15 june 2022| 
 
 
 **Legend for status:**
