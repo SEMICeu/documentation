@@ -12,14 +12,14 @@ A situation that raised many questions by the consumers.
 
 To have the data specifications progress in the same way, and following the same style, tooling support is required. 
 Introducing tooling will force the editors to follow a predefined editorial flow, and thus reduce their editorial freedom to the limits of the tooling.
-This limitation brings, however, crucial benefits for the SEMIC project:
-  - a harmonised coherent experience of the data specifications. This will increase the adoption by the consumers.
-  - the embedding of the key SEMIC data modeling in formal processes, instead of relying solely on the experience of the editors.
+This limitation, however, brings crucial benefits for the SEMIC project; namely, it will:
+  - provide a harmonised, coherent experience of the data specifications. This will increase the adoption by the consumers.
+  - allow the embedding of the key SEMIC data modeling in formal processes, instead of relying solely on the experience of the editors.
   - support scaling up the editorial capacity. Automation provides the ability to learn the editorial flow in a safe environment.
 
 
-In this chapter, the tooling that is supporting the editorial flow for managing data specifications is described.
-It focusses on the interplay between the different repositories and how editors can use it to generate the data specification artefacts.
+This chapter describes the tooling that is supporting the editorial flow for managing data specifications.
+It focusses on the interplay between the different repositories, and how editors can use it to generate the data specification artefacts.
 First the design and how it is setup in SEMIC space is described.
 Then frequently asked questions by the editors and developers are answered.
 The artefact generation itself is documented in the chapter on [artefact generation](./artefact_generation.md).
