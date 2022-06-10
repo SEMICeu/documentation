@@ -13,6 +13,6 @@ This document contains the an condensed overview of the used terminology within 
 - the _toolchain internal representation_ - All the content of a data specification in a format optimal for the artefact generators.
 - an _artefact generator_ - A tool able to generate a data specification artefact from the data specification's internal representation.
 
-
+- _master data management_ - the data management principle in which one identifies the origin of data (the master) and with that knowledge the use of the data is organised so that a change in the master will propogate throughout the whole usage chain. 
 
 
