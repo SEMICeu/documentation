@@ -35,6 +35,7 @@
  - **Ready for internal revision** : internal review is finished, suggestions for further improvements have been made, which need to be addressed
  - **Under internal revision** : undergoing changes to address feedback from internal review
  - **Ready for final review** : text and structure is in publishable shape, ready to undergo an official review
+ - **Under final review** : undergoing final review
  - **Ready for final revision** : official review is finished, suggestions for further improvements have been made, which need to be addressed
  - **Under final revision** : undergoing a final "official" review
  - **Approved** : text has been accepted for publishing
