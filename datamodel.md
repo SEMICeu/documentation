@@ -101,7 +101,7 @@ Working with two (or more) distinct modelling languages simultanously creates a 
 It would be a waste of time and effort, if the editors would have to express the same data specification in two distinct modelling languages.
 Therefore, one modeling language should be selected as the "master", from which the other representations would be derived.
 
-Within the SEMIC toolchain, the "master" for the semantic model is the UML represenation. 
+Within the SEMIC toolchain, the "master" for the semantic model is the UML representation. 
 This decision is motivated based on two compelling arguments: the "transformational argument" and the "editorial argument".
 
 #### Transformational argument
