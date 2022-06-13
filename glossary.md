@@ -1,6 +1,6 @@
 # Glossary
 
-This document contains the an condensed overview of the used terminology within this documentation.
+This document contains a condensed overview of the terminology, and other key notions, used within this documentation.
 
 - a _thema_ repository - A repository that contains the source content of one or more data specifications. 
 - a _publication_ repository - A repository associated with a publication environment. It contains the source of the static website published by the publication environment.
