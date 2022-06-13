@@ -1,6 +1,6 @@
 # Modeling data specifications
 
-This chapter decribes the key notions and information an editor needs to understand for _editing data specifications_.
+This chapter describes the key notions and information an editor needs to understand for _editing data specifications_.
 Within this document the term data specification is used to refer to its core: **the semantic model**, i.e. the classes and properties with their semantic description.
 Besides this, and beyond the scope of this chapter, a data specification contains metadata about the document, a changelog, use case descriptions, context, conformance statements and more.
 
