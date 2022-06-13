@@ -15,4 +15,15 @@ This document contains the an condensed overview of the used terminology within 
 
 - _master data management_ - the data management principle in which one identifies the origin of data (the master) and with that knowledge the use of the data is organised so that a change in the master will propogate throughout the whole usage chain. 
 
+TODO (further suggestions):
+- Semantic Web
+- URI, IRI 
+- PURI 
+- API 
+- XSD
+- JSON-LD
+- SHACL
+- CD/CI
+- regression testing
+- data specification (suggested by Pavlina)
 
