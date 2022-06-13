@@ -88,7 +88,7 @@ At this moment, however, _no formal expectation of the SEMIC data specifications
 ## The UML model
 
 As mentioned in the previous section, a SEMIC data specification is build and published according to the best practices of the Semantic Web.
-Following this approach data specifications identifiy terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass axioms, domain, range, cardinality restrictions, etc.). 
+Following this approach data specifications identify terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass axioms, domain, range, cardinality restrictions, etc.). 
 
 However, because the Semantic Web representations (rendered as HTML tables or in machine readable formats, such as RDF) are not providing consumers a satisfactory way for understanding the data specification, often a graphical representation is provided.
 Graphical representations are able to convey more concisely the key formal logic statements at one glance.
