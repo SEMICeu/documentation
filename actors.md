@@ -21,7 +21,7 @@ The page is structured in sections and subsections describing these **roles** an
 
 ## Consumers 
 
-The main group of consumers of the the data specifications are the EU Member State administrations that want to exchange data cross-border.
+The main group of consumers of the data specifications are the EU Member State administrations that want to exchange data cross-border.
 To support that activity an EU wide understanding of the semantics of the shared data is required.
 SEMIC offers a platform to achieve a consensus on the semantics, and the result is being published as a *data specification*.
 
