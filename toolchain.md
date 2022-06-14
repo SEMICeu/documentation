@@ -14,7 +14,7 @@ To have the data specifications progress in the same way, and following the same
 Introducing tooling will force the editors to follow a predefined editorial flow, and thus reduce their editorial freedom to the limits of the tooling.
 This limitation, however, brings crucial benefits for the SEMIC project; namely, it will:
   - provide a harmonised, coherent experience of the data specifications. This will increase the adoption by the consumers.
-  - allow the embedding of the key SEMIC data modeling practices in formal processes, instead of relying solely on the experience of the editors.
+  - allow the embedding of the key SEMIC data 00 practices in formal processes, instead of relying solely on the experience of the editors.
   - support scaling up the editorial capacity. Automation provides the ability to learn the editorial flow in a safe environment.
 
 
@@ -57,7 +57,7 @@ This design choice simplifies the operational work to serve the data specificati
 The source code of the static website, i.e. the publication environment, is stored on GitHub in the _publication repository_.
 The result of the generation process, i.e. the static website, is stored in the _generated repository_. 
 A _publication_ repository is thus always paired with a _generated_ repository. 
-The generated repository is kept in sync with the publication repository via a [Continous Integration/Continuous Development](https://en.wikipedia.org/wiki/CI/CD) (CI/CD) execution flow. 
+The generated repository is kept in sync with the publication repository via a [Continuous Integration/Continuous Development](https://en.wikipedia.org/wiki/CI/CD) (CI/CD) execution flow. 
 Within software engineering, CI/CD is the name for any automated process supporting the software building and deployment activities.
 Each change (commit) to the publication repository will lead after a successful CI/CD execution to a change in the generated repository.
 
@@ -69,32 +69,34 @@ These repositories are called _thema repositories_.
 The publication repository contains a list of references to the thema repositories.
 More precisely, they contain references to the state of the thema repositories at unique points in time, i.e. commits.
 These references are called __publication points__.
-Editors primarely interact with thema repositories, only when a new publication of the data specification is required, when they update the publication repository with a new publication point.
+Editors primarily interact with thema repositories, only when a new publication of the data specification is required, when they update the publication repository with a new publication point.
 This setup creates flexibility and provides editorial scaling potential, without loosing a central control. 
 
 
 For more information on the OSLO toolchain tools, the OSLO maintainers can be contacted. 
 This can be done by posting a github issue, or contacting them via email at digitaal.vlaanderen@vlaanderen.be.
 
-The deployment of the above design is supported by the existance of two template repositories.
+The deployment of the above design is supported by the existence of two template repositories.
  - a _template for a publication repository_ - available at: [https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
  - a _template for a thema repository_ - available at: [https://github.com/Informatievlaanderen/OSLOthema-template](https://github.com/Informatievlaanderen/OSLOthema-template)
 
 The generated repository does not require a template.
 
 After creating the publication repository from the template, the publication repository must be paired with the generated repository. 
-Documentation on how to do this, as well as more configuration options, are found in the documentation that is part of the template.
+Documentation on how to do this, as well as more configuration options, are found in the documentation that is part of the [template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/config).
 
 
 
 ### SEMIC setup
 
-In contrast to the OSLO toolchain premisse of a single publication environment, i.e. a single website, SEMIC has decided to apply a decentralised publication strategy. 
+In contrast to the OSLO toolchain premise of a single publication environment, i.e. a single website, SEMIC has decided to apply a decentralised publication strategy. 
 Each data specification repository in the SEMICeu space is not only the source of the specification, but also the publication platform for that data specification, by using  [GitHub Pages](https://pages.github.com/) service offering. 
 
-The OSLO toolchain separates the different functionalities (master data source, content generation, publication) in seperate repositories, making it then natural to combine the processing of multiple data specifications into a pair of publication and generated repository.
-Instead of applying the OSLO toolchain setup to each SEMICeu data specification, the toolchain has been deployed in the assumption that there is a single SEMIC publication environment, despite the fact that technically this is not the case.
-This deployment corresponds to a minimalistic setup, providing already the most important editorial support for creating harmonised artefacts for all data specifications.
+The OSLO toolchain separates the different functionalities (master data source, content generation, publication) in separate repositories, making it then natural to combine the processing of multiple data specifications into a pair of publication and generated repository. 
+Since there is no unique SEMIC publication environment identified with a unique domain, there are two alternatives to use the toolchain. (a) Integrate in each SEMIC data specification repository the toolchain functionalities. 
+Or (b) deploy the toolchain in new SEMICeu repositories, pretending there is a single SEMIC publication environment. 
+The second option has been chosen as it impacted the existing data specification repositories the least, and it deviates the least from the OSLO toolchain setup.
+The deployment corresponds to a minimal setup, providing already the most important editorial support for creating harmonised artefacts for all data specifications.
 
 In the SEMICeu GitHub space the toolchain has been deployed in these repositories:
 
@@ -105,10 +107,10 @@ All editing happens on the `master` branch as there are no staging publication e
 
 
 Within the SEMICeu GitHub space, these repositories are **private** GitHub repositories. 
-This influences the execution and configuration, as operating on private repositories requires differrent GitHub API requests than those that can be used with public GitHub repositories.
+This influences the execution and configuration, as operating on private repositories requires different GitHub API requests than those that can be used with public GitHub repositories.
 More information on this, and other aspects related to the configuration, can be found in the documentation of the [publication environment](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md).
 
-How these repositories feature in the management of data specifications is elaborated in the [editorial flow](./editorial_flow.md).
+How these repositories are used in the management of data specifications is elaborated in the [editorial flow](./editorial_flow.md).
 
 This setup does not provide the end-to-end experience of the original design, but it is feasible that the CI/CD flow can be adapted to achieve this.
 
@@ -116,11 +118,13 @@ This setup does not provide the end-to-end experience of the original design, bu
 
 #### Thema repository(ies)
 
-The deployment of the toolchain resulted in a simplied setup with a single thema repository. 
+The deployment of the toolchain resulted in a simplified setup with a _single_ thema repository. 
 This choice has been made to facilitate the ongoing harmonisation of the Core Vocabularies and to ensure that future contractors will have everything at their disposal to perform changes.
 One can consider the current SEMIC thema repository as the shared space to have the toolchain functioning.
 
-However, this choice might need to be reconsiderd in the future, if we want to support editors even better. Considerations to organise the content in multiple thema repositories and within the thema repositories are
+However, this choice might need to be reconsidered in the future, if we want to support editors even better. 
+The toolchain is designed to work with multiple thema repositories.
+To organise the SEMIC data specifications in multiple thema repositories the following considerations can best taken into account:
 
   - It is best to group all data specifications that are defining PURIs in the same namespace in one thema repository. 
     Like this the risk for creating overlapping concepts is reduced, and the impact of a change on a URI is more visible.
@@ -144,7 +148,7 @@ They are:
 
 - UML editing tool: [Enterprise Architect from Sparx systems](https://www.sparxsystems.eu/enterprise-architect)
 - Source Control System: [GitHub](https://github.com)
-- Continuous Integration/Continous Deployment: [CircleCI](https://circle.com)
+- Continuous Integration/Continuous Deployment: [CircleCI](https://circle.com)
 - OSLO toolchain tools:
     - UML content extraction tool: [EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF/tree/multilingual)
     - artefact generators: [OSLO Specification Generator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator/tree/multigual-dev)
@@ -189,7 +193,7 @@ Performing this change will trigger the generation of the artefacts.
 
 
 Besides technical expectations, such as the repository should be a GitHub repository, the toolchain does not impose editorial management rules on a publication point's structure.
-For instance, SEMIC could impose rules for the namegiving of the filenames, urlref path structure, and branchtags, but SEMIC could also impose a correspondence between the branchtag and the urlpath structure.
+For instance, SEMIC could impose rules for the name-giving of the filenames, urlref path structure, and branchtags, but SEMIC could also impose a correspondence between the branchtag and the urlpath structure.
 This is future work, and should be considered in the context of further integrating the toolchain in the publication process.
 
 
@@ -202,7 +206,7 @@ The source code for the CircleCI automation is part of the repository [uri.semic
 The organisation and setup of the workflow of the CircleCI workflow is extensively documentated in the _template_ repository [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
 
 The CircleCI workflow will execute in some steps software available as public Docker images. 
-These images are build from the open source repositores 
+These images are build from the open source repositories 
   - [OSLO-EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF)
   - [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator)
 
