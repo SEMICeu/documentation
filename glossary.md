@@ -15,15 +15,12 @@ This document contains a condensed overview of the terminology, and other key no
 
 - _master data management_ - the data management principle in which one identifies the origin of data (the master) and with that knowledge the use of the data is organised so that a change in the master will propogate throughout the whole usage chain. 
 
-TODO (further suggestions):
-- Semantic Web
-- URI, IRI 
-- PURI 
-- API 
-- XSD
-- JSON-LD
-- SHACL
-- CD/CI
-- regression testing
-- data specification (suggested by Pavlina)
+
+- JSON-LD - JSON for Linking Data, https://json-ld.org/ ; A JSON-based Serialization for Linked Data, https://www.w3.org/TR/json-ld/
+- SHACL  - Shapes Constraint Language, https://www.w3.org/TR/shacl/
+- XSD - W3C XML Schema Definition Language, https://www.w3.org/TR/xmlschema11-1/
+- CD/CI - Continous Development/Continous Integration: an approach in software development to automate the connection between a code change and the software artefacts in a running service. https://en.wikipedia.org/wiki/CI/CD
+- Semantic Web - the web of data, interlinked data through semantical links, https://en.wikipedia.org/wiki/Semantic_Web
+- regression testing - a software testing approach oriented to the detection of loss of functionality when developing new features.
+- data specification - a document describing the semantical agreements for data shared within an context.
 
