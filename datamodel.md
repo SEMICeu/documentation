@@ -164,6 +164,12 @@ The `{language}` part corresponds to the 2-letter [ISO 639-1 language code](http
   - `label-nl`: the tag expresses the label of the term in Dutch, at the level of a vocabulary
   - `ap-usageNote-en`: the tag expresses the "usage note" annotation in English, for the application profile
 
+Not all annotations require a prefix (`{data_spec_category}-`) or suffix (`-{language}`). 
+For instance, the tag name `uri` has no prefix or suffix, as a term should have only one globally unique persistent identifier. 
+
+Possible values for `{annotation}` are label, definition, usageNote, uri, name, parentURI, range, baseURI, codelist.   
+
+
 The pattern is very useful because it allows to have two perspectives on the same term in the UML file.
 One perspective is the base reference, i.e. the vocabulary, and the other perspective is the application usage context.
 Having the ability to have them side by side makes it much easier for editors to ensure that the reuse of a term is done properly.
@@ -172,9 +178,6 @@ For instance, when generating application profile content, first the tags with `
 If no value is found, then the vocabulary tag is consulted. 
 Only when this is not present a `TODO/NOT FOUND` value is used.
 Application profile editors are thus supported when reusing existing vocabularies.
-
-Not all annotations require a prefix (`{data_spec_category}-`) or suffix (`-{language}`). 
-For instance, `uri` has no prefix or suffix, as a term should have only one globally unique persistent identifier. 
 
 
 #### Example annotated UML model
