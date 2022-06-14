@@ -4,8 +4,8 @@ There are three main types of actors that will interact with the resources and a
 
 The connection between these three group of actors is the following: The tools and methods are set up by the _developers_ to support the _editors_ in their work, to provide together a coherent experience to the _consumers_.
 
-Since the _consumers_ are the "end users" of the data specifications, they will not need to interract directly with the SEMICeu GitHub space. 
-Therefore, this page will focus mosty on defining the roles of the _editors_ and _developers_, and will provide less details about _consumers_ and other user roles.
+Since the _consumers_ are the "end users" of the data specifications, they will not need to interact directly with the SEMICeu GitHub space. 
+Therefore, this page will focus mostly on defining the roles of the _editors_ and _developers_, and will provide less details about _consumers_ and other user roles.
 
 The page is structured in sections and subsections describing these **roles** and their related **activities**, as follows:
 
@@ -36,12 +36,12 @@ They are expected to have the following skills:
 
  - can write “formal” statements in vocabularies & application profiles (***linguistic skills***)  
  - can organise information in a data model (***structuring skills***)  
- - can explain data modeling issues in a webinar (***communication skills***)  
+ - can explain data modelling issues in a webinar (***communication skills***)  
  - can write & execute simple software code (***software developer skills***)  
 
 The editors should be familiar with the Semantic Web.
 That is, they should have knowledge and experience with the terminology, the data formats and tools used in the Semantic Web community. 
-This documentation is not targetting editors who model a data specification (according to the Semantic Web principles) for the first time.
+This documentation is not targeting editors who model a data specification (according to the Semantic Web principles) for the first time.
 Nevertheless, with a coach, and by using the tooling, editors with limited experience can become more experienced quite quickly. 
 
 
@@ -65,7 +65,7 @@ As mentioned in the [Historical Background](README.md#historical-background), th
 To support the editors even better more automation is required.
 
 
-The prerequisite knowlegde of a developer can be circumscribed as being a Swiss knife (or a full-stack) developer.
+The prerequisite knowledge of a developer can be circumscribed as being a Swiss knife (or a full-stack) developer.
 Developers (or the developers team) should have the following skills:
 
  - have generic programming skills
@@ -84,7 +84,7 @@ For instance, whereas for software the scope of a branch in a repository is to e
 
 
 ## Other roles
-Besides the main roles that the above described actors have to fulfill, there exist also other roles, involving specific activities, that certain actors need to assume. These activities are described below.
+Besides the main roles that the above described actors have to fulfil, there exist also other roles, involving specific activities, that certain actors need to assume. These activities are described below.
 
 ### Communication
 Besides the activities related to the creation and management of the data specifications, there are also __communication activities__, like publishing the results on JoinUp.
