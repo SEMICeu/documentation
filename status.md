@@ -18,10 +18,10 @@
 | ---- | ---- | ---- | ---- | ---- | 
 | README.md | Ready for final review | 7 june 2022 | 10 june 2022 | 20 june 2022|
 | actors.md | Ready for final review | 7 june 2022 | 10 june 2022 | 20 june 2022|
-| editorial_flow.md | Ready for internal review | 8 june 2022 | 13 june 2022 | 20 june 2022|
-| datamodel.md | Ready for internal revision (2nd round) |  8 june 2022 | 10 june 2022 | 20 june 2022|
-| toolchain.md | Under internal review |  8 june 2022 | 13 june 2022 | 20 june 2022|
-| puri.md | Ready for internal review | 8 june 2022 | 13 june 2022 | 20 june 2022|
+| editorial_flow.md | Ready for internal revision | 8 june 2022 | 13 june 2022 | 20 june 2022|
+| datamodel.md | Ready for final review |  8 june 2022 | 10 june 2022 | 20 june 2022|
+| toolchain.md | Ready for internal revision |  8 june 2022 | 13 june 2022 | 20 june 2022|
+| puri.md | Under internal review | 8 june 2022 | 13 june 2022 | 20 june 2022|
 | artefact_generation.md | Ready for internal review | 10 june 2022 | 15 june 2022 | 20 june 2022 |
 | xsd.md | Draft  | 10 june 2022 | 15 june 2022 | 20 june 2022 |
 | glossary.md | Draft | 14 june 2022 | 15 june 2022| 20 june 2022 |
@@ -35,6 +35,7 @@
  - **Ready for internal revision** : internal review is finished, suggestions for further improvements have been made, which need to be addressed
  - **Under internal revision** : undergoing changes to address feedback from internal review
  - **Ready for final review** : text and structure is in publishable shape, ready to undergo an official review
+ - **Under final review** : undergoing final review
  - **Ready for final revision** : official review is finished, suggestions for further improvements have been made, which need to be addressed
  - **Under final revision** : undergoing a final "official" review
  - **Approved** : text has been accepted for publishing

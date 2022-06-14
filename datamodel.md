@@ -1,6 +1,6 @@
 # Modeling data specifications
 
-This chapter decribes the key notions and information an editor needs to understand for _editing data specifications_.
+This chapter describes the key notions and information an editor needs to understand for _editing data specifications_.
 Within this document the term data specification is used to refer to its core: **the semantic model**, i.e. the classes and properties with their semantic description.
 Besides this, and beyond the scope of this chapter, a data specification contains metadata about the document, a changelog, use case descriptions, context, conformance statements and more.
 
@@ -88,7 +88,7 @@ At this moment, however, _no formal expectation of the SEMIC data specifications
 ## The UML model
 
 As mentioned in the previous section, a SEMIC data specification is build and published according to the best practices of the Semantic Web.
-Following this approach data specifications identifiy terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass axioms, domain, range, cardinality restrictions, etc.). 
+Following this approach data specifications identify terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass axioms, domain, range, cardinality restrictions, etc.). 
 
 However, because the Semantic Web representations (rendered as HTML tables or in machine readable formats, such as RDF) are not providing consumers a satisfactory way for understanding the data specification, often a graphical representation is provided.
 Graphical representations are able to convey more concisely the key formal logic statements at one glance.
@@ -101,7 +101,7 @@ Working with two (or more) distinct modelling languages simultanously creates a 
 It would be a waste of time and effort, if the editors would have to express the same data specification in two distinct modelling languages.
 Therefore, one modeling language should be selected as the "master", from which the other representations would be derived.
 
-Within the SEMIC toolchain, the "master" for the semantic model is the UML represenation. 
+Within the SEMIC toolchain, the "master" for the semantic model is the UML representation. 
 This decision is motivated based on two compelling arguments: the "transformational argument" and the "editorial argument".
 
 #### Transformational argument
