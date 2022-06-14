@@ -76,9 +76,9 @@ To illustrate the generic editorial flow consider the common change request to a
 The text below is summarised transcript of a video recording demonstrating the addition of a new property 'baptismal name' to the class Person in the Core Person Vocabulary.
 The video recordings are:
  
-   - [Part 1](./images/step1.mp4) - demonstrates the editing of the UML model
-   - [Part 2](./images/step2.mp4) - demonstrates the automated generation of the data specification artefacts
-   - [Part 3](./images/step3.mp4) - demonstrates the (manual) publication step
+   - [Part 1](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true) - demonstrates the editing of the UML model
+   - [Part 2](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true) - demonstrates the automated generation of the data specification artefacts
+   - [Part 3](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true) - demonstrates the (manual) publication step
 
 All demonstrated changes are performed on the involved repositories using a demonstration branch called `example`.
 Using this branch all activities can demonstrated on a working environment, except for the last step: the official publication of the transformation.
@@ -88,7 +88,7 @@ This approach has been selected to facilitate the recording, not because is the 
 Editors can use their preferred way to interact with the SEMIC GitHub space, e.g. checking out the code and working locally, then pushing the changes back.
 
 
-## Part 1: Change the UML model ( [video](./images/step1.mp4) )
+## Part 1: Change the UML model ( [video](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true) )
 
 1. Find the latest UML master data.
 
@@ -101,7 +101,7 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
    The editor edits the copy, and adds the property 'baptismalName' with the annotations: the label and definition in English, and the assigned URI.
    After finishing the editing, the editor commits the UML file to the thema repository.
    
-## Part 2: Build the artefacts using the toolchain ( [video](./images/step2.mp4) )
+## Part 2: Build the artefacts using the toolchain ( [video](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true) )
 
 3. Trigger the toolchain 
 
@@ -112,7 +112,7 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
    The progress of the generation process can be followed in [CircleCI](http://circleci.com).
 
 
-## Part 3: Publish the result ( [video](./images/step3.mp4) )
+## Part 3: Publish the result ( [video](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true) )
 
 4. Check the generated artefacts
 
