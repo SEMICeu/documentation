@@ -4,15 +4,15 @@ Persistent URIs are identifiers in the form of a URI that are maintained for ete
 They provide stability throughout space and time for data.
 
 A key aspect for persistent URIs is dereferenceability.
-Technically it means that content negotation is active for the PURI.
+Technically it means that content negotiation is active for the PURI.
 Without it, nobody can verify the original values and the risk exists that a local usage changes the semantics for the identifier unnoticed.
 Dereferencing is thus a technical mean to ensure that semantics are stable and not shifting behind the back of users.
 
 PURIs form the foundation of data specifications. 
-In order to unambigously fix the semantics of terms in a data specification, each term gets a URI assigned.
+In order to unambiguously fix the semantics of terms in a data specification, each term gets a URI assigned.
 This URI is either an existing URI or a new URI minted within [one of the persistent URI domains](#supported-domains-by-semic) from SEMIC.
 Reusing PURIs from external domains means that the data specification will rely on the semantics and the governance associated with the external URI to set the semantics of the term.
-For those terms that are identified by a PURI within a SEMIC owned domain, it is the editors duty to perform the neccesary editorial effort to maintain the correctness of the shared content via dereferenceability.
+For those terms that are identified by a PURI within a SEMIC owned domain, it is the editors duty to perform the necessary editorial effort to maintain the correctness of the shared content via dereferenceability.
 In this chapter the setup and basic editorial maintenance activities for PURIs within SEMIC are described.
 
 
@@ -75,18 +75,18 @@ The following domains are decommissioned.
 The SEMIC PURI service is designed to provide editors the means to manage the PURIs without (or minimal) involvement of a developer or a system admin.
 Because the editorial activities only involve GitHub interaction to create artefacts and publish them to the consumers, it is desirable for the PURI service to be also designed in this spirit.
 
-Namely the editor is granted acccess to a GitHub repository. 
+Namely the editor is granted access to a GitHub repository. 
 By changing the content of this GitHub repository also the content of the PURI service changes.
 
 
 
 #### Deployed setup
 
-Content negotation is a more complex proxy configuration than serving a static website as provided by GitHub pages used by the data specifications.
+Content negotiation is a more complex proxy configuration than serving a static website as provided by GitHub pages used by the data specifications.
 Therefore the solution has been deployed on a SEMIC operated virtual machine. 
 
 To the outside world, the SEMIC PURI service is accessible under the domain *uri.semic.eu*.
-The description of the implemented content negotation rules, source code and deployment instructions are found in the repository [uri.semic.eu-proxy](https://github.com/SEMICeu/uri.semic.eu-proxy). 
+The description of the implemented content negotiation rules, source code and deployment instructions are found in the repository [uri.semic.eu-proxy](https://github.com/SEMICeu/uri.semic.eu-proxy). 
 
 The content of the PURIs is stored in another repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris). 
 The PURI content repository is organised to match straightforward the URI structure of a PURI.
