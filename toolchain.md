@@ -173,7 +173,7 @@ A commit to the _thema_ repository is _not_ triggering the generation process.
 An editor can thus improve incrementally the content in the _thema_ repository, without being forced to generate each time the artefacts.
 Only when needed will the editor trigger the generation process.
 
-The usual change to the publication repository for triggering the generation process consists of in changing the publication point corresponding to the data specification that has been edited.
+The usual change to the publication repository for triggering the generation process consists of changing the publication point corresponding to the data specification that has been edited.
 A publication point is a reference to a data specification in a _thema_ repository.
 An example is shown below:
 ```
