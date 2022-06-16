@@ -2,71 +2,70 @@
 
 This chapter describes the artefact generation process for a data specification.
 The target audience for this chapter are experienced editors and developers that want to understand and improve the artefact generation.
-Nevertheless novel editors are invited to perform a quick reading as this will aid them to communicate better with the developers when the artefact generation fails.
+Nevertheless, novel editors are also invited to perform a quick reading, as this will aid them to communicate better with the developers, when the artefact generation fails.
 
 ## Overview
 
-The creation of the data specification artefacts is roughly a *two* phase process. 
+The creation of the data specification artefacts is roughly a *two phase* process. 
 First, all information of the data specification is collected in an internal representation. 
 Next, out of that internal representation, the artefacts of the data specification to be published are generated.
-The first phase is denoted as the [aggregation phase](#Aggregation-phase), while the second is called the [generation phase](#Generation-phase).
+The first phase is denoted as the [Aggregation phase](#aggregation-phase), while the second is called the [Generation phase](#generation-phase).
 
 
 The *internal representation* has the same structure for each data specification category. 
-This simplifies the developer effort to create (new) data specification artefact generators, as experience from one generator can be transferred to another.
-The internal representation contains besides the semantical content of a data specification (see the [datamodel](./datamodel.md) chapter) the stakeholders contributing to the data specification and the complete configuration information associated with the data specification:  the [data specification configuration](https://github.com/SEMICeu/uri.semic.eu-thema/blob/example/config/core-person.json), the [publication point configuration](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json), the [publication environment configuration](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/config.json) and the toolchain execution information.
-E.g. the internal representation for the example data specification discussed in the [editorial flow](./editorial_flow.md) chapter is [here](https://github.com/SEMICeu/uri.semic.eu-generated/blob/example/report/doc/core-vocabulary/core-person/all-core-person-ap.jsonld).
-Storing the internal representation in the generated repository provides editors to explore this structure to detect the origin of errors or to express new features for artefact generators.
+This simplifies the developers' effort to create (new) artefact generators for (new or existing) data specifications, as experience from one generator can be transferred to another.
+The internal representation contains, besides the semantic model of a data specification (see the [datamodel](./datamodel.md) chapter) the stakeholders contributing to the data specification and the complete configuration information associated with the data specification. This configuration information includes: the [data specification configuration](https://github.com/SEMICeu/uri.semic.eu-thema/blob/example/config/core-person.json), the [publication point configuration](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json), the [publication environment configuration](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/config.json) and the toolchain execution information.
+For example, the internal representation of the data specification given as example in the [editorial flow](./editorial_flow.md) chapter can be found [here](https://github.com/SEMICeu/uri.semic.eu-generated/blob/example/report/doc/core-vocabulary/core-person/all-core-person-ap.jsonld).
+Storing the internal representation in the generated repository provides an opportunity for the editors to explore this structure, to detect the origin of errors, or to express new features for artefact generators.
 
 The complete artefact generation process is automated and implemented using CircleCI, within the publication repository [uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication). 
 The CircleCI web application offers a visual representation of the CircleCI workflow, and thus a visual representation of the artefact generation process.
-Generic information about the organisation and setup of the workflow of the CircleCI workflow is documentated in [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
+Generic information about the organisation and setup of the workflow of the CircleCI workflow is provided in the documentation of the [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template#readme) GitHub repository.
 
 
 ## Aggregation phase 
 
 The core activity of the first phase is the extraction of the semantic model expressed in the UML diagram into the internal representation.
-In the [datamodel](./datamodel.md) chapter is explained that the UML diagram is a standard UML model extended with annotations.
+The [datamodel](./datamodel.md) chapter describes in detail how the UML diagram expressing the semantic model of a data specification is basically a standard UML model extended with annotations.
 
-The [UML Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF) is used to convert a UML diagram.
+The [UML Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF) is used to convert a UML diagram into RDF.
 This tool is responsible for assigning PURIs to the terms in the data specification and for the interpretation of the UML model as a semantic model.
-To avoid diverging semantical interpretations across the artefacts, the generators in the generation phase should not make any semantic interpretation. 
-This means determining what is a class or a property, the assignment of PURIs, etc. are the sole responsability for the UML Conversion Tool.
+To avoid diverging semantic interpretations across the artefacts, the generators should not make any semantic interpretation in the generation phase. 
+Determining what is a class or a property, the assignment of PURIs, etc. are the sole responsability for the UML Conversion Tool, and should happen in the aggregation phase.
 
-Besides the semantic interpretation, the aggregation phase is handling the multilingual aspects.
-It will create [translation files](https://github.com/SEMICeu/uri.semic.eu-generated/blob/example/report/doc/core-vocabulary/core-person/translation/core-person-ap_de.json). 
-Translation files contain all translatable content in a structure compatible with the semantic model.
+Besides the semantic interpretation, the aggregation phase is also handling the multilingual aspects, by creating *translation files*.
+Translation files contain all translatable content in a structure that is compatible with the semantic model. 
+[Here](https://github.com/SEMICeu/uri.semic.eu-generated/blob/example/report/doc/core-vocabulary/core-person/translation/core-person-ap_de.json) is an example translation file for the Core Person Vocabulary to provide the labels of the terms in German.
 During the aggration phase, the provided translations are merged into the internal representation to create a language aware internal representation.
 
 
 
 ## Generation phase 
 
-The artefact generation phase consists of parallell executions targetting one artefact.
-
 The toolchain provides a number of artefact generators. 
-Below for each artefact generator a short description is provided.
+During the generation phase These artefact generators are executed in a parallel fashion on the same artefact.
+Below we provide a short description for each artefact generator.
 
-During editing a data specifications editors should not be concerned with the internal details of the artefact generators.
-However experienced editors may start reflecting on whether the produced artefacts satisfy the consumers' expectations or needs.
-At that moment editors become developers, namely evaluating and desiging the expected outcome of the artefacts.
+During the editing of a data specification editors should not be concerned with the internal details of the artefact generators.
+However, experienced editors may start reflecting on whether the produced artefacts will satisfy the consumers' expectations or needs.
+At that moment editors become developers; namely, they will be not just editing the model, but will also be evaluating and desiging the expected outcome of the artefacts.
 The provided documentation targets the knowledge required for performing editorial activities. 
 Design considerations for developers are beyond scope.
 
 ### HTML artefact generator
 
-The HTML artefact generator makes a HTML file by rendering an template with the internal representation.
+The HTML artefact generator makes an HTML file by rendering the internal representation according to a template.
 The template language used is [Nunjuncks](https://mozilla.github.io/nunjucks/).
 
 The data specification configuration in the thema repository contains the reference to the template.
 The template language supports modularity via importing other templates. 
-The HTML artefact generator is designed, and configured, to exploit this mechanism so that the data specification's specific content, e.g. the summary,  is combined with a generic template for the publication environment.
-The ability to work with reusable generic templates is an enabler for a coherent consumer experience on the web.
-Creating reusable generic templates requires knowledge about the publication environment, such as the hostname and path where the HTML document will be published, and information where additional data specification's content, such as pictures.
-Where the first is part of the publication repository configuration, is the latter part of the thema repository. 
+The HTML artefact generator is designed and configured to exploit this mechanism, so that the data specification's specific content, e.g. the summary, is combined with a generic template for the publication environment.
+The ability to work with reusable generic templates is an enabler for a coherent consumer experience on the Web.
+Creating reusable generic templates requires knowledge about the publication environment, such as the hostname and path where the HTML document will be published, and where additional information, such as pictures, that are part of the data specification's content, can be accessed.
+While the first is part of the publication repository configuration, the latter is part of the thema repository. 
 
-The generation is language sensitive as the labels, definitions and usage notes of the terms in the data specification are language sensitive.
-Therefore the language to use from the internal representation must be specified.
+The generation is language sensitive, as the labels, definitions and usage notes of the terms in the data specification are language sensitive.
+Therefore, the language to be used from the internal representation must be specified.
 
 Besides these key options, there are more options facilitating the implementation, but these are for the developers to explore. 
 
@@ -84,7 +83,7 @@ The generation is not language sensitive as RDF allows multilanguage content.
 The JSON-LD context artefact generator creates a JSON-LD context out of the internal representation.
 
 The generation is language sensitive as the attribute names to be mapped can be based on the labels of the terms in the data specification.
-Therefore the language to use from the internal representation must be specified.
+Therefore, the language to be used from the internal representation must be specified.
 
 The generation is also sensitive to disambiguation challenges. 
 Therefore an option has been added to force domain based disambiguation.
@@ -105,7 +104,7 @@ In this case specific error messages can be associated per constraint.
 This representation allows to add more easily specific usage notes constraints such as, _there should only one value per language_ for which SHACL has a dedicated expression.
 
 The generation is language sensitive as the validation messages are based on the labels of the terms in the data specification.
-Therefore the language to use from the internal representation must be specified.
+Therefore, the language to be used from the internal representation must be specified.
 In a multilingual context, the second representation is required as it is the only way to create a error context aware message in multiple languages.
 
 In the toolchain the first representation is active.
@@ -115,22 +114,22 @@ In the toolchain the first representation is active.
 ## Adding a new artefact generator to the artefact generation process
 
 The repository [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator) collects the OSLO artefact generators.
-These are all written in javascript. 
+These are all written in Javascript. 
 A test suite is available in the repository, illustrating the usage of each artefact generator w.r.t. different parameter choices.
 
-Adding a new artefact generator in the artefact generation process is in short as follows:
-   - implement the artefact generator
-       - create the new artefact generator as a new javascript tool
+Adding a new artefact generator in the artefact generation process involves the following broad steps:
+   1. Implement the artefact generator
+       - create the new artefact generator as a new Javascript tool
        - add the test suite
        - build and publish a new docker image with the new artefact generator included
-   - integrate the artefact generator
+   2. Integrate the artefact generator in the artefact generation process
        - update the CircleCI workflow
        - extend or implement supportive scripts in the publication environment
        - test the result
 
 The integration is best applied on a working setup.  
-When the artefact generator has reached maturity add the additional generation possibility as part of a new version for
-[OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template) to share your work with the community.
+When the new artefact generator has reached maturity, this additional generation possibility should be shared with the community, by adding it as part of a new version of the
+[OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
 
 
 
