@@ -14,8 +14,13 @@ The first phase is denoted as the [Aggregation phase](#aggregation-phase), while
 
 The *internal representation* has the same structure for each data specification category. 
 This simplifies the developers' effort to create (new) artefact generators for (new or existing) data specifications, as experience from one generator can be transferred to another.
-The internal representation contains, besides the semantic model of a data specification (see the [datamodel](./datamodel.md) chapter) the stakeholders contributing to the data specification and the complete configuration information associated with the data specification. This configuration information includes: the [data specification configuration](https://github.com/SEMICeu/uri.semic.eu-thema/blob/example/config/core-person.json), the [publication point configuration](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json), the [publication environment configuration](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/config.json) and the toolchain execution information.
-For example, the internal representation of the data specification given as example in the [editorial flow](./editorial_flow.md) chapter can be found [here](https://github.com/SEMICeu/uri.semic.eu-generated/blob/example/report/doc/core-vocabulary/core-person/all-core-person-ap.jsonld).
+The internal representation contains, besides the semantic model of a data specification (see the [datamodel](./datamodel.md) chapter), also 
+  -  the stakeholders contributing to the data specification,  and
+  -  the complete configuration information associated with the data specification. 
+
+This configuration information consists of: the [data specification configuration](https://github.com/SEMICeu/uri.semic.eu-thema/blob/example/config/core-person.json), the [publication point configuration](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json), the [publication environment configuration](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/config.json) and the toolchain execution information.
+The toolchain execution information is runtime information related to the actual CI/CD execution at the moment of processing the data specification. For instance, the commit in the publication repositorory that triggered the toolchain, but also the thema repository commit that identifies the data specification that is being processed.
+The complete internal representation of the data specification of the example in the [editorial flow](./editorial_flow.md) chapter can be found [here](https://github.com/SEMICeu/uri.semic.eu-generated/blob/example/report/doc/core-vocabulary/core-person/all-core-person-ap.jsonld).
 Storing the internal representation in the generated repository provides an opportunity for the editors to explore this structure, to detect the origin of errors, or to express new features for artefact generators.
 
 The complete artefact generation process is automated and implemented using CircleCI, within the publication repository [uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication). 
@@ -25,10 +30,10 @@ Generic information about the organisation and setup of the workflow of the Circ
 
 ## Aggregation phase 
 
-The core activity of the first phase is the extraction of the semantic model expressed in the UML diagram into the internal representation.
+The _core activity_ of the first phase is the extraction of the semantic model expressed in the UML diagram into the *internal representation*.
 The [datamodel](./datamodel.md) chapter describes in detail how the UML diagram expressing the semantic model of a data specification is basically a standard UML model extended with annotations.
 
-The [UML Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF) is used to convert a UML diagram into RDF.
+The key component is the [UML Conversion Tool](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF).
 This tool is responsible for assigning PURIs to the terms in the data specification and for the interpretation of the UML model as a semantic model.
 To avoid diverging semantic interpretations across the artefacts, the generators should not make any semantic interpretation in the generation phase. 
 Determining what is a class or a property, the assignment of PURIs, etc. are the sole responsability for the UML Conversion Tool, and should happen in the aggregation phase.
@@ -55,9 +60,10 @@ Design considerations for developers are beyond scope.
 ### HTML artefact generator
 
 The HTML artefact generator makes an HTML file by rendering the internal representation according to a template.
+The objective of the HTML represenation is create a human readable representation. 
 The template language used is [Nunjuncks](https://mozilla.github.io/nunjucks/).
 
-The data specification configuration in the thema repository contains the reference to the template.
+The data specification configuration in the thema repository contains the reference to the [template](https://github.com/SEMICeu/uri.semic.eu-thema/blob/example/config/core-person.json#L7).
 The template language supports modularity via importing other templates. 
 The HTML artefact generator is designed and configured to exploit this mechanism, so that the data specification's specific content, e.g. the summary, is combined with a generic template for the publication environment.
 The ability to work with reusable generic templates is an enabler for a coherent consumer experience on the Web.
@@ -73,14 +79,19 @@ Besides these key options, there are more options facilitating the implementatio
 ### RDF artefact generator
 
 The RDF artefact generator makes a JSON-LD file out of the internal representation.
-
 Using of-the-shelf JSON-LD to RDF serialisation convertion tools the JSON-LD file is expressed as turtle, ntriples or RDF/XML.
+
+The objective is to support the machine readable representation of the vocabulary terminology. This artefact is thus tightly coupled with the PURI publication process.
 
 The generation is not language sensitive as RDF allows multilanguage content.
 
 ### JSON-LD context artefact generator
 
-The JSON-LD context artefact generator creates a JSON-LD context out of the internal representation.
+The JSON-LD context artefact generator creates a [JSON-LD context](https://www.w3.org/TR/json-ld/#the-context) out of the internal representation.
+
+The objective is to create a kick start building semantically annotated JSON based RESTful APIs. 
+The REST developer community is usually not familiar with the Semantic Web.
+The generated context file allow to quickly compose a JSON structure with the correct semantical mappings. 
 
 The generation is language sensitive as the attribute names to be mapped can be based on the labels of the terms in the data specification.
 Therefore, the language to be used from the internal representation must be specified.
@@ -90,26 +101,31 @@ Therefore an option has been added to force domain based disambiguation.
 
 ### SHACL artefact generator
 
-The SHACL artefact generator creates a SHACL out of the internal representation.
+The SHACL artefact generator creates a file containing [SHACL shapes](https://www.w3.org/TR/shacl/#shapes) out of the internal representation.
 
-The same collection of constraints can be expressed in various SHACL representations.
+The objective is to facilitate data validation. 
+By configuring a validator, e.g. the TestBed, with the SHACL file a data validation environment is created. 
+
+The design of the SHACL shapes is a non-trivial process. 
+The SHACL language allows to express the same collection of constraints in various ways.
+In the [Webinar on DCAT-AP validation](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/news/shacl-shapes-dcat-ap-webinar), the impact of some expression forms have been elaborated.
+
+A _constraint_ is an restriction on the use of the terminology in the data specification such as a domain, range, min and max cardinality, etc.
+
 In the most compact representation the constraints are grouped per SHACL node.
+In this design the error messages users of a data validation system will recieve are those that are produced by a validator engine.
+They are fixed, and cannot be altered by the SHACL shape designer.
 
-This is one representation the SHACL artefact generator can produce. 
-It was the first representation.
-The error messages in this representation are those from the SHACL processing engine.
-
-An alternative representation is to create per constraint an SHACL expression.
-In this case specific error messages can be associated per constraint.
+An alternative design is to create per constraint a unique SHACL node.
+In this case dedicated error messages can be associated per constraint.
 This representation allows to add more easily specific usage notes constraints such as, _there should only one value per language_ for which SHACL has a dedicated expression.
 
 The generation is language sensitive as the validation messages are based on the labels of the terms in the data specification.
 Therefore, the language to be used from the internal representation must be specified.
 In a multilingual context, the second representation is required as it is the only way to create a error context aware message in multiple languages.
 
-In the toolchain the first representation is active.
+In the SEMIC toolchain the first representation is active.
 
- 
 
 ## Adding a new artefact generator to the artefact generation process
 
