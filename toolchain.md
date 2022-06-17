@@ -3,8 +3,8 @@
 
 ## Motivation
 
-To support the editors in creating and maintaining data specifications in a coherent manner, tooling is required.
 
+To support the editors in creating and maintaining data specifications [[*]](./glossary.md#data_spec) in a coherent manner, tooling is required.
 Data specifications have their own life cycle. 
 The various Core Vocabularies are created by different (editorial) teams, with different Working Groups, at different times.
 In the past, the manual editing has resulted in similar, yet distinct, and sometimes incoherent, expressions of these Core Vocabularies.
