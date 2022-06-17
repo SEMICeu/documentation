@@ -1,12 +1,13 @@
 # Persistent URIs (PURIs)
 
 Persistent URIs are identifiers in the form of a URI that are maintained for eternity. 
-They provide stability throughout space and time for data.
+They provide stability for data through space and time.
 
 A key aspect for persistent URIs is dereferenceability.
-Technically it means that content negotiation is active for the PURI.
-Without it, nobody can verify the original values and the risk exists that a local usage changes the semantics for the identifier unnoticed.
-Dereferencing is thus a technical mean to ensure that semantics are stable and not shifting behind the back of users.
+Technically it means that content negotation is active for the PURI.
+Without it, nobody can verify the original values, and the risk exists that a local usage changes the semantics for the identifier unnoticed.
+Dereferencing is thus a technical mean to ensure that semantics are stable and it is not shifting "behind the back" of the users.
+
 
 PURIs form the foundation of data specifications. 
 In order to unambiguously fix the semantics of terms in a data specification, each term gets a URI assigned.
@@ -72,44 +73,44 @@ The following domains are decommissioned.
 
 #### Design objectives
 
-The SEMIC PURI service is designed to provide editors the means to manage the PURIs without (or minimal) involvement of a developer or a system admin.
+The SEMIC PURI service is designed to provide editors the means to manage the PURIs without (or with minimal) involvement of a developer or a system admin.
 Because the editorial activities only involve GitHub interaction to create artefacts and publish them to the consumers, it is desirable for the PURI service to be also designed in this spirit.
 
-Namely the editor is granted access to a GitHub repository. 
-By changing the content of this GitHub repository also the content of the PURI service changes.
+Namely, the editor is granted acccess to a GitHub repository. 
+By changing the content of this GitHub repository, the content of the PURI service should also change.
 
 
 
 #### Deployed setup
 
-Content negotiation is a more complex proxy configuration than serving a static website as provided by GitHub pages used by the data specifications.
-Therefore the solution has been deployed on a SEMIC operated virtual machine. 
+Content negotation requires a more complex proxy configuration than serving a static website, as provided by GitHub Pages in the case of the data specifications.
+Therefore, the solution has been deployed on a virtual machine operated by SEMIC. 
 
 To the outside world, the SEMIC PURI service is accessible under the domain *uri.semic.eu*.
-The description of the implemented content negotiation rules, source code and deployment instructions are found in the repository [uri.semic.eu-proxy](https://github.com/SEMICeu/uri.semic.eu-proxy). 
+The description of the implemented content negotation rules, source code, and deployment instructions are found in the repository [uri.semic.eu-proxy](https://github.com/SEMICeu/uri.semic.eu-proxy). 
 
 The content of the PURIs is stored in another repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris). 
-The PURI content repository is organised to match straightforward the URI structure of a PURI.
-The turtle representation for the PURI of the form `http://data.europa.eu/{domain}/{reference}` is found in the file `/releases/{domain}/{reference}.ttl` stored in the `main` branch of the PURI content repository.
+The PURI content repository is organised to match directly the URI structure of a PURI.
+The Turtle representation for the PURI of the form `http://data.europa.eu/{domain}/{reference}` is found in the file `/releases/{domain}/{reference}.ttl`, stored in the `main` branch of the PURI content repository.
 The same holds for other representations.
 
 
 #### Usage 
 
 A developer is responsible for enabling (configuring) a domain in the SEMIC PURI service. 
-When setup, editors should only edit the content of the PURI in the content repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris). 
-More precisely, the editors should extract from the generated RDF artefact for the data specification the content for the PURI.
-And then create the RDF serialisations to be added to the content repository according to the conventions explained before.
+When this is set up, the editors should only edit the content of the PURI in the content repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris). 
+More precisely, the editors should extract the content for the PURI from the RDF artefact that was generated for the data specification.
+Then they should create the RDF serialisations to be added to the content repository, according to the conventions explained before.
 
-An example is shown in the editorial flow chapter.
+An example is shown in the [editorial flow](./editorial_flow.md#part-3-publish-the-result--video-) chapter.
 
 
 **Future work 1**: Today the editors require assistance from a developer to complete the editorial process for PURIs.
-This limitation is documented in the proxy documentation and it future work to improve the setup to match the design objectives.
+This limitation is documented in the proxy documentation, and it is future work to improve the setup to match the design objectives.
 
 
-**Future work 2**: These steps are part of the editorial effort editors have to perform manually.
-Therefore this process is a candidate to be automated and integrated in the toolchain.
+**Future work 2**: These steps are part of the editorial effort that editors have to perform manually.
+Therefore, this process is a candidate to be automated and integrated in the toolchain.
 
 
 
