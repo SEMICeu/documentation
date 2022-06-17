@@ -4,7 +4,7 @@
 ## Motivation
 
 
-To support the editors in creating and maintaining data specifications ([*](./glossary.md#data_spec), [**](./glossary.md#sem_web), [***](./glossary.md#reg_test), [****](./glossary.md#cd_ci), [***](./glossary.md#shacl), [****](./glossary.md#xsd))in a coherent manner, tooling is required.
+To support the editors in creating and maintaining data specifications ([*](./glossary.md#data_spec), [**](./glossary.md#sem_web), [***](./glossary.md#reg_test), [****](./glossary.md#cd_ci), [*****](./glossary.md#shacl), [******](./glossary.md#xsd))in a coherent manner, tooling is required.
 Data specifications have their own life cycle. 
 The various Core Vocabularies are created by different (editorial) teams, with different Working Groups, at different times.
 In the past, the manual editing has resulted in similar, yet distinct, and sometimes incoherent, expressions of these Core Vocabularies.

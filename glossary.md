@@ -20,9 +20,9 @@ Go to [shackalack](#shacl):
 - <a name="json_ld"></a> JSON-LD - JSON for Linking Data, https://json-ld.org/ ; A JSON-based Serialization for Linked Data, https://www.w3.org/TR/json-ld/
 - <a name="shacl"></a> SHACL  - Shapes Constraint Language, https://www.w3.org/TR/shacl/
 - {#xsd} XSD - W3C XML Schema Definition Language, https://www.w3.org/TR/xmlschema11-1/
-- [cd_ci] CD/CI - Continous Development/Continous Integration: an approach in software development to automate the connection between a code change and the software artefacts in a running service. https://en.wikipedia.org/wiki/CI/CD
+- <a name="cd_ci" > CD/CI - Continous Development/Continous Integration: an approach in software development to automate the connection between a code change and the software artefacts in a running service. https://en.wikipedia.org/wiki/CI/CD
 - <a id="sem_web"> Semantic Web </a>- the web of data, interlinked data through semantical links, https://en.wikipedia.org/wiki/Semantic_Web
 - <a name="reg_test" > regression testing </a> - a software testing approach oriented to the detection of loss of functionality when developing new features.
 - <a id="data_spec"></a> data specification - a document describing the semantical agreements for data shared within an context.
 
-<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
