@@ -68,13 +68,13 @@ To support the editors even better more automation is required.
 The prerequisite knowledge of a developer can be circumscribed as being a Swiss knife (or a full-stack) developer.
 Developers (or the developers team) should have the following skills:
 
- - have generic programming skills
- - being able to process, read and manipulate software in different programming languages and development setups
- - being able to read documentation of various tools and search for missing documentation on the Web
- - understand and work with Continuous Integration and Continuous Development (CI/CD) tools
- - understand and work in the spirit of "infrastructure as code", and be able to operate and deploy software using Docker containers
- - be familiar with the Linux ecosystem, able to explore and execute tasks via command line
- - have affinity with the Semantic Web
+ - have generic programming skills,
+ - being able to process, read and manipulate software in different programming languages and development setups, e.g. bash, javascript, html, json, nginx, apache, ... 
+ - being able to read documentation of various tools and search for missing documentation on the Web, e.g. nunjuncks
+ - understand and work with Continuous Integration and Continuous Development (CI/CD) tools, e.g. circleci.com
+ - understand and work in the spirit of "infrastructure as code", and be able to operate and deploy software using Docker containers, e.g. Docker, Docker compose 
+ - be familiar with the Linux ecosystem, able to explore and execute tasks via command line, e.g. Ubuntu
+ - have affinity with the Semantic Web, e.g. RDF serialisations (ntriples, turtle, RDF/XML), SPARQL, virtuoso, json-ld, dereferencing URIs
   
 The work environment that the editors are faced with is more uniform than those by the developers. 
 It is advised to maintain the highest burden on the developers and not make design decisions that make the developers life easier, but complicate the work of the editors.

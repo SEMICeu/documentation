@@ -48,7 +48,9 @@ During the aggration phase, the provided translations are merged into the intern
 ## Generation phase 
 
 The toolchain provides a number of artefact generators. 
-During the generation phase These artefact generators are executed in a parallel fashion on the same artefact.
+During the generation phase, these artefact generators are executed to produce the artefacts according to the [data specification expectation](./datamodel.md#data-specification-categories).
+The result of the generation process is stored in the generated repository under the path defined by the `urlref` provided by the publication point.
+For instance, the generated artefacts for the [example publication point](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json#L3) are found [here](https://github.com/SEMICeu/uri.semic.eu-generated/tree/example/doc/core-vocabulary/core-person).
 Below we provide a short description for each artefact generator.
 
 During the editing of a data specification editors should not be concerned with the internal details of the artefact generators.
@@ -97,6 +99,7 @@ The generation is language sensitive as the attribute names to be mapped can be 
 Therefore, the language to be used from the internal representation must be specified.
 
 The generation is also sensitive to disambiguation challenges. 
+It may occur that two different terms in a data specification use the same label.
 Therefore an option has been added to force domain based disambiguation.
 
 ### SHACL artefact generator
