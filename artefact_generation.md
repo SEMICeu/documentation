@@ -15,7 +15,7 @@ The first phase is denoted as the [Aggregation phase](#aggregation-phase), while
 The *internal representation* has the same structure for each data specification category. 
 This simplifies the developers' effort to create (new) artefact generators for (new or existing) data specifications, as experience from one generator can be transferred to another.
 The internal representation contains, besides the semantic model of a data specification (see the [datamodel](./datamodel.md) chapter), also 
-  -  the stakeholders' contributions to the data specification,  and
+  -  the contributers (i.e. editor, author, collaboration) to the data specification,  and
   -  the complete configuration information associated with the data specification. 
 
 This configuration information consists of: the data specification configuration ([see example](https://github.com/SEMICeu/uri.semic.eu-thema/blob/example/config/core-person.json)), the publication point configuration ([see example](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json)), the publication environment configuration ([see example](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/config.json)), and the toolchain execution information.
@@ -100,8 +100,12 @@ The generation is language sensitive, as the attribute names to be mapped can be
 Therefore, the language to be used from the internal representation must be specified.
 
 The generation is also sensitive to disambiguation challenges. 
-It may occur that two different terms in a data specification use the same label.
-Therefore, an option has been added to force domain based disambiguation.
+It may occur that two different terms in a data specification use the same label. 
+For example, consider a property _status_ used within the same data specification in two different classes, e.g. _Requirement_ and _Evidence_. 
+Despite the label _status_ is unambigous in the context of each class, globally within the data specification there are differences: the codelists, usage note, the URI, etc.
+To ensure that the JSON-LD context does not create unintentional overlaps, the generated JSON-LD attribute names can be disambiguated.
+This is done by prefixing the labels with the domain of the class to which the property belongs. 
+Forcing domain based disambiguation is switched on for the JSON-LD generator in the SEMIC toolchain.
 
 ### SHACL artefact generator
 
