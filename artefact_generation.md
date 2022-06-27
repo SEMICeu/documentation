@@ -112,7 +112,7 @@ Forcing domain based disambiguation is switched on for the JSON-LD generator in 
 The SHACL artefact generator creates a file containing [SHACL shapes](https://www.w3.org/TR/shacl/#shapes) out of the internal representation.
 
 The objective is to facilitate data validation. 
-By configuring a validator, e.g. the TestBed, with the SHACL file, a data validation environment is created. 
+By configuring a validator, e.g. the [TestBed](https://joinup.ec.europa.eu/collection/interoperability-test-bed-repository/solution/interoperability-test-bed), with the SHACL file, a data validation environment is created. 
 
 The design of the SHACL shapes is a non-trivial process. 
 The SHACL language allows to express the same collection of constraints in various ways.
