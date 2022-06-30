@@ -137,7 +137,7 @@ Aadditional information about what these tools are meant to do and when and how 
 
 - *Useful links*
 
-[Full list of tagged 'tooling'](https://github.com/search?q=org%3ASEMICeu+topic%3Atooling)
+[Full list of repositories tagged 'tooling'](https://github.com/search?q=org%3ASEMICeu+topic%3Atooling)
 
 
 
