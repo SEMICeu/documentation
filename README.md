@@ -9,8 +9,11 @@ This documentation covers the state of affairs as of June 2022.
 The objective is that readers are provided with sufficient anchors to initiate mastering the methods and tooling used to create and manage data specifications.
 
 For readers not acquinted with SEMIC we recommend to read this page first and afterwards go through the different markdown files in the following order:
-[Actors](./actors.md) > [Artefact generation](./artefact_generation.md) > [Datamodel](./datamodel.md) > [Editorial flow](./editorial_flow.md) > [Glossary](./glossary.md) > [PURI](./puri.md) > [Status](./status.md) > [Toolchain](./toolchain.md) > [xsd](./xsd.md)
+[Actors](./actors.md) > [Artefact generation](./artefact_generation.md) > [Datamodel](./datamodel.md) > [Editorial flow](./editorial_flow.md) > [Toolchain](./toolchain.md)
 
+Other resources in the documentation are an explanation of a [PURI](./puri.md), the [glossary](./glossary.md) and additional information about [xsd artefact generation](./xsd.md). 
+
+A [status](./status.md) md displays the status of the different documentation. 
 
 ## Table Of Contents
 1. [Historical Background](#historical-background)
