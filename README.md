@@ -114,13 +114,13 @@ It is assumed that there is an `index.html` file, as the data specification is t
 
 Further governance agreements regarding the structure of the Core Vocabulary repositories are not made.
 
-- *Useful links*
+    - *Useful links*
 
-[Current list of Core Vocabulary repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Acore-vocabulary)
+    [Current list of Core Vocabulary repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Acore-vocabulary)
 
-[Example of data specification repository tagged 'core-vocabulary'| Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/)
+    [Example of data specification repository tagged 'core-vocabulary'| Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/)
 
-[Example of data specification release version folder | Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00)
+    [Example of data specification release version folder | Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00)
 
 
 #### Application Profile repositories
@@ -131,21 +131,21 @@ For historical reasons, some Application Profile repositories follow the same or
 
 When a new release for these Application Profiles is being prepared, restructuring the content in accordance to the above described structure is highly recommended.
 
-- *Useful links*
+    - *Useful links*
 
-[Current list of Application Profile repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Aapplication-profile)
+    [Current list of Application Profile repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Aapplication-profile)
 
-### Repositories for Supporting Generation and Publication of Data Specifications
+    ### Repositories for Supporting Generation and Publication of Data Specifications
 
-The repositories that provide the support for generating and publishing data specifications are tagged with the topic ***tooling***.
+    The repositories that provide the support for generating and publishing data specifications are tagged with the topic ***tooling***.
 
-These repositories have no common organisational structure, however their `README.md` file should provide a good overview about their organisation and usage.
+    These repositories have no common organisational structure, however their `README.md` file should provide a good overview about their organisation and usage.
 
 Aadditional information about what these tools are meant to do and when and how to use them can be found in the [Toolchain](./toolchain.md) page. 
 
-- *Useful links*
+    - *Useful links*
 
-[Full list of repositories tagged 'tooling'](https://github.com/search?q=org%3ASEMICeu+topic%3Atooling)
+    [Full list of repositories tagged 'tooling'](https://github.com/search?q=org%3ASEMICeu+topic%3Atooling)
 
 
 
