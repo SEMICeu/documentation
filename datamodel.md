@@ -1,16 +1,22 @@
 # Modeling data specifications
 
 This chapter describes the key notions and information an editor needs to understand for _editing data specifications_.
-Within this document the term data specification is used to refer to its core: **the semantic model**, i.e. the classes and properties with their semantic description.
-Besides this, and beyond the scope of this chapter, a data specification contains metadata about the document, a changelog, use case descriptions, context, conformance statements and more.
 
+Within this document the expression *data specification* is used to refer to its core: **the semantic model**, i.e. the classes and properties with their semantic description.
+Besides this, and beyond the scope of this chapter, a data specification contains, among others:
+- metadata about the document 
+- changelog 
+- use case descriptions 
+- context
+- conformance statements
 
-First, an overview of the different **data specification categories** is presented. 
-Understanding this categorisation helps the editors in their semantic model editing activity, as it provides an insight into the relationship between the generated artefacts and the expectations of consumers.
-The second part of this chapter discusses the **master data management** of the data specification.
-It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain.
+First, an overview of the different **data specification categories** is presented. Understanding this categorisation helps the editors in their semantic model editing activity, as it provides an insight into the relationship between the generated artefacts and the expectations of consumers.
 
-The implementation aspects of the modeling are not discussed in this chapter. Consult the [artefact generation process](./artefact_generation.md) chapter for insights on and pointers to the software used, and the [toolchain](./toolchain.md) chapter for understanding the automation process set up for publishing data specifications exploiting GitHub.
+The second part of this chapter discusses the **master data management** of the data specification. It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain.
+
+For details on implementation aspects of the modeling, that not not discussed in this chapter, please consult:
+- the [artefact generation process](./artefact_generation.md) chapter for insights on and pointers to the software used
+- the [toolchain](./toolchain.md) chapter for understanding the automation process set up for publishing data specifications exploiting GitHub.
 
 
 ## Data specification categories
