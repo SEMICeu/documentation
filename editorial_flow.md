@@ -104,10 +104,10 @@ Using this branch all activities can demonstrated on a working environment, exce
 
 *1. Find the latest UML master data*
 
-    The latest published UML file is located in the **Core Person Vocabulary repository** (5).
-    
-    To start editing, copy this version of the file to the Thema repository (1).
-    
+The latest published UML file is located in the **Core Person Vocabulary repository** (5)
+
+To start editing, copy this version of the file to the Thema repository (1) .
+
 
 *2. Edit the UML file*
 
