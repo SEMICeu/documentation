@@ -14,9 +14,9 @@ First, an overview of the different **data specification categories** is present
 
 The second part of this chapter discusses the **master data management** of the data specification. It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain.
 
-For details on implementation aspects of the modeling, that not not discussed in this chapter, please consult:
-- the [artefact generation process](./artefact_generation.md) chapter for insights on and pointers to the software used
-- the [toolchain](./toolchain.md) chapter for understanding the automation process set up for publishing data specifications exploiting GitHub.
+For details on implementation aspects of the modeling, that not not discussed in this chapter, please consult the following chapters:
+- [artefact generation process](./artefact_generation.md) - for insights on and pointers to the software used
+- [toolchain](./toolchain.md) - for understanding the automation process set up for publishing data specifications exploiting GitHub.
 
 
 ## Data specification categories
