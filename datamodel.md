@@ -14,6 +14,8 @@ First, an overview of the different **data specification categories** is present
 
 The second part of this chapter discusses the **master data management** of the data specification. It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain.
 
+Relevant links to the items described in the sections above are numbered throughout the page and included in section 'Links' at the bottom.
+
 For details on implementation aspects of the modeling, that not not discussed in this chapter, please consult the following chapters:
 - [artefact generation process](./artefact_generation.md) - for insights on and pointers to the software used
 - [toolchain](./toolchain.md) - for understanding the automation process set up for publishing data specifications exploiting GitHub.
@@ -29,9 +31,8 @@ Data specifications can roughly be categorized in three categories according to 
 
 A *vocabulary* is a collection of terms. 
 A term consists minimally of a label and definition, and it is identified by a URI. 
-The information attached to a term in a vocabulary is expressed with the intent to be applicable within a broad context. 
+The information attached to a term in a vocabulary is expressed with the intent to be applicable within a broad context. Specific **Guidelines on good definitions writing** exist and are available for consultation (1)
 
-(For guidelines on good definitions writing, please consult this [link](https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf))
  
 An *application profile* is the usage of terms within a generic application context. 
 The application context imposes additional constraints on the usage of the terms such as cardinality restrictions, ranges, code lists, etc.
@@ -164,8 +165,7 @@ The `{data_spec_category}` part represents the data specification category. The 
    - _ommitted_ :  the annotation is associated with the _vocabulary_ in which the term is defined. It contains the base information about the term.
    - `ap-` : the annotation is associated with an _application profile_ in which the term is used.
 
-The `{language}` part corresponds to the 2-letter ISO 639-1 language code in which the content of the annotation is expressed.
-(The full list of ISO 639-1 codes can be retrieved at this [link](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)).
+The `{language}` part corresponds to the **2-letter ISO 639-1 language code** (2) in which the content of the annotation is expressed.
 
 **Examples:**
   - `label-nl`: the tag expresses the label of the term in Dutch, at the level of a vocabulary
@@ -200,6 +200,15 @@ On the left side of the graphical representation the attributes and relationship
 
 #### Test suite
 
-Test suites are collection of examples of that editors can use to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. An example of this is OSLOthema-toolchainTestbed, which is a _thema_ repository that provides a collection of examples of UML models and that can be used by editors to do regression testing during development.
+Test suites are collection of examples of that editors can use to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
 
-(For accessing the OSLOthema-toolchainTestbed, please follow this [link](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed))
+An example of test suite is **OSLOthema-toolchainTestbed** (3), which is a _thema_ repository that provides a collection of examples of UML models and that can be used by editors to do regression testing during development.
+
+
+#  Links
+
+(1) [Guidelines on good definitions writing](https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf)
+
+(2) [Full list of ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+
+(3) [OSLOthema-toolchainTestbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed)
