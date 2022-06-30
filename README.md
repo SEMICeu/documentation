@@ -89,11 +89,11 @@ The SEMIC GitHub space contains several dozens of repositories, each falling in 
 ### Data specification repositories
 
 The data specification repositories are tagged with the topic ***data-specification*** in GitHub.
-(The full list of SEMICeu repositories tagged with ***data-specification*** can be found [here](https://github.com/search?q=org%3ASEMICeu+topic%3Adata-specification).)
 
 As each data specification follows its individual life-cycle, their respective repositories also do. 
 Nevertheless, as part of the editorial process multiple data specification repositories might be updated to address a given issue.
 
+(The full list of SEMICeu repositories tagged as ***data-specification*** can be found [here](https://github.com/search?q=org%3ASEMICeu+topic%3Adata-specification).)
 
 #### Core Vocabulary repositories
 
