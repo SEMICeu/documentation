@@ -77,12 +77,12 @@ The deployment of the above design is supported by the existence of two template
  - a **template for a publication repository** (6).
  - a **template for a thema repository** (7)
 
+After creating the publication repository from the template, the publication repository must be paired with the generated repository.
+On the contrary, generated repository does not require a template. 
+
+Information on how to do this, as well as more configuration options, is part of the OSLO tamplate documentation, also available on GitHub (8).  
+
 The generated repository does not require a template.
-
-After creating the publication repository from the template, the publication repository must be paired with the generated repository. 
-Documentation on how to do this, as well as more configuration options, are found in the documentation that is part of the [template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/config).
-
-
 
 ### SEMIC setup
 
@@ -222,4 +222,6 @@ These images are build from the open source repositories
 
 (6) [Template for a publication repository](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
 
-(7) [Ttemplate for a thema repository](https://github.com/Informatievlaanderen/OSLOthema-template)
+(7) [Template for a thema repository](https://github.com/Informatievlaanderen/OSLOthema-template)
+
+(8) [OSLO template documentation | GitHub](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/config)
