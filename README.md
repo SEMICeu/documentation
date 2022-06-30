@@ -69,15 +69,15 @@ For this the artefacts have to be stored in a publication environment.
 
 Currently, the publication environment that has been adopted by SEMIC is GitHub: one repository per data specification. 
 Over the past years, the organisation and structure of these repositories underwent a gradual harmonisation process.
-Moreover, the consumers' access to the content of these repositories is facilitated through [GitHub Pages](https://pages.github.com/), a service offered to render webpages stored in a repository.
+Moreover, the consumers' access to the content of these repositories is facilitated through**GitHub Pages**, a service offered to render webpages stored in a repository.
 
-Since these repositories were created before an automated artefact generation tooling was applied, the repositories are set up and organised with the assumption that the content of the repository is manually created. 
+Since these repositories were created before an automated artefact generation tooling was applied, the repositories are set up and organised with the assumption that the content of the repository is created manually. 
 The full integration of this publication design in the automation process requires adaptations to the automation, organisation and setup of the data specification repositories. 
 This is future work. Therefore, editors are today required to manually collect the generated artefacts, and store them in the appropriate locations within the data specification repository.
 
 
 
-## Organisation of the SEMIC GitHub Space
+## Organisation of the SEMIC GitHub space
 
 The SEMIC GitHub space contains several dozens of repositories, each falling in specific categories. There are data specification repositories, repositories supporting the generation and publication of the data specifications, and others. 
 
@@ -85,7 +85,7 @@ The SEMIC GitHub space contains several dozens of repositories, each falling in 
 ### Data specification repositories
 
 The data specification repositories are tagged with the topic ***data-specification*** in GitHub.
-The full list of SEMICeu repositories tagged with ***data-specification*** can be found [here](https://github.com/search?q=org%3ASEMICeu+topic%3Adata-specification).
+(The full list of SEMICeu repositories tagged with ***data-specification*** can be found [here](https://github.com/search?q=org%3ASEMICeu+topic%3Adata-specification).)
 
 As each data specification follows its individual life-cycle, their respective repositories also do. 
 Nevertheless, as part of the editorial process multiple data specification repositories might be updated to address a given issue.
@@ -94,16 +94,21 @@ Nevertheless, as part of the editorial process multiple data specification repos
 #### Core Vocabulary repositories
 
 A subset of the data specification repositories that are set up for the editing of Core Vocabularies is tagged with the topic ***core-vocabulary***.
-[Here](https://github.com/search?q=org%3ASEMICeu+topic%3Acore-vocabulary) is the current list of Core Vocabulary repositories.
 
-The Core Vocabulary repositories (e.g. [Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/)) are organised as follows:
+The Core Vocabulary repositories are organised as follows:
 
 - `Webinars` : any documentation, meeting minutes, recording relating to a webinar on the data specification
-- `releases` : the data specification releases, organised per version. Each release is identified by its version number, and has a dedicated sub-folder.  The content of a specific data specification release version folder (e.g. [version 2.00 of the Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00)) is not fixed.
+- `releases` : the data specification releases, organised per version. Each release is identified by its version number, and has a dedicated sub-folder. The content of a specific data specification release version folder is not fixed.
 The structure of the latest release will conform to the setup of the artefact generating *toolchain*. 
-It is assumed that there is an `index.html` file, as the data specification is then rendered using GitHub Pages, a free service for public open source GitHub repositories (e.g. version 2.0.0 of the Person Core Vocabulary would be published at [https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/)).
+It is assumed that there is an `index.html` file, as the data specification is then rendered using GitHub Pages, a free service for public open source GitHub repositories.
 
 Further governance agreements regarding the structure of the Core Vocabulary repositories are not made.
+
+- *Useful links for Core Vocabularies*
+[Current list of Core Vocabulary repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Acore-vocabulary)
+[Example of data specification repository tagged 'core-vocabulary'| Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/)
+[Example of data specification release version folder | Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00)
+
 
 #### Application Profile repositories
 
