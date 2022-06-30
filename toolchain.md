@@ -98,44 +98,41 @@ The deployment corresponds to a minimal setup, providing already the most import
 
 In the SEMICeu GitHub space the toolchain has been deployed in these repositories:
 
-- **SEMIC publication repository** (9) [https://github.com/SEMICeu/uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication)
-- **SEMIC generated repository** (10) [https://github.com/SEMICeu/uri.semic.eu-generated](https://github.com/SEMICeu/uri.semic.eu-generated)
-- **SEMIC thema repository** (11) [https://github.com/SEMICeu/uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema) - a _thema_ repository that currently contains _all_ the SEMIC data specifications. This choice can be revisited in the future.
+- **SEMIC publication repository** (9)
+- **SEMIC generated repository** (10)
+- **SEMIC thema repository** (11), that currently contains _all_ the SEMIC data specifications. This choice can be revisited in the future.
 
 All editing happens on the `master` branch as there are no staging publication environments.
 
-
 Within the SEMICeu GitHub space, these repositories are **private** GitHub repositories. 
 This influences the execution and configuration, as operating on private repositories requires different GitHub API requests than those that can be used with public GitHub repositories.
-More information on this, and other aspects related to the configuration, can be found in the documentation of the [publication environment](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md).
-
-How these repositories are used in the management of data specifications is elaborated in the [editorial flow](./editorial_flow.md).
 
 This setup does not provide the end-to-end experience of the original design, but it is feasible that the CI/CD flow can be adapted to achieve this.
 
+- For more information on this, and other aspects related to the configuration, in GitHub is available for consultation the relevant **documentation on the publication environment**(12).
+
+- For more information on how these repositories are used in the management of data specifications is elaborated in the page on [editorial flow](./editorial_flow.md).
 
 
 #### Thema repository(ies)
 
-The deployment of the toolchain resulted in a simplified setup with a _single_ thema repository. 
-This choice has been made to facilitate the ongoing harmonisation of the Core Vocabularies and to ensure that future contractors will have everything at their disposal to perform changes.
-One can consider the current SEMIC thema repository as the shared space to have the toolchain functioning.
+The deployment of the toolchain resulted in a simplified setup with a _single_ thema repository. This choice has been made to facilitate the ongoing harmonisation of the Core Vocabularies and to ensure that future contractors will have everything at their disposal to perform changes.
 
-However, this choice might need to be reconsidered in the future, if we want to support editors even better. 
-The toolchain is designed to work with multiple thema repositories.
-To organise the SEMIC data specifications in multiple thema repositories the following considerations can best taken into account:
+One can consider the current SEMIC thema repository as the shared space to have the toolchain functioning. However, this choice might need to be reconsidered in the future, in order to provide even more support to editors. 
+
+The toolchain is designed to work with **multiple thema repositories**.To organise the SEMIC data specifications in multiple thema repositories the following considerations can best taken into account:
 
   - It is best to group all data specifications that are defining PURIs in the same namespace in one thema repository. 
     Like this the risk for creating overlapping concepts is reduced, and the impact of a change on a URI is more visible.
+    
   - It is best to decide a branching and tagging strategy within the thema repository. E.g. each data specification could be hosted on a separate branch.
 
-Note that the some options might be blocked by past decisions. 
-For instance, the PURI design influences strongly the grouping. 
-I.e. the PURIs in the domain `http://data.europa.eu/m8g` form a global space and therefore all data specifications that create PURIs in this domain are best maintained together.
+Note that the some options might be blocked by past decisions. For instance, the PURI design influences strongly the grouping. 
+I.e. the PURIs in the domain _`http://data.europa.eu/m8g`_ form a global space and therefore all data specifications that create PURIs in this domain are best maintained together.
 Modularity in the PURI design will thus also facilitate modularity in the data specification management.
 
-Besides the "quick win" motivation, none of the above considerations have been discussed in depth. 
-They are part of future work to bring further improvments to the editorial flow, and must be done in collaboration with the whole SEMIC team.
+Currently, none of the above considerations have been discussed in depth, besides the "quick win" motivation.
+They will be part of future work to bring further improvments to the editorial flow, and must be done in collaboration with the whole SEMIC team.
 
 
 
@@ -168,11 +165,11 @@ Triggering the generation of the artefacts is done via changing the _publication
 When a change is committed to the _publication_ repository, a CI/CD process is initiated which produces the artefacts.
 The result of the generation process is stored in the _generated_ repository.
 
-A commit to the _thema_ repository is _not_ triggering the generation process. 
+A commit to the _thema_ repository is **not** triggering the generation process. 
 An editor can thus improve incrementally the content in the _thema_ repository, without being forced to generate each time the artefacts.
-Only when needed will the editor trigger the generation process.
+Only when neededm the editor will trigger the generation process.
 
-The usual change to the publication repository for triggering the generation process consists of changing the publication point corresponding to the data specification that has been edited.
+The usual change to the publication repository for triggering the generation process consists of **changing the publication point** corresponding to the data specification that has been edited.
 A publication point is a reference to a data specification in a _thema_ repository.
 An example is shown below:
 ```
@@ -185,11 +182,10 @@ An example is shown below:
     "navigation": {}
   },
 ```
-An elaborated description of the structure and semantics of the attributes is found in the [_publication_ repository](https://github.com/SEMICeu/uri.semic.eu-publication).
+An elaborated description of the structure and semantics of the attributes is found in the SEMIC publication publication repository (9).
 Intuitively, the above publication point can be read as the following processing instruction: "Write in the generated repository, at path `{urlref}`, the generated artefacts for the data specification `{name}`, according to config file `{filename}` located in `{repository}` as of the commit `{branchtag}`."
 Thus, since changing the data specification content is changing the thema repository, a change in the publication point can correspond to changing the `{branchtag}` to point to the new content. 
 Performing this change will trigger the generation of the artefacts.
-
 
 Besides technical expectations, such as the repository should be a GitHub repository, the toolchain does not impose editorial management rules on a publication point's structure.
 For instance, SEMIC could impose rules for the name-giving of the filenames, urlref path structure, and branchtags, but SEMIC could also impose a correspondence between the branchtag and the urlpath structure.
@@ -229,5 +225,9 @@ These images are build from the open source repositories
 (8) [OSLO template documentation | GitHub](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/config)
 
 (9) [SEMIC publication repository](https://github.com/SEMICeu/uri.semic.eu-publication)
+
 (10) [SEMIC generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
+
 (11) [SEMIC thema repository](https://github.com/SEMICeu/uri.semic.eu-thema) 
+
+(12) [SEMIC publication environment documentation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md)
