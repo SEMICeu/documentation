@@ -100,7 +100,7 @@ Using this branch all activities can demonstrated on a working environment, exce
 * ***NOTE: The recording applies one way to interact with the repositories*** - This approach has been selected to facilitate the recording, not because is the most efficient or best way to interact with the SEMIC GitHub space. Editors can use their preferred way to interact with the SEMIC GitHub space, e.g. checking out the code and working locally, then pushing the changes back.
 
 
-## Part 1: Editing of the UML model ([video](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true))
+## Part 1: Editing of the UML model ([Part 1 video](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true))
 
 1. Find the latest UML master data.
 
@@ -115,7 +115,7 @@ Using this branch all activities can demonstrated on a working environment, exce
    
    After finishing the editing, the editor commits the UML file to the Thema repository.
    
-## Part 2: Generate data specification artefacts using the toolchain ([video](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true))
+## Part 2: Generate data specification artefacts using the toolchain ([Part 2 video](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true))
 
 3. Trigger the toolchain 
 
@@ -127,7 +127,7 @@ Using this branch all activities can demonstrated on a working environment, exce
    This change will trigger the artefact generation process. The progress of the generation process can be followed in **CircleCI** (7).
 
 
-## Part 3: Publication of the result ([video](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true))
+## Part 3: Publication of the result ([Part 3 video](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true))
 
 4. Check the generated artefacts
 
@@ -155,16 +155,17 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
    **Not in the recording:** To share the new artefacts with the public, the editor follows the publication guidelines for Core Person repository. 
    For that, the editor will use the version (release number) of the data specification.
    First, a directory named after the version is created in the Core Person Vocabulary repository, under the `releases` directory.
-   Because the editor must ensure that no information contained in the previous release of the Core Person Vocabulary is lost in the new release, it is advised to initiated the content of the new directory with the content of the previous release.
+   Because the editor must ensure that no information contained in the previous release of the Core Person Vocabulary is lost in the new release, it is advised to initiate the content of the new directory with the content of the previous release.
    Then the artefacts from the generated repository in the directory `/doc/core-vocabulary/core-person/` are copied into this directory.
    Committing this will make the content available to the public.
 
-
-   
  
 6. Verify the published artefacts 
     
-   **Not in the recording:** All the steps above result in a page of the Core Person Vocabulary referring to the specific version of the artefact and reachable trough a public URL structured as follows:`https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/`. This public URL provides the HTML representation of the Core Vocabulary.  By doing a final check of this URL, the editor ensures quality of work.
+   **Not in the recording:** All the steps above result in a page of the Core Person Vocabulary referring to the specific version of the artefact and reachable trough a public URL structured as follows:`https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/`. 
+   
+   This public URL provides the HTML representation of the Core Vocabulary.  By doing a final check of this URL, the editor ensures quality of work.
+   
  (An example of the data specfication page - including all artefacts and contextual information - can be found can be found [at this link](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/)).
   
    
@@ -186,3 +187,4 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
 (7) [CircleCI](http://circleci.com)
 
 (8) [doc directory](https://github.com/SEMICeu/uri.semic.eu-generated/tree/example/doc)
+
