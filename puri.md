@@ -33,7 +33,7 @@ The following paragraphs provide an overview of:
 - the setup of the PURI service by SEMIC
 
 
-### - Supported domains by SEMIC
+### Supported domains by SEMIC
 SEMIC is responsible for a number of PURI domains. 
 They are listed below with their activation level in the SEMIC PURI service.
 
