@@ -111,20 +111,24 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
 1. Find the latest UML master data.
 
     The latest published UML file is located in the **Core Person Vocabulary repository** (5).
+    
     To start editing, copy this version of the file to the Thema repository (1).
     
 
 2. Edit the UML file in the Thema repository
 
-   The editor, edit the copy in the Thema repository, adding the property 'baptismalName' with the following annotations: i) label and definition in English, ii) and the assigned URI.
+   The editor edits the copy in the Thema repository, adding the property 'baptismalName' with the following annotations: i) label and definition in English, ii) and the assigned URI.
+   
    After finishing the editing, the editor commits the UML file to the Thema repository.
    
 ## Part 2: Generate data specification artefacts using the toolchain ([video](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true))
 
 3. Trigger the toolchain 
 
-   The editor selects the commit hash corresponding to the UML file update in the Thema repository. 
+   The editor selects the commit hash corresponding to the UML file update in the Thema repository.
+   
    Using this commit hash, the editor updates the **publication points** (6) in the publication repository. 
+   
    In the demonstration video, the `branchtag` attribute of the publication points are updated with the new commit hash.
    This change will trigger the artefact generation process. The progress of the generation process can be followed in **CircleCI** (7).
 
@@ -163,7 +167,7 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
 
 6. Verify the published artefacts 
     
-   **(not in the recording)** All the steps above result in the page  `https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/` (e.g. https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/). 
+   **(not in the recording)** All the steps above result in the page of the Core Person Vocabulary repository  `https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/` (e.g. https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/). 
    This is the public URL for the HTML representation of the Core Vocabulary. 
    On this page the data specification is described, and all artefacts and contextual information can be found.
    By doing a final check of this URL, the editor ensures quality of work.
