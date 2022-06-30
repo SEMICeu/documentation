@@ -196,11 +196,11 @@ This is future work, and should be considered in the context of further integrat
 
 ### HowTo find the source code of the automation
 
-In SEMIC publication repository can be found the **source code for the CircleCI automation** (13). [uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication). 
-The organisation and setup of the workflow of the CircleCI workflow is extensively documentated in the _template_ repository [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
+In SEMIC _publication_ repository can be found the **source code for the CircleCI automation** (13). 
 
+The organisation and setup of the workflow of the **CircleCI workflow**, is instead extensively documented in OSLO _template_ repository (14).
 The CircleCI workflow will execute in some steps software available as public Docker images. 
-These images are build from the open source repositories 
+These images are build from the following open source repositories:
   - [OSLO-EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF)
   - [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator)
 
@@ -233,4 +233,4 @@ These images are build from the open source repositories
 
 (13) [CircleCI automation source code](https://github.com/SEMICeu/uri.semic.eu-publication/tree/master/.circleci)
 
-(14)
+(14) [CircleCI workflow](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/.circleci)
