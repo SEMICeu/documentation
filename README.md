@@ -34,8 +34,13 @@ Nevertheless, the current design of the architecture is a reflection of the orga
 
 ## User Roles and Activities
 
-There are three main types of __actors__ that will interact with the resources and assets produced and managed by SEMIC on the SEMICeu GitHub space: the data specification _consumers_, the data specification _editors_, and the supporting asset _developers_. 
+There are three main types of __actors__ that will interact with the resources and assets produced and managed by SEMIC on the SEMICeu GitHub space:
+- the data specification _consumers_ 
+- the data specification _editors_ 
+- the supporting asset _developers_ 
+
 The tools and methods are set up by the _developers_ to support the _editors_ in their work to provide together a coherent experience to the _consumers_.
+
 Since the _consumers_ are the "end users" of the data specifications, they will not need to interact directly with the SEMICeu GitHub space. Therefore, this documentation will only focus on the _editors_ and _developers_, as they constitute its target audience.
 
 For more information about the user roles please check out the [Actors](./actors.md) page.
