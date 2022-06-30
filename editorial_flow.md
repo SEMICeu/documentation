@@ -143,7 +143,7 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
    To prepare the next step, the editor checks the generated artefacts to see whether the result is correct (e.g. if the property is present in all relevant artefacts).
    There are two main ways in which the editor can check this: 
    - download the artefacts and check within the downloaded files for the new property
-   - use the GitHub built in diffing support (For more information on how this is done, please check out the section on [Comparing commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits) or the instructions fot the [Smart Diff action]  https://github.com/marketplace/actions/smart-diff).).
+   - use the GitHub built in diffing support (For more information on how this is done, please check out the section on [Comparing commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits) or the instructions fot the [Smart Diff action](https://github.com/marketplace/actions/smart-diff).).
 
 5. Publish the generated artefacts 
 
