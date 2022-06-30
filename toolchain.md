@@ -23,24 +23,23 @@ Then, we provide some useful information about the use of the toolchain, by answ
 
 Relevant links to the items described in following sections are numbered throughout the page and included in **section 'Links'** at the bottom.
 
-The artefact generation itself is documented in a chapter on [artefact generation](./artefact_generation.md).
+The artefact generation itself is documented in a dedciated page on [artefact generation](./artefact_generation.md).
 
 
 
 ## Setup & Design
 
-
-The toolchain used in the SEMICeu project is based on the [OSLO toolchain](https://github.com/Informatievlaanderen/OSLO-toolchain/tree/master/doc-generic).
-
+The toolchain used in the SEMICeu project is based on the **OSLO toolchain** (1). 
 The OSLO toolchain is part of a larger environment for supporting the generation, maintenance and publication of data specifications under the governance of the Flemish Government, Belgium.
-Because OSLO has been participating in SEMIC from the start, the toolchain incorporates many advices and best practices SEMIC has produced or applies.
-This is especially true for the support of the editorial flow. 
-The main distinction between the use of the toolchain in the two environments is regarding their approach to publication. The current SEMIC practice is to use GitHub as publication platform, where each data specification is edited and published in its own repository. On the other hand, the OSLO toolchain has been designed with a single publication environment in mind.
 
-In the [editorial flow](./editorial_flow.md) this distinction is indicated by the existence of the manual publication steps that the editor has to perform; steps that are not required in the OSLO context. It is future work to adapt the tooling to the SEMIC publication context.
+Because OSLO has been involved in SEMIC from the start, the toolchain incorporates many advices and best practices SEMIC has produced or applies.
+This is especially true for the support of the **editorial flow** (2). 
 
-The result produced by the OSLO toolchain can be seen at [data.vlaanderen.be](https://data.vlaanderen.be).
-The source code of the tooling, as well as of the data specifications are all publicly available on [GitHub](https://github.com/search?q=org%3AInformatievlaanderen+topic%3Aoslo).
+The main distinction between the use of the toolchain in the two environments pertains their approach to publication. The current SEMIC practice uses GitHub as publication platform, where each data specification is edited and published in its own repository. On the other hand, the OSLO toolchain has been designed with a single publication environment in mind.
+
+In the editorial flow, this distinction is indicated by the existence of the manual publication steps that the editor has to perform; steps that are not required in the OSLO context. As such, it will be future work to adapt the tooling to the SEMIC publication context.
+
+The result produced by the OSLO toolchain can be seen at the portal of the **Flemish Government data portal** (3), while on Github **the source code of the tooling**, as well as of the data specifications are all publicly available(4).
 
 
 ### Generic Design
@@ -212,3 +211,12 @@ These images are build from the open source repositories
   - [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator)
 
 
+# Links
+
+(1) [OSLO toolchain](https://github.com/Informatievlaanderen/OSLO-toolchain/tree/master/doc-generic)
+
+(2) [Editorial flow](./editorial_flow.md)
+
+(3) [Flemish Government data portal](https://data.vlaanderen.be)
+
+(4) [OSLO source code | GitHub](https://github.com/search?q=org%3AInformatievlaanderen+topic%3Aoslo)
