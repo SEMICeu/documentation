@@ -144,13 +144,16 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
    To prepare the next step, the editor checks the generated artefacts to see whether the result is correct (e.g. if the property is present in all relevant artefacts).
    There are two main ways in which the editor can check this: 
    - download the artefacts and check within the downloaded files for the new property
-   - use the GitHub built in diffing support (For more information on how this is done, please check out the section on [Comparing commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits) or the instructions fot the [Smart Diff action](https://github.com/marketplace/actions/smart-diff).).
+   - use the GitHub built in diffing support (For more information on how this is done, please check out the section on [Comparing commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits) or the instructions fot the [Smart Diff action](https://github.com/marketplace/actions/smart-diff)).
 
 5. Publish the generated artefacts 
 
 Since the `baptismal name` is a new property, and thus got a new PURI assigned, the editor has to publish the content in the PURI content repository (4). 
+
    The editor extracts from the generated RDF artefact the triples that are relating to the new property, and stores these in a file with the name 'baptismalName'. 
+   
    Using one of the many RDF serialisation tools, it is then created a variant for the RDF serialisation n-triples, turtle, and RDF/XML, with the corresponding file extensions. In the video an online web tool is used.
+   
    The editor will commit these files in the directory `releases/m8g` in the PURI content repository *uri.semic.eu-puris*.
    For demonstration purposes the files created during the video are stored in the branch `example`, e.g. [baptismalName.ttl](https://github.com/SEMICeu/uri.semic.eu-puris/blob/example/releases/m8g/baptismalName.ttl).
    
@@ -172,7 +175,7 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
 
 6. Verify the published artefacts 
     
-   **(not in the recording)** All the steps above result in the page of the Core Person Vocabulary repository  `https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/` (e.g. https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/). 
+   **Not in the recording:** All the steps above result in the page of the Core Person Vocabulary repository (5)  `https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/` (e.g. https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/). 
    This is the public URL for the HTML representation of the Core Vocabulary. 
    On this page the data specification is described, and all artefacts and contextual information can be found.
    By doing a final check of this URL, the editor ensures quality of work.
