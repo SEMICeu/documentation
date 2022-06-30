@@ -44,12 +44,12 @@ These are called *implementation models*.
 Aside from the differences in the content resulting from the reuse perspective, each category has different expectations on the to be published artefacts. 
 These expectations, summarized below, result from the premise to use the _Semantic Web_ as the __basis__ for the design of the data specification.
 
-_Vocabularies_ expect: 
+- _Vocabularies_ expect: 
 
   - a document with a simple tabular view of the terms 
   - dereferenceable persistent identifiers 
 
-_Application profiles_ expect:
+- _Application profiles_ expect:
 
   - a document 
     - explaining the application scope 
@@ -62,7 +62,7 @@ _Application profiles_ expect:
     - examples
   - to being integrated with the vocabularies they reuse
 
-_Implementation models_ expect:
+- _Implementation models_ expect:
 
   - the same as application profiles, but usually augmented with additional artefacts specific for a given system,
       e.g., a template DB or an API specification.
@@ -72,7 +72,6 @@ The design of a data specification usually involves the creation of other data s
 It is seldom that a data specification will rely only on already existing data specifications.
 In particular, the development of application profiles and implementation models is naturally combined with the creation of a vocabulary.
 That vocabulary captures all new terminology that has not yet been published.
-
 
 
 The **SEMIC Core Vocabularies** have the design intent of the _vocabularies_ category; namely, broad reuse, mostly ignorant of the application context.
@@ -91,7 +90,7 @@ On the other extreme are the implementation models, providing a collection of te
 At this moment, however, _no formal expectation of the SEMIC data specifications_ has been written out. We are clarifying these concepts here in the assumption and hope that the editors' awareness of this categorisation will aid the creation the most appropriate semantic models.
 
 
-### The UML model
+### Intro to the UML model
 
 As mentioned in the previous section, a SEMIC data specification is build and published according to the best practices of the Semantic Web.
 Following this approach data specifications identify terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass axioms, domain, range, cardinality restrictions, etc.). 
@@ -107,10 +106,10 @@ Working with two (or more) distinct modelling languages simultanously creates a 
 It would be a waste of time and effort, if the editors would have to express the same data specification in two distinct modelling languages.
 Therefore, one modeling language should be selected as the "master", from which the other representations would be derived.
 
-Within the SEMIC toolchain, the "master" for the semantic model is the UML representation. 
-This decision is motivated based on two compelling arguments: the "transformational argument" and the "editorial argument".
+Within the SEMIC toolchain, the "master" for the semantic model is the UML representation, described below. 
+This decision is motivated based on two compelling arguments:
 
-#### Transformational argument
+#### - Transformational argument
 Turning RDF vocabularies into UML, to fully exploit the graphical notation possibilies, would require to create a new configuration language.
 This language would not only include semantical instructions (such as "this URI is a UML class"), but likely would also need to include styling and other represenation instructions. 
 A large part of the editorial effort for a graphical representation is organising and styling the picture to make it as suggestive and meaningful as possible for the consumers. 
@@ -118,7 +117,7 @@ That is a complex task.
 It is far more easier to exploit the power of a UML modeling tool, offering all the graphical styling possibilities an editor needs, and transform the resulting UML representation into a semantic model (such as RDF).
 
 
-#### Editorial argument 
+#### - Editorial argument 
 The interactions and discussions within a Working Group are often driven by a graphical representation.
 Therefore, naturally, editors first create the graphical representation of the proposed resolution.
 When agreement is reached, the decision is turned by the editor into the data specification following the Semantic Web principles.
@@ -202,6 +201,3 @@ On the left side of the graphical representation the attributes and relationship
 The [OSLOthema-toolchainTestbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed) is a _thema_ repository that provides a collection of example UML models.
 Editors can use this collection to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
 Developers can use it to do regression testing during development.
-
-
-
