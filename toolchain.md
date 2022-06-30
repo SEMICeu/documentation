@@ -15,10 +15,14 @@ In practice, this limitation brings crucial benefits for the SEMIC project; name
   - supports the **scaling up of the editorial capacity**, through automation, which allows to learn the editorial flow in a safe environment.
 
 
-This chapter describes the tooling that is supporting the editorial flow for managing data specifications.
-It focusses on the interplay between the different repositories, and how editors can use it to generate the data specification artefacts.
+This chapter describes the tooling that is supporting the editorial flow for managing data specifications.It focusses on the interplay between the different repositories, and how editors can use it to generate the data specification artefacts.
+
 First, we present an overview of the overall design of the toolchain, and we describe how it is set up in the SEMIC space.
-Then, we provide some useful information about the use of the toolchain, by answering a few frequently asked questions asked by the editors and developers.
+
+Then, we provide some useful information about the use of the toolchain, by answering a few frequently asked questions, coming from editors and developers.
+
+Relevant links to the items described in following sections are numbered throughout the page and included in **section 'Links'** at the bottom.
+
 The artefact generation itself is documented in a chapter on [artefact generation](./artefact_generation.md).
 
 
