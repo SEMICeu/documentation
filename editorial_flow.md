@@ -73,12 +73,7 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
 
 
 
-* ***NOTE: The Generation and publication of artefacts require manual effort***
-
-The workflow above shows that the artefact generation tooling (the toolchain) does not releases editors from substantial manual work.
-This manual work happens at the start of the editorial flow and at the end.
-In both cases, the work introduces risks for unnoticed changes or incomplete publications.
-
+* ***NOTE: The Generation and publication of artefacts require manual effort*** - The workflow above shows that the artefact generation tooling (the toolchain) does not releases editors from substantial manual work. This manual work happens at the start of the editorial flow and at the end. In both cases, the work introduces risks for unnoticed changes or incomplete publications.
 To reduce these risks, additional work has to be done to further integrate the artefact generation into the data specification repositories and vice versa.
 This is feasible, but probably will require further alignment and restructuring of the data specification repositories in the SEMIC GitHub space.
 Topics like version numbering, using shared PURI domain, etc. all affect the automation.
@@ -102,9 +97,7 @@ All demonstrated changes are performed on the involved repositories using a demo
 Using this branch all activities can demonstrated on a working environment, except for the last step: the official publication of the transformation.
 
 
-* ***NOTE: The recording applies one way to interact with the repositories***
-This approach has been selected to facilitate the recording, not because is the most efficient or best way to interact with the SEMIC GitHub space.
-Editors can use their preferred way to interact with the SEMIC GitHub space, e.g. checking out the code and working locally, then pushing the changes back.
+* ***NOTE: The recording applies one way to interact with the repositories*** - This approach has been selected to facilitate the recording, not because is the most efficient or best way to interact with the SEMIC GitHub space. Editors can use their preferred way to interact with the SEMIC GitHub space, e.g. checking out the code and working locally, then pushing the changes back.
 
 
 ## Part 1: Editing of the UML model ([video](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true))
@@ -157,9 +150,7 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
    The editor will commit these files in the directory `releases/m8g` in the PURI content repository *uri.semic.eu-puris*.
    For demonstration purposes the files created during the video are stored in the branch `example`, e.g. [baptismalName.ttl](https://github.com/SEMICeu/uri.semic.eu-puris/blob/example/releases/m8g/baptismalName.ttl).
    
-   * ***NOTE: Step 5 and 6 are only partially shown in the recording***
-   In order to demonstrate all the steps, it would require to propagate the demonstration content to the consumers on an official channel.
-   Therefore, only the changes that do not lead to immediate and direct impact on the consumers are included in the video.
+   * ***NOTE: Step 5 and 6 are only partially shown in the recording*** - In order to demonstrate all the steps, it would require to propagate the demonstration content to the consumers on an official channel. Therefore, only the changes that do not lead to immediate and direct impact on the consumers are included in the video.
 
    **Not in the recording:** To share the new artefacts with the public, the editor follows the publication guidelines for Core Person repository. 
    For that, the editor will use the version (release number) of the data specification.
@@ -170,15 +161,12 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
 
 
    
-
-   
-
+ 
 6. Verify the published artefacts 
     
-   **Not in the recording:** All the steps above result in the page of the Core Person Vocabulary repository (5)  `https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/` (e.g. https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/). 
-   This is the public URL for the HTML representation of the Core Vocabulary. 
-   On this page the data specification is described, and all artefacts and contextual information can be found.
-   By doing a final check of this URL, the editor ensures quality of work.
+   **Not in the recording:** All the steps above result in a page of the Core Person Vocabulary referring to the specific version of the artefact and reachable trough a public URL structured as follows:`https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/`. This public URL provides the HTML representation of the Core Vocabulary.  By doing a final check of this URL, the editor ensures quality of work.
+ (An example of the data specfication page - including all artefacts and contextual information - can be found can be found [at this link](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/)).
+  
    
   
  ## Links
