@@ -116,7 +116,7 @@ Then they should create the RDF serialisations to be added to the content reposi
 A usage example is shown in the [editorial flow](./editorial_flow.md#part-3-publish-the-result--video-) page.
 
 
-**Future work on usage **
+**Future work on usage**
 
 The following, represent key needs and activity streams that will be required to improve the work of editors
 
