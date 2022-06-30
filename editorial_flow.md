@@ -89,6 +89,7 @@ Topics like version numbering, using shared PURI domain, etc. all affect the aut
 
 # Example editorial flow
 
+
 To illustrate the generic editorial flow consider the common change request to add a property to a class in a data specification. 
 
 The text below is summarised transcript of a video recording demonstrating the addition of a new property 'baptismal name' to the class Person in the Core Person Vocabulary. The example goes through the 3 main parts of the editorial flow, described above:
@@ -115,26 +116,25 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
 
 2. Edit the UML file in the Thema repository
 
-   The editor edits the copy, and adds the property 'baptismalName' with the annotations: the label and definition in English, and the assigned URI.
+   The editor, edit the copy in the Thema repository, adding the property 'baptismalName' with the following annotations: i) label and definition in English, ii) and the assigned URI.
    After finishing the editing, the editor commits the UML file to the Thema repository.
    
 ## Part 2: Generate data specification artefacts using the toolchain ([video](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true))
 
 3. Trigger the toolchain 
 
-   The editor selects the commit hash corresponding to the UML file update in the thema repository. 
-   Using this commit hash, the [publication points](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json) in the publication repository are updated. 
+   The editor selects the commit hash corresponding to the UML file update in the Thema repository. 
+   Using this commit hash, the editor updates the **publication points** (6) in the publication repository. 
    In the demonstration video, the `branchtag` attribute of the publication points are updated with the new commit hash.
-   This change will trigger the artefact generation process.
-   The progress of the generation process can be followed in [CircleCI](http://circleci.com).
+   This change will trigger the artefact generation process. The progress of the generation process can be followed in **CircleCI** (7).
 
 
-## Part 3: Publication of the result ( [video](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true) )
+## Part 3: Publication of the result ([video](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true))
 
 4. Check the generated artefacts
 
    When the artefact generation process is finished, the generated artefacts are available in the generated repository.
-   In the demonstration video, the updated artefacts are found within the directory [`/doc`](https://github.com/SEMICeu/uri.semic.eu-generated/tree/example/doc). 
+   In the demonstration video, the updated artefacts are found within the **directory [`/doc`]** (8). 
 
    To prepare the next step, the editor checks the generated artefacts to see whether the result is correct: e.g. if the property is present in all relevant artefacts.
    There are several ways to check this: the editor can download the artefacts and checks within the downloaded files for the new property, but he or she can also use the GitHub built in diffing support.
@@ -181,4 +181,8 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
 
 (5) [Core Person Vocabulary repository](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00/uml)
 
+(6) [Publication points](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json)
 
+(7) [CircleCI](http://circleci.com)
+
+(8) [doc directory](https://github.com/SEMICeu/uri.semic.eu-generated/tree/example/doc)
