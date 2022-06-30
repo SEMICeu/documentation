@@ -154,4 +154,4 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
     
  ## Links
  
- **[Thema repository](https://github.com/SEMICeu/uri.semic.eu-thema)
+ **[Thema repository]**(https://github.com/SEMICeu/uri.semic.eu-thema)
