@@ -141,7 +141,7 @@ When a new release for these Application Profiles is being prepared, restructuri
 
 These repositories have no common organisational structure, however their `README.md` file should provide a good overview about their organisation and usage.
 
-Aadditional information about what these tools are meant to do and when and how to use them can be found in the [Toolchain](./toolchain.md) page. 
+Additional information about what these tools are meant to do and when and how to use them can be found in the [Toolchain](./toolchain.md) page. 
 
 #### *Useful links*
 
