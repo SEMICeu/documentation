@@ -124,6 +124,7 @@ For historical reasons, some Application Profile repositories follow the same or
 When a new release for these Application Profiles is being prepared, restructuring the content in accordance to the above described structure is highly recommended.
 
 - *Useful links*
+
 [Current list of Application Profile repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Aapplication-profile)
 
 ### Repositories for Supporting Generation and Publication of Data Specifications
@@ -135,6 +136,7 @@ These repositories have no common organisational structure, however their `READM
 Aadditional information about what these tools are meant to do and when and how to use them can be found in the [Toolchain](./toolchain.md) page. 
 
 - *Useful links*
+
 [Full list of tagged 'tooling'](https://github.com/search?q=org%3ASEMICeu+topic%3Atooling)
 
 
@@ -152,19 +154,17 @@ One of the best practices within software development is to build tools that rel
 Here, the toolchain will release editors from manually building the artefacts by exploiting software building tools.
 As a consequence, editors must familiarise themselves with the software development mindset. 
 
-Using the toolchain for editing data specifications requires editors to have insight in 
+Using the toolchain for editing data specifications requires editors to have a number of insights. To provide such insights and introduce *editors* (but also *developers*) to foundational aspects of the *editorial flow* and how it is supported by the *toolchain*, the following pages have been developed:
   
-   - the interplay between the GitHub repositories (see the chapter on the [Editorial flow](./editorial_flow.md)) 
-   - what data specifications are, and what information are they built of (see the chapter on the [Data specifications](./datamodel.md))
-   - what persistent unique identifiers (PURIs) are, and how their use is supported by SEMIC (see the chapter on [Persistent identifiers](./puri.md))
-   - the deployed tooling for the generation of artefacts (see the chapter on the [Toolchain](./toolchain.md))
+   - [Editorial flow](./editorial_flow.md) - illustrating the interplay between the GitHub repositories  
+   - [Data specifications](./datamodel.md) - describing what data specifications are, and what information are they built of
+   - [Persistent identifiers](./puri.md) - describing what persistent unique identifiers (PURIs) are, and how their use is supported by SEMIC
+   - [Toolchain](./toolchain.md) - presenting the deployed tool for the generation of artefacts
 
-The purpose of these chapters is  to introduce *editors*, but also *developers*, to foundational aspects of the *editorial flow* and how it is supported by the *toolchain*.
-
-Note that the documentation is not a reflection on design decisions. Only those are included that are helpful to improve the understanding of how the tools and processes work. 
+Note that the documentation is not a reflection on design decisions, but rather a helpful support to improve the understanding of how the tools and processes work. 
 The documentation provides merely a description of the current state of affairs, with references to further information, when it might be necessary for a given task.
-As a result, the documentation may raise valuable (design) questions without an answer provided here. For instance, UML data modeling guidelines are not part of this documentation, despite this being a valuable knowledge for an editor.
-However, in the future, such aspects might be included also in this documentation.
+
+As a result, the documentation may raise valuable (design) questions without an answer provided here. For instance, UML data modeling guidelines are not part of this documentation, despite this being a valuable knowledge for an editor. However, in the future, such aspects might be included also in this documentation.
 
 The chapters are written with the assumption that the reader has at least a basic knowledge on the Semantic Web, UML modeling, GitHub and software development.
 Despite the efforts to make the text understandable for readers with diverse backgrounds, readers might encounter parts using unfamiliar terminology or approaches.
@@ -176,5 +176,3 @@ Each chapter can be read, to a high extent, independently.
 Nevertheless, they might use terms or refer to knowledge that are explained in other chapters in more depth. 
 Cross referencing among chapters is used to enable readers to find these explanations more quickly.
 This organisation is to keep the documents concise and easily processable for the reader.
-
-
