@@ -1,16 +1,24 @@
 # Modeling data specifications
 
 This chapter describes the key notions and information an editor needs to understand for _editing data specifications_.
-Within this document the term data specification is used to refer to its core: **the semantic model**, i.e. the classes and properties with their semantic description.
-Besides this, and beyond the scope of this chapter, a data specification contains metadata about the document, a changelog, use case descriptions, context, conformance statements and more.
 
+Within this document the expression *data specification* is used to refer to its core: **the semantic model**, i.e. the classes and properties with their semantic description.
+Besides this, and beyond the scope of this chapter, a data specification contains, among others:
+- metadata about the document 
+- changelog 
+- use case descriptions 
+- context
+- conformance statements
 
-First, an overview of the different **data specification categories** is presented. 
-Understanding this categorisation helps the editors in their semantic model editing activity, as it provides an insight into the relationship between the generated artefacts and the expectations of consumers.
-The second part of this chapter discusses the **master data management** of the data specification.
-It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain.
+First, an overview of the different **data specification categories** is presented. Understanding this categorisation helps the editors in their semantic model editing activity, as it provides an insight into the relationship between the generated artefacts and the expectations of consumers.
 
-The implementation aspects of the modeling are not discussed in this chapter. Consult the [artefact generation process](./artefact_generation.md) chapter for insights on and pointers to the software used, and the [toolchain](./toolchain.md) chapter for understanding the automation process set up for publishing data specifications exploiting GitHub.
+The second part of this chapter discusses the **master data management** of the data specification. It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain.
+
+Relevant links to the items described in following sections are numbered throughout the page and  included in **section 'Links'** at the bottom.
+
+For details on implementation aspects of the modeling, that not not discussed in this chapter, please consult the following chapters:
+- [Artefact generation process](./artefact_generation.md) - for insights on and pointers to the software used
+- [Toolchain](./toolchain.md) - for understanding the automation process set up for publishing data specifications exploiting GitHub.
 
 
 ## Data specification categories
@@ -23,8 +31,8 @@ Data specifications can roughly be categorized in three categories according to 
 
 A *vocabulary* is a collection of terms. 
 A term consists minimally of a label and definition, and it is identified by a URI. 
-The information attached to a term in a vocabulary is expressed with the intent to be applicable within a broad context. 
-Guidelines on writing good definitions can be found [here](https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf).
+The information attached to a term in a vocabulary is expressed with the intent to be applicable within a broad context. Specific **Guidelines on good definitions writing** exist and are available for consultation (1)
+
  
 An *application profile* is the usage of terms within a generic application context. 
 The application context imposes additional constraints on the usage of the terms such as cardinality restrictions, ranges, code lists, etc.
@@ -38,12 +46,12 @@ These are called *implementation models*.
 Aside from the differences in the content resulting from the reuse perspective, each category has different expectations on the to be published artefacts. 
 These expectations, summarized below, result from the premise to use the _Semantic Web_ as the __basis__ for the design of the data specification.
 
-_Vocabularies_ expect: 
+- _Vocabularies_ expect: 
 
   - a document with a simple tabular view of the terms 
   - dereferenceable persistent identifiers 
 
-_Application profiles_ expect:
+- _Application profiles_ expect:
 
   - a document 
     - explaining the application scope 
@@ -56,7 +64,7 @@ _Application profiles_ expect:
     - examples
   - to being integrated with the vocabularies they reuse
 
-_Implementation models_ expect:
+- _Implementation models_ expect:
 
   - the same as application profiles, but usually augmented with additional artefacts specific for a given system,
       e.g., a template DB or an API specification.
@@ -66,7 +74,6 @@ The design of a data specification usually involves the creation of other data s
 It is seldom that a data specification will rely only on already existing data specifications.
 In particular, the development of application profiles and implementation models is naturally combined with the creation of a vocabulary.
 That vocabulary captures all new terminology that has not yet been published.
-
 
 
 The **SEMIC Core Vocabularies** have the design intent of the _vocabularies_ category; namely, broad reuse, mostly ignorant of the application context.
@@ -85,7 +92,7 @@ On the other extreme are the implementation models, providing a collection of te
 At this moment, however, _no formal expectation of the SEMIC data specifications_ has been written out. We are clarifying these concepts here in the assumption and hope that the editors' awareness of this categorisation will aid the creation the most appropriate semantic models.
 
 
-## The UML model
+### Intro to the UML model
 
 As mentioned in the previous section, a SEMIC data specification is build and published according to the best practices of the Semantic Web.
 Following this approach data specifications identify terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass axioms, domain, range, cardinality restrictions, etc.). 
@@ -95,16 +102,16 @@ Graphical representations are able to convey more concisely the key formal logic
 Instead of reinventing a new graphical language, SEMIC uses the Unified Modeling Language (UML) as graphical modelling language.
 
 
-###  Master data management
+##  Master data management
 
 Working with two (or more) distinct modelling languages simultanously creates a significant challenge. 
 It would be a waste of time and effort, if the editors would have to express the same data specification in two distinct modelling languages.
 Therefore, one modeling language should be selected as the "master", from which the other representations would be derived.
 
-Within the SEMIC toolchain, the "master" for the semantic model is the UML representation. 
-This decision is motivated based on two compelling arguments: the "transformational argument" and the "editorial argument".
+Within the SEMIC toolchain, the "master" for the semantic model is the UML representation, described below. 
+This decision is motivated based on two compelling arguments:
 
-#### Transformational argument
+#### - Transformational argument
 Turning RDF vocabularies into UML, to fully exploit the graphical notation possibilies, would require to create a new configuration language.
 This language would not only include semantical instructions (such as "this URI is a UML class"), but likely would also need to include styling and other represenation instructions. 
 A large part of the editorial effort for a graphical representation is organising and styling the picture to make it as suggestive and meaningful as possible for the consumers. 
@@ -112,7 +119,7 @@ That is a complex task.
 It is far more easier to exploit the power of a UML modeling tool, offering all the graphical styling possibilities an editor needs, and transform the resulting UML representation into a semantic model (such as RDF).
 
 
-#### Editorial argument 
+#### - Editorial argument 
 The interactions and discussions within a Working Group are often driven by a graphical representation.
 Therefore, naturally, editors first create the graphical representation of the proposed resolution.
 When agreement is reached, the decision is turned by the editor into the data specification following the Semantic Web principles.
@@ -158,7 +165,7 @@ The `{data_spec_category}` part represents the data specification category. The 
    - _ommitted_ :  the annotation is associated with the _vocabulary_ in which the term is defined. It contains the base information about the term.
    - `ap-` : the annotation is associated with an _application profile_ in which the term is used.
 
-The `{language}` part corresponds to the 2-letter [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in which the content of the annotation is expressed.
+The `{language}` part corresponds to the **2-letter ISO 639-1 language code** (2) in which the content of the annotation is expressed.
 
 **Examples:**
   - `label-nl`: the tag expresses the label of the term in Dutch, at the level of a vocabulary
@@ -193,9 +200,15 @@ On the left side of the graphical representation the attributes and relationship
 
 #### Test suite
 
-The [OSLOthema-toolchainTestbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed) is a _thema_ repository that provides a collection of example UML models.
-Editors can use this collection to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
-Developers can use it to do regression testing during development.
+Test suites are collection of examples of that editors can use to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
+
+An example of test suite is **OSLOthema-toolchain Testbed** (3), which is a _thema_ repository that provides a collection of examples of UML models and that can be used by editors to do regression testing during development.
 
 
+#  Links
 
+(1) [Guidelines on good definitions writing](https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf)
+
+(2) [Full list of ISO 639-1 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+
+(3) [OSLOthema-toolchain Testbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed)
