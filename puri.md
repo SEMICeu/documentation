@@ -1,12 +1,11 @@
 # Persistent URIs (PURIs)
 
-Persistent URIs are identifiers in the form of a URI that are maintained for eternity. 
+Persistent URIs are identifiers in the form of a URI that are maintained indefinitely. 
 They provide stability for data through space and time.
 
-A key aspect for persistent URIs is dereferenceability.
-Technically it means that content negotation is active for the PURI.
-Without it, nobody can verify the original values, and the risk exists that a local usage changes the semantics for the identifier unnoticed.
-Dereferencing is thus a technical mean to ensure that semantics are stable and it is not shifting "behind the back" of the users.
+A key aspect for persistent URIs is *dereferenceability*. Technically it means that content negotiation is active for the PURI.
+Without it, it would not be possible to verify the original values, and the risk exists that a local usage changes the semantics for the identifier unnoticed.
+Dereferencing is thus a technical mean to ensure that semantics are stable and not shifting "behind the back" of the users.
 
 
 PURIs form the foundation of data specifications. 
@@ -19,17 +18,16 @@ In this chapter the setup and basic editorial maintenance activities for PURIs w
 
 ## PURIs at SEMIC
 
-A PURI is of the form *`http://data.europa.eu/{domain}/{reference}`*, where 
+PURIs appear in this form: *`http://data.europa.eu/{domain}/{reference}`*; where: 
 
- - *{domain}* is requested and assigned by Publications Office, which is the maintainer of **data.europa.eu** domain
+ - *{domain}* is requested and assigned by Publications Office (which is the maintainer of **data.europa.eu** domain)
  - *{reference}* is maintained and assigned by editors of the data specification
 
-The complete list of supported persistent domains by data.europa.eu are found [here](https://data.europa.eu/URI.html).
+(For consulting the complete list of supported persistent domains by data.europa.eu, please consult this [link](https://data.europa.eu/URI.html))
 
 ### Supported domains by SEMIC
 SEMIC is responsible for a number of PURI domains. 
 They are listed below with their activation level in the SEMIC PURI service.
-
 
 The following domains are configured on SEMIC PURI service and are ready to be used by editors to publish PURIs 
 
@@ -111,10 +109,6 @@ This limitation is documented in the proxy documentation, and it is future work 
 
 **Future work 2**: These steps are part of the editorial effort that editors have to perform manually.
 Therefore, this process is a candidate to be automated and integrated in the toolchain.
-
-
-
-
 
 
 
