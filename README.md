@@ -43,7 +43,7 @@ There are three main types of __actors__ that will interact with the resources a
 
 The actors above are expected to perform the following actions:
 - Editing of artefacts
-- Publication of atrefacts
+- Publication of artefacts
 
 The tools and methods are set up by the _developers_ to support the _editors_ in their work to provide together a coherent experience to the _consumers_.
 
