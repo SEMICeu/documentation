@@ -10,11 +10,13 @@ Dereferencing is thus a technical mean to ensure that semantics are stable and n
 
 PURIs form the foundation of data specifications. 
 In order to unambiguously fix the semantics of terms in a data specification, each term gets a URI assigned.
-This URI is either an existing URI or a new URI minted within [one of the persistent URI domains](#supported-domains-by-semic) from SEMIC.
-Reusing PURIs from external domains means that the data specification will rely on the semantics and the governance associated with the external URI to set the semantics of the term.
-For those terms that are identified by a PURI within a SEMIC owned domain, it is the editors duty to perform the necessary editorial effort to maintain the correctness of the shared content via dereferenceability.
+This URI is either an existing URI or a new URI minted within one of the persistent URI domains from SEMIC.
+
+Reusing PURIs from external domains means that the data specification will rely on the semantics and the governance associated with the external URI to set the semantics of the term. For those terms that are identified by a PURI within a SEMIC-owned domain, it is the editor's duty to perform the necessary editorial effort to maintain the correctness of the shared content via dereferenceability. 
+
 In this chapter the setup and basic editorial maintenance activities for PURIs within SEMIC are described.
 
+Relevant links to the items described in following sections are numbered throughout the page and included in **section 'Links'** at the bottom.
 
 ## PURIs at SEMIC
 
