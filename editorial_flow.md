@@ -170,7 +170,7 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
    This public URL provides the HTML representation of the Core Vocabulary.  By doing a final check of this URL, the editor ensures quality of work.
    
 
- (An example of the data specfication page - including all artefacts and contextual information - can be found [at this link](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/)).
+ (An example of the data specification page - including all artefacts and contextual information - can be found [at this link](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/)).
   
    
   
