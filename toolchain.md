@@ -40,7 +40,7 @@ The main distinction between the use of the toolchain in the two environments pe
 In the editorial flow, this distinction is indicated by the existence of the manual publication steps that the editor has to perform; steps that are not required in the OSLO context. As such, it will be future work to adapt the tooling to the SEMIC publication context.
 
 The result produced by the OSLO toolchain can be seen at the portal of the **Flemish Government data portal** (3), while on Github **the source code of the tooling**, as well as of the data specifications are all publicly available(4).
-
+(*For more information on the OSLO toolchain tools, the OSLO maintainers can be contacted. This can be done by posting a github issue, or contacting them via email at digitaal.vlaanderen@vlaanderen.be.*)
 
 ### Generic Design
 
@@ -54,31 +54,27 @@ The content of that website can be (and usually is) broader than the data specif
 The toolchain is designed to create a static website, i.e. a collection of webpages.
 This design choice simplifies the operational work to serve the data specifications on the publication environment, but more importantly it also provides the editors with an exact view on what is being shared with the consumers on the publication environment.
 
-The source code of the static website, i.e. the publication environment, is stored on GitHub in the _publication repository_.
-The result of the generation process, i.e. the static website, is stored in the _generated repository_. 
+The source code of the static website, (i.e. the publication environment), is stored on GitHub in the **publication repository**.
+The result of the generation process, (i.e. the static website), is stored in the **generated repository**. 
 A _publication_ repository is thus always paired with a _generated_ repository. 
-The generated repository is kept in sync with the publication repository via a [Continuous Integration/Continuous Development](https://en.wikipedia.org/wiki/CI/CD) (CI/CD) execution flow. 
+
+The generated repository is kept in sync with the publication repository via a **Continuous Integration/Continuous Development (CI/CD) execution flow** (5). 
 Within software engineering, CI/CD is the name for any automated process supporting the software building and deployment activities.
 Each change (commit) to the publication repository will lead after a successful CI/CD execution to a change in the generated repository.
 
 Using the branching functionality of Github repositories, system staging (i.e. publishing on development, testing and production publication environments) is also supported. 
 
-
 To provide the editorial freedom and to let data specifications have their own life cycle, the source of each data specification is stored in their own repository. 
-These repositories are called _thema repositories_. 
-The publication repository contains a list of references to the thema repositories.
-More precisely, they contain references to the state of the thema repositories at unique points in time, i.e. commits.
-These references are called __publication points__.
+These repositories are called **thema repositories**. 
+
+The publication repository contains a list of references to the thema repositories. More precisely, they contain references to the state of the thema repositories at unique points in time, i.e. commits. These references are called __publication points__.
+
 Editors primarily interact with thema repositories, only when a new publication of the data specification is required, when they update the publication repository with a new publication point.
 This setup creates flexibility and provides editorial scaling potential, without loosing a central control. 
 
-
-For more information on the OSLO toolchain tools, the OSLO maintainers can be contacted. 
-This can be done by posting a github issue, or contacting them via email at digitaal.vlaanderen@vlaanderen.be.
-
-The deployment of the above design is supported by the existence of two template repositories.
- - a _template for a publication repository_ - available at: [https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
- - a _template for a thema repository_ - available at: [https://github.com/Informatievlaanderen/OSLOthema-template](https://github.com/Informatievlaanderen/OSLOthema-template)
+The deployment of the above design is supported by the existence of two template repositories, both available on GitHub:
+ - a **template for a publication repository** (6).
+ - a **template for a thema repository** (7)
 
 The generated repository does not require a template.
 
@@ -220,3 +216,9 @@ These images are build from the open source repositories
 (3) [Flemish Government data portal](https://data.vlaanderen.be)
 
 (4) [OSLO source code | GitHub](https://github.com/search?q=org%3AInformatievlaanderen+topic%3Aoslo)
+
+(5) [Continuous Integration/Continuous Development (CI/CD) execution flow](https://en.wikipedia.org/wiki/CI/CD)
+
+(6) [Template for a publication repository](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
+
+(7) [Ttemplate for a thema repository](https://github.com/Informatievlaanderen/OSLOthema-template)
