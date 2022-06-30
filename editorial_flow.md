@@ -40,30 +40,33 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
 
    The editor triggers the rendering of the data specification artefacts by adding a publication point in the **publication repository** (2).
    
-   *(For more information on how this is done, please check out the section on* [How to trigger the generation of the artefacts](./toolchain.md#howto-trigger-the-generation-of-the-artefacts).)  
+   (For more information on how this is done, please check out the section on [How to trigger the generation of the artefacts](./toolchain.md#howto-trigger-the-generation-of-the-artefacts).)  
 
 *4. Check the generated artefacts*
 
    When the toolchain processing is finished, the artefacts become available in the **generated repository** (3).
 
-   If the artefacts address the issue as expected the editor continues with the publication (step 5), otherwise another iteration is required (back to step 2 ).
+   If the artefacts address the issue as expected, the editor can proceed with the publication, otherwise another iteration is required (back to step 2).
 
 **Part 3: Publish the result**
 
 *5. Publish the generated artefacts*
 
-   To provide the consumers access to the updated artefacts, the editor must publish the generated artefacts to the right places by copying the content to other GitHub repositories.
+   To provide the consumers access to the updated artefacts just generated, the editor must publish them to the correct locations by copying the content to other GitHub repositories.
    
    This consists of copying artefacts to the data specification repository from where the editorial flow was started. 
+   
    This must be done in accordance with the guidelines on these data specification repositories, for instance by creating a new release directory.
+   (For more information on how this is done, please check out the section on [Managing releases in a repository](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository).)
+   
 
    Another repository might be affected too; namely, when the editing resulted in an RDF content change for a persistent URI published by SEMIC.
-   If this is the case, the change must be propagated to the PURI content repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) as well.
+   If this is the case, the change must be propagated also to the **PURI content repository** (4).
    
 
 *6. Verify the published artefacts*
 
-   To finalise the editorial flow a final verification of the published data specification is advised.
+   To finalise the editorial flow, a final verification of the published data specification is advised.
    The editor will then take the role of the consumer to investigate if the new situation is as desired.
 
 
@@ -165,5 +168,9 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
  ## Links
  
 (1) [Thema repository](https://github.com/SEMICeu/uri.semic.eu-thema)
+
 (2) [Publication repository](https://github.com/SEMICeu/uri.semic.eu-publication)
+
 (3) [generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
+
+(4) [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) 
