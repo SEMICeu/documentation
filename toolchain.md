@@ -183,21 +183,20 @@ An example is shown below:
   },
 ```
 An elaborated description of the structure and semantics of the attributes is found in the SEMIC publication publication repository (9).
+
 Intuitively, the above publication point can be read as the following processing instruction: "Write in the generated repository, at path `{urlref}`, the generated artefacts for the data specification `{name}`, according to config file `{filename}` located in `{repository}` as of the commit `{branchtag}`."
-Thus, since changing the data specification content is changing the thema repository, a change in the publication point can correspond to changing the `{branchtag}` to point to the new content. 
-Performing this change will trigger the generation of the artefacts.
 
-Besides technical expectations, such as the repository should be a GitHub repository, the toolchain does not impose editorial management rules on a publication point's structure.
-For instance, SEMIC could impose rules for the name-giving of the filenames, urlref path structure, and branchtags, but SEMIC could also impose a correspondence between the branchtag and the urlpath structure.
+Thus, since changing the data specification content is changing the thema repository, a change in the publication point can correspond to changing the `{branchtag}` to point to the new content. Performing this change will trigger the generation of the artefacts.
+
+Besides technical expectations (such as the repository should be a GitHub repository), the toolchain does not impose editorial management rules on a publication point's structure. For instance, SEMIC could impose rules for the name-giving of the filenames, urlref path structure, and branchtags, but SEMIC could also impose a correspondence between the branchtag and the urlpath structure.
 This is future work, and should be considered in the context of further integrating the toolchain in the publication process.
-
 
 
 ## Developers HowTo
 
 ### HowTo find the source code of the automation
 
-The source code for the CircleCI automation is part of the repository [uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication). 
+In SEMIC publication repository can be found the **source code for the CircleCI automation** (13). [uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication). 
 The organisation and setup of the workflow of the CircleCI workflow is extensively documentated in the _template_ repository [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
 
 The CircleCI workflow will execute in some steps software available as public Docker images. 
@@ -231,3 +230,7 @@ These images are build from the open source repositories
 (11) [SEMIC thema repository](https://github.com/SEMICeu/uri.semic.eu-thema) 
 
 (12) [SEMIC publication environment documentation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md)
+
+(13) [CircleCI automation source code](https://github.com/SEMICeu/uri.semic.eu-publication/tree/master/.circleci)
+
+(14)
