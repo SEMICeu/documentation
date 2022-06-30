@@ -38,13 +38,13 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
    The editor triggers the rendering of the data specification artefacts by adding a publication point in the [publication repository](https://github.com/SEMICeu/uri.semic.eu-publication).
    For more information on how this is done, please check out the section on [How to trigger the generation of the artefacts](./toolchain.md#howto-trigger-the-generation-of-the-artefacts).  
 
-**Part 3: Publish the result**
-
 4. Check the generated artefacts
 
    When the toolchain processing is finished the artefacts are available in the [generated repository](https://github.com/SEMICeu/uri.semic.eu-generated).
 
    If the artefacts address the issue as expected the editor continues with the publication (step 5), otherwise another iteration is required (back to step 2 ).
+
+**Part 3: Publish the result**
 
 5. Publish the generated artefacts.
 
