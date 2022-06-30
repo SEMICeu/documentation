@@ -149,10 +149,10 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
    
    The editor will commit these files in the directory `releases/m8g` in the PURI content repository *uri.semic.eu-puris*.
    For demonstration purposes the files created during the video are stored in the branch `example`.
-   (An example of `baptismal name` files committed in the `releases/m8g` directory, can be found [at this link])
    
-   e.g. [baptismalName.ttl](https://github.com/SEMICeu/uri.semic.eu-puris/blob/example/releases/m8g/baptismalName.ttl).
+   (An example of `baptismal name` files committed in the `releases/m8g` directory, can be found [at this link](https://github.com/SEMICeu/uri.semic.eu-puris/blob/example/releases/m8g/baptismalName.ttl))
    
+  
    * ***NOTE: Step 5 and 6 are only partially shown in the recording*** - In order to demonstrate all the steps, it would require to propagate the demonstration content to the consumers on an official channel. Therefore, only the changes that do not lead to immediate and direct impact on the consumers are included in the video.
 
    **Not in the recording:** To share the new artefacts with the public, the editor follows the publication guidelines for Core Person repository. 
