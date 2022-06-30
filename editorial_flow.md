@@ -31,7 +31,7 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
 
    The changed UML file is committed in the [thema repository](https://github.com/SEMICeu/uri.semic.eu-thema).
    
- **Part 2: Part 2: Build the artefacts using the toolchain**
+ **Part 2: Build the artefacts using the toolchain**
 
 3. Trigger the toolchain in the publication repository.
 
