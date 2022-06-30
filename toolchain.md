@@ -3,19 +3,16 @@
 
 ## Motivation
 
+The toolchain has beed developed to support the editors in creating and maintaining data specifications in a coherent manner.
 
-To support the editors in creating and maintaining data specifications [[*]](./glossary.md#data_spec) in a coherent manner, tooling is required.
-Data specifications have their own life cycle. 
-The various Core Vocabularies are created by different (editorial) teams, with different Working Groups, at different times.
-In the past, the manual editing has resulted in similar, yet distinct, and sometimes incoherent, expressions of these Core Vocabularies.
-A situation that raised many questions by the consumers.
+The need for a toolchain emerged from the fact that data specifications have their own life cycle and the the various Core Vocabularies are created by different (editorial) teams, with different Working Groups, at different times. In the past, this resulted in manual editing producing similar, yet distinct, and sometimes incoherent, expressions of these Core Vocabularies. A situation that raised many questions by the consumers.
 
 To have the data specifications progress in the same way, and following the same style, tooling support is required. 
-Introducing tooling will force the editors to follow a predefined editorial flow, and thus reduce their editorial freedom to the limits of the tooling.
-This limitation, however, brings crucial benefits for the SEMIC project; namely, it will:
-  - provide a harmonised, coherent experience of the data specifications. This will increase the adoption by the consumers.
-  - allow the embedding of the key SEMIC data modelling best practices in formal processes, instead of relying solely on the experience of the editors.
-  - support scaling up the editorial capacity. Automation provides the ability to learn the editorial flow in a safe environment.
+Introducing tooling forces the editors to follow a predefined editorial flow, and thus reduce their editorial freedom to the limits of the tooling.
+In practice, this limitation brings crucial benefits for the SEMIC project; namely:
+  - provides a **harmonised, coherent experience of the data specifications**, which will increase the adoption by the consumers
+  - allows **the embedding of the key SEMIC data modelling best practices in formal processes**, instead of relying solely on the experience of the editors.
+  - supports the **scaling up of the editorial capacity**, through automation, which allows to learn the editorial flow in a safe environment.
 
 
 This chapter describes the tooling that is supporting the editorial flow for managing data specifications.
@@ -209,6 +206,5 @@ The CircleCI workflow will execute in some steps software available as public Do
 These images are build from the open source repositories 
   - [OSLO-EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF)
   - [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator)
-
 
 
