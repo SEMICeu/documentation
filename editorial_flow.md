@@ -27,7 +27,7 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
 
    The editor opens and edits the UML file in the appropriate UML editor. 
    The UML structure is modified to address the issue.
-   These changes are made according to the toolchain UML data model requirements.[^1]
+   These changes are made according to the toolchain UML data model requirements.[1]
 
    The changed UML file is committed in the [thema repository](https://github.com/SEMICeu/uri.semic.eu-thema).
    
@@ -157,5 +157,5 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
    On this page the data specification is described, and all artefacts and contextual information can be found.
    By doing a final check of this URL, the editor ensures quality of work.
    
-   [^1] [toolchain UML data model requirements](./datamodel.md). 
+   [1] [toolchain UML data model requirements](./datamodel.md). 
     
