@@ -169,6 +169,7 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
    
    This public URL provides the HTML representation of the Core Vocabulary.  By doing a final check of this URL, the editor ensures quality of work.
    
+
  (An example of the data specfication page - including all artefacts and contextual information - can be found [at this link](https://semiceu.github.io/Core-Person-Vocabulary/releases/2.00/)).
   
    
@@ -190,4 +191,5 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
 (7) [CircleCI](http://circleci.com)
 
 (8) [doc directory](https://github.com/SEMICeu/uri.semic.eu-generated/tree/example/doc)
+
 
