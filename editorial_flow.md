@@ -25,7 +25,7 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
    From that repository the UML file is copied to the **thema repository** (1).
 
 
-*2. Edit the UML file* 
+*2. Edit the UML file in the thema repository* 
 
    The editor opens and edits the UML file in the appropriate UML editor. 
    The UML structure is modified to address the issue.
@@ -102,14 +102,14 @@ Using this branch all activities can demonstrated on a working environment, exce
 
 ## Part 1: Editing of the UML model ([Part 1 video](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true))
 
-1. Find the latest UML master data.
+*1. Find the latest UML master data*
 
     The latest published UML file is located in the **Core Person Vocabulary repository** (5).
     
     To start editing, copy this version of the file to the Thema repository (1).
     
 
-2. Edit the UML file in the Thema repository
+*2. Edit the UML file*
 
    The editor edits the copy in the Thema repository, adding the property 'baptismalName' with the following annotations: i) label and definition in English, ii) and the assigned URI.
    
@@ -117,7 +117,7 @@ Using this branch all activities can demonstrated on a working environment, exce
    
 ## Part 2: Generate data specification artefacts using the toolchain ([Part 2 video](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true))
 
-3. Trigger the toolchain 
+*3. Trigger the toolchain* 
 
    The editor selects the commit hash corresponding to the UML file update in the Thema repository.
    
@@ -129,7 +129,7 @@ Using this branch all activities can demonstrated on a working environment, exce
 
 ## Part 3: Publication of the result ([Part 3 video](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true))
 
-4. Check the generated artefacts
+*4. Check the generated artefacts*
 
    When the artefact generation process is finished, the generated artefacts are available in the generated repository.
    In the demonstration video, the updated artefacts are found within the **directory [`/doc`]** (8). 
@@ -139,7 +139,7 @@ Using this branch all activities can demonstrated on a working environment, exce
    - download the artefacts and check within the downloaded files for the new property
    - use the GitHub built in diffing support (For more information on how this is done, please check out the section on [Comparing commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits) or the instructions fot the [Smart Diff action](https://github.com/marketplace/actions/smart-diff)).
 
-5. Publish the generated artefacts 
+*5. Publish the generated artefacts* 
 
 Since the `baptismal name` is a new property, and thus got a new PURI assigned, the editor has to publish the content in the PURI content repository (4). 
 
@@ -160,7 +160,7 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
    Committing this will make the content available to the public.
 
  
-6. Verify the published artefacts 
+*6. Verify the published artefacts* 
     
    **Not in the recording:** All the steps above result in a page of the Core Person Vocabulary referring to the specific version of the artefact and reachable trough a public URL structured as follows:`https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/`. 
    
