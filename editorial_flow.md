@@ -101,7 +101,8 @@ The text below is summarised transcript of a video recording demonstrating the a
 All demonstrated changes are performed on the involved repositories using a demonstration branch called `example`.
 Using this branch all activities can demonstrated on a working environment, except for the last step: the official publication of the transformation.
 
-*Note*: The recording applies one way to interact with the repositories. 
+
+* ***NOTE: The recording applies one way to interact with the repositories***
 This approach has been selected to facilitate the recording, not because is the most efficient or best way to interact with the SEMIC GitHub space.
 Editors can use their preferred way to interact with the SEMIC GitHub space, e.g. checking out the code and working locally, then pushing the changes back.
 
@@ -147,7 +148,13 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
 
 5. Publish the generated artefacts 
 
-   *Note:* This and the subsequent step are only partially shown in the recording. 
+Since the `baptismal name` is a new property, and thus got a new PURI assigned, the editor has to publish the content in the PURI content repository (4). 
+   The editor extracts from the generated RDF artefact the triples that are relating to the new property, and stores these in a file with the name 'baptismalName'. 
+   Using one of the many RDF serialisation tools, it is then created a variant for the RDF serialisation n-triples, turtle, and RDF/XML, with the corresponding file extensions. In the video an online web tool is used.
+   The editor will commit these files in the directory `releases/m8g` in the PURI content repository *uri.semic.eu-puris*.
+   For demonstration purposes the files created during the video are stored in the branch `example`, e.g. [baptismalName.ttl](https://github.com/SEMICeu/uri.semic.eu-puris/blob/example/releases/m8g/baptismalName.ttl).
+   
+   * ***NOTE: Step 5 and 6 are only partially shown in the recording***
    In order to demonstrate all the steps, it would require to propagate the demonstration content to the consumers on an official channel.
    Therefore, only the changes that do not lead to immediate and direct impact on the consumers are included in the video.
 
@@ -158,11 +165,7 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
    Then the artefacts from the generated repository in the directory `/doc/core-vocabulary/core-person/` are copied into this directory.
    Committing this will make the content available to the public.
 
-   **In the recording:** Since the `baptismal name` is a new property, and thus got a new PURI assigned, the editor has to publish the content in the PURIS content repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris). 
-   The editor extracts from the generated RDF artefact the triples that are relating to the new property, and stores these in a file with the name 'baptismalName'. 
-   A variant for the RDF serialisation ntriples, turtle, and RDF/XML, with the corresponding file extensions, is then created, using one of the many RDF serialisation tools. In the video an online web tool is used.
-   The editor will commit these files in the directory `releases/m8g` in the PURIs content repository *uri.semic.eu-puris*.
-   For demonstration purposes the file created during the video are stored in the branch `example`, e.g. [baptismalName.ttl](https://github.com/SEMICeu/uri.semic.eu-puris/blob/example/releases/m8g/baptismalName.ttl).
+
    
 
    
