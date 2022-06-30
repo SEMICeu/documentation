@@ -70,15 +70,16 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
    The editor will then take the role of the consumer to investigate if the new situation is as desired.
 
 
-## NOTE: The Generation and publication of artefacts require manual effort
+
+* ***NOTE: The Generation and publication of artefacts require manual effort***
 
 The workflow above shows that the artefact generation tooling (the toolchain) does not releases editors from substantial manual work.
 This manual work happens at the start of the editorial flow and at the end.
-In both cases the work introduces risks for unnoticed changes or incomplete publications.
+In both cases, the work introduces risks for unnoticed changes or incomplete publications.
 
-To reduce these risks additional work has to be done to further integrate the artefact generation into the data specification repositories and vice versa.
+To reduce these risks, additional work has to be done to further integrate the artefact generation into the data specification repositories and vice versa.
 This is feasible, but probably will require further alignment and restructuring of the data specification repositories in the SEMIC GitHub space.
-Topics like version numbering, using shared PURI domain, etc. are affecting the automation.
+Topics like version numbering, using shared PURI domain, etc. all affect the automation.
 
 
 
@@ -171,6 +172,6 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
 
 (2) [Publication repository](https://github.com/SEMICeu/uri.semic.eu-publication)
 
-(3) [generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
+(3) [Generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
 
-(4) [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) 
+(4) [PURI content repository](https://github.com/SEMICeu/uri.semic.eu-puris) 
