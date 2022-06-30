@@ -157,9 +157,3 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
    This is the public URL for the HTML representation of the Core Vocabulary. 
    On this page the data specification is described, and all artefacts and contextual information can be found.
    By doing a final check of this URL, the editor ensures quality of work.
-   
-  
- ## Links
- 
- [Thema repository](https://github.com/SEMICeu/uri.semic.eu-thema)
-
