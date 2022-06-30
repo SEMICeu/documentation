@@ -1,10 +1,12 @@
 # Documentation
 This repository contains the overview documentation describing the resources and tools developed and used by the Semantic Interoperability Community ([SEMIC](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic)).
 
-The [SEMICeu GitHub space](https://github.com/SEMICeu) is created to support the Semantic Interoperability Community with the creation of __data specifications__ (e-Government Core Vocabularies, Application Profiles, etc.). A list of these data specifications can be found [on the SEMIC website](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/our-resources). This documentation describes both how the different SEMIC resources are organised in GitHub repositories, as well as what are the supporting assets that need to be _set up_, _configured_, and _used_ to realise (i.e. edit and publish) such SEMIC data specifications.
+The [SEMICeu GitHub space](https://github.com/SEMICeu) is created to support the Semantic Interoperability Community with the creation of __data specifications__ (e-Government Core Vocabularies, Application Profiles, etc.). A list of these data specifications can be found on the SEMIC website. 
+
+This documentation describes both how the different SEMIC resources are organised in GitHub repositories, as well as what are the supporting assets that need to be _set up_, _configured_, and _used_ to realise (i.e. edit and publish) such SEMIC data specifications.
 
 This documentation covers the state of affairs as of June 2022.
-The objective is that readers of this documentation are provided with sufficient anchors to initiate mastering the methods and tooling used to create and manage data specifications.
+The objective is that readers are provided with sufficient anchors to initiate mastering the methods and tooling used to create and manage data specifications.
 
 
 
@@ -54,32 +56,32 @@ During the editorial process the _editors_ are adapting the data specification: 
 The assessment of how to best address the different use cases is beyond the scope of this documentation. 
 Nevertheless, this documentation provides insights into how a resolution for a given change is integrated in the published artefacts of the data specification.
 
-To adequately respond to a use case, _editors_ should understand how to operate the **toolchain** (see [Usage section](#Usage) for details) to efficiently create the artefacts for a data specification. 
-The created artefacts are always represented in a human readable form (e.g. HTML) together with other supportive representations (JSON-LD context files, SHACL shapes, RDF vocabularies, etc.) depending on the nature of the data specification. 
+To adequately respond to a use case, _editors_ should understand how to operate the **toolchain** to efficiently create the artefacts for a data specification (see [Usage section](#Usage) for details).
+The created artefacts are always represented in a human readable form (e.g. HTML) together with other supportive representations (JSON-LD context files, SHACL shapes, RDF vocabularies, etc.), depending on the nature of the data specification. 
 
 The editorial activity typically requires several iterations in order to reach the final resolution.
-The *toolchain* reduces the workload on editors created by these iterations, makes the artefact creation less error-prone, and at the same time increase the coherency among the different data specifications. 
+The *toolchain* reduces the workload on editors created by these iterations, makes the artefact creation less error-prone, and at the same time increases the coherency among the different data specifications. 
 It also can play an important role in training future editors to maintain the data specifications. 
 
 
 ### Publication of the artefacts
 
 After creating the artefacts, the editor has to make them accessible to the consumers. 
-For this the artefacts have to be stored in a publication environment.
+To this end, the artefacts have to be stored in a publication environment.
 
-Currently, the publication environment that has been adopted by SEMIC is GitHub: one repository per data specification. 
+Currently, the publication environment that has been adopted by SEMIC is GitHub, where there is one repository per data specification. 
 Over the past years, the organisation and structure of these repositories underwent a gradual harmonisation process.
-Moreover, the consumers' access to the content of these repositories is facilitated through**GitHub Pages**, a service offered to render webpages stored in a repository.
+Moreover, the consumers' access to the content of these repositories is facilitated through **GitHub Pages**, a service offered to render webpages stored in a repository.
 
 Since these repositories were created before an automated artefact generation tooling was applied, the repositories are set up and organised with the assumption that the content of the repository is created manually. 
 The full integration of this publication design in the automation process requires adaptations to the automation, organisation and setup of the data specification repositories. 
-This is future work. Therefore, editors are today required to manually collect the generated artefacts, and store them in the appropriate locations within the data specification repository.
+Until that stage of automation is not reached, editors are today required to manually collect the generated artefacts, and store them in the appropriate locations within the data specification repository.
 
 
 
 ## Organisation of the SEMIC GitHub space
 
-The SEMIC GitHub space contains several dozens of repositories, each falling in specific categories. There are data specification repositories, repositories supporting the generation and publication of the data specifications, and others. 
+The SEMIC GitHub space contains several dozens of repositories, each falling in specific categories. These include data specification repositories, repositories supporting the generation and publication of the data specifications, among others. 
 
 
 ### Data specification repositories
@@ -104,7 +106,7 @@ It is assumed that there is an `index.html` file, as the data specification is t
 
 Further governance agreements regarding the structure of the Core Vocabulary repositories are not made.
 
-- *Useful links for Core Vocabularies*
+- *Useful links*
 
 [Current list of Core Vocabulary repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Acore-vocabulary)
 
@@ -116,21 +118,25 @@ Further governance agreements regarding the structure of the Core Vocabulary rep
 #### Application Profile repositories
 
 The data specification repositories are tagged with the topic ***application-profile***.
-[Here](https://github.com/search?q=org%3ASEMICeu+topic%3Aapplication-profile) is the current list of Application Profile repositories.
 
-Some Application Profile repositories will follow the same organisational structure as the Core Vocabularies, but others follow a different structure.
-This has historic reasons.
+For historical reasons, some Application Profile repositories follow the same organisational structure as the Core Vocabularies, while others follow a different structure.
 
 When a new release for these Application Profiles is being prepared, restructuring the content in accordance to the above described structure is highly recommended.
 
+- *Useful links*
+[Current list of Application Profile repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Aapplication-profile)
 
 ### Repositories for Supporting Generation and Publication of Data Specifications
 
 The repositories that provide the support for generating and publishing data specifications are tagged with the topic ***tooling***.
-The full list of these repositories can be found [here](https://github.com/search?q=org%3ASEMICeu+topic%3Atooling).
 
 These repositories have no common organisational structure, however their `README.md` file should provide a good overview about their organisation and usage.
-Also, the [Toolchain](./toolchain.md) page can offer additional information about what these tools are meant to do and when and how to use it. 
+
+Aadditional information about what these tools are meant to do and when and how to use them can be found in the [Toolchain](./toolchain.md) page. 
+
+- *Useful links*
+[Full list of tagged 'tooling'](https://github.com/search?q=org%3ASEMICeu+topic%3Atooling)
+
 
 
 ## Usage
