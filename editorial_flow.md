@@ -27,7 +27,7 @@ The editorial flow consist of 6 steps:
    The UML structure is modified to address the issue.
    These changes are made according to the [toolchain UML data model requirements](./datamodel.md). 
 
-   The changed UML file is committed in the [thema repository](https://github.com/SEMICeu/uri.semic.eu-thema).
+   The changed UML file is committed in the thema repository.
 
 3. Trigger the toolchain in the publication repository.
 
