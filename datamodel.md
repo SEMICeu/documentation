@@ -30,7 +30,8 @@ Data specifications can roughly be categorized in three categories according to 
 A *vocabulary* is a collection of terms. 
 A term consists minimally of a label and definition, and it is identified by a URI. 
 The information attached to a term in a vocabulary is expressed with the intent to be applicable within a broad context. 
-Guidelines on writing good definitions can be found [here](https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf).
+
+(For guidelines on good definitions writing, please consult this [link](https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf))
  
 An *application profile* is the usage of terms within a generic application context. 
 The application context imposes additional constraints on the usage of the terms such as cardinality restrictions, ranges, code lists, etc.
@@ -199,6 +200,6 @@ On the left side of the graphical representation the attributes and relationship
 
 #### Test suite
 
-The [OSLOthema-toolchainTestbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed) is a _thema_ repository that provides a collection of example UML models.
-Editors can use this collection to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
-Developers can use it to do regression testing during development.
+Test suites are collection of examples of that editors can use to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. An example of this is OSLOthema-toolchainTestbed, which is a _thema_ repository that provides a collection of examples of UML models and that can be used by editors to do regression testing during development.
+
+(For accessing the OSLOthema-toolchainTestbed, please follow this [link](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed))
