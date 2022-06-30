@@ -19,13 +19,13 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
 
 **Part 1: Change the UML model**
 
-*1. Find the latest UML master data.
+*1. Find the latest UML master data*
 
    The editor selects the data specification GitHub repository that contains the latest published artefacts to determine the source information.
    From that repository the UML file is copied to the **thema repository** (1).
 
 
-*2. Edit the UML file 
+*2. Edit the UML file* 
 
    The editor opens and edits the UML file in the appropriate UML editor. 
    The UML structure is modified to address the issue.
@@ -36,20 +36,21 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
  **Part 2: Build the artefacts using the toolchain**
 
 
-*3. Trigger the toolchain in the publication repository.
+*3. Trigger the toolchain in the publication repository*
 
    The editor triggers the rendering of the data specification artefacts by adding a publication point in the **publication repository** (2).
-   (For more information on how this is done, please check out the section on [How to trigger the generation of the artefacts](./toolchain.md#howto-trigger-the-generation-of-the-artefacts).)  
+   
+   *(For more information on how this is done, please check out the section on* [How to trigger the generation of the artefacts](./toolchain.md#howto-trigger-the-generation-of-the-artefacts).)  
 
-*4. Check the generated artefacts
+*4. Check the generated artefacts*
 
-   When the toolchain processing is finished the artefacts are available in the [generated repository](https://github.com/SEMICeu/uri.semic.eu-generated).
+   When the toolchain processing is finished, the artefacts become available in the **generated repository** (3).
 
    If the artefacts address the issue as expected the editor continues with the publication (step 5), otherwise another iteration is required (back to step 2 ).
 
 **Part 3: Publish the result**
 
-*5. Publish the generated artefacts.
+*5. Publish the generated artefacts*
 
    To provide the consumers access to the updated artefacts, the editor must publish the generated artefacts to the right places by copying the content to other GitHub repositories.
    
@@ -60,7 +61,7 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
    If this is the case, the change must be propagated to the PURI content repository [uri.semic.eu-puris](https://github.com/SEMICeu/uri.semic.eu-puris) as well.
    
 
-*6. Verify the published artefacts.
+*6. Verify the published artefacts*
 
    To finalise the editorial flow a final verification of the published data specification is advised.
    The editor will then take the role of the consumer to investigate if the new situation is as desired.
@@ -165,3 +166,4 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
  
 (1) [Thema repository](https://github.com/SEMICeu/uri.semic.eu-thema)
 (2) [Publication repository](https://github.com/SEMICeu/uri.semic.eu-publication)
+(3) [generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
