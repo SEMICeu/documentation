@@ -33,6 +33,7 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
    
  **Part 2: Build the artefacts using the toolchain**
 
+
 3. Trigger the toolchain in the publication repository.
 
    The editor triggers the rendering of the data specification artefacts by adding a publication point in the [publication repository](https://github.com/SEMICeu/uri.semic.eu-publication).
@@ -157,5 +158,8 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
    On this page the data specification is described, and all artefacts and contextual information can be found.
    By doing a final check of this URL, the editor ensures quality of work.
    
-   [1] [toolchain UML data model requirements](./datamodel.md). 
-    
+  
+ ## Links
+ 
+ [Thema repository](https://github.com/SEMICeu/uri.semic.eu-thema)
+
