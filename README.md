@@ -18,7 +18,7 @@ The objective is that readers are provided with sufficient anchors to initiate m
 4. [Usage](#usage)
 
 
-## Historical Background
+## 1. Historical Background
 
 The creation of data specification is an activity that involves design decisions regarding two aspects:
 
@@ -34,7 +34,7 @@ The tooling documented hereby is a further step towards an integrated and automa
 Nevertheless, the current design of the architecture is a reflection of the organic growth of the system, during which a number of best possible decisions have been taken in order to minimise the impacts on the existing processes and methods.
 
 
-## User Roles and Activities
+## 2. User Roles and Activities
 
 There are three main types of __actors__ that will interact with the resources and assets produced and managed by SEMIC on the SEMICeu GitHub space:
 - the data specification _consumers_ 
@@ -56,7 +56,9 @@ During the editorial process the _editors_ are adapting the data specification: 
 The assessment of how to best address the different use cases is beyond the scope of this documentation. 
 Nevertheless, this documentation provides insights into how a resolution for a given change is integrated in the published artefacts of the data specification.
 
-To adequately respond to a use case, _editors_ should understand how to operate the **toolchain** to efficiently create the artefacts for a data specification (see [Usage section](#Usage) for details).
+To adequately respond to a use case, _editors_ should understand how to operate the **toolchain** to efficiently create the artefacts for a data specification.
+(For more details, consult [section 4. Usage ](#Usage)).
+
 The created artefacts are always represented in a human readable form (e.g. HTML) together with other supportive representations (JSON-LD context files, SHACL shapes, RDF vocabularies, etc.), depending on the nature of the data specification. 
 
 The editorial activity typically requires several iterations in order to reach the final resolution.
@@ -79,7 +81,7 @@ Until that stage of automation is not reached, editors are today required to man
 
 
 
-## Organisation of the SEMIC GitHub space
+## 3. Organisation of the SEMIC GitHub space
 
 The SEMIC GitHub space contains several dozens of repositories, each falling in specific categories. These include data specification repositories, repositories supporting the generation and publication of the data specifications, among others. 
 
@@ -141,7 +143,7 @@ Aadditional information about what these tools are meant to do and when and how 
 
 
 
-## Usage
+## 4. Usage
 
 The *toolchain* is an online service built from a collection of GitHub repositories in the SEMIC GitHub space. 
 The repositories are interconnected with automated processing.
