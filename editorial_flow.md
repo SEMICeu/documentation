@@ -13,7 +13,9 @@ To make the example more insightful, it is composed of three short screen record
 ![Generic editorial flow](./images/editorial-flow-generic.jpg)
 
 
-The editorial flow consist of 6 steps:
+The editorial flow consist of 3 larger parts with 6 steps in total:
+
+**Part 1: Change the UML model**
 
 1. Find the latest UML master data.
 
@@ -28,11 +30,15 @@ The editorial flow consist of 6 steps:
    These changes are made according to the [toolchain UML data model requirements](./datamodel.md). 
 
    The changed UML file is committed in the [thema repository](https://github.com/SEMICeu/uri.semic.eu-thema).
+   
+ **Part 2: Part 2: Build the artefacts using the toolchain**
 
 3. Trigger the toolchain in the publication repository.
 
    The editor triggers the rendering of the data specification artefacts by adding a publication point in the [publication repository](https://github.com/SEMICeu/uri.semic.eu-publication).
    For more information on how this is done, please check out the section on [How to trigger the generation of the artefacts](./toolchain.md#howto-trigger-the-generation-of-the-artefacts).  
+
+**Part 3: Publish the result**
 
 4. Check the generated artefacts
 
