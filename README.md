@@ -3,7 +3,7 @@ This repository contains the overview documentation describing the resources and
 
 The [SEMICeu GitHub space](https://github.com/SEMICeu) is created to support the Semantic Interoperability Community with the creation of __data specifications__ (e-Government Core Vocabularies, Application Profiles, etc.). A list of these data specifications can be found [on the SEMIC website](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/our-resources). This documentation describes both how the different SEMIC resources are organised in GitHub repositories, as well as what are the supporting assets that need to be _set up_, _configured_, and _used_ to realise (i.e. edit and publish) such SEMIC data specifications.
 
-This documentation covers the state of affairs as of May 2022.
+This documentation covers the state of affairs as of June 2022.
 The objective is that readers of this documentation are provided with sufficient anchors to initiate mastering the methods and tooling used to create and manage data specifications.
 
 
