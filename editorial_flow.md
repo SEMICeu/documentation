@@ -140,8 +140,10 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
    When the artefact generation process is finished, the generated artefacts are available in the generated repository.
    In the demonstration video, the updated artefacts are found within the **directory [`/doc`]** (8). 
 
-   To prepare the next step, the editor checks the generated artefacts to see whether the result is correct: e.g. if the property is present in all relevant artefacts.
-   There are several ways to check this: the editor can download the artefacts and checks within the downloaded files for the new property, but he or she can also use the GitHub built in diffing support.
+   To prepare the next step, the editor checks the generated artefacts to see whether the result is correct (e.g. if the property is present in all relevant artefacts).
+   There are two main ways in which the editor can check this: 
+   - download the artefacts and check within the downloaded files for the new property
+   - use the GitHub built in diffing support (For more information on how this is done, please check out the section on [Comparing commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits).).
 
 5. Publish the generated artefacts 
 
