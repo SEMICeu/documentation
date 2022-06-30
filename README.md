@@ -119,7 +119,7 @@ Further governance agreements regarding the structure of the Core Vocabulary rep
 
 #### Application Profile repositories
 
-The data specification repositories are tagged with the topic ***application-profile***.
+Data specification repositories are also tagged with the topic ***application-profile***.
 
 For historical reasons, some Application Profile repositories follow the same organisational structure as the Core Vocabularies, while others follow a different structure.
 
