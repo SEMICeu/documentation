@@ -80,26 +80,28 @@ The deployment of the above design is supported by the existence of two template
 After creating the publication repository from the template, the publication repository must be paired with the generated repository.
 On the contrary, generated repository does not require a template. 
 
-Information on how to do this, as well as more configuration options, is part of the OSLO tamplate documentation, also available on GitHub (8).  
-
-The generated repository does not require a template.
+Information on how to do this, as well as more configuration options, is part of the **OSLO template documentation**, also available on GitHub (8).  
 
 ### SEMIC setup
 
-In contrast to the OSLO toolchain premise of a single publication environment, i.e. a single website, SEMIC has decided to apply a decentralised publication strategy. 
-Each data specification repository in the SEMICeu space is not only the source of the specification, but also the publication platform for that data specification, by using  [GitHub Pages](https://pages.github.com/) service offering. 
+In contrast to the OSLO toolchain premise of a single publication environment, (i.e. a single website), SEMIC has decided to apply a decentralised publication strategy. Each data specification repository in the SEMICeu space is not only the source of the specification, but also the publication platform for that data specification, by using **GitHub Pages** service. 
 
 The OSLO toolchain separates the different functionalities (master data source, content generation, publication) in separate repositories, making it then natural to combine the processing of multiple data specifications into a pair of publication and generated repository. 
-Since there is no unique SEMIC publication environment identified with a unique domain, there are two alternatives to use the toolchain. (a) Integrate in each SEMIC data specification repository the toolchain functionalities. 
-Or (b) deploy the toolchain in new SEMICeu repositories, pretending there is a single SEMIC publication environment. 
+
+Since there is no unique SEMIC publication environment identified with a unique domain, there are two alternatives to use the toolchain:
+
+   (a) Integrate the toolchain functionalities in each SEMIC data specification repository 
+   (b) deploy the toolchain in new SEMICeu repositories, pretending there is a single SEMIC publication environment. 
+
 The second option has been chosen as it impacted the existing data specification repositories the least, and it deviates the least from the OSLO toolchain setup.
 The deployment corresponds to a minimal setup, providing already the most important editorial support for creating harmonised artefacts for all data specifications.
 
 In the SEMICeu GitHub space the toolchain has been deployed in these repositories:
 
-- [https://github.com/SEMICeu/uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication) - the _publication_ repository
-- [https://github.com/SEMICeu/uri.semic.eu-generated](https://github.com/SEMICeu/uri.semic.eu-generated) - the _generated_ repository
-- [https://github.com/SEMICeu/uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema) - a _thema_ repository that currently contains _all_ the SEMIC data specifications. This choice can be revisited in the future.
+- **SEMIC publication repository** (9) [https://github.com/SEMICeu/uri.semic.eu-publication](https://github.com/SEMICeu/uri.semic.eu-publication)
+- **SEMIC generated repository** (10) [https://github.com/SEMICeu/uri.semic.eu-generated](https://github.com/SEMICeu/uri.semic.eu-generated)
+- **SEMIC thema repository** (11) [https://github.com/SEMICeu/uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema) - a _thema_ repository that currently contains _all_ the SEMIC data specifications. This choice can be revisited in the future.
+
 All editing happens on the `master` branch as there are no staging publication environments.
 
 
@@ -220,8 +222,12 @@ These images are build from the open source repositories
 
 (5) [Continuous Integration/Continuous Development (CI/CD) execution flow](https://en.wikipedia.org/wiki/CI/CD)
 
-(6) [Template for a publication repository](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
+(6) [OSLO Template for a publication repository](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
 
-(7) [Template for a thema repository](https://github.com/Informatievlaanderen/OSLOthema-template)
+(7) [OSLO Template for a thema repository](https://github.com/Informatievlaanderen/OSLOthema-template)
 
 (8) [OSLO template documentation | GitHub](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/config)
+
+(9) [SEMIC publication repository](https://github.com/SEMICeu/uri.semic.eu-publication)
+(10) [SEMIC generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
+(11) [SEMIC thema repository](https://github.com/SEMICeu/uri.semic.eu-thema) 
