@@ -17,8 +17,8 @@ The second part of this chapter discusses the **master data management** of the 
 Relevant links to the items described in the sections above are numbered throughout the page and included in **section 'Links'** at the bottom.
 
 For details on implementation aspects of the modeling, that not not discussed in this chapter, please consult the following chapters:
-- [artefact generation process](./artefact_generation.md) - for insights on and pointers to the software used
-- [toolchain](./toolchain.md) - for understanding the automation process set up for publishing data specifications exploiting GitHub.
+- [Artefact generation process](./artefact_generation.md) - for insights on and pointers to the software used
+- [Toolchain](./toolchain.md) - for understanding the automation process set up for publishing data specifications exploiting GitHub.
 
 
 ## Data specification categories
