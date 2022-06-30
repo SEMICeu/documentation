@@ -23,7 +23,7 @@ Then, we provide some useful information about the use of the toolchain, by answ
 
 Relevant links to the items described in following sections are numbered throughout the page and included in **section 'Links'** at the bottom.
 
-The artefact generation itself is documented in a dedciated page on [artefact generation](./artefact_generation.md).
+The artefact generation itself is documented in a dedicated page on [artefact generation](./artefact_generation.md).
 
 
 
