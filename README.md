@@ -105,8 +105,11 @@ It is assumed that there is an `index.html` file, as the data specification is t
 Further governance agreements regarding the structure of the Core Vocabulary repositories are not made.
 
 - *Useful links for Core Vocabularies*
+
 [Current list of Core Vocabulary repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Acore-vocabulary)
+
 [Example of data specification repository tagged 'core-vocabulary'| Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/)
+
 [Example of data specification release version folder | Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00)
 
 
