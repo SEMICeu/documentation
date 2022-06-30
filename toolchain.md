@@ -39,7 +39,8 @@ The main distinction between the use of the toolchain in the two environments pe
 
 In the editorial flow, this distinction is indicated by the existence of the manual publication steps that the editor has to perform; steps that are not required in the OSLO context. As such, it will be future work to adapt the tooling to the SEMIC publication context.
 
-The result produced by the OSLO toolchain can be seen at the portal of the **Flemish Government data portal** (3), while on Github **the source code of the tooling**, as well as of the data specifications are all publicly available(4).
+The result produced by the OSLO toolchain can be seen at the portal of the **Flemish Government data portal** (3), while on Github **the source code of the tooling**, as well as of the data specifications are all publicly available (4).
+
 (*For more information on the OSLO toolchain tools, the OSLO maintainers can be contacted. This can be done by posting a github issue, or contacting them via email at digitaal.vlaanderen@vlaanderen.be.*)
 
 ### Generic Design
