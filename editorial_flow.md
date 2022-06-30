@@ -71,6 +71,8 @@ The editorial flow consist of 3 larger parts with 6 steps in total:
 
 
 
+
+
 * ***NOTE: The Generation and publication of artefacts require manual effort***
 
 The workflow above shows that the artefact generation tooling (the toolchain) does not releases editors from substantial manual work.
@@ -83,16 +85,17 @@ Topics like version numbering, using shared PURI domain, etc. all affect the aut
 
 
 
+
+
 # Example editorial flow
 
 To illustrate the generic editorial flow consider the common change request to add a property to a class in a data specification. 
 
-The text below is summarised transcript of a video recording demonstrating the addition of a new property 'baptismal name' to the class Person in the Core Person Vocabulary.
-The video recordings are:
- 
-   - [Part 1](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true) - demonstrates the editing of the UML model
-   - [Part 2](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true) - demonstrates the automated generation of the data specification artefacts
-   - [Part 3](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true) - demonstrates the (manual) publication step
+The text below is summarised transcript of a video recording demonstrating the addition of a new property 'baptismal name' to the class Person in the Core Person Vocabulary. The example goes through the 3 main parts of the editorial flow, described above:
+
+   - Part 1 demonstrates the editing of the UML model
+   - Part 2 demonstrates the automated generation of the data specification artefacts, through the toolchain
+   - Part 3 demonstrates the (manual) publication of the result
 
 All demonstrated changes are performed on the involved repositories using a demonstration branch called `example`.
 Using this branch all activities can demonstrated on a working environment, except for the last step: the official publication of the transformation.
@@ -102,20 +105,20 @@ This approach has been selected to facilitate the recording, not because is the 
 Editors can use their preferred way to interact with the SEMIC GitHub space, e.g. checking out the code and working locally, then pushing the changes back.
 
 
-## Part 1: Change the UML model ( [video](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true) )
+## Part 1: Editing of the UML model ([video](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true))
 
 1. Find the latest UML master data.
 
-    In the [Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00/uml) repository the latest published UML file is located.
-    Copy this version to the [uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema) for editing.
+    The latest published UML file is located in the **Core Person Vocabulary repository** (5).
+    To start editing, copy this version of the file to the Thema repository (1).
     
 
-2. Edit the UML file in [uri.semic.eu-thema](https://github.com/SEMICeu/uri.semic.eu-thema)
+2. Edit the UML file in the Thema repository
 
    The editor edits the copy, and adds the property 'baptismalName' with the annotations: the label and definition in English, and the assigned URI.
-   After finishing the editing, the editor commits the UML file to the thema repository.
+   After finishing the editing, the editor commits the UML file to the Thema repository.
    
-## Part 2: Build the artefacts using the toolchain ( [video](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true) )
+## Part 2: Generate data specification artefacts using the toolchain ([video](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true))
 
 3. Trigger the toolchain 
 
@@ -126,7 +129,7 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
    The progress of the generation process can be followed in [CircleCI](http://circleci.com).
 
 
-## Part 3: Publish the result ( [video](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true) )
+## Part 3: Publication of the result ( [video](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true) )
 
 4. Check the generated artefacts
 
@@ -175,3 +178,7 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
 (3) [Generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
 
 (4) [PURI content repository](https://github.com/SEMICeu/uri.semic.eu-puris) 
+
+(5) [Core Person Vocabulary repository](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00/uml)
+
+
