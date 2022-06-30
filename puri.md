@@ -31,11 +31,11 @@ The following paragraphs provide an overview of:
 - the setup of the PURI service by SEMIC
 
 
-### Supported domains by SEMIC
+### - Supported domains by SEMIC
 SEMIC is responsible for a number of PURI domains. 
 They are listed below with their activation level in the SEMIC PURI service.
 
-#### Domains configured on SEMIC PURI service
+#### - Domains configured on SEMIC PURI service
 The following domains are configured on SEMIC PURI service and are ready to be used by editors to publish PURIs 
 
 |Domain|Description|Example|Content|
@@ -44,7 +44,7 @@ The following domains are configured on SEMIC PURI service and are ready to be u
 |r5r| The DCAT-AP domain | http://data.europa.eu/r5r/availability | [releases/r5r](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/r5r) |
 |p4s| The EU Once Only Principle (Single Digital Gateway - OOTS) domain - unused | | [releases/p4s](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/p4s) |
 
-#### Domains handled by the proxy operated by SEMIC
+#### - Domains handled by the proxy operated by SEMIC
 The following domains are handled by the proxy operated by SEMIC.
 
 |Domain|Description| Notes |
@@ -52,9 +52,9 @@ The following domains are handled by the proxy operated by SEMIC.
 |930| The GeoDCAT-AP domain | | 
 |edm| The EU Public Domain project  | |
 
-(More details on the proxy can be found at this [link](https://github.com/SEMICeu/uri.semic.eu-proxy) 
+(More details on the proxy can be found at this [link](https://github.com/SEMICeu/uri.semic.eu-proxy)) 
 
-#### Domains handled directly by the data.europa.eu
+#### - Domains handled directly by the data.europa.eu
 The following domains are directly handled by the data.europa.eu proxy, operated by the Publications Office.
 
 |Domain|Description| Notes |
@@ -62,9 +62,9 @@ The following domains are directly handled by the data.europa.eu proxy, operated
 |3b1| The adms controlled vocabularies | |
 |s1n| The statDCAT-AP domain | | 
 
-(More details on the data.europa.eu proxy can be found at this [link](http://data.europa.eu) 
+(More details on the data.europa.eu proxy can be found at this [link](http://data.europa.eu)) 
 
-#### Domains closely related to SEMIC, but maintained by others
+#### - Domains closely related to SEMIC, but maintained by others
 The following domains are domains that are closely related to SEMIC activities but maintained by other teams.
 
 |Domain|Description| Notes |
@@ -74,7 +74,7 @@ The following domains are domains that are closely related to SEMIC activities b
 |2sa| The Common Assessment Method for Standards and Specifications (CAMSS) domain | |
 
 
-#### Decommissioned domains 
+#### - Decommissioned domains 
 The following domains are decommissioned.
 
 |Domain|Description| Notes |
