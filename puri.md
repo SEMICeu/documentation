@@ -23,7 +23,7 @@ PURIs appear in this form: *`http://data.europa.eu/{domain}/{reference}`*; where
  - *{domain}* is requested and assigned by Publications Office (which is the maintainer of **data.europa.eu** domain)
  - *{reference}* is maintained and assigned by editors of the data specification
 
-(For consulting the complete list of supported persistent domains by data.europa.eu, please consult this [link](https://data.europa.eu/URI.html))
+(For the complete list of supported persistent domains by data.europa.eu, please consult this [link](https://data.europa.eu/URI.html))
 
 ### Supported domains by SEMIC
 SEMIC is responsible for a number of PURI domains. 
