@@ -163,7 +163,8 @@ The `{data_spec_category}` part represents the data specification category. The 
    - _ommitted_ :  the annotation is associated with the _vocabulary_ in which the term is defined. It contains the base information about the term.
    - `ap-` : the annotation is associated with an _application profile_ in which the term is used.
 
-The `{language}` part corresponds to the 2-letter [ISO 639-1 language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) in which the content of the annotation is expressed.
+The `{language}` part corresponds to the 2-letter ISO 639-1 language code in which the content of the annotation is expressed.
+(The full list of ISO 639-1 codes can be retrieved at this [link](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)).
 
 **Examples:**
   - `label-nl`: the tag expresses the label of the term in Dutch, at the level of a vocabulary
