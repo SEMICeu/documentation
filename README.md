@@ -9,7 +9,7 @@ This documentation covers the state of affairs as of June 2022.
 The objective is that readers are provided with sufficient anchors to initiate mastering the methods and tooling used to create and manage data specifications.
 
 
-## How to read this Documentation
+### How to read this Documentation
 
 For readers not acquinted with SEMIC we recommend to read this page first and afterwards go through the different markdown files in the following order:
 [Actors](./actors.md) > [Artefact generation](./artefact_generation.md) > [Datamodel](./datamodel.md) > [Editorial flow](./editorial_flow.md) > [Toolchain](./toolchain.md)
