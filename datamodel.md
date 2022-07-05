@@ -1,3 +1,6 @@
+### Go to: 
+<<< [Previous page: Artefact generation](./artefact_generation.md) - [Next page: Editorial flow](./editorial_flow.md) >>>
+
 # Modeling data specifications
 
 This chapter describes the key notions and information an editor needs to understand for _editing data specifications_.
@@ -212,3 +215,6 @@ An example of test suite is **OSLOthema-toolchain Testbed** (3), which is a _the
 (2) [Full list of ISO 639-1 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 
 (3) [OSLOthema-toolchain Testbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed)
+
+### Go to: 
+<<< [Previous page: Artefact generation](./artefact_generation.md) - [Next page: Editorial flow](./editorial_flow.md) >>>
