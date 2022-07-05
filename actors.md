@@ -107,6 +107,9 @@ For them, and the EC officials, the [SEMIC administrators team](https://github.c
 They have full access to the SEMIC GitHub space.
 They can also perform any necessary access control operation for individual users.
 
+### Go to: 
+<<< [Homepage](https://github.com/SEMICeu/documentation) - [Next page: Artefact generation](./artefact_generation.md) >>>
+
 
 
 
