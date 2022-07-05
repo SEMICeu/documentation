@@ -1,3 +1,6 @@
+### Go to: 
+<<< [Homepage](./documentation) - [Next page: Artefact generation](./artefact_generation.md) >>>
+
 # Actors
 
 There are three main types of actors that will interact with the resources and assets produced and managed by SEMIC on the SEMICeu GitHub space: the data specification _consumers_, the data specification _editors_, and the supporting asset _developers_. 
