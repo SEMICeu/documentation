@@ -1,3 +1,6 @@
+### Go to: 
+<<< [Previous page: Actors](./actors.md) - [Next page: Datamodel](./datamodel.md) >>>
+
 # Artefact generation process
 
 This chapter describes the artefact generation process for a data specification.
@@ -155,6 +158,7 @@ The integration is best applied on a working setup.
 When the new artefact generator has reached maturity, this additional generation possibility should be shared with the community, by adding it as part of a new version of the
 [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
 
-
+### Go to: 
+<<< [Previous page: Actors](./actors.md) - [Next page: Datamodel](./datamodel.md) >>>
 
 
