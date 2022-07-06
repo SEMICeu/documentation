@@ -51,15 +51,15 @@ There are three main types of __actors__ that will interact with the resources a
 - the data specification _editors_ 
 - the supporting asset _developers_ 
 
-The actors above are expected to perform the following actions:
-- Editing of artefacts
-- Publication of artefacts
-
 The tools and methods are set up by the _developers_ to support the _editors_ in their work to provide together a coherent experience to the _consumers_.
 
 Since the _consumers_ are the "end users" of the data specifications, they will not need to interact directly with the SEMICeu GitHub space. Therefore, this documentation will only focus on the _editors_ and _developers_, as they constitute its target audience.
 
-The following paragraph describe the editing and publishing activities. For more information about the user roles please check out the [Actors](./actors.md) page.
+These actors are expected to perform the following actions:
+- Editing of artefacts
+- Publication of artefacts
+
+The following paragraphs describe the editing and publishing activities. For more information about the user roles please check out the [Actors](./actors.md) page.
 
 
 ### 2.1 The editing of the artefacts
