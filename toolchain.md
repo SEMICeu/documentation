@@ -1,3 +1,6 @@
+### Go to: 
+<<< [Previous page: Editorial flow](./editorial_flow.md) - [Go back to: Homepage](https://github.com/SEMICeu/documentation) >>>
+
 # Toolchain for publishing data specifications
 
 
@@ -234,3 +237,6 @@ These images are build from the following open source repositories:
 (13) [CircleCI automation source code](https://github.com/SEMICeu/uri.semic.eu-publication/tree/master/.circleci)
 
 (14) [CircleCI workflow](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/.circleci)
+
+### Go to: 
+<<< [Previous page: Editorial flow](./editorial_flow.md) - [Go back to: Homepage](https://github.com/SEMICeu/documentation) >>>

@@ -1,3 +1,6 @@
+### Go to: 
+<<< [Previous page: Datamodel](./datamodel.md) - [Next page: Toolchain](./toolchain.md) >>>
+
 # Editorial flow
 
 An editorial flow is initiated when issues for a data specification are to be addressed.
@@ -194,4 +197,5 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
 
 (9) [doc directory](https://github.com/SEMICeu/uri.semic.eu-generated/tree/example/doc)
 
-
+### Go to: 
+<<< [Previous page: Datamodel](./datamodel.md) - [Next page: Toolchain](./toolchain.md) >>>
