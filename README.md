@@ -22,10 +22,10 @@ A [status](./status.md) md displays the status of the different documentation.
 
 
 ## Table Of Contents
-1. [Historical Background](#historical-background)
-2. [User Roles and Activities](#user-roles-and-activities)
-3. [Organisation of the SEMIC GitHub Space](#organisation-of-the-semic-github-space)
-4. [Usage](#usage)
+1. [Historical Background](#1-historical-background)
+2. [User Roles and Activities](#2-user-roles-and-activities)
+3. [Organisation of the SEMIC GitHub Space](#3-organisation-of-the-semic-github-space)
+4. [Usage](#4-usage)
 
 
 ## 1. Historical Background
@@ -51,18 +51,18 @@ There are three main types of __actors__ that will interact with the resources a
 - the data specification _editors_ 
 - the supporting asset _developers_ 
 
-The actors above are expected to perform the following actions:
-- Editing of artefacts
-- Publication of artefacts
-
 The tools and methods are set up by the _developers_ to support the _editors_ in their work to provide together a coherent experience to the _consumers_.
 
 Since the _consumers_ are the "end users" of the data specifications, they will not need to interact directly with the SEMICeu GitHub space. Therefore, this documentation will only focus on the _editors_ and _developers_, as they constitute its target audience.
 
-The following paragraph describe the editing and publishing activities. For more information about the user roles please check out the [Actors](./actors.md) page.
+These actors are expected to perform the following actions:
+- Editing of artefacts
+- Publication of artefacts
+
+The following paragraphs describe the editing and publishing activities. For more information about the user roles please check out the [Actors](./actors.md) page.
 
 
-### The editing of the artefacts
+### 2.1 The editing of the artefacts
 
 Data specifications evolve over time. 
 This evolution is the result of addressing the __use cases__ provided by the SEMIC community for the data specifications.
@@ -72,7 +72,7 @@ The assessment of how to best address the different use cases is beyond the scop
 Nevertheless, this documentation provides insights into how a resolution for a given change is integrated in the published artefacts of the data specification.
 
 To adequately respond to a use case, _editors_ should understand how to operate the **toolchain** to efficiently create the artefacts for a data specification.
-(For more details, consult [section 4. Usage ](#Usage)).
+(For more details, consult [section 4. Usage ](#4-usage)).
 
 The created artefacts are always represented in a human readable form (e.g. HTML) together with other supportive representations (JSON-LD context files, SHACL shapes, RDF vocabularies, etc.), depending on the nature of the data specification. 
 
@@ -81,7 +81,7 @@ The *toolchain* reduces the workload on editors created by these iterations, mak
 It also can play an important role in training future editors to maintain the data specifications. 
 
 
-### Publication of the artefacts
+### 2.2 Publication of the artefacts
 
 After creating the artefacts, the editor has to make them accessible to the consumers. 
 To this end, the artefacts have to be stored in a publication environment.
