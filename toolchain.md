@@ -32,17 +32,17 @@ The artefact generation itself is documented in a dedicated page on [artefact ge
 
 ## Setup & Design
 
-The toolchain used in the SEMICeu project is based on the **OSLO toolchain** (1). 
+The toolchain used in the SEMICeu project is based on the **OSLO toolchain** [1]. 
 The OSLO toolchain is part of a larger environment for supporting the generation, maintenance and publication of data specifications under the governance of the Flemish Government, Belgium.
 
 Because OSLO has been involved in SEMIC from the start, the toolchain incorporates many advices and best practices SEMIC has produced or applies.
-This is especially true for the support of the **editorial flow** (2). 
+This is especially true for the support of the **editorial flow** [2]. 
 
 The main distinction between the use of the toolchain in the two environments pertains their approach to publication. The current SEMIC practice uses GitHub as publication platform, where each data specification is edited and published in its own repository. On the other hand, the OSLO toolchain has been designed with a single publication environment in mind.
 
 In the editorial flow, this distinction is indicated by the existence of the manual publication steps that the editor has to perform; steps that are not required in the OSLO context. As such, it will be future work to adapt the tooling to the SEMIC publication context.
 
-The result produced by the OSLO toolchain can be seen at the portal of the **Flemish Government data portal** (3), while on Github **the source code of the tooling**, as well as of the data specifications are all publicly available (4).
+The result produced by the OSLO toolchain can be seen at the portal of the **Flemish Government data portal** [3], while on Github **the source code of the tooling**, as well as of the data specifications are all publicly available [4].
 
 (*For more information on the OSLO toolchain tools, the OSLO maintainers can be contacted. This can be done by posting a github issue, or contacting them via email at digitaal.vlaanderen@vlaanderen.be.*)
 
@@ -62,7 +62,7 @@ The source code of the static website, (i.e. the publication environment), is st
 The result of the generation process, (i.e. the static website), is stored in the **generated repository**. 
 A _publication_ repository is thus always paired with a _generated_ repository. 
 
-The generated repository is kept in sync with the publication repository via a **Continuous Integration/Continuous Development (CI/CD) execution flow** (5). 
+The generated repository is kept in sync with the publication repository via a **Continuous Integration/Continuous Development (CI/CD) execution flow** [5]. 
 Within software engineering, CI/CD is the name for any automated process supporting the software building and deployment activities.
 Each change (commit) to the publication repository will lead after a successful CI/CD execution to a change in the generated repository.
 
@@ -77,13 +77,13 @@ Editors primarily interact with thema repositories, only when a new publication 
 This setup creates flexibility and provides editorial scaling potential, without loosing a central control. 
 
 The deployment of the above design is supported by the existence of two template repositories, both available on GitHub:
- - a **template for a publication repository** (6).
- - a **template for a thema repository** (7)
+ - a **template for a publication repository** [6].
+ - a **template for a thema repository** [7]
 
 After creating the publication repository from the template, the publication repository must be paired with the generated repository.
 On the contrary, the generated repository does not require a template. 
 
-Information on how to do this, as well as more configuration options, is part of the **OSLO template documentation**, also available on GitHub (8).  
+Information on how to do this, as well as more configuration options, is part of the **OSLO template documentation**, also available on GitHub [8].  
 
 ### SEMIC setup
 
@@ -101,9 +101,9 @@ The deployment corresponds to a minimal setup, providing already the most import
 
 In the SEMICeu GitHub space the toolchain has been deployed in these repositories:
 
-- **SEMIC publication repository** (9)
-- **SEMIC generated repository** (10)
-- **SEMIC thema repository** (11), that currently contains _all_ the SEMIC data specifications. This choice can be revisited in the future.
+- **SEMIC publication repository** [9]
+- **SEMIC generated repository** [10]
+- **SEMIC thema repository** [11], that currently contains _all_ the SEMIC data specifications. This choice can be revisited in the future.
 
 All editing happens on the `master` branch as there are no staging publication environments.
 
@@ -112,7 +112,7 @@ This influences the execution and configuration, as operating on private reposit
 
 This setup does not provide the end-to-end experience of the original design, but it is feasible that the CI/CD flow can be adapted to achieve this.
 
-- For more information on this, and other aspects related to the configuration, in GitHub is available for consultation the relevant **documentation on the publication environment**(12).
+- For more information on this, and other aspects related to the configuration, in GitHub is available for consultation the relevant **documentation on the publication environment**[12].
 
 - For more information on how these repositories are used in the management of data specifications is elaborated in the page on [editorial flow](./editorial_flow.md).
 
@@ -185,7 +185,7 @@ An example is shown below:
     "navigation": {}
   },
 ```
-An elaborated description of the structure and semantics of the attributes is found in the SEMIC publication repository (9).
+An elaborated description of the structure and semantics of the attributes is found in the SEMIC publication repository [9].
 
 Intuitively, the above publication point can be read as the following processing instruction: "Write in the generated repository, at path `{urlref}`, the generated artefacts for the data specification `{name}`, according to config file `{filename}` located in `{repository}` as of the commit `{branchtag}`."
 
@@ -199,9 +199,9 @@ This is future work, and should be considered in the context of further integrat
 
 ### HowTo find the source code of the automation
 
-In SEMIC _publication_ repository can be found the **source code for the CircleCI automation** (13). 
+In SEMIC _publication_ repository can be found the **source code for the CircleCI automation** [13]. 
 
-The organisation and setup of the **CircleCI workflow**, is instead extensively documented in OSLO _template_ repository (14).
+The organisation and setup of the **CircleCI workflow**, is instead extensively documented in OSLO _template_ repository [14].
 The CircleCI workflow will execute in some of its steps software that are available as public Docker images. 
 These images are build from the following open source repositories:
   - [OSLO-EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF)
@@ -210,33 +210,33 @@ These images are build from the following open source repositories:
 
 # Links
 
-(1) [OSLO toolchain](https://github.com/Informatievlaanderen/OSLO-toolchain/tree/master/doc-generic)
+[1] [OSLO toolchain](https://github.com/Informatievlaanderen/OSLO-toolchain/tree/master/doc-generic)
 
-(2) [Editorial flow](./editorial_flow.md)
+[2] [Editorial flow](./editorial_flow.md)
 
-(3) [Flemish Government data portal](https://data.vlaanderen.be)
+[3] [Flemish Government data portal](https://data.vlaanderen.be)
 
-(4) [OSLO source code | GitHub](https://github.com/search?q=org%3AInformatievlaanderen+topic%3Aoslo)
+[4] [OSLO source code | GitHub](https://github.com/search?q=org%3AInformatievlaanderen+topic%3Aoslo)
 
-(5) [Continuous Integration/Continuous Development (CI/CD) execution flow](https://en.wikipedia.org/wiki/CI/CD)
+[5] [Continuous Integration/Continuous Development (CI/CD) execution flow](https://en.wikipedia.org/wiki/CI/CD)
 
-(6) [OSLO Template for a publication repository](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
+[6] [OSLO Template for a publication repository](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
 
-(7) [OSLO Template for a thema repository](https://github.com/Informatievlaanderen/OSLOthema-template)
+[7] [OSLO Template for a thema repository](https://github.com/Informatievlaanderen/OSLOthema-template)
 
-(8) [OSLO template documentation | GitHub](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/config)
+[8] [OSLO template documentation | GitHub](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/config)
 
-(9) [SEMIC publication repository](https://github.com/SEMICeu/uri.semic.eu-publication)
+[9] [SEMIC publication repository](https://github.com/SEMICeu/uri.semic.eu-publication)
 
-(10) [SEMIC generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
+[10] [SEMIC generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
 
-(11) [SEMIC thema repository](https://github.com/SEMICeu/uri.semic.eu-thema) 
+[11] [SEMIC thema repository](https://github.com/SEMICeu/uri.semic.eu-thema) 
 
-(12) [SEMIC publication environment documentation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md)
+[12] [SEMIC publication environment documentation](https://github.com/SEMICeu/uri.semic.eu-publication/blob/master/config/README.md)
 
-(13) [CircleCI automation source code](https://github.com/SEMICeu/uri.semic.eu-publication/tree/master/.circleci)
+[13] [CircleCI automation source code](https://github.com/SEMICeu/uri.semic.eu-publication/tree/master/.circleci)
 
-(14) [CircleCI workflow](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/.circleci)
+[14] [CircleCI workflow](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/.circleci)
 
 ### Go to: 
 <<< [Previous page: Editorial flow](./editorial_flow.md) - [Go back to: Homepage](https://github.com/SEMICeu/documentation) >>>
