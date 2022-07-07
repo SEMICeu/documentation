@@ -25,14 +25,14 @@ The editorial flow consist of 3 larger parts, with 6 steps in total:
 *1. Find the latest UML master data*
 
    The editor selects the GitHub repository of the data specification, which contains the latest published artefacts, to determine the source information.
-   From that repository the UML file is copied to the **thema repository** (1).
+   From that repository the UML file is copied to the **thema repository** [1].
 
 
 *2. Edit the UML file in the thema repository* 
 
    The editor opens and edits the UML file in the appropriate UML editor. 
    The UML structure is modified to address the issue.
-   These changes are made according to the **toolchain UML data model requirements** (2).
+   These changes are made according to the **toolchain UML data model requirements** [2].
 
    The changed UML file is committed in the thema repository.
    
@@ -41,13 +41,13 @@ The editorial flow consist of 3 larger parts, with 6 steps in total:
 
 *3. Trigger the toolchain in the publication repository*
 
-   The editor triggers the rendering of the data specification artefacts by adding a publication point in the **publication repository** (3).
+   The editor triggers the rendering of the data specification artefacts by adding a publication point in the **publication repository** [3].
    
    (For more information on how this is done, please check out the chapter on [How to trigger the generation of the artefacts](./toolchain.md#howto-trigger-the-generation-of-the-artefacts).)  
 
 *4. Check the generated artefacts*
 
-   When the toolchain processing is finished, the artefacts become available in the **generated repository** (4).
+   When the toolchain processing is finished, the artefacts become available in the **generated repository** [4].
 
    If the artefacts address the issue as expected, the editor can proceed with the publication. Otherwise, another iteration is required (back to Step 2).
 
@@ -64,7 +64,7 @@ The editorial flow consist of 3 larger parts, with 6 steps in total:
    
 
    Another repository might be affected too; namely, when the editing resulted in an RDF content change for a persistent URI published by SEMIC.
-   If this is the case, the change must be propagated also to the **PURI content repository** (5).
+   If this is the case, the change must be propagated also to the **PURI content repository** [5].
    
 
 *6. Verify the published artefacts*
@@ -107,9 +107,9 @@ Using this branch all activities can be demonstrated on a working environment, e
 
 *1. Find the latest UML master data*
 
-The latest published UML file is located in the **Core Person Vocabulary repository** (6)
+The latest published UML file is located in the **Core Person Vocabulary repository** [6]
 
-To start editing, copy this version of the file to the Thema repository (1) .
+To start editing, copy this version of the file to the Thema repository [1] .
 
 
 *2. Edit the UML file in the thema repository*
@@ -124,16 +124,16 @@ To start editing, copy this version of the file to the Thema repository (1) .
 
    The editor selects the commit hash corresponding to the UML file update in the Thema repository.
    
-   Using this commit hash, the editor updates the **publication points** (7) in the publication repository. 
+   Using this commit hash, the editor updates the **publication points** [7] in the publication repository. 
    
    In the demonstration video, the `branchtag` attribute of the publication points are updated with the new commit hash.
-   This change will trigger the artefact generation process. The progress of the generation process can be followed in **CircleCI** (8).
+   This change will trigger the artefact generation process. The progress of the generation process can be followed in **CircleCI** [8].
 
 
 *4. Check the generated artefacts*
 
    When the artefact generation process is finished, the generated artefacts are available in the generated repository.
-   In the demonstration video, the updated artefacts are found within the **directory [`/doc`]** (9). 
+   In the demonstration video, the updated artefacts are found within the **directory [`/doc`]** [9]. 
 
    To prepare the next step, the editor checks the generated artefacts to see whether the result is correct (e.g. if the property is present in all relevant artefacts).
    There are two main ways in which the editor can check this: 
@@ -144,7 +144,7 @@ To start editing, copy this version of the file to the Thema repository (1) .
 
 *5. Publish the generated artefacts* 
 
-Since the `baptismal name` is a new property, and thus got a new PURI assigned, the editor has to publish the content in the PURI content repository (4). 
+Since the `baptismal name` is a new property, and thus got a new PURI assigned, the editor has to publish the content in the PURI content repository [4]. 
 
    The editor extracts from the generated RDF artefact the triples that are relating to the new property, and stores these in a file with the name 'baptismalName'. 
    
@@ -179,23 +179,23 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
   
  ## Links
  
-(1) [Thema repository](https://github.com/SEMICeu/uri.semic.eu-thema)
+[1] [Thema repository](https://github.com/SEMICeu/uri.semic.eu-thema)
 
-(2) [toolchain UML data model requirements](./datamodel.md)
+[2] [toolchain UML data model requirements](./datamodel.md)
 
-(3) [Publication repository](https://github.com/SEMICeu/uri.semic.eu-publication)
+[3] [Publication repository](https://github.com/SEMICeu/uri.semic.eu-publication)
 
-(4) [Generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
+[4] [Generated repository](https://github.com/SEMICeu/uri.semic.eu-generated)
 
-(5) [PURI content repository](https://github.com/SEMICeu/uri.semic.eu-puris) 
+[5] [PURI content repository](https://github.com/SEMICeu/uri.semic.eu-puris) 
 
-(6) [Core Person Vocabulary repository](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00/uml)
+[6] [Core Person Vocabulary repository](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00/uml)
 
-(7) [Publication points](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json)
+[7] [Publication points](https://github.com/SEMICeu/uri.semic.eu-publication/blob/example/config/dev/publication.json)
 
-(8) [CircleCI](http://circleci.com)
+[8] [CircleCI](http://circleci.com)
 
-(9) [doc directory](https://github.com/SEMICeu/uri.semic.eu-generated/tree/example/doc)
+[9] [doc directory](https://github.com/SEMICeu/uri.semic.eu-generated/tree/example/doc)
 
 ### Go to: 
 <<< [Previous page: Datamodel](./datamodel.md) - [Next page: Toolchain](./toolchain.md) >>>
