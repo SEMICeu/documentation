@@ -25,7 +25,7 @@ PURIs have the following form: *`http://data.europa.eu/{domain}/{reference}`* , 
  - *{domain}* is requested and assigned by Publications Office (which is the maintainer of **data.europa.eu** domain)
  - *{reference}* is maintained and assigned by editors of the data specification
 
-A complete **list of supported persistent domains by data.europa.eu** exists and is available for consultation (1).
+A complete **list of supported persistent domains by data.europa.eu** exists and is available for consultation [1].
 
 The following sections provide an overview of:
 
@@ -47,7 +47,7 @@ The following domains are configured on SEMIC PURI service and are ready to be u
 |p4s| The EU Once Only Principle (Single Digital Gateway - OOTS) domain - unused | | [releases/p4s](https://github.com/SEMICeu/uri.semic.eu-puris/tree/main/releases/p4s) |
 
 #### - Domains handled by the proxy operated by SEMIC
-The following domains are handled by the **proxy operated by SEMIC** (2).
+The following domains are handled by the **proxy operated by SEMIC** [2].
 
 |Domain|Description| Notes |
 | --- | --- | --- | 
@@ -55,7 +55,7 @@ The following domains are handled by the **proxy operated by SEMIC** (2).
 |edm| The EU Public Domain project  | | 
 
 #### - Domains handled directly by the data.europa.eu proxy
-The following domains are directly handled by the **data.europa.eu proxy** (3), operated by the Publications Office.
+The following domains are directly handled by the **data.europa.eu proxy** [3], operated by the Publications Office.
 
 |Domain|Description| Notes |
 | --- | --- | --- | 
@@ -98,9 +98,9 @@ Content negotation requires a more complex proxy configuration than serving a st
 Therefore, the solution has been deployed on a virtual machine operated by SEMIC. 
 
 To the outside world, the **SEMIC PURI service** is accessible under the domain *uri.semic.eu*.
-The description of the implemented content negotation rules, source code, and deployment instructions are found in the related repository. (4)
+The description of the implemented content negotation rules, source code, and deployment instructions are found in the related repository. [4]
 
-The **content of the PURIs** is stored in another repository, accessible at (5). 
+The **content of the PURIs** is stored in another repository, accessible at [5]. 
 The PURI content repository is organised to match directly the URI structure of a PURI.
 
 PURI are also visible through **Turtle representation**, which has the following form `http://data.europa.eu/{domain}/{reference}` and is available in the file `/releases/{domain}/{reference}.ttl`, stored in the `main` branch of the PURI content repository. The same holds for other representations as well.
@@ -131,12 +131,12 @@ Therefore, this process is a candidate to be automated and integrated in the too
 
 ## Links
 
-(1) [Full list of supported persistent domains by data.europa.eu](https://data.europa.eu/URI.html)
+[1] [Full list of supported persistent domains by data.europa.eu](https://data.europa.eu/URI.html)
 
-(2) [Details on the proxy operated by SEMIC](https://github.com/SEMICeu/uri.semic.eu-proxy)
+[2] [Details on the proxy operated by SEMIC](https://github.com/SEMICeu/uri.semic.eu-proxy)
 
-(3) [Details on the data.europa.eu proxy](http://data.europa.eu))
+[3] [Details on the data.europa.eu proxy](http://data.europa.eu))
 
-(4) [SEMIC PURI Service (*'uri.semic.eu-proxy'*)](https://github.com/SEMICeu/uri.semic.eu-proxy)
+[4] [SEMIC PURI Service (*'uri.semic.eu-proxy'*)](https://github.com/SEMICeu/uri.semic.eu-proxy)
 
-(5) [PURIs content repository (*uri.semic.eu-puris*)](https://github.com/SEMICeu/uri.semic.eu-puris)
+[5] [PURIs content repository (*uri.semic.eu-puris*)](https://github.com/SEMICeu/uri.semic.eu-puris)
