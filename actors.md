@@ -1,5 +1,4 @@
-### Go to: 
-<<< [Homepage](https://github.com/SEMICeu/documentation) - [Next page: Artefact generation](./artefact_generation.md) >>>
+#### [<<< Homepage](https://github.com/SEMICeu/documentation) --- [Next page: Artefact generation >>>](./artefact_generation.md)
 
 # Actors
 

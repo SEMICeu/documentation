@@ -1,5 +1,4 @@
-### Go to: 
-<<< [Previous page: Actors](./actors.md) - [Next page: Datamodel](./datamodel.md) >>>
+#### [<<< Previous page: Actors](./actors.md) --- [Next page: Datamodel >>>](./datamodel.md)
 
 # Artefact generation process
 

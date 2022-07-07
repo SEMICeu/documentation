@@ -1,5 +1,4 @@
-### Go to: 
-<<< [Previous page: Artefact generation](./artefact_generation.md) - [Next page: Editorial flow](./editorial_flow.md) >>>
+#### [<<< Previous page: Artefact generation](./artefact_generation.md) --- [Next page: Editorial flow >>>](./editorial_flow.md)
 
 # Modeling data specifications
 

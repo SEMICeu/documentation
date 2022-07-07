@@ -1,5 +1,4 @@
-### Go to: 
-<<< [Previous page: Editorial flow](./editorial_flow.md) - [Go back to: Homepage](https://github.com/SEMICeu/documentation) >>>
+#### [<<< Previous page: Editorial flow](./editorial_flow.md) --- [Go back to: Homepage >>>](https://github.com/SEMICeu/documentation)
 
 # Toolchain for publishing data specifications
 

@@ -1,5 +1,4 @@
-### Go to: 
-<<< [Previous page: Datamodel](./datamodel.md) - [Next page: Toolchain](./toolchain.md) >>>
+#### [<<< Previous page: Datamodel](./datamodel.md) --- [Next page: Toolchain >>>](./toolchain.md)
 
 # Editorial flow
 
