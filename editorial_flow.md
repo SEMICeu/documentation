@@ -10,7 +10,7 @@ First, we provide a generic description of the editorial flow, at design level. 
 
 Next, we provide an example of the generic editorial flow, to make the description more concrete. To make the examples even more easier to understand, for each of the three parts of the editorial flow we also prepared a short screen videorecording, which illustrate in a more dynamic and visual manner some of the steps involved.
 
-Relevant links to the items described in following sections are numbered throughout the page, and are included in the **'Links' section** at the bottom.
+Relevant links to items described in the following sections are numbered throughout the page, and are included in the **'Links' section** at the bottom.
 
 # 1. Generic editorial flow
 

@@ -16,7 +16,7 @@ For readers not acquinted with SEMIC we recommend to read this page first and af
 
 Other resources in the documentation are an explanation of a [PURI](./puri.md), the [glossary](./glossary.md) and additional information about [xsd artefact generation](./xsd.md). 
 
-Links to other relevant contents and pages are normally numbered throughout the text and provided in a specific 'Link' section at the bottom of each page.
+Links to relevant contents and other pages are numbered throughout the text in a bibliographic reference style (e.g. [1], [2]), and are provided in a dedicated 'Links' section at the bottom of each page.
 
 A [status](./status.md) md displays the status of the different documentation. 
 

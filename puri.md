@@ -16,7 +16,7 @@ Reusing PURIs from external domains means that the data specification will rely 
 
 In this chapter the setup and basic editorial maintenance activities for PURIs within SEMIC are described.
 
-Relevant links to the items described in following sections are numbered throughout the page and included in **section 'Links'** at the bottom.
+Relevant links to items described in the following sections are numbered throughout the page, and are included in the **'Links' section** at the bottom.
 
 ## PURIs at SEMIC
 

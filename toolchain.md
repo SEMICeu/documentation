@@ -24,7 +24,7 @@ First, we present an overview of the overall design of the toolchain, and we des
 
 Then, we provide some useful information about the use of the toolchain, by answering a few frequently asked questions, coming from editors and developers.
 
-Relevant links to the items described in following sections are numbered throughout the page and included in **section 'Links'** at the bottom.
+Relevant links to items described in the following sections are numbered throughout the page, and are included in the **'Links' section** at the bottom.
 
 The artefact generation itself is documented in a dedicated page on [artefact generation](./artefact_generation.md).
 
