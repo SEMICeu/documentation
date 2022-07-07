@@ -8,17 +8,17 @@
 
 The toolchain has beed developed to support the editors in creating and maintaining data specifications in a coherent manner.
 
-The need for a toolchain emerged from the fact that data specifications have their own life cycle and the the various Core Vocabularies are created by different (editorial) teams, with different Working Groups, at different times. In the past, this resulted in manual editing producing similar, yet distinct, and sometimes incoherent, expressions of these Core Vocabularies. A situation that raised many questions by the consumers.
+The need for a toolchain emerged from the fact that data specifications have their own life cycle and the various Core Vocabularies are created by different (editorial) teams, with different Working Groups, at different times. In the past, this (manual) editing process resulted in producing similar, yet distinct, and sometimes incoherent, expressions of these Core Vocabularies. A situation that raised many questions by the consumers.
 
 To have the data specifications progress in the same way, and following the same style, tooling support is required. 
 Introducing tooling forces the editors to follow a predefined editorial flow, and thus reduce their editorial freedom to the limits of the tooling.
 In practice, this limitation brings crucial benefits for the SEMIC project; namely:
   - provides a **harmonised, coherent experience of the data specifications**, which will increase the adoption by the consumers
   - allows **the embedding of the key SEMIC data modelling best practices in formal processes**, instead of relying solely on the experience of the editors.
-  - supports the **scaling up of the editorial capacity**, through automation, which allows to learn the editorial flow in a safe environment.
+  - supports the **scaling up of the editorial capacity**, through automation, which allows someone to learn the editorial flow in a safe environment.
 
 
-This chapter describes the tooling that is supporting the editorial flow for managing data specifications.It focusses on the interplay between the different repositories, and how editors can use it to generate the data specification artefacts.
+This chapter describes the tooling that is supporting the editorial flow for managing data specifications. It focusses on the interplay between the different repositories, and how editors can use it to generate the data specification artefacts.
 
 First, we present an overview of the overall design of the toolchain, and we describe how it is set up in the SEMIC space.
 
@@ -81,13 +81,13 @@ The deployment of the above design is supported by the existence of two template
  - a **template for a thema repository** (7)
 
 After creating the publication repository from the template, the publication repository must be paired with the generated repository.
-On the contrary, generated repository does not require a template. 
+On the contrary, the generated repository does not require a template. 
 
 Information on how to do this, as well as more configuration options, is part of the **OSLO template documentation**, also available on GitHub (8).  
 
 ### SEMIC setup
 
-In contrast to the OSLO toolchain premise of a single publication environment, (i.e. a single website), SEMIC has decided to apply a decentralised publication strategy. Each data specification repository in the SEMICeu space is not only the source of the specification, but also the publication platform for that data specification, by using **GitHub Pages** service. 
+In contrast to the OSLO toolchain's premise of a single publication environment, (i.e. a single website), SEMIC has decided to apply a decentralised publication strategy. Each data specification repository in the SEMICeu space is not only the source of the specification, but also the publication platform for that data specification, by using **GitHub Pages** service. 
 
 The OSLO toolchain separates the different functionalities (master data source, content generation, publication) in separate repositories, making it then natural to combine the processing of multiple data specifications into a pair of publication and generated repository. 
 
@@ -135,7 +135,7 @@ I.e. the PURIs in the domain _`http://data.europa.eu/m8g`_ form a global space a
 Modularity in the PURI design will thus also facilitate modularity in the data specification management.
 
 Currently, none of the above considerations have been discussed in depth, besides the "quick win" motivation.
-They will be part of future work to bring further improvments to the editorial flow, and must be done in collaboration with the whole SEMIC team.
+They will be part of future work, to bring further improvments to the editorial flow, and must be done in collaboration with the whole SEMIC team.
 
 
 
@@ -170,7 +170,7 @@ The result of the generation process is stored in the _generated_ repository.
 
 A commit to the _thema_ repository is **not** triggering the generation process. 
 An editor can thus improve incrementally the content in the _thema_ repository, without being forced to generate each time the artefacts.
-Only when neededm the editor will trigger the generation process.
+The editor will trigger the generation process only when needed.
 
 The usual change to the publication repository for triggering the generation process consists of **changing the publication point** corresponding to the data specification that has been edited.
 A publication point is a reference to a data specification in a _thema_ repository.
@@ -185,7 +185,7 @@ An example is shown below:
     "navigation": {}
   },
 ```
-An elaborated description of the structure and semantics of the attributes is found in the SEMIC publication publication repository (9).
+An elaborated description of the structure and semantics of the attributes is found in the SEMIC publication repository (9).
 
 Intuitively, the above publication point can be read as the following processing instruction: "Write in the generated repository, at path `{urlref}`, the generated artefacts for the data specification `{name}`, according to config file `{filename}` located in `{repository}` as of the commit `{branchtag}`."
 
@@ -201,8 +201,8 @@ This is future work, and should be considered in the context of further integrat
 
 In SEMIC _publication_ repository can be found the **source code for the CircleCI automation** (13). 
 
-The organisation and setup of the workflow of the **CircleCI workflow**, is instead extensively documented in OSLO _template_ repository (14).
-The CircleCI workflow will execute in some steps software available as public Docker images. 
+The organisation and setup of the **CircleCI workflow**, is instead extensively documented in OSLO _template_ repository (14).
+The CircleCI workflow will execute in some of its steps software that are available as public Docker images. 
 These images are build from the following open source repositories:
   - [OSLO-EA-to-RDF](https://github.com/Informatievlaanderen/OSLO-EA-to-RDF)
   - [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator)
