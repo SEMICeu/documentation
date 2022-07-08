@@ -43,7 +43,8 @@ In the editorial flow, this distinction is indicated by the existence of the man
 
 The result produced by the OSLO toolchain can be seen at the portal of the **Flemish Government data portal** [3], while on Github **the source code of the tooling**, as well as of the data specifications are all publicly available [4].
 
-(*For more information on the OSLO toolchain tools, the OSLO maintainers can be contacted. This can be done by posting a github issue, or contacting them via email at digitaal.vlaanderen@vlaanderen.be.*)
+(*For more information on the OSLO toolchain, contact the OSLO team. This can be done by posting a github issue, or via email (digitaal.vlaanderen@vlaanderen.be).
+*)
 
 ### Generic Design
 
@@ -198,7 +199,7 @@ This is future work, and should be considered in the context of further integrat
 
 ### HowTo find the source code of the automation
 
-In SEMIC _publication_ repository can be found the **source code for the CircleCI automation** [13]. 
+The **source code for the CircleCI automation** [13] can be found in the SEMIC  _publication_ repository. 
 
 The organisation and setup of the **CircleCI workflow**, is instead extensively documented in OSLO _template_ repository [14].
 The CircleCI workflow will execute in some of its steps software that are available as public Docker images. 
