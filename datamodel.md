@@ -215,5 +215,4 @@ An example of test suite is **OSLOthema-toolchain Testbed** [3], which is a _the
 
 [3] [OSLOthema-toolchain Testbed](https://github.com/Informatievlaanderen/OSLOthema-toolchainTestbed)
 
-### Go to: 
-<<< [Previous page: Artefact generation](./artefact_generation.md) - [Next page: Editorial flow](./editorial_flow.md) >>>
+#### [<<< Previous page: Artefact generation](./artefact_generation.md) --- [Next page: Editorial flow >>>](./editorial_flow.md)
