@@ -1,5 +1,4 @@
-### Go to: 
-<<< [Previous page: Artefact generation](./artefact_generation.md) - [Next page: Editorial flow](./editorial_flow.md) >>>
+#### [<<< Previous page: Artefact generation](./artefact_generation.md) --- [Next page: Editorial flow >>>](./editorial_flow.md)
 
 # Modeling data specifications
 
@@ -17,7 +16,7 @@ First, an overview of the different **data specification categories** is present
 
 The second part of this chapter discusses the **master data management** of the data specification. It describes the approach how editors must construct the UML models (which is the chosen master data representation), to be processed by the toolchain.
 
-Relevant links to the items described in following sections are numbered throughout the page and  included in **'Links' section** at the bottom.
+Relevant links to items described in the following sections are numbered throughout the page, and are included in the **'Links' section** at the bottom.
 
 For details on implementation aspects of the modeling, that are not discussed in this chapter, please consult the following chapters:
 - [Artefact generation process](./artefact_generation.md) - for insights on, and pointers to, the software used
