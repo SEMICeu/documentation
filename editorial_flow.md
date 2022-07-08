@@ -21,13 +21,13 @@ The editorial flow consist of 3 larger parts, with 6 steps in total:
 
 ## **Part 1: Change the UML model**
 
-*1. Find the latest UML master data*
+*Step 1. Find the latest UML master data*
 
    The editor selects the GitHub repository of the data specification, which contains the latest published artefacts, to determine the source information.
    From that repository the UML file is copied to the **thema repository** [1].
 
 
-*2. Edit the UML file in the thema repository* 
+*Step 2. Edit the UML file in the thema repository* 
 
    The editor opens and edits the UML file in the appropriate UML editor. 
    The UML structure is modified to address the issue.
@@ -38,13 +38,13 @@ The editorial flow consist of 3 larger parts, with 6 steps in total:
 ## **Part 2: Build the data specification artefacts using the toolchain**
 
 
-*3. Trigger the toolchain in the publication repository*
+*Step 3. Trigger the toolchain in the publication repository*
 
    The editor triggers the rendering of the data specification artefacts by adding a publication point in the **publication repository** [3].
    
    (For more information on how this is done, please check out the chapter on [How to trigger the generation of the artefacts](./toolchain.md#howto-trigger-the-generation-of-the-artefacts).)  
 
-*4. Check the generated artefacts*
+*Step 4. Check the generated artefacts*
 
    When the toolchain processing is finished, the artefacts become available in the **generated repository** [4].
 
@@ -52,7 +52,7 @@ The editorial flow consist of 3 larger parts, with 6 steps in total:
 
 ## **Part 3: Publish the result**
 
-*5. Publish the generated artefacts*
+*Step 5. Publish the generated artefacts*
 
    To provide the consumers access to the updated artefacts that were just generated, the editor must publish them to the appropriate locations, by copying the content to other GitHub repositories.
    
@@ -66,7 +66,7 @@ The editorial flow consist of 3 larger parts, with 6 steps in total:
    If this is the case, the change must be propagated also to the **PURI content repository** [5].
    
 
-*6. Verify the published artefacts*
+*Step 6. Verify the published artefacts*
 
    To finalise the editorial flow, a final verification of the published data specification is advised.
    The editor will then take the role of the consumer to investigate if the new situation is as desired.
@@ -91,9 +91,9 @@ To illustrate the generic editorial flow consider the common change request to a
 
 The text below is summarised transcript of a video recording demonstrating the addition of a new property 'baptismal name' to the class Person in the Core Person Vocabulary. The example goes through the 3 main parts of the editorial flow, described above:
 
-   - Part 1 demonstrates the editing of the UML model
-   - Part 2 demonstrates the automated generation of the data specification artefacts, through the toolchain
-   - Part 3 demonstrates the (manual) publication of the result
+   - Part 1 demonstrates the editing of the UML model (Step 1 & 2)
+   - Part 2 demonstrates the automated generation of the data specification artefacts, through the toolchain (Step 3 & 4)
+   - Part 3 demonstrates the (manual) publication of the result (Step 5 & 6)
 
 All demonstrated changes are performed on the involved repositories using a demonstration branch called `example`.
 Using this branch all activities can be demonstrated on a working environment, except for the last step: the official publication of the transformation.
@@ -104,14 +104,14 @@ Using this branch all activities can be demonstrated on a working environment, e
 
 ## Part 1: Editing of the UML model ([Part 1 video](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true))
 
-*1. Find the latest UML master data*
+*Step 1. Find the latest UML master data*
 
 The latest published UML file is located in the **Core Person Vocabulary repository** [6]
 
 To start editing, copy this version of the file to the Thema repository [1] .
 
 
-*2. Edit the UML file in the thema repository*
+*Step 2. Edit the UML file in the thema repository*
 
    The editor edits the copy in the Thema repository, adding the property 'baptismalName' with the following annotations: i) label and definition in English, ii) and the assigned URI.
    
@@ -119,7 +119,7 @@ To start editing, copy this version of the file to the Thema repository [1] .
    
 ## Part 2: Generation of the data specification artefacts using the toolchain ([Part 2 video](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true))
 
-*3. Trigger the toolchain in the publication repository* 
+*Step 3. Trigger the toolchain in the publication repository* 
 
    The editor selects the commit hash corresponding to the UML file update in the Thema repository.
    
@@ -129,7 +129,7 @@ To start editing, copy this version of the file to the Thema repository [1] .
    This change will trigger the artefact generation process. The progress of the generation process can be followed in **CircleCI** [8].
 
 
-*4. Check the generated artefacts*
+*Step 4. Check the generated artefacts*
 
    When the artefact generation process is finished, the generated artefacts are available in the generated repository.
    In the demonstration video, the updated artefacts are found within the **directory [`/doc`]** [9]. 
@@ -141,7 +141,7 @@ To start editing, copy this version of the file to the Thema repository [1] .
 
 ## Part 3: Publication of the result ([Part 3 video](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true))
 
-*5. Publish the generated artefacts* 
+*Step 5. Publish the generated artefacts* 
 
 Since the `baptismal name` is a new property, and thus got a new PURI assigned, the editor has to publish the content in the PURI content repository [4]. 
 
@@ -165,7 +165,7 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
    Committing this will make the content available to the public.
 
  
-*6. Verify the published artefacts* 
+*Step 6. Verify the published artefacts* 
     
    **Not in the recording:** By executing all the above steps will result in a page of the Core Person Vocabulary referring to the specific version of the artefact, which is reachable through a public URL of the following form: `https://semiceu.github.io/Core-Person-Vocabulary/releases/{version}/`. 
    
