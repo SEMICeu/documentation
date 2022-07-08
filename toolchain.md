@@ -237,5 +237,4 @@ These images are build from the following open source repositories:
 
 [14] [CircleCI workflow](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/.circleci)
 
-### Go to: 
-<<< [Previous page: Editorial flow](./editorial_flow.md) - [Go back to: Homepage](https://github.com/SEMICeu/documentation) >>>
+#### [<<< Previous page: Editorial flow](./editorial_flow.md) --- [Go back to: Homepage >>>](https://github.com/SEMICeu/documentation)
