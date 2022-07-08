@@ -196,5 +196,4 @@ Since the `baptismal name` is a new property, and thus got a new PURI assigned, 
 
 [9] [doc directory](https://github.com/SEMICeu/uri.semic.eu-generated/tree/example/doc)
 
-### Go to: 
-<<< [Previous page: Datamodel](./datamodel.md) - [Next page: Toolchain](./toolchain.md) >>>
+#### [<<< Previous page: Datamodel](./datamodel.md) --- [Next page: Toolchain >>>](./toolchain.md)
