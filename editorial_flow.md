@@ -13,14 +13,14 @@ Next, we provide an example of the generic editorial flow, to make the descripti
 Relevant links to items described in the following sections are numbered throughout the page, and are included in the **'Links' section** at the bottom.
 
 # Table of Content
-&nbsp;&nbsp;&nbsp;&nbsp1. [Generic editorial flow](#1-generic-editorial-flow)
-&nbsp;&nbsp;&nbsp;&nbsp;1.1 [Change the UML model](#11-change-the-UML-model)
-&nbsp;&nbsp;&nbsp;&nbsp;1.2 [Build the data specification artefacts using the toolchain](#12-build-the-data-specification-artefacts-using-the-toolchain)
-&nbsp;&nbsp;&nbsp;&nbsp;1.3 [Publish the result](#13-publish-the-result)
-&nbsp;&nbsp;&nbsp;&nbsp2. [Example editorial flow](#2-example-editorial-flow)
-&nbsp;&nbsp;&nbsp;&nbsp;2.1 [Editing of the UML model](#21-editing-of-the-uml-model)
-&nbsp;&nbsp;&nbsp;&nbsp;2.2 [Generation of the data specification artefacts using the toolchain](#22-Generation-of-the-data-specification-artefacts-using-the-toolchain)
-&nbsp;&nbsp;&nbsp;&nbsp;2.3 [Publication of the result](#23-publication-of-the-result)
+&nbsp;&nbsp;&nbsp;&nbsp;1. [Generic editorial flow](#1-generic-editorial-flow)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.1 [Change the UML model](#11-change-the-UML-model)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.2 [Build the data specification artefacts using the toolchain](#12-build-the-data-specification-artefacts-using-the-toolchain)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1.3 [Publish the result](#13-publish-the-result)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2. [Example editorial flow](#2-example-editorial-flow)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.1 [Editing of the UML model](#21-editing-of-the-uml-model)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.2 [Generation of the data specification artefacts using the toolchain](#22-Generation-of-the-data-specification-artefacts-using-the-toolchain)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2.3 [Publication of the result](#23-publication-of-the-result)<br>
 
 # 1. Generic editorial flow
 
