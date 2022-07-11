@@ -10,13 +10,13 @@ The objective is that readers of this documentation are provided with sufficient
 ### How to read this Documentation
 
 For readers not acquinted with SEMIC we recommend to read this page first and afterwards go through the different markdown files in the following order:
-[Actors](./actors.md) > [Artefact generation](./artefact_generation.md) > [Datamodel](./datamodel.md) > [Editorial flow](./editorial_flow.md) > [Toolchain](./toolchain.md)
+[Actors](./actors.md) > [Artefact generation](./artefact_generation.md) > [Data model](./datamodel.md) > [Editorial flow](./editorial_flow.md) > [Toolchain](./toolchain.md)
 
-Other resources in the documentation are an explanation of a [PURI](./puri.md), the [glossary](./glossary.md) and additional information about [xsd artefact generation](./xsd.md). 
+Other resources in the documentation are: an explanation of [PURI](./puri.md)s, the [Glossary](./glossary.md), and additional information about [XSD artefact generation](./xsd.md). 
 
 Links to relevant contents and other pages are numbered throughout the text in a bibliographic reference style (e.g. [1], [2]), and are provided in a dedicated 'Links' section at the bottom of each page.
 
-A [status](./status.md) md displays the status of the different documentation. 
+A [Status](./status.md) page displays the current editorial status of the different documentation. 
 
 
 
