@@ -94,7 +94,7 @@ On the other extreme are the implementation models, providing a collection of te
 At this moment, however, _no formal expectation of the SEMIC data specifications_ has been written out. We are clarifying these concepts here in the assumption and hope that the editors' awareness of this categorisation will aid the creation the most appropriate semantic models.
 
 
-### Intro to the UML model
+## Intro to the UML model
 
 As mentioned in the previous section, a SEMIC data specification is build and published according to the best practices of the Semantic Web.
 Following this approach data specifications identify terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass axioms, domain, range, cardinality restrictions, etc.). 
@@ -104,7 +104,7 @@ Graphical representations are able to convey more concisely the key formal logic
 Instead of reinventing a new graphical language, SEMIC uses the Unified Modeling Language (UML) as graphical modelling language.
 
 
-##  Master data management
+###  Master data management
 
 Working with two (or more) distinct modelling languages simultanously creates a significant challenge. 
 It would be a waste of time and effort, if the editors would have to express the same data specification in two distinct modelling languages.
