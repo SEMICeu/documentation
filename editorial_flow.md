@@ -112,7 +112,7 @@ Editors can use their preferred way to interact with the SEMIC GitHub space, e.g
 * ***NOTE: The recording demonstrates <u>one way</u> to interact with the repositories*** - This approach has been selected to facilitate the recording, not because this is the most efficient or best way to interact with the SEMIC GitHub space. Editors can use their preferred way to interact with the SEMIC GitHub space, e.g. checking out the code and working locally, then pushing the changes back.
 
 
-## Part 1: Editing of the UML model ([Part 1 video](https://github.com/SEMICeu/documentation/blob/main/images/step1.mp4?raw=true))
+## Part 1: Editing of the UML model ([Part 1 video](https://github.com/SEMICeu/documentation/blob/main/images/part1.mp4?raw=true))
 
 *Step 1. Find the latest UML master data*
 
@@ -135,7 +135,7 @@ To start editing, copy this version of the file to the Thema repository [1] .
 
    After finishing the editing, the editor commits the UML file to the Thema repository.
    
-## Part 2: Generation of the data specification artefacts using the toolchain ([Part 2 video](https://github.com/SEMICeu/documentation/blob/main/images/step2.mp4?raw=true))
+## Part 2: Generation of the data specification artefacts using the toolchain ([Part 2 video](https://github.com/SEMICeu/documentation/blob/main/images/part2.mp4?raw=true))
 
 *Step 3. Trigger the toolchain in the publication repository* 
 
@@ -157,7 +157,7 @@ To start editing, copy this version of the file to the Thema repository [1] .
    - download the artefacts and check within the downloaded files for the new property
    - use the GitHub built in diffing support (For more information on how this is done, please check out the GitHub documentation's section on [Comparing commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/viewing-and-comparing-commits/comparing-commits) or the instructions for the [Smart Diff action](https://github.com/marketplace/actions/smart-diff)).
 
-## Part 3: Publication of the result ([Part 3 video](https://github.com/SEMICeu/documentation/blob/main/images/step3.mp4?raw=true))
+## Part 3: Publication of the result ([Part 3 video](https://github.com/SEMICeu/documentation/blob/main/images/part3.mp4?raw=true))
 
 *Step 5. Publish the generated artefacts* 
 
