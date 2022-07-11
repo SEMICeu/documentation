@@ -11,6 +11,7 @@
  - artefact generation: describes the artefact generation process
  - xsd : describes the XSD artefact generation process
  - glossary : quick overview of the used terminology within the documentation
+ - FAQ: frequently asked questions about the documentation and content
 
 ## Planning
 
