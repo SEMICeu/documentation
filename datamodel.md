@@ -23,16 +23,15 @@ For details on implementation aspects of the modeling, that are not discussed in
 
 
 ## Table of Contents
-1. [Data specification categories](#1-data-specification-categories)
-2. [Intro to the UML model](#2-intro-to-the-uml-model)
-3. [Master data management](#3-master-data-management)
-4. [Transformational argument](#4-transformational-argument)
-5. [Editorial argument](#5-editorial-argument)
-6. [The semantic model in UML](#6-the-semantic-model)
-7. [UML annotations (tags)](#7-uml-annotations)
-8. [Example annotated UML model](#8-example-annotated-uml-model)
-9. [Test suite](#9-test-suite)
-10. [Links](#10-links)
+&nbsp;&nbsp;&nbsp;&nbsp;1. [Data specification categories](#1-data-specification-categories)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;2. [Master data management](#2-master-data-management)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1 [Intro to the UML model](#21-intro-to-the-uml-model)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 [Choosing the "master" semantic model](#22-choosing-the-master-semantic-model)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3 [The semantic model in UML](#23-the-semantic-model-in-uml)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.1 [UML annotations (tags)](#231-uml-annotations-tags)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.3.2 [Example annotated UML model](#232-example-annotated-uml-model)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.4. [Test suite](#24-test-suite)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;3. [Links](#3-links)<br>
 
 ## 1. Data specification categories
 
@@ -108,7 +107,9 @@ On the other extreme are the implementation models, providing a collection of te
 At this moment, however, _no formal expectation of the SEMIC data specifications_ has been written out. We are clarifying these concepts here in the assumption and hope that the editors' awareness of this categorisation will aid the creation the most appropriate semantic models.
 
 
-## 2. Intro to the UML model
+## 2. Master data management
+
+### 2.1 Intro to the UML model
 
 
 As mentioned in the previous section, a SEMIC data specification is build and published according to the best practices of the Semantic Web.
@@ -120,7 +121,7 @@ Instead of reinventing a new graphical language, SEMIC uses the Unified Modeling
 
 
 
-###  3. Master data management
+###  2.2 Choosing the "master" semantic model
 
 
 Working with two (or more) distinct modelling languages simultanously creates a significant challenge. 
@@ -131,7 +132,7 @@ Within the SEMIC toolchain, the "master" for the semantic model is the UML repre
 This decision is motivated based on two compelling arguments: the "transformational argument" and the "editorial argument".
 
 
-#### - 4. Transformational argument
+#### - Transformational argument
 
 Turning RDF vocabularies into UML, to fully exploit the graphical notation possibilies, would require to create a new configuration language.
 This language would not only include semantical instructions (such as "this URI is a UML class"), but likely would also need to include styling and other represenation instructions. 
@@ -141,7 +142,7 @@ It is far more easier to exploit the power of a UML modeling tool, offering all 
 
 
 
-#### - 5. Editorial argument 
+#### - Editorial argument 
 
 The interactions and discussions within a Working Group are often driven by a graphical representation.
 Therefore, naturally, editors first create the graphical representation of the proposed resolution.
@@ -151,7 +152,7 @@ Both arguments resulted in the design decision to store the master data of the d
 However, despite the fact that the UML diagram will act as the master data for the data specification, it is the **semantic model** that is generated from it that the consumers will consider as the data specification.
 
 
-### 6. The semantic model in UML
+### 2.3 The semantic model in UML
 
 Having the UML model as master data means that the UML must be constructed to contain **all** information required for the Semantic Web representation. 
 The UML Conversion Tool that is part of the toolchain is capable of interpreting not only the standard semantics of the UML language, as it is expected, but also of the additional annotations that are defined on the UML model elements.
@@ -167,7 +168,7 @@ The description of the impact and usage of each of the possible annotations is b
 
 
 
-#### 7. UML annotations (tags)
+#### 2.3.1 UML annotations (tags)
 
 Without going into the details, the figure below shows the abstract metamodel of the information that the UML Conversion Tool extracts from the UML model augmented with annotations. 
 For instance, the metamodel shows that there are _properties_ extracted, and that they may have a label associated. 
@@ -212,7 +213,7 @@ Only when this is not present a `TODO/NOT FOUND` value is used.
 Application profile editors are thus supported when reusing existing vocabularies.
 
 
-#### 8. Example annotated UML model
+#### 2.3.2 Example annotated UML model
 
 The following screenshot shows the class _Person_ defined in the Core Person Vocabulary, when edited in Enterprise Architect. 
 
@@ -223,7 +224,7 @@ On the right hand side the tags for the selected _Person_ class are shown.
 On the left side of the graphical representation the attributes and relationships of the selected class can be seen.
 
 
-#### 9. Test suite
+### 2.4 Test suite
 
 A test suite is a collection of examples that editors can use to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
 
@@ -231,7 +232,7 @@ A test suite is a collection of examples that editors can use to understand the 
 An example of test suite is **OSLOthema-toolchain Testbed** [3], which is a _thema_ repository that provides a collection of examples of UML models and that can be used by editors to do regression testing during development.
 
 
-#  10. Links
+##  3. Links
 
 [1] [Guidelines on good definitions writing](https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf)
 
