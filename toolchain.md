@@ -47,8 +47,7 @@ In the [editorial flow](./editorial_flow.md) this distinction is indicated by th
 
 The result produced by the OSLO toolchain can be seen at the portal of the **Flemish Government data portal** [3], while on Github **the source code of the tooling**, as well as of the data specifications are all publicly available [4].
 
-(*For more information on the OSLO toolchain, contact the OSLO team. This can be done by posting a github issue, or via email (digitaal.vlaanderen@vlaanderen.be).
-*)
+*(For more information on the OSLO toolchain, contact the OSLO team. This can be done by posting a github issue, or via email (digitaal.vlaanderen@vlaanderen.be).)*
 
 
 ### Generic Design
@@ -130,7 +129,7 @@ This setup does not provide the end-to-end experience of the original design, bu
 
 - For more information on this, and other aspects related to the configuration, please see the **documentation on the publication environment**[12] available on GitHub.
 
-- For more information on how these repositories are used in the management of data specifications please check the [editorial flow](./editorial_flow.md) page within this repository.
+- For more information on how these repositories are used in the management of data specifications please consult the chapter on the [editorial flow](./editorial_flow.md).
 
 
 #### Thema repository(ies)
@@ -256,4 +255,3 @@ These images are build from the following open source repositories:
 [14] [CircleCI workflow](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/.circleci)
 
 #### [<<< Previous page: Editorial flow](./editorial_flow.md) --- [Go back to: Homepage >>>](https://github.com/SEMICeu/documentation)
-n
