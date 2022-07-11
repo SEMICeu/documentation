@@ -18,7 +18,7 @@
 | Page | Status| Planned date for<BR>'Ready for internal review' | Planned date for<BR>'Ready for final review' | Planned date for <BR>'Approved' |
 | ---- | ---- | ---- | ---- | ---- | 
 | README.md | Ready for final review (2nd round) | 7 june 2022 | 10 june 2022 | 20 june 2022|
-| actors.md | Draft | 7 june 2022 | 10 june 2022 | 20 june 2022|
+| actors.md | Ready for final review (2nd round) | 7 june 2022 | 10 june 2022 | 20 june 2022|
 | editorial_flow.md | Ready for final review (2nd round) | 8 june 2022 | 13 june 2022 | 20 june 2022|
 | datamodel.md | Ready for final review (2nd round) |  8 june 2022 | 10 june 2022 | 20 june 2022|
 | toolchain.md | Ready for final review (2nd round) |  8 june 2022 | 13 june 2022 | 20 june 2022|
@@ -26,7 +26,7 @@
 | artefact_generation.md | Ready for final revision | 10 june 2022 | 15 june 2022 | 20 june 2022 |
 | xsd.md | Ready for final revision  | 10 june 2022 | 15 june 2022 | 20 june 2022 |
 | glossary.md | Ready for final revision | 14 june 2022 | 15 june 2022| 20 june 2022 |
-| FAQ.md | Ready for final revision | ---- | ---- | ---- | 
+| FAQ.md | Draft | ---- | ---- | ---- | 
 
 **Legend for status:**
 
