@@ -112,9 +112,9 @@ This influences the execution and configuration, as operating on private reposit
 
 This setup does not provide the end-to-end experience of the original design, but it is feasible that the CI/CD flow can be adapted to achieve this.
 
-- For more information on this, and other aspects related to the configuration, in GitHub is available for consultation the relevant **documentation on the publication environment**[12].
+- For more information on this, and other aspects related to the configuration, please see the **documentation on the publication environment**[12] available on GitHub.
 
-- For more information on how these repositories are used in the management of data specifications is elaborated in the page on [editorial flow](./editorial_flow.md).
+- For more information on how these repositories are used in the management of data specifications please check the [editorial flow](./editorial_flow.md) page within this repository.
 
 
 #### Thema repository(ies)
