@@ -16,7 +16,7 @@ The page is structured in sections and subsections describing these **roles** an
 3. [Developers](#developers)
 4. [Other roles](#other-roles)
     1. [Communication](#communication)
-	2. [User access management](#access-management)
+    2. [User access management](#access-management)
 
 
 
@@ -63,7 +63,7 @@ _Developers_ are the supporting actors in this story.
 Their role is mainly to be able to assist in resolving any technical issue with the setup. 
 Thus, the performed activities are primarily of operational nature, and less oriented to new development.
 When it comes to new development, this will be mostly in the area of automation. 
-As mentioned in the [Historical Background](README.md#historical-background), the SEMIC tooling and organisation is grown step by step. 
+As mentioned in the [Historical Background](./README.md#historical-background), the SEMIC tooling and organisation is grown step by step. 
 To support the editors even better more automation is required.
 
 
