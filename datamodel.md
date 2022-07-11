@@ -23,16 +23,16 @@ For details on implementation aspects of the modeling, that are not discussed in
 - [Toolchain](./toolchain.md) - for understanding the automation process set up for publishing data specifications exploiting GitHub.
 
 ## Table of Contents
-1. [Data specification categories] (#1-data-specification-categories)
-2. [Intro to the UML model] (#2-intro-to-the-uml-model)
-3. [Master data management] (#3-master-data-management)
-4. [Transformational argument] (#4-transformational-argument)
-5. [Editorial argument] (#5-editorial-argument)
-6. [The semantic model in UML] (#6-the-semantic-model)
-7. [UML annotations (tags)] (#7-uml-annotations)
-8. [Example annotated UML model] (#8-example-annotated-uml-model)
-9. [Test suite] (#9-test-suite)
-10. [Links] (#10-links)
+1. [Data specification categories](#1-data-specification-categories)
+2. [Intro to the UML model](#2-intro-to-the-uml-model)
+3. [Master data management](#3-master-data-management)
+4. [Transformational argument](#4-transformational-argument)
+5. [Editorial argument](#5-editorial-argument)
+6. [The semantic model in UML](#6-the-semantic-model)
+7. [UML annotations (tags)](#7-uml-annotations)
+8. [Example annotated UML model](#8-example-annotated-uml-model)
+9. [Test suite](#9-test-suite)
+10. [Links](#10-links)
 
 ## 1. Data specification categories
 
