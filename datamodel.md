@@ -22,8 +22,19 @@ For details on implementation aspects of the modeling, that are not discussed in
 - [Artefact generation process](./artefact_generation.md) - for insights on, and pointers to, the software used
 - [Toolchain](./toolchain.md) - for understanding the automation process set up for publishing data specifications exploiting GitHub.
 
+## Table of Contents
+1. [Data specification categories] (#1-data-specification-categories)
+2. [Intro to the UML model] (#2-intro-to-the-uml-model)
+3. [Master data management] (#3-master-data-management)
+3a. [Transformational argument] (#3a-transformational-argument)
+3b. [Editorial argument] (#3b-editorial-argument)
+4. [The semantic model in UML] (#4-the-semantic-model)
+4a. [UML annotations (tags)] (#4a-uml-annotations)
+4b. [Example annotated UML model] (#4b-example-annotated-uml-model)
+4c. [Test suite] (#4c-test-suite)
+5. [Links] (#10-links)
 
-## Data specification categories
+## 1. Data specification categories
 
 Designing a data specification encompasses the following activities:
 - determining the appropriate data structures that should be used (classes, properties, etc.)
@@ -94,7 +105,7 @@ On the other extreme are the implementation models, providing a collection of te
 At this moment, however, _no formal expectation of the SEMIC data specifications_ has been written out. We are clarifying these concepts here in the assumption and hope that the editors' awareness of this categorisation will aid the creation the most appropriate semantic models.
 
 
-## Intro to the UML model
+## 2. Intro to the UML model
 
 As mentioned in the previous section, a SEMIC data specification is build and published according to the best practices of the Semantic Web.
 Following this approach data specifications identify terms with URIs and associate the term with the real world using associated semantic information expressed as human readible expressions (labels, definitions, usage notes, ...) and formal logic statements (subclass axioms, domain, range, cardinality restrictions, etc.). 
@@ -104,7 +115,7 @@ Graphical representations are able to convey more concisely the key formal logic
 Instead of reinventing a new graphical language, SEMIC uses the Unified Modeling Language (UML) as graphical modelling language.
 
 
-###  Master data management
+###  3. Master data management
 
 Working with two (or more) distinct modelling languages simultanously creates a significant challenge. 
 It would be a waste of time and effort, if the editors would have to express the same data specification in two distinct modelling languages.
@@ -113,7 +124,7 @@ Therefore, one modeling language should be selected as the "master", from which 
 Within the SEMIC toolchain, the "master" for the semantic model is the UML representation, described below. 
 This decision is motivated based on two compelling arguments:
 
-#### - Transformational argument
+#### - a. Transformational argument
 Turning RDF vocabularies into UML, to fully exploit the graphical notation possibilies, would require to create a new configuration language.
 This language would not only include semantical instructions (such as "this URI is a UML class"), but likely would also need to include styling and other represenation instructions. 
 A large part of the editorial effort for a graphical representation is organising and styling the picture to make it as suggestive and meaningful as possible for the consumers. 
@@ -121,7 +132,7 @@ That is a complex task.
 It is far more easier to exploit the power of a UML modeling tool, offering all the graphical styling possibilities an editor needs, and transform the resulting UML representation into a semantic model (such as RDF).
 
 
-#### - Editorial argument 
+#### - b. Editorial argument 
 The interactions and discussions within a Working Group are often driven by a graphical representation.
 Therefore, naturally, editors first create the graphical representation of the proposed resolution.
 When agreement is reached, the decision is turned by the editor into the data specification following the Semantic Web principles.
@@ -130,7 +141,7 @@ Both arguments resulted in the design decision to store the master data of the d
 However, despite the fact that the UML diagram will act as the master data for the data specification, it is the **semantic model** that is generated from it that the consumers will consider as the data specification.
 
 
-### The semantic model in UML
+### 4. The semantic model in UML
 
 Having the UML model as master data means that the UML must be constructed to contain **all** information required for the Semantic Web representation. 
 The UML Conversion Tool that is part of the toolchain is capable of interpreting not only the standard semantics of the UML language, as it is expected, but also of the additional annotations that are defined on the UML model elements.
@@ -146,7 +157,7 @@ The description of the impact and usage of each of the possible annotations is b
 
 
 
-####  UML annotations (tags)
+####  a. UML annotations (tags)
 
 Without going into the details, the figure below shows the abstract metamodel of the information that the UML Conversion Tool extracts from the UML model augmented with annotations. 
 For instance, the metamodel shows that there are _properties_ extracted, and that they may have a label associated. 
@@ -189,7 +200,7 @@ Only when this is not present a `TODO/NOT FOUND` value is used.
 Application profile editors are thus supported when reusing existing vocabularies.
 
 
-#### Example annotated UML model
+#### b. Example annotated UML model
 
 The following screenshot shows the class _Person_ defined in the Core Person Vocabulary, when edited in Enterprise Architect. 
 
@@ -200,14 +211,14 @@ On the right hand side the tags for the selected _Person_ class are shown.
 On the left side of the graphical representation the attributes and relationships of the selected class can be seen.
 
 
-#### Test suite
+#### c. Test suite
 
 A test suite is a collection of examples that editors can use to understand the impact of a modeling choice in combination with the annotations for each supported data specification category. 
 
 An example of test suite is **OSLOthema-toolchain Testbed** [3], which is a _thema_ repository that provides a collection of examples of UML models and that can be used by editors to do regression testing during development.
 
 
-#  Links
+#  5. Links
 
 [1] [Guidelines on good definitions writing](https://github.com/SEMICeu/OpenGuidelines/blob/main/Principles%20for%20creating%20good%20definitions_v1.00.pdf)
 
