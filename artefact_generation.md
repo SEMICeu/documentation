@@ -1,15 +1,17 @@
+#### [<<< Previous page: Actors](./actors.md) --- [Next page: Datamodel >>>](./datamodel.md)
+
 # Artefact generation process
 
 This chapter describes the artefact generation process for a data specification.
-The target audience for this chapter are experienced editors and developers that want to understand and improve the artefact generation.
-Nevertheless, novel editors are also invited to perform a quick reading, as this will aid them to communicate better with the developers, when the artefact generation fails.
+The target audience for this chapter are experienced editors and developers who want to understand and improve the artefact generation.
+Nevertheless, novel editors are also invited to perform a quick reading, as this will help them to better communicate with the developers, when the artefact generation fails.
 
 ## Overview
 
 The creation of the data specification artefacts is roughly a *two phase* process. 
 First, all information of the data specification is collected in an internal representation. 
 Next, out of that internal representation, the artefacts of the data specification to be published are generated.
-The first phase is denoted as the [Aggregation phase](#aggregation-phase), while the second is called the [Generation phase](#generation-phase).
+The first phase is denoted as the [Aggregation phase](#1-aggregation-phase), while the second is called the [Generation phase](#2-generation-phase).
 
 
 The *internal representation* has the same structure for each data specification category. 
@@ -28,7 +30,7 @@ The CircleCI web application offers a visual representation of the CircleCI work
 Generic information about the organisation and setup of the workflow of the CircleCI workflow is provided in the documentation of the [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template#readme) GitHub repository.
 
 
-## Aggregation phase 
+## 1. Aggregation phase 
 
 The _core activity_ of the first phase is the extraction of the semantic model expressed in the UML diagram into the *internal representation*.
 The [datamodel](./datamodel.md) chapter describes in detail how the UML diagram expressing the semantic model of a data specification is basically a standard UML model extended with annotations.
@@ -45,7 +47,7 @@ During the aggration phase, the provided translations are merged into the intern
 
 
 
-## Generation phase 
+## 2. Generation phase 
 
 The toolchain provides a number of artefact generators. 
 During the generation phase, these artefact generators are executed to produce the artefacts according to the expectations of the different [data specification categories ](./datamodel.md#data-specification-categories).
@@ -60,7 +62,7 @@ Design considerations for developers are beyond scope.
 
 Below we provide a short description for each artefact generator.
 
-### HTML artefact generator
+### 2.1 HTML artefact generator
 
 The HTML artefact generator makes an HTML file by rendering the internal representation according to a template.
 The objective of the HTML represenation is create a human readable representation. 
@@ -79,7 +81,7 @@ Therefore, the language to be used from the internal representation must be spec
 Besides these key options, there are more options facilitating the implementation, but these are for the developers to explore. 
 
 
-### RDF artefact generator
+### 2.2 RDF artefact generator
 
 The RDF artefact generator makes a JSON-LD file out of the internal representation.
 Using of-the-shelf JSON-LD to RDF serialisation convertion tools the JSON-LD file is expressed as Turtle, N-Triples or RDF/XML.
@@ -88,7 +90,7 @@ The objective is to support the machine readable representation of the vocabular
 
 The generation is not language sensitive, as RDF allows multilanguage content.
 
-### JSON-LD context artefact generator
+### 2.3 JSON-LD context artefact generator
 
 The JSON-LD context artefact generator creates a [JSON-LD context](https://www.w3.org/TR/json-ld/#the-context) out of the internal representation.
 
@@ -107,7 +109,7 @@ To ensure that the JSON-LD context does not create unintentional overlaps, the g
 This is done by prefixing the labels with the domain of the class to which the property belongs. 
 Forcing domain based disambiguation is switched on for the JSON-LD generator in the SEMIC toolchain.
 
-### SHACL artefact generator
+### 2.4 SHACL artefact generator
 
 The SHACL artefact generator creates a file containing [SHACL shapes](https://www.w3.org/TR/shacl/#shapes) out of the internal representation.
 
@@ -135,7 +137,7 @@ In a multilingual context, the second representation is required as it is the on
 In the SEMIC toolchain the first, more compact, representation is active.
 
 
-## Adding a new artefact generator to the artefact generation process
+## 3. Adding a new artefact generator to the artefact generation process
 
 The  [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator) GitHub repository collects the OSLO artefact generators.
 These are all written in JavaScript. 
@@ -155,6 +157,6 @@ The integration is best applied on a working setup.
 When the new artefact generator has reached maturity, this additional generation possibility should be shared with the community, by adding it as part of a new version of the
 [OSLO-publicationenvironment-template](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template).
 
-
+#### [<<< Previous page: Actors](./actors.md) --- [Next page: Datamodel >>>](./datamodel.md)
 
 

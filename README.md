@@ -7,13 +7,24 @@ This documentation covers the state of affairs as of May 2022.
 The objective is that readers of this documentation are provided with sufficient anchors to initiate mastering the methods and tooling used to create and manage data specifications.
 
 
+### How to read this Documentation
+
+For readers not acquinted with SEMIC we recommend to read this page first and afterwards go through the different markdown files in the following order:
+[Actors](./actors.md) > [Artefact generation](./artefact_generation.md) > [Datamodel](./datamodel.md) > [Editorial flow](./editorial_flow.md) > [Toolchain](./toolchain.md)
+
+Other resources in the documentation are an explanation of a [PURI](./puri.md), the [glossary](./glossary.md) and additional information about [xsd artefact generation](./xsd.md). 
+
+Links to relevant contents and other pages are numbered throughout the text in a bibliographic reference style (e.g. [1], [2]), and are provided in a dedicated 'Links' section at the bottom of each page.
+
+A [status](./status.md) md displays the status of the different documentation. 
+
 
 
 ## Table Of Contents
-1. [Historical Background](#historical-background)
-2. [User Roles and Activities](#user-roles-and-activities)
-3. [Organisation of the SEMIC GitHub Space](#organisation-of-the-semic-github-space)
-4. [Usage](#usage)
+1. [Historical Background](#1-historical-background)
+2. [User Roles and Activities](#2-user-roles-and-activities)
+3. [Organisation of the SEMIC GitHub Space](#3-organisation-of-the-semic-github-space)
+4. [Usage](#4-usage)
 
 
 ## Historical Background
@@ -32,15 +43,27 @@ The tooling documented hereby is a further step towards an integrated and automa
 Nevertheless, the current design of the architecture is a reflection of the organic growth of the system, during which a number of best possible decisions have been taken in order to minimise the impacts on the existing processes and methods.
 
 
-## User Roles and Activities
 
-There are three main types of __actors__ that will interact with the resources and assets produced and managed by SEMIC on the SEMICeu GitHub space: the data specification _consumers_, the data specification _editors_, and the supporting asset _developers_. 
+## 2. User Roles and Activities
+
+There are three main types of __actors__ that will interact with the resources and assets produced and managed by SEMIC on the SEMICeu GitHub space:
+- the data specification _consumers_ 
+- the data specification _editors_ 
+- the supporting asset _developers_ 
+
+
 The tools and methods are set up by the _developers_ to support the _editors_ in their work to provide together a coherent experience to the _consumers_.
 Since the _consumers_ are the "end users" of the data specifications, they will not need to interact directly with the SEMICeu GitHub space. Therefore, this documentation will only focus on the _editors_ and _developers_, as they constitute its target audience.
 
-For more information about the user roles please check out the [Actors](./actors.md) page.
+These actors are expected to perform the following actions:
+- Editing of artefacts
+- Publication of artefacts
 
-### The editing of the artefacts
+The following paragraphs describe the editing and publishing activities. For more information about the user roles please check out the [Actors](./actors.md) page.
+
+
+
+### 2.1 The editing of the artefacts
 
 Data specifications evolve over time. 
 This evolution is the result of addressing the __use cases__ provided by the SEMIC community for the data specifications.
@@ -49,15 +72,19 @@ During the editorial process the _editors_ are adapting the data specification: 
 The assessment of how to best address the different use cases is beyond the scope of this documentation. 
 Nevertheless, this documentation provides insights into how a resolution for a given change is integrated in the published artefacts of the data specification.
 
-To adequately respond to a use case, _editors_ should understand how to operate the **toolchain** (see [Usage section](#Usage) for details) to efficiently create the artefacts for a data specification. 
-The created artefacts are always represented in a human readable form (e.g. HTML) together with other supportive representations (JSON-LD context files, SHACL shapes, RDF vocabularies, etc.) depending on the nature of the data specification. 
+
+To adequately respond to a use case, _editors_ should understand how to operate the **toolchain** to efficiently create the artefacts for a data specification.
+(For more details, consult [section 4. Usage ](#4-usage)).
+
+The created artefacts are always represented in a human readable form (e.g. HTML) together with other supportive representations (JSON-LD context files, SHACL shapes, RDF vocabularies, etc.), depending on the nature of the data specification. 
+
 
 The editorial activity typically requires several iterations in order to reach the final resolution.
 The *toolchain* reduces the workload on editors created by these iterations, makes the artefact creation less error-prone, and at the same time increase the coherency among the different data specifications. 
 It also can play an important role in training future editors to maintain the data specifications. 
 
 
-### Publication of the artefacts
+### 2.2 Publication of the artefacts
 
 After creating the artefacts, the editor has to make them accessible to the consumers. 
 For this the artefacts have to be stored in a publication environment.
@@ -77,7 +104,7 @@ This is future work. Therefore, editors are today required to manually collect t
 The SEMIC GitHub space contains several dozens of repositories, each falling in specific categories. There are data specification repositories, repositories supporting the generation and publication of the data specifications, and others. 
 
 
-### Data specification repositories
+### 3.1 Data specification repositories
 
 The data specification repositories are tagged with the topic ***data-specification*** in GitHub.
 The full list of SEMICeu repositories tagged with ***data-specification*** can be found [here](https://github.com/search?q=org%3ASEMICeu+topic%3Adata-specification).
@@ -86,7 +113,7 @@ As each data specification follows its individual life-cycle, their respective r
 Nevertheless, as part of the editorial process multiple data specification repositories might be updated to address a given issue.
 
 
-#### Core Vocabulary repositories
+### 3.2 Core Vocabulary repositories
 
 A subset of the data specification repositories that are set up for the editing of Core Vocabularies is tagged with the topic ***core-vocabulary***.
 [Here](https://github.com/search?q=org%3ASEMICeu+topic%3Acore-vocabulary) is the current list of Core Vocabulary repositories.
@@ -100,7 +127,18 @@ It is assumed that there is an `index.html` file, as the data specification is t
 
 Further governance agreements regarding the structure of the Core Vocabulary repositories are not made.
 
-#### Application Profile repositories
+
+#### *Useful links*
+
+[Current list of Core Vocabulary repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Acore-vocabulary)
+
+[Example of data specification repository tagged 'core-vocabulary'| Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/)
+
+[Example of data specification release version folder | Core Person Vocabulary](https://github.com/SEMICeu/Core-Person-Vocabulary/tree/master/releases/2.00)
+
+
+### 3.3 Application Profile repositories
+
 
 The data specification repositories are tagged with the topic ***application-profile***.
 [Here](https://github.com/search?q=org%3ASEMICeu+topic%3Aapplication-profile) is the current list of Application Profile repositories.
@@ -110,14 +148,24 @@ This has historic reasons.
 
 When a new release for these Application Profiles is being prepared, restructuring the content in accordance to the above described structure is highly recommended.
 
+#### *Useful links*
 
-### Repositories for Supporting Generation and Publication of Data Specifications
+[Current list of Application Profile repositories](https://github.com/search?q=org%3ASEMICeu+topic%3Aapplication-profile)
 
-The repositories that provide the support for generating and publishing data specifications are tagged with the topic ***tooling***.
-The full list of these repositories can be found [here](https://github.com/search?q=org%3ASEMICeu+topic%3Atooling).
+ ### 3.4 Repositories for Supporting Generation and Publication of Data Specifications
+
+
+ The repositories that provide the support for generating and publishing data specifications are tagged with the topic ***tooling***.
 
 These repositories have no common organisational structure, however their `README.md` file should provide a good overview about their organisation and usage.
-Also, the [Toolchain](./toolchain.md) page can offer additional information about what these tools are meant to do and when and how to use it. 
+
+Additional information about what these tools are meant to do and when and how to use them can be found in the [Toolchain](./toolchain.md) page. 
+
+#### *Useful links*
+
+[Full list of repositories tagged 'tooling'](https://github.com/search?q=org%3ASEMICeu+topic%3Atooling)
+
+
 
 
 ## Usage
