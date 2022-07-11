@@ -25,7 +25,7 @@
 | artefact_generation.md | Draft | 10 june 2022 | 15 june 2022 | 20 june 2022 |
 | xsd.md | Draft  | 10 june 2022 | 15 june 2022 | 20 june 2022 |
 | glossary.md | Draft | 14 june 2022 | 15 june 2022| 20 june 2022 |
-
+| FAQ.md | Draft | ---- | ---- | ---- | 
 
 **Legend for status:**
 
