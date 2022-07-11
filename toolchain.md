@@ -5,7 +5,6 @@
 
 ## Motivation
 
-The toolchain has beed developed to support the editors in creating and maintaining data specifications in a coherent manner.
 
 The need for a toolchain emerged from the fact that data specifications have their own life cycle and the various Core Vocabularies are created by different (editorial) teams, with different Working Groups, at different times. In the past, this (manual) editing process resulted in producing similar, yet distinct, and sometimes incoherent, expressions of these Core Vocabularies. A situation that raised many questions by the consumers.
 
@@ -29,6 +28,7 @@ The artefact generation itself is documented in a dedicated page on [artefact ge
 
 
 
+
 ## Setup & Design
 
 The toolchain used in the SEMICeu project is based on the **OSLO toolchain** [1]. 
@@ -37,14 +37,19 @@ The OSLO toolchain is part of a larger environment for supporting the generation
 Because OSLO has been involved in SEMIC from the start, the toolchain incorporates many advices and best practices SEMIC has produced or applies.
 This is especially true for the support of the **editorial flow** [2]. 
 
-The main distinction between the use of the toolchain in the two environments pertains their approach to publication. The current SEMIC practice uses GitHub as publication platform, where each data specification is edited and published in its own repository. On the other hand, the OSLO toolchain has been designed with a single publication environment in mind.
 
-In the editorial flow, this distinction is indicated by the existence of the manual publication steps that the editor has to perform; steps that are not required in the OSLO context. As such, it will be future work to adapt the tooling to the SEMIC publication context.
+The OSLO toolchain is part of a larger environment for supporting the generation, maintenance and publication of data specifications under the governance of the Flemish Government, Belgium.
+Because OSLO has been participating in SEMIC from the start, the toolchain incorporates many advices and best practices SEMIC has produced or applies.
+This is especially true for the support of the editorial flow. 
+The main distinction between the use of the toolchain in the two environments is regarding their approach to publication. The current SEMIC practice is to use GitHub as publication platform, where each data specification is edited and published in its own repository. On the other hand, the OSLO toolchain has been designed with a single publication environment in mind.
+
+In the [editorial flow](./editorial_flow.md) this distinction is indicated by the existence of the manual publication steps that the editor has to perform; steps that are not required in the OSLO context. It is future work to adapt the tooling to the SEMIC publication context.
 
 The result produced by the OSLO toolchain can be seen at the portal of the **Flemish Government data portal** [3], while on Github **the source code of the tooling**, as well as of the data specifications are all publicly available [4].
 
 (*For more information on the OSLO toolchain, contact the OSLO team. This can be done by posting a github issue, or via email (digitaal.vlaanderen@vlaanderen.be).
 *)
+
 
 ### Generic Design
 
@@ -58,21 +63,24 @@ The content of that website can be (and usually is) broader than the data specif
 The toolchain is designed to create a static website, i.e. a collection of webpages.
 This design choice simplifies the operational work to serve the data specifications on the publication environment, but more importantly it also provides the editors with an exact view on what is being shared with the consumers on the publication environment.
 
-The source code of the static website, (i.e. the publication environment), is stored on GitHub in the **publication repository**.
-The result of the generation process, (i.e. the static website), is stored in the **generated repository**. 
+The source code of the static website, i.e. the publication environment, is stored on GitHub in the _publication repository_.
+The result of the generation process, i.e. the static website, is stored in the _generated repository_. 
 A _publication_ repository is thus always paired with a _generated_ repository. 
 
+
 The generated repository is kept in sync with the publication repository via a **Continuous Integration/Continuous Development (CI/CD) execution flow** [5]. 
+
 Within software engineering, CI/CD is the name for any automated process supporting the software building and deployment activities.
 Each change (commit) to the publication repository will lead after a successful CI/CD execution to a change in the generated repository.
 
 Using the branching functionality of Github repositories, system staging (i.e. publishing on development, testing and production publication environments) is also supported. 
 
+
 To provide the editorial freedom and to let data specifications have their own life cycle, the source of each data specification is stored in their own repository. 
-These repositories are called **thema repositories**. 
-
-The publication repository contains a list of references to the thema repositories. More precisely, they contain references to the state of the thema repositories at unique points in time, i.e. commits. These references are called __publication points__.
-
+These repositories are called _thema repositories_. 
+The publication repository contains a list of references to the thema repositories.
+More precisely, they contain references to the state of the thema repositories at unique points in time, i.e. commits.
+These references are called __publication points__.
 Editors primarily interact with thema repositories, only when a new publication of the data specification is required, when they update the publication repository with a new publication point.
 This setup creates flexibility and provides editorial scaling potential, without loosing a central control. 
 
@@ -85,25 +93,33 @@ On the contrary, the generated repository does not require a template.
 
 Information on how to do this, as well as more configuration options, is part of the **OSLO template documentation**, also available on GitHub [8].  
 
-### SEMIC setup
+
+The generated repository does not require a template.
+
 
 In contrast to the OSLO toolchain's premise of a single publication environment, (i.e. a single website), SEMIC has decided to apply a decentralised publication strategy. Each data specification repository in the SEMICeu space is not only the source of the specification, but also the publication platform for that data specification, by using **GitHub Pages** service. 
 
+
+
+
+### SEMIC setup
+
+In contrast to the OSLO toolchain premise of a single publication environment, i.e. a single website, SEMIC has decided to apply a decentralised publication strategy. 
+Each data specification repository in the SEMICeu space is not only the source of the specification, but also the publication platform for that data specification, by using  [GitHub Pages](https://pages.github.com/) service offering. 
+
 The OSLO toolchain separates the different functionalities (master data source, content generation, publication) in separate repositories, making it then natural to combine the processing of multiple data specifications into a pair of publication and generated repository. 
-
-Since there is no unique SEMIC publication environment identified with a unique domain, there are two alternatives to use the toolchain:
-
-   (a) Integrate the toolchain functionalities in each SEMIC data specification repository 
-   (b) deploy the toolchain in new SEMICeu repositories, pretending there is a single SEMIC publication environment. 
-
+Since there is no unique SEMIC publication environment identified with a unique domain, there are two alternatives to use the toolchain. (a) Integrate in each SEMIC data specification repository the toolchain functionalities. 
+Or (b) deploy the toolchain in new SEMICeu repositories, pretending there is a single SEMIC publication environment. 
 The second option has been chosen as it impacted the existing data specification repositories the least, and it deviates the least from the OSLO toolchain setup.
 The deployment corresponds to a minimal setup, providing already the most important editorial support for creating harmonised artefacts for all data specifications.
 
 In the SEMICeu GitHub space the toolchain has been deployed in these repositories:
 
+
 - **SEMIC publication repository** [9]
 - **SEMIC generated repository** [10]
 - **SEMIC thema repository** [11], that currently contains _all_ the SEMIC data specifications. This choice can be revisited in the future.
+
 
 All editing happens on the `master` branch as there are no staging publication environments.
 
@@ -208,6 +224,7 @@ These images are build from the following open source repositories:
   - [OSLO-Specificationgenerator](https://github.com/Informatievlaanderen/OSLO-SpecificationGenerator)
 
 
+
 # Links
 
 [1] [OSLO toolchain](https://github.com/Informatievlaanderen/OSLO-toolchain/tree/master/doc-generic)
@@ -239,3 +256,4 @@ These images are build from the following open source repositories:
 [14] [CircleCI workflow](https://github.com/Informatievlaanderen/OSLO-publicationenvironment-template/tree/main/.circleci)
 
 #### [<<< Previous page: Editorial flow](./editorial_flow.md) --- [Go back to: Homepage >>>](https://github.com/SEMICeu/documentation)
+n
